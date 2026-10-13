@@ -29,18 +29,6 @@ This will:
 5. write outputs under `reproduced/`;
 6. print a concise PASS/WARN report.
 
-### 3. Regenerate Figure 2
-
-```bash
-python scripts/analysis/plot_figure2.py
-```
-
-The figure is regenerated from the paper-frozen metric file at:
-
-`results/paper_metrics/Figure2_metrics.csv`
-
-and written to `reproduced/`.
-
 For an even shorter check:
 
 ```bash
@@ -96,8 +84,7 @@ Everything needed to check the paper's reported Table I and Figure 2 summaries i
 - reproducing Table I;
 - reconstructing Figure 2 metric summaries;
 - inspecting B0/B1/B2 treatment material;
-- checking rescoring changes and data provenance;
-- regenerating Figure 2 from the paper-frozen metric file.
+- checking rescoring changes and data provenance.
 
 ## Optional re-execution
 
