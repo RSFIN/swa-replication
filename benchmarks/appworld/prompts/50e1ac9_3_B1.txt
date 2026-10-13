@@ -1,0 +1,122 @@
+TASK_ID: 50e1ac9_3
+SCB_CONDITION: B1
+
+TASK INSTRUCTION:
+Give me a comma-separated list of top 3 most played indie song titles from across my Spotify song, album and playlist libraries.
+
+FROZEN CONTEXT:
+{
+  "candidate_occurrences_with_source_provenance": [
+    {
+      "song_id": 29,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 30,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 31,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 32,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 29,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 318,
+      "source_id": 446,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 21,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 16,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 31,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 314,
+      "source_id": "direct",
+      "source_type": "song_library"
+    }
+  ],
+  "candidate_song_details": [
+    {
+      "genre": "indie",
+      "play_count": 675,
+      "song_id": 16,
+      "title": "Yearning for a Glimpse of Heaven"
+    },
+    {
+      "genre": "indie",
+      "play_count": 926,
+      "song_id": 21,
+      "title": "Lost in the Embrace of Night"
+    },
+    {
+      "genre": "indie",
+      "play_count": 265,
+      "song_id": 29,
+      "title": "Violet Rain"
+    },
+    {
+      "genre": "indie",
+      "play_count": 395,
+      "song_id": 30,
+      "title": "Eternal Flame"
+    },
+    {
+      "genre": "indie",
+      "play_count": 125,
+      "song_id": 31,
+      "title": "Waves of Yesterday"
+    },
+    {
+      "genre": "indie",
+      "play_count": 448,
+      "song_id": 32,
+      "title": "Wading Through Rivers of Tears"
+    },
+    {
+      "genre": "indie",
+      "play_count": 556,
+      "song_id": 314,
+      "title": "The Complexity of Simple Things"
+    },
+    {
+      "genre": "indie",
+      "play_count": 858,
+      "song_id": 318,
+      "title": "Mystic Voyage to Avalon"
+    }
+  ],
+  "target_genre": "indie",
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "ed_wilson@gmail.com"
+  }
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

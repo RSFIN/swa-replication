@@ -1,0 +1,124 @@
+{
+  "evidence_items": [
+    {
+      "like_count": 0,
+      "transaction_id": 827
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1147
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 1150
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1223
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 2706
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 3287
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5126
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5289
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5292
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 5961
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 6329
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 6938
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7249
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7263
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 7269
+    },
+    {
+      "like_count": 4,
+      "transaction_id": 7272
+    },
+    {
+      "like_count": 2,
+      "transaction_id": 7283
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 7288
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7289
+    },
+    {
+      "like_count": 2,
+      "transaction_id": 7291
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7294
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 7296
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7304
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 7308
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7313
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7321
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7327
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7333
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 7334
+    }
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "nan_ritt@gmail.com"
+  }
+}

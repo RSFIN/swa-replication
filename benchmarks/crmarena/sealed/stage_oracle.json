@@ -1,0 +1,407 @@
+{
+  "crmarena_0391": {
+    "benchmark_idx": 391,
+    "gold": "005Ws000001xZvdIAE",
+    "target_issue_id": "a1MWs0000012u7BMAQ",
+    "target_issue_name": "Incorrect Item Received",
+    "target_product_id": "01tWs000002wWw1IAE",
+    "target_product_name": "Reflective Running Vest",
+    "route_depth": 1,
+    "issue_stage": {
+      "top_count": 8,
+      "finalists": [
+        "005Ws000001xZvdIAE"
+      ],
+      "evidence": {
+        "005Ws000001xZvdIAE": [
+          "500Ws000007qncXIAQ",
+          "500Ws000007rBxWIAU",
+          "500Ws000007rCjqIAE",
+          "500Ws000007rCyKIAU",
+          "500Ws000007rFBPIA2",
+          "500Ws000007rFRdIAM",
+          "500Ws000007rRR7IAM",
+          "500Ws000007rRu6IAE"
+        ]
+      }
+    },
+    "product_stage": null,
+    "workload_stage": null
+  },
+  "crmarena_0393": {
+    "benchmark_idx": 393,
+    "gold": "005Ws000001xZvdIAE",
+    "target_issue_id": "a1MWs0000012u7BMAQ",
+    "target_issue_name": "Incorrect Item Received",
+    "target_product_id": "01tWs000002wR9zIAE",
+    "target_product_name": "AeroFlex Cycling Jacket",
+    "route_depth": 1,
+    "issue_stage": {
+      "top_count": 8,
+      "finalists": [
+        "005Ws000001xZvdIAE"
+      ],
+      "evidence": {
+        "005Ws000001xZvdIAE": [
+          "500Ws000007qncXIAQ",
+          "500Ws000007rBxWIAU",
+          "500Ws000007rCjqIAE",
+          "500Ws000007rCyKIAU",
+          "500Ws000007rFBPIA2",
+          "500Ws000007rFRdIAM",
+          "500Ws000007rRR7IAM",
+          "500Ws000007rRu6IAE"
+        ]
+      }
+    },
+    "product_stage": null,
+    "workload_stage": null
+  },
+  "crmarena_0394": {
+    "benchmark_idx": 394,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012u0jMAA",
+    "target_issue_name": "Size Mismatch",
+    "target_product_id": "01tWs000002wVNFIA2",
+    "target_product_name": "Velocity Soccer Ball",
+    "route_depth": 1,
+    "issue_stage": {
+      "top_count": 6,
+      "finalists": [
+        "005Ws000001xYl3IAE"
+      ],
+      "evidence": {
+        "005Ws000001xYl3IAE": [
+          "500Ws000007r4BxIAI",
+          "500Ws000007rJeqIAE",
+          "500Ws000007rK1SIAU",
+          "500Ws000007rQ3aIAE",
+          "500Ws000007rQunIAE",
+          "500Ws000007rSJvIAM"
+        ]
+      }
+    },
+    "product_stage": null,
+    "workload_stage": null
+  },
+  "crmarena_0395": {
+    "benchmark_idx": 395,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012u0jMAA",
+    "target_issue_name": "Size Mismatch",
+    "target_product_id": "01tWs000002wXQfIAM",
+    "target_product_name": "HydroFlex Swim Belt",
+    "route_depth": 1,
+    "issue_stage": {
+      "top_count": 6,
+      "finalists": [
+        "005Ws000001xYl3IAE"
+      ],
+      "evidence": {
+        "005Ws000001xYl3IAE": [
+          "500Ws000007r4BxIAI",
+          "500Ws000007rJeqIAE",
+          "500Ws000007rK1SIAU",
+          "500Ws000007rQ3aIAE",
+          "500Ws000007rQunIAE",
+          "500Ws000007rSJvIAM"
+        ]
+      }
+    },
+    "product_stage": null,
+    "workload_stage": null
+  },
+  "crmarena_0399": {
+    "benchmark_idx": 399,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012u0jMAA",
+    "target_issue_name": "Size Mismatch",
+    "target_product_id": "01tWs000002wWPlIAM",
+    "target_product_name": "ProGym Dumbbell Set",
+    "route_depth": 1,
+    "issue_stage": {
+      "top_count": 6,
+      "finalists": [
+        "005Ws000001xYl3IAE"
+      ],
+      "evidence": {
+        "005Ws000001xYl3IAE": [
+          "500Ws000007r4BxIAI",
+          "500Ws000007rJeqIAE",
+          "500Ws000007rK1SIAU",
+          "500Ws000007rQ3aIAE",
+          "500Ws000007rQunIAE",
+          "500Ws000007rSJvIAM"
+        ]
+      }
+    },
+    "product_stage": null,
+    "workload_stage": null
+  },
+  "crmarena_0459": {
+    "benchmark_idx": 459,
+    "gold": "005Ws000001xaoTIAQ",
+    "target_issue_id": "a1MWs0000012u2LMAQ",
+    "target_issue_name": "Shipping Delay",
+    "target_product_id": "01tWs000002wRwLIAU",
+    "target_product_name": "Swim Training Fins",
+    "route_depth": 2,
+    "issue_stage": {
+      "top_count": 4,
+      "finalists": [
+        "005Ws000001xTrqIAE",
+        "005Ws000001xYmfIAE",
+        "005Ws000001xZSbIAM",
+        "005Ws000001xaoTIAQ"
+      ],
+      "evidence": {
+        "005Ws000001xTrqIAE": [
+          "500Ws000007quJsIAI",
+          "500Ws000007rFWUIA2",
+          "500Ws000007rFXzIAM",
+          "500Ws000007rS8bIAE"
+        ],
+        "005Ws000001xYmfIAE": [
+          "500Ws000007qnLfIAI",
+          "500Ws000007qqnRIAQ",
+          "500Ws000007rCVJIA2",
+          "500Ws000007rFPxIAM"
+        ],
+        "005Ws000001xZSbIAM": [
+          "500Ws000007rCyJIAU",
+          "500Ws000007rELoIAM",
+          "500Ws000007rGQrIAM",
+          "500Ws000007rHmkIAE"
+        ],
+        "005Ws000001xaoTIAQ": [
+          "500Ws000007ql6yIAA",
+          "500Ws000007ql8YIAQ",
+          "500Ws000007rHrbIAE",
+          "500Ws000007rRVtIAM"
+        ]
+      }
+    },
+    "product_stage": {
+      "top_count": 1,
+      "finalists": [
+        "005Ws000001xaoTIAQ"
+      ],
+      "evidence": {
+        "005Ws000001xaoTIAQ": [
+          "500Ws000007rABjIAM"
+        ]
+      }
+    },
+    "workload_stage": null
+  },
+  "crmarena_0462": {
+    "benchmark_idx": 462,
+    "gold": "005Ws000001xZ2oIAE",
+    "target_issue_id": "a1MWs0000012u3xMAA",
+    "target_issue_name": "Order Cancellation",
+    "target_product_id": "01tWs000002wRTJIA2",
+    "target_product_name": "Active Fitness Tracker",
+    "route_depth": 2,
+    "issue_stage": {
+      "top_count": 4,
+      "finalists": [
+        "005Ws000001xZ2oIAE",
+        "005Ws000001xZ9FIAU",
+        "005Ws000001xZnZIAU",
+        "005Ws000001xadBIAQ"
+      ],
+      "evidence": {
+        "005Ws000001xZ2oIAE": [
+          "500Ws000007qSm1IAE",
+          "500Ws000007qt5PIAQ",
+          "500Ws000007rEaJIAU",
+          "500Ws000007rJgRIAU"
+        ],
+        "005Ws000001xZ9FIAU": [
+          "500Ws000007qdvkIAA",
+          "500Ws000007quBnIAI",
+          "500Ws000007r7iUIAQ",
+          "500Ws000007rGNgIAM"
+        ],
+        "005Ws000001xZnZIAU": [
+          "500Ws000007rIvjIAE",
+          "500Ws000007rJ71IAE",
+          "500Ws000007rK4cIAE",
+          "500Ws000007rQy1IAE"
+        ],
+        "005Ws000001xadBIAQ": [
+          "500Ws000007rEH3IAM",
+          "500Ws000007rHBhIAM",
+          "500Ws000007rIE9IAM",
+          "500Ws000007rRR3IAM"
+        ]
+      }
+    },
+    "product_stage": {
+      "top_count": 1,
+      "finalists": [
+        "005Ws000001xZ2oIAE"
+      ],
+      "evidence": {
+        "005Ws000001xZ2oIAE": [
+          "500Ws000007rECAIA2"
+        ]
+      }
+    },
+    "workload_stage": null
+  },
+  "crmarena_0497": {
+    "benchmark_idx": 497,
+    "gold": "005Ws000001xZXRIA2",
+    "target_issue_id": "a1MWs0000012tz7MAA",
+    "target_issue_name": "Product Defect",
+    "target_product_id": "01tWs000002wRrVIAU",
+    "target_product_name": "Pro Running Cap",
+    "route_depth": 2,
+    "issue_stage": {
+      "top_count": 4,
+      "finalists": [
+        "005Ws000001xZArIAM",
+        "005Ws000001xZXRIA2"
+      ],
+      "evidence": {
+        "005Ws000001xZArIAM": [
+          "500Ws000007r8RfIAI",
+          "500Ws000007rBpLIAU",
+          "500Ws000007rEthIAE",
+          "500Ws000007rFRbIAM"
+        ],
+        "005Ws000001xZXRIA2": [
+          "500Ws000007ql8ZIAQ",
+          "500Ws000007qtCbIAI",
+          "500Ws000007rJ5NIAU",
+          "500Ws000007rRxJIAU"
+        ]
+      }
+    },
+    "product_stage": {
+      "top_count": 1,
+      "finalists": [
+        "005Ws000001xZXRIA2"
+      ],
+      "evidence": {
+        "005Ws000001xZXRIA2": [
+          "500Ws000007rJ5NIAU"
+        ]
+      }
+    },
+    "workload_stage": null
+  },
+  "crmarena_0505": {
+    "benchmark_idx": 505,
+    "gold": "005Ws000001xaBlIAI",
+    "target_issue_id": "a1MWs0000012u5ZMAQ",
+    "target_issue_name": "Warranty Issue",
+    "target_product_id": "01tWs000002wQp0IAE",
+    "target_product_name": "Trailblazer Jacket",
+    "route_depth": 2,
+    "issue_stage": {
+      "top_count": 3,
+      "finalists": [
+        "005Ws000001xYl3IAE",
+        "005Ws000001xYzZIAU",
+        "005Ws000001xZIvIAM",
+        "005Ws000001xZcHIAU",
+        "005Ws000001xaBlIAI",
+        "005Ws000001xaLRIAY",
+        "005Ws000001xaTVIAY"
+      ],
+      "evidence": {
+        "005Ws000001xYl3IAE": [
+          "500Ws000007rGfKIAU",
+          "500Ws000007rHA0IAM",
+          "500Ws000007rJi3IAE"
+        ],
+        "005Ws000001xYzZIAU": [
+          "500Ws000007qk1EIAQ",
+          "500Ws000007rFeSIAU",
+          "500Ws000007rJtPIAU"
+        ],
+        "005Ws000001xZIvIAM": [
+          "500Ws000007rEH1IAM",
+          "500Ws000007rHrcIAE",
+          "500Ws000007rS0XIAU"
+        ],
+        "005Ws000001xZcHIAU": [
+          "500Ws000007rGyiIAE",
+          "500Ws000007rIKZIA2",
+          "500Ws000007rRJ3IAM"
+        ],
+        "005Ws000001xaBlIAI": [
+          "500Ws000007r9ysIAA",
+          "500Ws000007rCiEIAU",
+          "500Ws000007rG9CIAU"
+        ],
+        "005Ws000001xaLRIAY": [
+          "500Ws000007r8JjIAI",
+          "500Ws000007rHrYIAU",
+          "500Ws000007rK7vIAE"
+        ],
+        "005Ws000001xaTVIAY": [
+          "500Ws000007qWseIAE",
+          "500Ws000007qncTIAQ",
+          "500Ws000007rIsRIAU"
+        ]
+      }
+    },
+    "product_stage": {
+      "top_count": 2,
+      "finalists": [
+        "005Ws000001xaBlIAI"
+      ],
+      "evidence": {
+        "005Ws000001xaBlIAI": [
+          "500Ws000007rFTAIA2",
+          "500Ws000007rGyhIAE"
+        ]
+      }
+    },
+    "workload_stage": null
+  },
+  "crmarena_0509": {
+    "benchmark_idx": 509,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012txVMAQ",
+    "target_issue_name": "Return Policy Issue",
+    "target_product_id": "01tWs000002wROTIA2",
+    "target_product_name": "Pro Speed Rope",
+    "route_depth": 2,
+    "issue_stage": {
+      "top_count": 3,
+      "finalists": [
+        "005Ws000001xYl3IAE",
+        "005Ws000001xZZ3IAM"
+      ],
+      "evidence": {
+        "005Ws000001xYl3IAE": [
+          "500Ws000007rFRcIAM",
+          "500Ws000007rHoJIAU",
+          "500Ws000007rIR3IAM"
+        ],
+        "005Ws000001xZZ3IAM": [
+          "500Ws000007rCyLIAU",
+          "500Ws000007rD9cIAE",
+          "500Ws000007rFufIAE"
+        ]
+      }
+    },
+    "product_stage": {
+      "top_count": 2,
+      "finalists": [
+        "005Ws000001xYl3IAE"
+      ],
+      "evidence": {
+        "005Ws000001xYl3IAE": [
+          "500Ws000007rHA0IAM",
+          "500Ws000007rJi3IAE"
+        ]
+      }
+    },
+    "workload_stage": null
+  }
+}

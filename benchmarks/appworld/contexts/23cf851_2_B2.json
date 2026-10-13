@@ -1,0 +1,196 @@
+{
+  "evidence_items": [
+    {
+      "like_count": 2,
+      "transaction_id": 1023
+    },
+    {
+      "like_count": 4,
+      "transaction_id": 1024
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1025
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1026
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1028
+    },
+    {
+      "like_count": 3,
+      "transaction_id": 1029
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1030
+    },
+    {
+      "like_count": 4,
+      "transaction_id": 1533
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1534
+    },
+    {
+      "like_count": 4,
+      "transaction_id": 1538
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 1539
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1540
+    },
+    {
+      "like_count": 4,
+      "transaction_id": 1541
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1981
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1985
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1986
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1987
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1988
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1989
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1990
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1991
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1992
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1993
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1994
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 1995
+    },
+    {
+      "like_count": 4,
+      "transaction_id": 3998
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 3999
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 4000
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 4001
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 4002
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 4524
+    },
+    {
+      "like_count": 6,
+      "transaction_id": 4525
+    },
+    {
+      "like_count": 6,
+      "transaction_id": 4526
+    },
+    {
+      "like_count": 6,
+      "transaction_id": 4527
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 4528
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 4529
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 4530
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5681
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 5682
+    },
+    {
+      "like_count": 2,
+      "transaction_id": 5683
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5684
+    },
+    {
+      "like_count": 2,
+      "transaction_id": 5685
+    },
+    {
+      "like_count": 1,
+      "transaction_id": 5686
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5687
+    },
+    {
+      "like_count": 6,
+      "transaction_id": 5688
+    },
+    {
+      "like_count": 0,
+      "transaction_id": 5689
+    },
+    {
+      "like_count": 5,
+      "transaction_id": 5690
+    }
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "paul_mill@gmail.com"
+  }
+}

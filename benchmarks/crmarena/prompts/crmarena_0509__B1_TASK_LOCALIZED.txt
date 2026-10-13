@@ -1,0 +1,172 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Confusion Regarding Return Policy of Pro Speed Rope
+- Case Description: I'm having some trouble understanding the return policy for the Pro Speed Rope that I purchased online. Can you please provide details on the conditions under which I can return this item?
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Return Policy Issue
+TARGET_PRODUCT=Pro Speed Rope
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007qWseIAE|005Ws000001xaTVIAY|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007qdvlIAA|005Ws000001xYgDIAU|Return Policy Issue|Eco Trail Hiking Pants|Closed
+500Ws000007qe2AIAQ|005Ws000001xYhpIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007ql5JIAQ|005Ws000001xUwrIAE|Return Policy Issue|Women's Yoga Shorts|Closed
+500Ws000007qlOjIAI|005Ws000001xZu1IAE|Return Policy Issue|Comfort Yoga Hoodie|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qnWtIAI|005Ws000001xZ61IAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007qnYdIAI|005Ws000001xYptIAE|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qpSIIAY|005Ws000001xZCTIA2|Return Policy Issue|Women's Performance Hoodie|Closed
+500Ws000007qq3OIAQ|005Ws000001xVNQIA2|Return Policy Issue|Women's Performance Hoodie|Closed
+500Ws000007qqKpIAI|005Ws000001xZ61IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007qqjOIAQ|005Ws000001xYrVIAU|Return Policy Issue|Women's Trail Running Shorts|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qsTOIAY|005Ws000001xZvdIAE|Return Policy Issue|Tracker Smartwatch|Closed
+500Ws000007qsTPIAY|005Ws000001xaZxIAI|Return Policy Issue|Functional Training Kettlebell|Closed
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007qtVrIAI|005Ws000001xSR9IAM|Return Policy Issue|Tracker Smartwatch|Closed
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quOgIAI|005Ws000001xamrIAA|Return Policy Issue|All-Around Yoga Tank|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007r6kqIAA|005Ws000001xYt8IAE|Return Policy Issue|Cycling Thermal Jacket|Closed
+500Ws000007r8BXIAY|005Ws000001xXQpIAM|Return Policy Issue|Home Gym Dumbbell Set|Closed
+500Ws000007r8JkIAI|005Ws000001xaDNIAY|Return Policy Issue|Women's Performance Hoodie|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r9VvIAI|005Ws000001xZQzIAM|Return Policy Issue|Ultimate Basketball Tank|Closed
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007r9qmIAA|005Ws000001xW8AIAU|Return Policy Issue|Comfort Yoga Hoodie|Closed
+500Ws000007r9yrIAA|005Ws000001xZPNIA2|Return Policy Issue|Women's Trail Running Shorts|Closed
+500Ws000007rA3iIAE|005Ws000001xZijIAE|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rBpPIAU|005Ws000001xTrqIAE|Return Policy Issue|Hydro Racer Swim Fins|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCiBIAU|005Ws000001xalFIAQ|Return Policy Issue|Women's Running Tank Top|Closed
+500Ws000007rCyLIAU|005Ws000001xZZ3IAM|Return Policy Issue|All-Around Yoga Tank|Closed
+500Ws000007rD9cIAE|005Ws000001xZZ3IAM|Return Policy Issue|Striker Soccer Jersey|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDHeIAM|005Ws000001xYt7IAE|Return Policy Issue|Women's Performance Hoodie|Closed
+500Ws000007rDrAIAU|005Ws000001xZh7IAE|Return Policy Issue|Women's Fitness Leggings|Closed
+500Ws000007rDzFIAU|005Ws000001xaWjIAI|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rE8vIAE|005Ws000001xZ1BIAU|Return Policy Issue|Women's Quick-Dry Sports Top|Closed
+500Ws000007rEAXIA2|005Ws000001xYxxIAE|Return Policy Issue|Hydro Racer Swim Fins|Closed
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rEH4IAM|005Ws000001xZkLIAU|Return Policy Issue|Urban Flux Sneakers|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEdZIAU|005Ws000001xarhIAA|Return Policy Issue|Elite Basketball Shorts|Closed
+500Ws000007rEnEIAU|005Ws000001xamrIAA|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rEqUIAU|005Ws000001xYrVIAU|Return Policy Issue|Women's Trail Running Shorts|Closed
+500Ws000007rEtiIAE|005Ws000001xZVpIAM|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rEtjIAE|005Ws000001xaA9IAI|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rEycIAE|005Ws000001xZyrIAE|Return Policy Issue|Aero Golf Driver|Closed
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rF9oIAE|005Ws000001xYxxIAE|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rFGKIA2|005Ws000001xZu1IAE|Return Policy Issue|Cycling Thermal Jacket|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFLCIA2|005Ws000001xaBlIAI|Return Policy Issue|Women's Performance Hoodie|Closed
+500Ws000007rFMkIAM|005Ws000001xabZIAQ|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rFRcIAM|005Ws000001xYl3IAE|Return Policy Issue|Peak Performance Hoodie|Closed
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFT9IAM|005Ws000001xZnaIAE|Return Policy Issue|Ultimate Basketball Tank|Closed
+500Ws000007rFY2IAM|005Ws000001xaoTIAQ|Return Policy Issue|Women's Fitness Leggings|Closed
+500Ws000007rFcwIAE|005Ws000001xZ9FIAU|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFg6IAE|005Ws000001xZ2oIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rFhhIAE|005Ws000001xZ2oIAE|Return Policy Issue|Tracker Smartwatch|Closed
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rFufIAE|005Ws000001xZZ3IAM|Return Policy Issue|Peak Performance Hoodie|Closed
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rGHCIA2|005Ws000001xZh7IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rGKUIA2|005Ws000001xaq5IAA|Return Policy Issue|Elite Basketball Shorts|Closed
+500Ws000007rGKXIA2|005Ws000001xZ1BIAU|Return Policy Issue|Striker Soccer Jersey|Closed
+500Ws000007rGM1IAM|005Ws000001xZqnIAE|Return Policy Issue|Tracker Smartwatch|Closed
+500Ws000007rGQpIAM|005Ws000001xai1IAA|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGfLIAU|005Ws000001xajdIAA|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGnTIAU|005Ws000001xZVpIAM|Return Policy Issue|Hydro Racer Swim Fins|Closed
+500Ws000007rGnUIAU|005Ws000001xZqnIAE|Return Policy Issue|Home Gym Dumbbell Set|Closed
+500Ws000007rGykIAE|005Ws000001xZUDIA2|Return Policy Issue|Studio Yoga Block|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rHA0IAM|005Ws000001xYl3IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHEpIAM|005Ws000001xaWjIAI|Return Policy Issue|Elite Basketball Shorts|Closed
+500Ws000007rHOWIA2|005Ws000001xZnZIAU|Return Policy Issue|Seamless Yoga Comfort Bra|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHoJIAU|005Ws000001xYl3IAE|Return Policy Issue|Elite Basketball Shorts|Closed
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rHraIAE|005Ws000001xa25IAA|Return Policy Issue|Seamless Yoga Comfort Bra|Closed
+500Ws000007rHxyIAE|005Ws000001xZ1BIAU|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rI9IIAU|005Ws000001xa8XIAQ|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rINpIAM|005Ws000001xZh7IAE|Return Policy Issue|Cycling Thermal Jacket|Closed
+500Ws000007rIR3IAM|005Ws000001xYl3IAE|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rJADIA2|005Ws000001xZ9FIAU|Return Policy Issue|Women's Flex Running Tights|Closed
+500Ws000007rJVAIA2|005Ws000001xZnaIAE|Return Policy Issue|Urban Flux Sneakers|Closed
+500Ws000007rJi3IAE|005Ws000001xYl3IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rJoXIAU|005Ws000001xYgDIAU|Return Policy Issue|Women's Fitness Leggings|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rL79IAE|005Ws000001xZ2nIAE|Return Policy Issue|All-Around Yoga Tank|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQd6IAE|005Ws000001xZIvIAM|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rQjVIAU|005Ws000001xYptIAE|Return Policy Issue|Home Gym Dumbbell Set|Closed
+500Ws000007rQl8IAE|005Ws000001xYujIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rQrZIAU|005Ws000001xaOfIAI|Return Policy Issue|Women's Trail Running Shorts|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rR1FIAU|005Ws000001xZArIAM|Return Policy Issue|Tracker Smartwatch|Closed
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRHNIA2|005Ws000001xYujIAE|Return Policy Issue|Dynamic Run Shorts|Closed
+500Ws000007rRKdIAM|005Ws000001xZpBIAU|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rRKjIAM|005Ws000001xaEzIAI|Return Policy Issue|All-Around Yoga Tank|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRXWIA2|005Ws000001xZnaIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rRZ7IAM|005Ws000001xVFKIA2|Return Policy Issue|Urban Flux Sneakers|Closed
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRkPIAU|005Ws000001xagPIAQ|Return Policy Issue|Flow Yoga Tee|Closed
+500Ws000007rRm1IAE|005Ws000001xZPNIA2|Return Policy Issue|Seamless Yoga Comfort Bra|Closed
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rRyvIAE|005Ws000001xYujIAE|Return Policy Issue|Studio Yoga Block|Closed
+500Ws000007rS3lIAE|005Ws000001xXQpIAM|Return Policy Issue|Women's Running Tank Top|Closed
+500Ws000007rS5OIAU|005Ws000001xZ1BIAU|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rSGfIAM|005Ws000001xaRtIAI|Return Policy Issue|Eco Trail Hiking Pants|Closed
+500Ws000007rSIHIA2|005Ws000001xZM9IAM|Return Policy Issue|Precision Golf Putter|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

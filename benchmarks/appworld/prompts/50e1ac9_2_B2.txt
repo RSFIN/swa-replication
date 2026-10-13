@@ -1,0 +1,98 @@
+TASK_ID: 50e1ac9_2
+SCB_CONDITION: B2
+
+TASK INSTRUCTION:
+Give me a comma-separated list of top 6 most played edm song titles from across my Spotify song, album and playlist libraries.
+
+FROZEN CONTEXT:
+{
+  "target_genre": "edm",
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "erikabail@gmail.com"
+  },
+  "top_n_requested": 6,
+  "unique_song_evidence": [
+    {
+      "play_count": 638,
+      "song_id": 1,
+      "title": "Painting Shadows on the Wall"
+    },
+    {
+      "play_count": 845,
+      "song_id": 54,
+      "title": "Heartstrings Symphony"
+    },
+    {
+      "play_count": 437,
+      "song_id": 55,
+      "title": "Tangled Lies"
+    },
+    {
+      "play_count": 334,
+      "song_id": 56,
+      "title": "Distant Love"
+    },
+    {
+      "play_count": 421,
+      "song_id": 57,
+      "title": "Silver Lining"
+    },
+    {
+      "play_count": 468,
+      "song_id": 64,
+      "title": "Caught in a Web of Lies"
+    },
+    {
+      "play_count": 382,
+      "song_id": 96,
+      "title": "In the Chambers of My Mind"
+    },
+    {
+      "play_count": 549,
+      "song_id": 100,
+      "title": "Fragile Bonds"
+    },
+    {
+      "play_count": 466,
+      "song_id": 107,
+      "title": "Quiet Despair"
+    },
+    {
+      "play_count": 658,
+      "song_id": 111,
+      "title": "Lonesome Road"
+    },
+    {
+      "play_count": 356,
+      "song_id": 112,
+      "title": "Silent Tears"
+    },
+    {
+      "play_count": 565,
+      "song_id": 116,
+      "title": "Paper Planes"
+    },
+    {
+      "play_count": 548,
+      "song_id": 253,
+      "title": "In the Wake of Unspoken Promises"
+    },
+    {
+      "play_count": 786,
+      "song_id": 293,
+      "title": "Dancing in a Field of Thorns"
+    },
+    {
+      "play_count": 910,
+      "song_id": 294,
+      "title": "Eternal Reverie"
+    }
+  ]
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

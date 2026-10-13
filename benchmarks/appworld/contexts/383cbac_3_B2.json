@@ -1,0 +1,44 @@
+{
+  "manager_email": "spencer.powell@gmail.com",
+  "payment_evidence_items": [
+    {
+      "amount": 39.0,
+      "coworker_email": "ad.blackburn@gmail.com",
+      "evidence_id": "venmo:transaction:8217"
+    },
+    {
+      "amount": 26.0,
+      "coworker_email": "angriddle@gmail.com",
+      "evidence_id": "venmo:transaction:8216"
+    },
+    {
+      "amount": 40.0,
+      "coworker_email": "ashlee_martinez@gmail.com",
+      "evidence_id": "venmo:transaction:8219"
+    },
+    {
+      "amount": 40.0,
+      "coworker_email": "connorbrow@gmail.com",
+      "evidence_id": "venmo:transaction:8220"
+    },
+    {
+      "amount": 49.0,
+      "coworker_email": "glenn.burton@gmail.com",
+      "evidence_id": "venmo:transaction:8221"
+    },
+    {
+      "amount": 47.0,
+      "coworker_email": "jefsmith@gmail.com",
+      "evidence_id": "venmo:transaction:8218"
+    },
+    {
+      "amount": 34.0,
+      "evidence_id": "task:user_share",
+      "role": "user_share"
+    }
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "jo-harr@gmail.com"
+  }
+}

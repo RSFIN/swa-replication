@@ -1,0 +1,224 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Issue with Size Chart for ProGym Dumbbell Set
+- Case Description: I recently purchased the ProGym Dumbbell Set, but I noticed that the size chart on your website does not match the actual product size. The adjustable range is not as specified, and I am unable to use them effectively for my home workouts. Can you please assist?
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Size Mismatch
+TARGET_PRODUCT=ProGym Dumbbell Set
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007qQ4FIAU|005Ws000001xaJpIAI|Size Mismatch|Glide Surf Swim Shorts|Closed
+500Ws000007qcgNIAQ|005Ws000001xZKXIA2|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007qcgOIAQ|005Ws000001xVFKIA2|Size Mismatch|Dynamic Run Shorts|Closed
+500Ws000007qcgSIAQ|005Ws000001xZafIAE|Size Mismatch|Elite Basketball Shorts|Closed
+500Ws000007qkfUIAQ|005Ws000001xZ1BIAU|Size Mismatch|Elite Basketball Socks|Closed
+500Ws000007qkfXIAQ|005Ws000001xaWjIAI|Size Mismatch|Mercurial Superfly|Closed
+500Ws000007ql8bIAA|005Ws000001xatJIAQ|Size Mismatch|All-Around Yoga Tank|Closed
+500Ws000007qlGbIAI|005Ws000001xZXRIA2|Size Mismatch|Women's Running Tank Top|Closed
+500Ws000007qlOiIAI|005Ws000001xYoHIAU|Size Mismatch|Vaporfly Elite|Closed
+500Ws000007qlrjIAA|005Ws000001xZ4PIAU|Size Mismatch|Women's Trail Running Shorts|Closed
+500Ws000007qlrlIAA|005Ws000001xZSbIAM|Size Mismatch|Elite Basketball Shorts|Closed
+500Ws000007qmEJIAY|005Ws000001xZ4PIAU|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007qmMLIAY|005Ws000001xa25IAA|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qnNJIAY|005Ws000001xSR9IAM|Size Mismatch|Glide Surf Swim Shorts|Closed
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qnYaIAI|005Ws000001xaWjIAI|Size Mismatch|Comfort Yoga Hoodie|Closed
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qncVIAQ|005Ws000001xZ2nIAE|Size Mismatch|Fusion Yoga Leggings|Closed
+500Ws000007qoJKIAY|005Ws000001xa25IAA|Size Mismatch|Performance Basketball Hoodie|Closed
+500Ws000007qoPtIAI|005Ws000001xZFhIAM|Size Mismatch|Performance Basketball Hoodie|Closed
+500Ws000007qoPvIAI|005Ws000001xZ1BIAU|Size Mismatch|Urban Lifestyle Sneakers|Closed
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoXtIAI|005Ws000001xXQpIAM|Size Mismatch|Cycling Thermal Jacket|Closed
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qprDIAQ|005Ws000001xZKXIA2|Size Mismatch|Impact Basketball Shoes|Closed
+500Ws000007qqKlIAI|005Ws000001xalFIAQ|Size Mismatch|Women's High-Impact Sports Bra|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qr2fIAA|005Ws000001xaJpIAI|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007qr2jIAA|005Ws000001xZvdIAE|Size Mismatch|All-Around Yoga Tank|Closed
+500Ws000007qsEpIAI|005Ws000001xZpBIAU|Size Mismatch|Women's Trail Running Shorts|Closed
+500Ws000007qsTQIAY|005Ws000001xZPNIA2|Size Mismatch|Women's Yoga Shorts|Closed
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007qtdvIAA|005Ws000001xZArIAM|Size Mismatch|Women's Performance Hoodie|Closed
+500Ws000007qtuwIAA|005Ws000001xZ7dIAE|Size Mismatch|Sport Luxe Sneakers|Closed
+500Ws000007qtvhIAA|005Ws000001xaQHIAY|Size Mismatch|All-Around Yoga Tank|Closed
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quLWIAY|005Ws000001xalFIAQ|Size Mismatch|Comfort Yoga Hoodie|Closed
+500Ws000007quN9IAI|005Ws000001xaTVIAY|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007quOhIAI|005Ws000001xTbjIAE|Size Mismatch|HydroFlow Swim Shorts|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007r4BxIAI|005Ws000001xYl3IAE|Size Mismatch|Peak Performance Hoodie|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r8RhIAI|005Ws000001xYgDIAU|Size Mismatch|Women's Quick-Dry Sports Top|Closed
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007r9Z1IAI|005Ws000001xYt8IAE|Size Mismatch|Impact Basketball Shoes|Closed
+500Ws000007r9dyIAA|005Ws000001xYwLIAU|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rAA7IAM|005Ws000001xZIvIAM|Size Mismatch|Women's Performance Hoodie|Closed
+500Ws000007rBpNIAU|005Ws000001xatJIAQ|Size Mismatch|Women's Performance Hoodie|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCgbIAE|005Ws000001xUwrIAE|Size Mismatch|Women's High-Impact Sports Bra|Closed
+500Ws000007rCgcIAE|005Ws000001xZnZIAU|Size Mismatch|Women's High-Impact Sports Bra|Closed
+500Ws000007rD5dIAE|005Ws000001xYwLIAU|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rD9dIAE|005Ws000001xZCTIA2|Size Mismatch|Alpine Trek Jacket|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDCuIAM|005Ws000001xYt7IAE|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007rDuNIAU|005Ws000001xZcHIAU|Size Mismatch|Women's Swim Racerback|Closed
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rE4yIAE|005Ws000001xajdIAA|Size Mismatch|Cyclone Bike Jersey|Closed
+500Ws000007rEAVIA2|005Ws000001xVFKIA2|Size Mismatch|Air Zoom Pegasus|Closed
+500Ws000007rEAWIA2|005Ws000001xai1IAA|Size Mismatch|Women's Performance Hoodie|Closed
+500Ws000007rEAYIA2|005Ws000001xYrVIAU|Size Mismatch|Hiking Waterproof Boots|Closed
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rEH5IAM|005Ws000001xamrIAA|Size Mismatch|Women's Trail Running Shorts|Closed
+500Ws000007rENQIA2|005Ws000001xZvdIAE|Size Mismatch|Sport Luxe Sneakers|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rENTIA2|005Ws000001xYgDIAU|Size Mismatch|Pro Slam Dunk Shorts|Closed
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rEyfIAE|005Ws000001xXIkIAM|Size Mismatch|Women's Quick-Dry Sports Top|Closed
+500Ws000007rFEfIAM|005Ws000001xZM9IAM|Size Mismatch|Fusion Yoga Leggings|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFOKIA2|005Ws000001xatJIAQ|Size Mismatch|Peak Performance Hoodie|Closed
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFY0IAM|005Ws000001xW8AIAU|Size Mismatch|Pro Slam Dunk Shorts|Closed
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFhgIAE|005Ws000001xabZIAQ|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007rFmVIAU|005Ws000001xYujIAE|Size Mismatch|Elite Basketball Socks|Closed
+500Ws000007rFoFIAU|005Ws000001xaYLIAY|Size Mismatch|RapidGo Running Shoes|Closed
+500Ws000007rFrMIAU|005Ws000001xZafIAE|Size Mismatch|Performance Basketball Hoodie|Closed
+500Ws000007rFrOIAU|005Ws000001xVFKIA2|Size Mismatch|Mercurial Superfly|Closed
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rG5tIAE|005Ws000001xZZ3IAM|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rGAgIAM|005Ws000001xaenIAA|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rGCSIA2|005Ws000001xaLRIAY|Size Mismatch|Adventure Parka|Closed
+500Ws000007rGNfIAM|005Ws000001xabZIAQ|Size Mismatch|Cycling Thermal Jacket|Closed
+500Ws000007rGPFIA2|005Ws000001xZ1BIAU|Size Mismatch|Women's Quick-Dry Sports Top|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGQsIAM|005Ws000001xTbkIAE|Size Mismatch|Women's Trail Running Shorts|Closed
+500Ws000007rGU8IAM|005Ws000001xYptIAE|Size Mismatch|Ultimate Basketball Tank|Closed
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGloIAE|005Ws000001xZnaIAE|Size Mismatch|Air Zoom Pegasus|Closed
+500Ws000007rH1yIAE|005Ws000001xZZ3IAM|Size Mismatch|Velocity Basketball Shoes|Closed
+500Ws000007rH3XIAU|005Ws000001xZUDIA2|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007rH3YIAU|005Ws000001xaA9IAI|Size Mismatch|Elite Basketball Socks|Closed
+500Ws000007rH8NIAU|005Ws000001xaRtIAI|Size Mismatch|Cyclone Bike Jersey|Closed
+500Ws000007rH8OIAU|005Ws000001xXIkIAM|Size Mismatch|Aquatic Training Shorts|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHBfIAM|005Ws000001xY6lIAE|Size Mismatch|Performance Basketball Hoodie|Closed
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHBjIAM|005Ws000001xaRuIAI|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007rHDEIA2|005Ws000001xZxFIAU|Size Mismatch|Mercurial Superfly|Closed
+500Ws000007rHMsIAM|005Ws000001xa25IAA|Size Mismatch|Women's Yoga Shorts|Closed
+500Ws000007rHMuIAM|005Ws000001xZZ3IAM|Size Mismatch|Hiking Waterproof Boots|Closed
+500Ws000007rHMxIAM|005Ws000001xaDNIAY|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rI4TIAU|005Ws000001xYptIAE|Size Mismatch|Comfort Yoga Hoodie|Closed
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rI9JIAU|005Ws000001xYrVIAU|Size Mismatch|Sport Luxe Sneakers|Closed
+500Ws000007rIFoIAM|005Ws000001xZvdIAE|Size Mismatch|Women's Yoga Shorts|Closed
+500Ws000007rIHNIA2|005Ws000001xai1IAA|Size Mismatch|Performance Basketball Hoodie|Closed
+500Ws000007rINoIAM|005Ws000001xZQzIAM|Size Mismatch|Pro Slam Dunk Shorts|Closed
+500Ws000007rIR2IAM|005Ws000001xZcHIAU|Size Mismatch|Dynamic Run Shorts|Closed
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIsTIAU|005Ws000001xa8XIAQ|Size Mismatch|Women's Performance Hoodie|Closed
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu4IAE|005Ws000001xa25IAA|Size Mismatch|Elite Basketball Shorts|Closed
+500Ws000007rIu5IAE|005Ws000001xarhIAA|Size Mismatch|Solstice Trail Shoes|Closed
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rIviIAE|005Ws000001xZ2nIAE|Size Mismatch|Glide Surf Swim Shorts|Closed
+500Ws000007rJOgIAM|005Ws000001xYptIAE|Size Mismatch|Trail Running Shoes|Closed
+500Ws000007rJYMIA2|005Ws000001xaJpIAI|Size Mismatch|Women's Yoga Shorts|Closed
+500Ws000007rJeqIAE|005Ws000001xYl3IAE|Size Mismatch|Eco Yoga Pants|Closed
+500Ws000007rJgSIAU|005Ws000001xZ9FIAU|Size Mismatch|Seamless Yoga Comfort Bra|Closed
+500Ws000007rJq8IAE|005Ws000001xaenIAA|Size Mismatch|Aero Zip Cycling Vest|Closed
+500Ws000007rJq9IAE|005Ws000001xai1IAA|Size Mismatch|Urban Lifestyle Sneakers|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rK1SIAU|005Ws000001xYl3IAE|Size Mismatch|Urban Lifestyle Sneakers|Closed
+500Ws000007rK4dIAE|005Ws000001xXQpIAM|Size Mismatch|Urban Lifestyle Sneakers|Closed
+500Ws000007rK6HIAU|005Ws000001xYjRIAU|Size Mismatch|Air Zoom Pegasus|Closed
+500Ws000007rK6JIAU|005Ws000001xaoTIAQ|Size Mismatch|Women's Quick-Dry Sports Top|Closed
+500Ws000007rK7uIAE|005Ws000001xZIvIAM|Size Mismatch|Elite Basketball Shorts|Closed
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rKt0IAE|005Ws000001xaOfIAI|Size Mismatch|Dynamic Yoga Pants|Closed
+500Ws000007rKt1IAE|005Ws000001xTbjIAE|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007rKvqIAE|005Ws000001xaYLIAY|Size Mismatch|Ultimate Basketball Tank|Closed
+500Ws000007rLDaIAM|005Ws000001xaYLIAY|Size Mismatch|Pro Slam Dunk Shorts|Closed
+500Ws000007rLdOIAU|005Ws000001xZArIAM|Size Mismatch|Rapid Soccer Cleats|Closed
+500Ws000007rLryIAE|005Ws000001xVNQIA2|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQ3aIAE|005Ws000001xYl3IAE|Size Mismatch|Women's Quick-Dry Sports Top|Closed
+500Ws000007rQAvIAM|005Ws000001xagPIAQ|Size Mismatch|Striker Soccer Jersey|Closed
+500Ws000007rQWdIAM|005Ws000001xaOfIAI|Size Mismatch|Women's Fitness Leggings|Closed
+500Ws000007rQd5IAE|005Ws000001xYxxIAE|Size Mismatch|Sport Luxe Sneakers|Closed
+500Ws000007rQd7IAE|005Ws000001xZM9IAM|Size Mismatch|Adventure Parka|Closed
+500Ws000007rQdAIAU|005Ws000001xZdtIAE|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rQjWIAU|005Ws000001xaA9IAI|Size Mismatch|Seamless Yoga Leggings|Closed
+500Ws000007rQjXIAU|005Ws000001xZ9FIAU|Size Mismatch|Elite Basketball Shorts|Closed
+500Ws000007rQoNIAU|005Ws000001xajdIAA|Size Mismatch|Urban Lifestyle Sneakers|Closed
+500Ws000007rQpyIAE|005Ws000001xaOfIAI|Size Mismatch|Trail Running Shoes|Closed
+500Ws000007rQunIAE|005Ws000001xYl3IAE|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rQuoIAE|005Ws000001xZxFIAU|Size Mismatch|Women's Running Tank Top|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rR7hIAE|005Ws000001xaq5IAA|Size Mismatch|Retro Style Sneakers|Closed
+500Ws000007rR9JIAU|005Ws000001xZh7IAE|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rRAwIAM|005Ws000001xaRuIAI|Size Mismatch|Women's High-Impact Sports Bra|Closed
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRKcIAM|005Ws000001xZVpIAM|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007rRKeIAM|005Ws000001xZh7IAE|Size Mismatch|Classic Court Sneakers|Closed
+500Ws000007rRKlIAM|005Ws000001xTbjIAE|Size Mismatch|Women's High-Impact Sports Bra|Closed
+500Ws000007rRKmIAM|005Ws000001xWT8IAM|Size Mismatch|All-Around Yoga Tank|Closed
+500Ws000007rRShIAM|005Ws000001xTrqIAE|Size Mismatch|Trail Running Shoes|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRUHIA2|005Ws000001xZQzIAM|Size Mismatch|Glide Surf Swim Shorts|Closed
+500Ws000007rRXVIA2|005Ws000001xYt7IAE|Size Mismatch|All-Around Yoga Tank|Closed
+500Ws000007rRXXIA2|005Ws000001xZXRIA2|Size Mismatch|Performance Basketball Hoodie|Closed
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRndIAE|005Ws000001xZlxIAE|Size Mismatch|Cycling Thermal Jacket|Closed
+500Ws000007rRpFIAU|005Ws000001xVNQIA2|Size Mismatch|Women's Trail Running Shorts|Closed
+500Ws000007rRqrIAE|005Ws000001xaEzIAI|Size Mismatch|Women's Running Tank Top|Closed
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rRvkIAE|005Ws000001xZVpIAM|Size Mismatch|Women's Fitness Leggings|Closed
+500Ws000007rS6zIAE|005Ws000001xZdtIAE|Size Mismatch|Women's Trail Running Shorts|Closed
+500Ws000007rSF4IAM|005Ws000001xW8AIAU|Size Mismatch|Cycling Thermal Jacket|Closed
+500Ws000007rSIIIA2|005Ws000001xaRtIAI|Size Mismatch|Women's High-Impact Sports Bra|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+500Ws000007rSJvIAM|005Ws000001xYl3IAE|Size Mismatch|Marathon Performance Shoes|Closed
+500Ws000007rSRxIAM|005Ws000001xW8AIAU|Size Mismatch|Women's Flex Running Tights|Closed
+500Ws000007rSTaIAM|005Ws000001xaYLIAY|Size Mismatch|Elite Basketball Shorts|Closed
+500Ws000007rSVBIA2|005Ws000001xYujIAE|Size Mismatch|Women's Yoga Shorts|Closed
+500Ws000007rSVCIA2|005Ws000001xa8XIAQ|Size Mismatch|Seamless Yoga Leggings|Closed
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

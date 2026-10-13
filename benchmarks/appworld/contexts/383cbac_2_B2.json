@@ -1,0 +1,64 @@
+{
+  "manager_email": "jamie-solomon@gmail.com",
+  "payment_evidence_items": [
+    {
+      "amount": 47.0,
+      "coworker_email": "allison-calhoun@gmail.com",
+      "evidence_id": "venmo:transaction:8218"
+    },
+    {
+      "amount": 42.0,
+      "coworker_email": "cod.smith@gmail.com",
+      "evidence_id": "venmo:transaction:8219"
+    },
+    {
+      "amount": 49.0,
+      "coworker_email": "gra-martinez@gmail.com",
+      "evidence_id": "venmo:transaction:8221"
+    },
+    {
+      "amount": 31.0,
+      "coworker_email": "ka_burt@gmail.com",
+      "evidence_id": "venmo:transaction:8225"
+    },
+    {
+      "amount": 40.0,
+      "coworker_email": "kri-powe@gmail.com",
+      "evidence_id": "venmo:transaction:8217"
+    },
+    {
+      "amount": 38.0,
+      "coworker_email": "sab-brown@gmail.com",
+      "evidence_id": "venmo:transaction:8223"
+    },
+    {
+      "amount": 31.0,
+      "coworker_email": "saritt@gmail.com",
+      "evidence_id": "venmo:transaction:8224"
+    },
+    {
+      "amount": 43.0,
+      "coworker_email": "st-maldonado@gmail.com",
+      "evidence_id": "venmo:transaction:8222"
+    },
+    {
+      "amount": 25.0,
+      "coworker_email": "stmcco@gmail.com",
+      "evidence_id": "venmo:transaction:8216"
+    },
+    {
+      "amount": 30.0,
+      "coworker_email": "tra_wils@gmail.com",
+      "evidence_id": "venmo:transaction:8220"
+    },
+    {
+      "amount": 20.0,
+      "evidence_id": "task:user_share",
+      "role": "user_share"
+    }
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "anita.burch@gmail.com"
+  }
+}

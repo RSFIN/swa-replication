@@ -1,0 +1,727 @@
+TASK_ID: 23cf851_2
+SCB_CONDITION: B1
+
+TASK INSTRUCTION:
+How many likes did all Venmo transactions, I received this year, have in total?
+
+FROZEN CONTEXT:
+{
+  "resolved_user_email": "paul_mill@gmail.com",
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "paul_mill@gmail.com"
+  },
+  "task_relevant_primitive_transactions": [
+    {
+      "amount": 54.0,
+      "created_at": "2023-01-08T01:20:17",
+      "description": "Mixology Class",
+      "like_count": 2,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1023
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-01-15T23:31:04",
+      "description": "📚 Study Group Snack Fund 📖",
+      "like_count": 4,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1024
+    },
+    {
+      "amount": 31.0,
+      "created_at": "2023-04-03T02:27:38",
+      "description": "Guitar Strings",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1025
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-04-17T00:41:15",
+      "description": "💐 Flower Shop 🌹🌷",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1026
+    },
+    {
+      "amount": 22.0,
+      "created_at": "2023-03-01T05:41:35",
+      "description": "Pizza Night 🍕",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1028
+    },
+    {
+      "amount": 29.0,
+      "created_at": "2023-04-13T19:20:01",
+      "description": "Game night",
+      "like_count": 3,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1029
+    },
+    {
+      "amount": 23.0,
+      "created_at": "2023-02-06T16:36:57",
+      "description": "Online courses",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseharr@gmail.com",
+        "name": "Jose Harrison"
+      },
+      "transaction_id": 1030
+    },
+    {
+      "amount": 295.0,
+      "created_at": "2023-01-22T07:29:07",
+      "description": "Photography",
+      "like_count": 4,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "transaction_id": 1533
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-03-25T08:54:09",
+      "description": "🍔 Gourmet Burger and Fries 🍟",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "transaction_id": 1534
+    },
+    {
+      "amount": 24.0,
+      "created_at": "2023-05-05T03:31:17",
+      "description": "Sushi night 🍣",
+      "like_count": 4,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "transaction_id": 1538
+    },
+    {
+      "amount": 7.0,
+      "created_at": "2023-01-22T22:52:16",
+      "description": "Quick coffee fix ☕",
+      "like_count": 5,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "transaction_id": 1539
+    },
+    {
+      "amount": 34.0,
+      "created_at": "2023-04-08T10:16:56",
+      "description": "🏊 Pool Party Supplies",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "transaction_id": 1540
+    },
+    {
+      "amount": 27.0,
+      "created_at": "2023-01-18T02:49:33",
+      "description": "🍔 Weekend BBQ Supplies",
+      "like_count": 4,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "transaction_id": 1541
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-02-24T04:17:59",
+      "description": "🎈Party Deco",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "aa_burt@gmail.com",
+        "name": "Aaron Burton"
+      },
+      "transaction_id": 1981
+    },
+    {
+      "amount": 77.0,
+      "created_at": "2023-02-19T14:04:59",
+      "description": "Skincare Products",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 1985
+    },
+    {
+      "amount": 21.0,
+      "created_at": "2023-01-06T14:58:00",
+      "description": "🎬Movie Snacks",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 1986
+    },
+    {
+      "amount": 25.0,
+      "created_at": "2023-03-19T13:35:11",
+      "description": "🍣Sushi Vibes",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 1987
+    },
+    {
+      "amount": 14.0,
+      "created_at": "2023-04-03T11:18:25",
+      "description": "🍿 Netflix Subscription 🎬🛋️",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 1988
+    },
+    {
+      "amount": 12.0,
+      "created_at": "2023-01-12T07:02:09",
+      "description": "🍿 Cinema Snacks 🍫",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "corwils@gmail.com",
+        "name": "Cory Wilson"
+      },
+      "transaction_id": 1989
+    },
+    {
+      "amount": 21.0,
+      "created_at": "2023-03-01T18:06:32",
+      "description": "Monthly comics 🦸",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "corwils@gmail.com",
+        "name": "Cory Wilson"
+      },
+      "transaction_id": 1990
+    },
+    {
+      "amount": 282.0,
+      "created_at": "2023-04-14T07:26:37",
+      "description": "Language Classes",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "corwils@gmail.com",
+        "name": "Cory Wilson"
+      },
+      "transaction_id": 1991
+    },
+    {
+      "amount": 27.0,
+      "created_at": "2023-05-18T11:52:19",
+      "description": "🎳Bowling Squad",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "siwhit@gmail.com",
+        "name": "Sierra White"
+      },
+      "transaction_id": 1992
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-03-29T02:43:25",
+      "description": "Skate park fees",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "siwhit@gmail.com",
+        "name": "Sierra White"
+      },
+      "transaction_id": 1993
+    },
+    {
+      "amount": 41.0,
+      "created_at": "2023-02-06T12:10:16",
+      "description": "🎶 Live Concert Experience 🎤",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "gina-ritter@gmail.com",
+        "name": "Gina Burch"
+      },
+      "transaction_id": 1994
+    },
+    {
+      "amount": 164.0,
+      "created_at": "2023-04-13T06:55:52",
+      "description": "Photography Gear",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "gina-ritter@gmail.com",
+        "name": "Gina Burch"
+      },
+      "transaction_id": 1995
+    },
+    {
+      "amount": 31.0,
+      "created_at": "2023-02-20T23:34:26",
+      "description": "Craft beers 🍺",
+      "like_count": 4,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "transaction_id": 3998
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-03-06T01:29:06",
+      "description": "Pizza & 🎥 Netflix",
+      "like_count": 5,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "transaction_id": 3999
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2023-02-28T04:52:41",
+      "description": "Netflix binge weekend",
+      "like_count": 1,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "transaction_id": 4000
+    },
+    {
+      "amount": 79.0,
+      "created_at": "2023-02-23T09:23:45",
+      "description": "Apartment cleaning",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "transaction_id": 4001
+    },
+    {
+      "amount": 33.0,
+      "created_at": "2023-03-19T10:46:38",
+      "description": "Golf 🏌️ Day",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "transaction_id": 4002
+    },
+    {
+      "amount": 8.0,
+      "created_at": "2023-04-14T14:35:20",
+      "description": "🎈 Birthday Balloons 🎈🎉",
+      "like_count": 5,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4524
+    },
+    {
+      "amount": 90.0,
+      "created_at": "2023-01-17T05:41:48",
+      "description": "Grocery haul",
+      "like_count": 6,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4525
+    },
+    {
+      "amount": 45.0,
+      "created_at": "2023-01-11T01:27:54",
+      "description": "Pet Food",
+      "like_count": 6,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4526
+    },
+    {
+      "amount": 13.0,
+      "created_at": "2023-04-09T18:01:06",
+      "description": "Streaming sub share",
+      "like_count": 6,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4527
+    },
+    {
+      "amount": 37.0,
+      "created_at": "2023-04-20T17:22:25",
+      "description": "Football Game 🏈 Tickets",
+      "like_count": 1,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4528
+    },
+    {
+      "amount": 122.0,
+      "created_at": "2023-04-26T21:05:34",
+      "description": "Car Maintenance",
+      "like_count": 1,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4529
+    },
+    {
+      "amount": 9.0,
+      "created_at": "2023-01-27T09:22:05",
+      "description": "Skate park fees",
+      "like_count": 1,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "je.simpson@gmail.com",
+        "name": "Jeffery Simpson"
+      },
+      "transaction_id": 4530
+    },
+    {
+      "amount": 5.0,
+      "created_at": "2023-04-17T08:53:54",
+      "description": "Monthly 🎶 Music Subscription",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5681
+    },
+    {
+      "amount": 23.0,
+      "created_at": "2023-03-10T05:58:29",
+      "description": "🎤 Karaoke Night 🎶💃",
+      "like_count": 1,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5682
+    },
+    {
+      "amount": 33.0,
+      "created_at": "2023-03-02T06:34:34",
+      "description": "Fishing Gear",
+      "like_count": 2,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5683
+    },
+    {
+      "amount": 16.0,
+      "created_at": "2023-04-17T15:38:17",
+      "description": "Aquarium Tickets",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5684
+    },
+    {
+      "amount": 73.0,
+      "created_at": "2023-03-07T12:50:53",
+      "description": "Dinner",
+      "like_count": 2,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5685
+    },
+    {
+      "amount": 146.0,
+      "created_at": "2023-02-08T17:49:18",
+      "description": "Language Classes",
+      "like_count": 1,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5686
+    },
+    {
+      "amount": 756.0,
+      "created_at": "2023-01-22T15:15:08",
+      "description": "Bicycle",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5687
+    },
+    {
+      "amount": 92.0,
+      "created_at": "2023-02-03T17:45:36",
+      "description": "Snowboarding Gear",
+      "like_count": 6,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5688
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2023-02-11T18:40:41",
+      "description": "Game night",
+      "like_count": 0,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5689
+    },
+    {
+      "amount": 21.0,
+      "created_at": "2023-03-31T17:01:32",
+      "description": "Crafternoon 🧶",
+      "like_count": 5,
+      "receiver": {
+        "email": "paul_mill@gmail.com",
+        "name": "Paul Miller"
+      },
+      "sender": {
+        "email": "dav.mart@gmail.com",
+        "name": "David Martinez"
+      },
+      "transaction_id": 5690
+    }
+  ]
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

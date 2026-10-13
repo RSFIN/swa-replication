@@ -1,0 +1,127 @@
+{
+  "qualifying_album_records": [
+    {
+      "album_id": 3,
+      "release_date": "2023-01-23T00:00:00",
+      "song_ids": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "title": "Nocturnal Melodies"
+    },
+    {
+      "album_id": 5,
+      "release_date": "2023-09-09T00:00:00",
+      "song_ids": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "title": "Velvet Shadows"
+    },
+    {
+      "album_id": 6,
+      "release_date": "2023-07-12T00:00:00",
+      "song_ids": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "title": "Ethereal Rhapsody"
+    },
+    {
+      "album_id": 9,
+      "release_date": "2023-05-04T00:00:00",
+      "song_ids": [
+        44,
+        45,
+        46
+      ],
+      "title": "Mystical Crescendo"
+    },
+    {
+      "album_id": 13,
+      "release_date": "2023-03-10T00:00:00",
+      "song_ids": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "title": "Starlight Serenades"
+    },
+    {
+      "album_id": 17,
+      "release_date": "2023-01-05T00:00:00",
+      "song_ids": [
+        77,
+        78,
+        79
+      ],
+      "title": "Enchanted Melodies"
+    }
+  ],
+  "qualifying_direct_song_records": [
+    {
+      "release_date": "2023-01-23T00:00:00",
+      "song_id": 12,
+      "title": "Haunted Memories"
+    },
+    {
+      "release_date": "2023-09-09T00:00:00",
+      "song_id": 25,
+      "title": "A Symphony of Broken Hearts"
+    },
+    {
+      "release_date": "2023-09-09T00:00:00",
+      "song_id": 27,
+      "title": "When Angels Weep for Us"
+    },
+    {
+      "release_date": "2023-03-10T00:00:00",
+      "song_id": 66,
+      "title": "Phantom Pain"
+    },
+    {
+      "release_date": "2023-01-05T00:00:00",
+      "song_id": 78,
+      "title": "A Love That Never Was"
+    },
+    {
+      "release_date": "2023-01-12T06:12:23",
+      "song_id": 125,
+      "title": "Heart's Abyss"
+    },
+    {
+      "release_date": "2023-04-04T14:07:29",
+      "song_id": 184,
+      "title": "Enchanted Reverie"
+    },
+    {
+      "release_date": "2023-01-13T15:40:51",
+      "song_id": 273,
+      "title": "Endless Drift"
+    },
+    {
+      "release_date": "2023-01-01T22:40:16",
+      "song_id": 297,
+      "title": "Vivid Scars"
+    },
+    {
+      "release_date": "2023-01-16T15:16:03",
+      "song_id": 302,
+      "title": "An Ode to Forgotten Dreams"
+    }
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "bradley_ball@gmail.com"
+  }
+}

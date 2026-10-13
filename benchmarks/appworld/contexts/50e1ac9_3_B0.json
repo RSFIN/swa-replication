@@ -1,0 +1,984 @@
+{
+  "primitive_song_details": [
+    {
+      "genre": "EDM",
+      "play_count": 463,
+      "song_id": 3,
+      "title": "The Fragrance of Fading Roses"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 667,
+      "song_id": 4,
+      "title": "The Puzzle of My Heart"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 466,
+      "song_id": 5,
+      "title": "Chasing the Ghosts of Yesterday"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 265,
+      "song_id": 6,
+      "title": "Reflections in a Pool of Regret"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 905,
+      "song_id": 8,
+      "title": "Shadows of the Past"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 826,
+      "song_id": 9,
+      "title": "When Fate Becomes a Foe"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 386,
+      "song_id": 10,
+      "title": "The Curse of Loving You"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 293,
+      "song_id": 15,
+      "title": "In the Depths of Despair"
+    },
+    {
+      "genre": "indie",
+      "play_count": 675,
+      "song_id": 16,
+      "title": "Yearning for a Glimpse of Heaven"
+    },
+    {
+      "genre": "indie",
+      "play_count": 926,
+      "song_id": 21,
+      "title": "Lost in the Embrace of Night"
+    },
+    {
+      "genre": "indie",
+      "play_count": 265,
+      "song_id": 29,
+      "title": "Violet Rain"
+    },
+    {
+      "genre": "indie",
+      "play_count": 395,
+      "song_id": 30,
+      "title": "Eternal Flame"
+    },
+    {
+      "genre": "indie",
+      "play_count": 125,
+      "song_id": 31,
+      "title": "Waves of Yesterday"
+    },
+    {
+      "genre": "indie",
+      "play_count": 448,
+      "song_id": 32,
+      "title": "Wading Through Rivers of Tears"
+    },
+    {
+      "genre": "hip-hop",
+      "play_count": 135,
+      "song_id": 35,
+      "title": "Dancing in the Rain of Tears"
+    },
+    {
+      "genre": "hip-hop",
+      "play_count": 974,
+      "song_id": 36,
+      "title": "A Whisper in the Midnight Air"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 594,
+      "song_id": 39,
+      "title": "A Pathway to Nowhere"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 433,
+      "song_id": 43,
+      "title": "Whispers of Destiny"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 279,
+      "song_id": 47,
+      "title": "Time's Hold"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 314,
+      "song_id": 48,
+      "title": "Cherry Blossom Tears"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 841,
+      "song_id": 49,
+      "title": "Whispers of the Enchanted Forest"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 316,
+      "song_id": 50,
+      "title": "Lonely Skies"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 991,
+      "song_id": 51,
+      "title": "The Silence Between Us"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 648,
+      "song_id": 52,
+      "title": "Bleeding Sun"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 648,
+      "song_id": 53,
+      "title": "Unearthed Secrets"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 582,
+      "song_id": 63,
+      "title": "Journey Through the Unknown"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 468,
+      "song_id": 64,
+      "title": "Caught in a Web of Lies"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 818,
+      "song_id": 65,
+      "title": "Eternal Solitude"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 975,
+      "song_id": 66,
+      "title": "Phantom Pain"
+    },
+    {
+      "genre": "pop",
+      "play_count": 201,
+      "song_id": 70,
+      "title": "Serenade of the Forgotten Stars"
+    },
+    {
+      "genre": "pop",
+      "play_count": 313,
+      "song_id": 71,
+      "title": "Eternal Fade"
+    },
+    {
+      "genre": "pop",
+      "play_count": 151,
+      "song_id": 72,
+      "title": "Wandering Through Time's Embrace"
+    },
+    {
+      "genre": "pop",
+      "play_count": 482,
+      "song_id": 73,
+      "title": "When Silence Becomes Deafening"
+    },
+    {
+      "genre": "rock",
+      "play_count": 846,
+      "song_id": 74,
+      "title": "On the Border of Reality"
+    },
+    {
+      "genre": "classical",
+      "play_count": 505,
+      "song_id": 77,
+      "title": "Whispers of the Soul"
+    },
+    {
+      "genre": "classical",
+      "play_count": 479,
+      "song_id": 78,
+      "title": "A Love That Never Was"
+    },
+    {
+      "genre": "classical",
+      "play_count": 126,
+      "song_id": 79,
+      "title": "Fleeting Touch"
+    },
+    {
+      "genre": "classical",
+      "play_count": 863,
+      "song_id": 80,
+      "title": "Wandering the Streets Alone"
+    },
+    {
+      "genre": "classical",
+      "play_count": 645,
+      "song_id": 81,
+      "title": "Echoes of the Whispering Wind"
+    },
+    {
+      "genre": "classical",
+      "play_count": 750,
+      "song_id": 82,
+      "title": "Lost in the Twilight of Hope"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 236,
+      "song_id": 84,
+      "title": "Wilted Petals"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 415,
+      "song_id": 89,
+      "title": "Glass Castles"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 188,
+      "song_id": 90,
+      "title": "Whispers of Tomorrow"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 231,
+      "song_id": 105,
+      "title": "Beyond the Horizon's Reach"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 658,
+      "song_id": 111,
+      "title": "Lonesome Road"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 316,
+      "song_id": 124,
+      "title": "Drowning Sorrows"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 463,
+      "song_id": 127,
+      "title": "Mystic Rhythms"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 842,
+      "song_id": 128,
+      "title": "Silent Sorrow"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 486,
+      "song_id": 130,
+      "title": "Longing for Another Chance"
+    },
+    {
+      "genre": "jazz",
+      "play_count": 661,
+      "song_id": 131,
+      "title": "Longing for a Ghostly Touch"
+    },
+    {
+      "genre": "rock",
+      "play_count": 346,
+      "song_id": 135,
+      "title": "In the Silence of Your Absence"
+    },
+    {
+      "genre": "classical",
+      "play_count": 858,
+      "song_id": 139,
+      "title": "Momentary Bliss"
+    },
+    {
+      "genre": "classical",
+      "play_count": 367,
+      "song_id": 152,
+      "title": "The Enigma of Love"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 844,
+      "song_id": 159,
+      "title": "The Forgotten Pages of Time"
+    },
+    {
+      "genre": "classical",
+      "play_count": 967,
+      "song_id": 162,
+      "title": "Caught in the Afterglow of Love"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 315,
+      "song_id": 172,
+      "title": "Neon Reverie"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 314,
+      "song_id": 182,
+      "title": "Melodies of the Forgotten Past"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 990,
+      "song_id": 185,
+      "title": "Mysteries of the Silent Sea"
+    },
+    {
+      "genre": "country",
+      "play_count": 761,
+      "song_id": 187,
+      "title": "In the Hollows of Your Eyes"
+    },
+    {
+      "genre": "country",
+      "play_count": 717,
+      "song_id": 189,
+      "title": "Sinking Ship"
+    },
+    {
+      "genre": "country",
+      "play_count": 581,
+      "song_id": 190,
+      "title": "Final Goodbye"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 759,
+      "song_id": 191,
+      "title": "Wandering Hearts"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 344,
+      "song_id": 197,
+      "title": "Surrendering to the Night"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 417,
+      "song_id": 198,
+      "title": "The Last Embers of a Fire"
+    },
+    {
+      "genre": "country",
+      "play_count": 907,
+      "song_id": 207,
+      "title": "A Tale of Unspoken Longing"
+    },
+    {
+      "genre": "country",
+      "play_count": 907,
+      "song_id": 210,
+      "title": "The Fragile Web of Destiny"
+    },
+    {
+      "genre": "country",
+      "play_count": 844,
+      "song_id": 211,
+      "title": "Caught in the Tangle of Time"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 674,
+      "song_id": 223,
+      "title": "Lost in the Crowd"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 228,
+      "song_id": 224,
+      "title": "Fading Starlight"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 721,
+      "song_id": 226,
+      "title": "Midnight Whispers"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 554,
+      "song_id": 250,
+      "title": "Invisible Chains"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 352,
+      "song_id": 251,
+      "title": "Trapped in the Snare of Love"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 992,
+      "song_id": 257,
+      "title": "In the Theater of Broken Promises"
+    },
+    {
+      "genre": "classical",
+      "play_count": 846,
+      "song_id": 261,
+      "title": "The Shadows That Haunt Us"
+    },
+    {
+      "genre": "pop",
+      "play_count": 938,
+      "song_id": 276,
+      "title": "Velvet Skies"
+    },
+    {
+      "genre": "pop",
+      "play_count": 546,
+      "song_id": 278,
+      "title": "A Broken Heart's Lament"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 835,
+      "song_id": 280,
+      "title": "The Tragedy of Living Without"
+    },
+    {
+      "genre": "reggae",
+      "play_count": 750,
+      "song_id": 285,
+      "title": "Wading Through the Ashes of Love"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 661,
+      "song_id": 287,
+      "title": "Painted Skies"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 718,
+      "song_id": 298,
+      "title": "When Dawn Breaks Without You"
+    },
+    {
+      "genre": "R&B",
+      "play_count": 443,
+      "song_id": 303,
+      "title": "Searching for a Lost Horizon"
+    },
+    {
+      "genre": "classical",
+      "play_count": 907,
+      "song_id": 308,
+      "title": "The Melancholy of Wasted Years"
+    },
+    {
+      "genre": "rock",
+      "play_count": 990,
+      "song_id": 311,
+      "title": "Infinite Dreams"
+    },
+    {
+      "genre": "indie",
+      "play_count": 556,
+      "song_id": 314,
+      "title": "The Complexity of Simple Things"
+    },
+    {
+      "genre": "indie",
+      "play_count": 858,
+      "song_id": 318,
+      "title": "Mystic Voyage to Avalon"
+    }
+  ],
+  "primitive_source_memberships": [
+    {
+      "song_id": 47,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 48,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 49,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 50,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 51,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 52,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 53,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 63,
+      "source_id": 13,
+      "source_type": "album"
+    },
+    {
+      "song_id": 64,
+      "source_id": 13,
+      "source_type": "album"
+    },
+    {
+      "song_id": 65,
+      "source_id": 13,
+      "source_type": "album"
+    },
+    {
+      "song_id": 66,
+      "source_id": 13,
+      "source_type": "album"
+    },
+    {
+      "song_id": 70,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 71,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 72,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 73,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 77,
+      "source_id": 17,
+      "source_type": "album"
+    },
+    {
+      "song_id": 78,
+      "source_id": 17,
+      "source_type": "album"
+    },
+    {
+      "song_id": 79,
+      "source_id": 17,
+      "source_type": "album"
+    },
+    {
+      "song_id": 80,
+      "source_id": 18,
+      "source_type": "album"
+    },
+    {
+      "song_id": 81,
+      "source_id": 18,
+      "source_type": "album"
+    },
+    {
+      "song_id": 82,
+      "source_id": 18,
+      "source_type": "album"
+    },
+    {
+      "song_id": 8,
+      "source_id": 2,
+      "source_type": "album"
+    },
+    {
+      "song_id": 9,
+      "source_id": 2,
+      "source_type": "album"
+    },
+    {
+      "song_id": 10,
+      "source_id": 2,
+      "source_type": "album"
+    },
+    {
+      "song_id": 29,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 30,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 31,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 32,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 39,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 74,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 105,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 182,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 185,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 210,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 223,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 280,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 298,
+      "source_id": 443,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 29,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 130,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 224,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 250,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 251,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 261,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 278,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 311,
+      "source_id": 444,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 43,
+      "source_id": 445,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 124,
+      "source_id": 445,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 128,
+      "source_id": 445,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 159,
+      "source_id": 445,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 162,
+      "source_id": 445,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 211,
+      "source_id": 445,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 207,
+      "source_id": 446,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 226,
+      "source_id": 446,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 257,
+      "source_id": 446,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 308,
+      "source_id": 446,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 318,
+      "source_id": 446,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 4,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 15,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 21,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 65,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 172,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 187,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 191,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 197,
+      "source_id": 447,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 35,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 39,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 127,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 131,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 207,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 276,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 287,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 303,
+      "source_id": 448,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 3,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 5,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 6,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 16,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 31,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 36,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 84,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 89,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 90,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 111,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 135,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 139,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 152,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 162,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 189,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 190,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 198,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 285,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 308,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 314,
+      "source_id": "direct",
+      "source_type": "song_library"
+    }
+  ],
+  "source_interfaces": [
+    "spotify song/album/playlist libraries",
+    "spotify.show_song"
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "ed_wilson@gmail.com"
+  }
+}

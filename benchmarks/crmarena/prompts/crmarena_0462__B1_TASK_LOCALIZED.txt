@@ -1,0 +1,207 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Unable to Cancel Order for Active Fitness Tracker
+- Case Description: I recently purchased the Active Fitness Tracker and am now trying to cancel my order within the allowed cancellation window. However, the online system is not allowing me to proceed with the cancellation. Can someone please assist me with canceling this order?
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Order Cancellation
+TARGET_PRODUCT=Active Fitness Tracker
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007qSm1IAE|005Ws000001xZ2oIAE|Order Cancellation|Precision Golf Putter|Closed
+500Ws000007qdvkIAA|005Ws000001xZ9FIAU|Order Cancellation|Elite Trail Running Vest|Closed
+500Ws000007ql8XIAQ|005Ws000001xaN3IAI|Order Cancellation|Cycling Thermal Jacket|Closed
+500Ws000007qlGaIAI|005Ws000001xYgDIAU|Order Cancellation|Fusion Yoga Leggings|Closed
+500Ws000007qlrmIAA|005Ws000001xTbkIAE|Order Cancellation|Seamless Yoga Leggings|Closed
+500Ws000007qmEGIAY|005Ws000001xabZIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qnNHIAY|005Ws000001xZnaIAE|Loyalty Program Inquiry|Active Fitness Tracker|Closed
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qnYcIAI|005Ws000001xVFKIA2|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qncSIAQ|005Ws000001xalFIAQ|Order Cancellation|Women's Fitness Leggings|Closed
+500Ws000007qndMIAQ|005Ws000001xZkLIAU|Order Cancellation|Aero Golf Driver|Closed
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qq3PIAQ|005Ws000001xamrIAA|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007qqKrIAI|005Ws000001xabZIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007qqKtIAI|005Ws000001xamrIAA|Order Cancellation|Trailblazer Jacket|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qr2gIAA|005Ws000001xZpBIAU|Order Cancellation|FitPulse Fitness Tracker|Closed
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qt5PIAQ|005Ws000001xZ2oIAE|Order Cancellation|Swim Training Fins|Closed
+500Ws000007qtCZIAY|005Ws000001xalFIAQ|Order Cancellation|Trailblazer Jacket|Closed
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007qtHUIAY|005Ws000001xZnaIAE|Order Cancellation|Comfort Yoga Hoodie|Closed
+500Ws000007qtajIAA|005Ws000001xYrVIAU|Order Cancellation|Home Gym Dumbbell Set|Closed
+500Ws000007qtalIAA|005Ws000001xaYLIAY|Order Cancellation|Women's Yoga Shorts|Closed
+500Ws000007qth8IAA|005Ws000001xZ2nIAE|Order Cancellation|High-Speed Swim Goggles|Closed
+500Ws000007qtusIAA|005Ws000001xa6vIAA|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007qtxIIAQ|005Ws000001xZkLIAU|Order Cancellation|Peak Performance Hoodie|Closed
+500Ws000007qu5MIAQ|005Ws000001xagPIAQ|Order Cancellation|Hydro Racer Swim Fins|Closed
+500Ws000007quBnIAI|005Ws000001xZ9FIAU|Order Cancellation|Women's Flex Running Tights|Closed
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quDQIAY|005Ws000001xaBlIAI|Order Cancellation|Glide Surf Swim Shorts|Closed
+500Ws000007quIHIAY|005Ws000001xai1IAA|Loyalty Program Inquiry|Active Fitness Tracker|Closed
+500Ws000007quLTIAY|005Ws000001xa0TIAQ|Order Cancellation|Versatile Fitness Mat|Closed
+500Ws000007quOjIAI|005Ws000001xSR9IAM|Order Cancellation|Swim Training Fins|Closed
+500Ws000007qvKnIAI|005Ws000001xYwLIAU|Order Cancellation|Flex Yoga Mat|Closed
+500Ws000007qxo2IAA|005Ws000001xaIDIAY|Order Cancellation|Revolution Fitness Tracker|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007qxpmIAA|005Ws000001xaLRIAY|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007r6krIAA|005Ws000001xZfVIAU|Order Cancellation|Adventure Parka|Closed
+500Ws000007r7iUIAQ|005Ws000001xZ9FIAU|Order Cancellation|Flex Fit Yoga Capris|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007r9Z2IAI|005Ws000001xW8AIAU|Order Cancellation|Smart Fitness Watch|Closed
+500Ws000007r9xFIAQ|005Ws000001xZafIAE|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rA3hIAE|005Ws000001xZUDIA2|Order Cancellation|Women's Yoga Shorts|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rA9GIAU|005Ws000001xabZIAQ|Order Cancellation|Versatile Fitness Mat|Closed
+500Ws000007rAIDIA2|005Ws000001xZdtIAE|Order Cancellation|Revolution Fitness Tracker|Closed
+500Ws000007rBpMIAU|005Ws000001xZxFIAU|Order Cancellation|Fusion Yoga Leggings|Closed
+500Ws000007rBxTIAU|005Ws000001xZ7dIAE|Order Cancellation|Peak Performance Hoodie|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rCHRIA2|005Ws000001xSR9IAM|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rCIPIA2|005Ws000001xZvdIAE|Order Cancellation|Women's Yoga Shorts|Closed
+500Ws000007rCOyIAM|005Ws000001xajdIAA|Loyalty Program Inquiry|Active Fitness Tracker|Closed
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCS5IAM|005Ws000001xZqnIAE|Order Cancellation|Eco Trail Hiking Pants|Closed
+500Ws000007rCiCIAU|005Ws000001xaQHIAY|Loyalty Program Inquiry|Active Fitness Tracker|Closed
+500Ws000007rD6OIAU|005Ws000001xaLRIAY|Order Cancellation|Women's Yoga Shorts|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rE7JIAU|005Ws000001xZKXIA2|Order Cancellation|Revolution Fitness Tracker|Closed
+500Ws000007rE8uIAE|005Ws000001xZsPIAU|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rE8wIAE|005Ws000001xYzZIAU|Order Cancellation|Hydrate Fitness Watch|Closed
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rECAIA2|005Ws000001xZ2oIAE|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rEGoIAM|005Ws000001xZKXIA2|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rEH2IAM|005Ws000001xaRtIAI|Order Cancellation|Ultimate Basketball Tank|Closed
+500Ws000007rEH3IAM|005Ws000001xadBIAQ|Order Cancellation|Women's Fitness Leggings|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEaJIAU|005Ws000001xZ2oIAE|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rElhIAE|005Ws000001xZu1IAE|Order Cancellation|Women's Fitness Leggings|Closed
+500Ws000007rEljIAE|005Ws000001xXQpIAM|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rEnFIAU|005Ws000001xaV7IAI|Order Cancellation|Pro Swim Goggles|Closed
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rFBOIA2|005Ws000001xZnaIAE|Order Cancellation|Swim Training Fins|Closed
+500Ws000007rFBQIA2|005Ws000001xW8AIAU|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rFEgIAM|005Ws000001xaN3IAI|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rFGIIA2|005Ws000001xZZ3IAM|Order Cancellation|Women's Performance Hoodie|Closed
+500Ws000007rFLAIA2|005Ws000001xZZ3IAM|Order Cancellation|Fusion Yoga Leggings|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFhiIAE|005Ws000001xZ1BIAU|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rFmUIAU|005Ws000001xW8AIAU|Order Cancellation|Eco Trail Hiking Pants|Closed
+500Ws000007rFmWIAU|005Ws000001xaYLIAY|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rGNgIAM|005Ws000001xZ9FIAU|Order Cancellation|Premium Golf Cart Bag|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGYvIAM|005Ws000001xZM9IAM|Order Cancellation|Women's Running Tank Top|Closed
+500Ws000007rGaXIAU|005Ws000001xYoHIAU|Order Cancellation|Pro Swim Goggles|Closed
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGp1IAE|005Ws000001xYxxIAE|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rGx6IAE|005Ws000001xalFIAQ|Order Cancellation|Smart Fitness Watch|Closed
+500Ws000007rGyhIAE|005Ws000001xaBlIAI|Order Cancellation|Trailblazer Jacket|Closed
+500Ws000007rGyiIAE|005Ws000001xZcHIAU|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHA8IAM|005Ws000001xa0TIAQ|Order Cancellation|Flex Yoga Mat|Closed
+500Ws000007rHBhIAM|005Ws000001xadBIAQ|Order Cancellation|Performance Basketball Hoodie|Closed
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHMtIAM|005Ws000001xZVpIAM|Order Cancellation|Precision Golf Putter|Closed
+500Ws000007rHOUIA2|005Ws000001xagPIAQ|Order Cancellation|Eco Trail Hiking Pants|Closed
+500Ws000007rHZoIAM|005Ws000001xYl4IAE|Order Cancellation|Women's Flex Running Tights|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHoMIAU|005Ws000001xaq5IAA|Order Cancellation|Home Gym Dumbbell Set|Closed
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rI4SIAU|005Ws000001xai1IAA|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rI69IAE|005Ws000001xatJIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rIE9IAM|005Ws000001xadBIAQ|Order Cancellation|Cross Training Jump Rope|Closed
+500Ws000007rIKdIAM|005Ws000001xaQIIAY|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIajIAE|005Ws000001xTbjIAE|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIm1IAE|005Ws000001xZyrIAE|Order Cancellation|Women's Running Tank Top|Closed
+500Ws000007rIncIAE|005Ws000001xVNQIA2|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rIvjIAE|005Ws000001xZnZIAU|Order Cancellation|Smart Fitness Watch|Closed
+500Ws000007rJ71IAE|005Ws000001xZnZIAU|Order Cancellation|Hydrate Fitness Watch|Closed
+500Ws000007rJDRIA2|005Ws000001xZCTIA2|Order Cancellation|Hydro Racer Swim Fins|Closed
+500Ws000007rJa2IAE|005Ws000001xabZIAQ|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rJepIAE|005Ws000001xajdIAA|Order Cancellation|Seamless Yoga Leggings|Closed
+500Ws000007rJgRIAU|005Ws000001xZ2oIAE|Order Cancellation|Enduro Training Ladder|Closed
+500Ws000007rJgUIAU|005Ws000001xaoTIAQ|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rJgYIAU|005Ws000001xaYLIAY|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rJtNIAU|005Ws000001xTbjIAE|Order Cancellation|Women's Flex Running Tights|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rK1QIAU|005Ws000001xYjRIAU|Order Cancellation|Women's Quick-Dry Sports Top|Closed
+500Ws000007rK4cIAE|005Ws000001xZnZIAU|Order Cancellation|Women's Performance Hoodie|Closed
+500Ws000007rK7tIAE|005Ws000001xZFhIAM|Order Cancellation|Precision Basketball Jersey|Closed
+500Ws000007rKKlIAM|005Ws000001xaBlIAI|Order Cancellation|All-Around Yoga Tank|Closed
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKMOIA2|005Ws000001xYt8IAE|Order Cancellation|Revolution Fitness Tracker|Closed
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rLDcIAM|005Ws000001xaA9IAI|Order Cancellation|Seamless Yoga Leggings|Closed
+500Ws000007rLDdIAM|005Ws000001xY6lIAE|Order Cancellation|Tempo Running Watch|Closed
+500Ws000007rLdPIAU|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Closed
+500Ws000007rLrvIAE|005Ws000001xSR9IAM|Order Cancellation|Women's Performance Hoodie|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQd8IAE|005Ws000001xYhpIAE|Order Cancellation|Pro Swim Goggles|Closed
+500Ws000007rQmjIAE|005Ws000001xYujIAE|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rQq1IAE|005Ws000001xZnaIAE|Order Cancellation|Women's Yoga Shorts|Closed
+500Ws000007rQrcIAE|005Ws000001xatJIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQy1IAE|005Ws000001xZnZIAU|Order Cancellation|Cross Training Jump Rope|Closed
+500Ws000007rQy2IAE|005Ws000001xZsPIAU|Order Cancellation|Hydrate Fitness Watch|Closed
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rR7iIAE|005Ws000001xZpBIAU|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rR9KIAU|005Ws000001xSR9IAM|Order Cancellation|Explorer Outdoor Jacket|Closed
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRKgIAM|005Ws000001xYt7IAE|Order Cancellation|Altitude Hiking Pants|Closed
+500Ws000007rRKhIAM|005Ws000001xaYLIAY|Order Cancellation|Women's Performance Hoodie|Closed
+500Ws000007rRKkIAM|005Ws000001xaLRIAY|Loyalty Program Inquiry|Active Fitness Tracker|Closed
+500Ws000007rRNsIAM|005Ws000001xaLRIAY|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rRR3IAM|005Ws000001xadBIAQ|Order Cancellation|Pro Swim Goggles|Closed
+500Ws000007rRSfIAM|005Ws000001xaRuIAI|Order Cancellation|Swim Training Fins|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRajIAE|005Ws000001xZ61IAE|Order Cancellation|Tempo Running Watch|Closed
+500Ws000007rRcLIAU|005Ws000001xZKXIA2|Billing/Payment Issue|Active Fitness Tracker|Closed
+500Ws000007rRcMIAU|005Ws000001xTrqIAE|Order Cancellation|Women's Performance Hoodie|Closed
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRfcIAE|005Ws000001xabZIAQ|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rRm3IAE|005Ws000001xZNlIAM|Order Cancellation|Women's High-Impact Sports Bra|Closed
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rSDRIA2|005Ws000001xZUDIA2|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+500Ws000007rSWnIAM|005Ws000001xZ7dIAE|Order Cancellation|Pro Swim Goggles|Closed
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

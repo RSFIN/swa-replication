@@ -1,0 +1,13 @@
+Package self-test performed before packaging:
+
+OK: 900 unique planned runs; every benchmark/model/SCB cell has 30 runs.
+OK: anonymity scan passed for repository metadata/code/config/results (benchmark payloads intentionally excluded from synthetic-email checks).
+PASS: Table I reconstructs exactly from the canonical 900-run file.
+PASS: Figure 2 reliability, completed-count, and input/output-token summaries reconstruct from the canonical run-level file.
+PASS WITH NOTE: request-latency reconstruction differs from the paper-frozen aggregation by at most 0.267 s (known timestamp-aggregation detail).
+
+Pooled operational success (%):
+  CRMArena: B0=30.0, B1=76.0, B2=97.3
+  AppWorld: B0=96.0, B1=98.0, B2=100.0
+
+Figure 2 regeneration script executed successfully from the paper-frozen metrics.

@@ -1,0 +1,578 @@
+{
+  "resolved_source_membership_edges": [
+    {
+      "song_id": 47,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 48,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 49,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 50,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 51,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 52,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 53,
+      "source_id": 10,
+      "source_type": "album"
+    },
+    {
+      "song_id": 67,
+      "source_id": 14,
+      "source_type": "album"
+    },
+    {
+      "song_id": 68,
+      "source_id": 14,
+      "source_type": "album"
+    },
+    {
+      "song_id": 69,
+      "source_id": 14,
+      "source_type": "album"
+    },
+    {
+      "song_id": 70,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 71,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 72,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 73,
+      "source_id": 15,
+      "source_type": "album"
+    },
+    {
+      "song_id": 74,
+      "source_id": 16,
+      "source_type": "album"
+    },
+    {
+      "song_id": 75,
+      "source_id": 16,
+      "source_type": "album"
+    },
+    {
+      "song_id": 76,
+      "source_id": 16,
+      "source_type": "album"
+    },
+    {
+      "song_id": 80,
+      "source_id": 18,
+      "source_type": "album"
+    },
+    {
+      "song_id": 81,
+      "source_id": 18,
+      "source_type": "album"
+    },
+    {
+      "song_id": 82,
+      "source_id": 18,
+      "source_type": "album"
+    },
+    {
+      "song_id": 16,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 17,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 18,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 19,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 20,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 21,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 22,
+      "source_id": 4,
+      "source_type": "album"
+    },
+    {
+      "song_id": 29,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 30,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 31,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 32,
+      "source_id": 6,
+      "source_type": "album"
+    },
+    {
+      "song_id": 37,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 38,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 39,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 40,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 41,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 42,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 43,
+      "source_id": 8,
+      "source_type": "album"
+    },
+    {
+      "song_id": 33,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 44,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 55,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 102,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 211,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 230,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 256,
+      "source_id": 228,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 47,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 73,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 153,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 163,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 166,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 262,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 322,
+      "source_id": 229,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 9,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 30,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 40,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 41,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 223,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 246,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 258,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 277,
+      "source_id": 230,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 78,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 87,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 107,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 129,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 130,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 131,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 139,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 201,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 219,
+      "source_id": 231,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 15,
+      "source_id": 232,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 81,
+      "source_id": 232,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 137,
+      "source_id": 232,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 166,
+      "source_id": 232,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 196,
+      "source_id": 232,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 280,
+      "source_id": 232,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 100,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 154,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 164,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 218,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 245,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 258,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 269,
+      "source_id": 233,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 59,
+      "source_id": 234,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 121,
+      "source_id": 234,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 147,
+      "source_id": 234,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 150,
+      "source_id": 234,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 256,
+      "source_id": 234,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 273,
+      "source_id": 234,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 7,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 12,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 89,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 124,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 270,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 272,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 307,
+      "source_id": 235,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 7,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 36,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 40,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 41,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 43,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 59,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 65,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 98,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 118,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 139,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 142,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 151,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 153,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 154,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 193,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 201,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 258,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 259,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 303,
+      "source_id": "direct",
+      "source_type": "song_library"
+    }
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "jac-blackburn@gmail.com"
+  }
+}

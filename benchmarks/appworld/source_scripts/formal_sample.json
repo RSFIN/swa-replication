@@ -1,0 +1,36 @@
+{
+  "split": "dev",
+  "design_instances": [
+    "23cf851_1",
+    "383cbac_1",
+    "4ec8de5_1",
+    "50e1ac9_1",
+    "fac291d_1"
+  ],
+  "formal_instances": [
+    "23cf851_2",
+    "23cf851_3",
+    "383cbac_2",
+    "383cbac_3",
+    "4ec8de5_2",
+    "4ec8de5_3",
+    "50e1ac9_2",
+    "50e1ac9_3",
+    "fac291d_2",
+    "fac291d_3"
+  ],
+  "families": [
+    "23cf851",
+    "383cbac",
+    "4ec8de5",
+    "50e1ac9",
+    "fac291d"
+  ],
+  "max_b0_chars": 300000,
+  "conditions": [
+    "B0",
+    "B1",
+    "B2"
+  ],
+  "output_contract_version": "appworld_trace_v1"
+}

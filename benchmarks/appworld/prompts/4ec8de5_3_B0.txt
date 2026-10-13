@@ -1,0 +1,335 @@
+TASK_ID: 4ec8de5_3
+SCB_CONDITION: B0
+
+TASK INSTRUCTION:
+How many songs from across my spotify song and album libraries were released before this year?
+
+FROZEN CONTEXT:
+{
+  "album_library": [
+    {
+      "album_id": 1,
+      "release_date": "2021-07-24T00:00:00",
+      "song_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "title": "Echo Chamber Chronicles"
+    },
+    {
+      "album_id": 2,
+      "release_date": "2021-06-12T00:00:00",
+      "song_ids": [
+        8,
+        9,
+        10
+      ],
+      "title": "Celestial Harmonies"
+    },
+    {
+      "album_id": 3,
+      "release_date": "2021-03-29T00:00:00",
+      "song_ids": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "title": "Nocturnal Melodies"
+    },
+    {
+      "album_id": 4,
+      "release_date": "2023-10-06T00:00:00",
+      "song_ids": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "title": "Neon Echoes"
+    },
+    {
+      "album_id": 5,
+      "release_date": "2021-09-13T00:00:00",
+      "song_ids": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "title": "Velvet Shadows"
+    },
+    {
+      "album_id": 6,
+      "release_date": "2022-03-03T00:00:00",
+      "song_ids": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "title": "Ethereal Rhapsody"
+    },
+    {
+      "album_id": 7,
+      "release_date": "2022-06-22T00:00:00",
+      "song_ids": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "title": "Vibrant Visions"
+    },
+    {
+      "album_id": 8,
+      "release_date": "2022-06-28T00:00:00",
+      "song_ids": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "title": "Velvet Underground"
+    },
+    {
+      "album_id": 9,
+      "release_date": "2023-05-14T00:00:00",
+      "song_ids": [
+        44,
+        45,
+        46
+      ],
+      "title": "Mystical Crescendo"
+    },
+    {
+      "album_id": 10,
+      "release_date": "2021-08-13T00:00:00",
+      "song_ids": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "title": "Dreamscape Delights"
+    },
+    {
+      "album_id": 11,
+      "release_date": "2023-07-11T00:00:00",
+      "song_ids": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "title": "Synaptic Serenity"
+    },
+    {
+      "album_id": 12,
+      "release_date": "2023-05-04T00:00:00",
+      "song_ids": [
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "title": "Astral Journey"
+    },
+    {
+      "album_id": 13,
+      "release_date": "2021-07-22T00:00:00",
+      "song_ids": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "title": "Starlight Serenades"
+    },
+    {
+      "album_id": 14,
+      "release_date": "2023-03-14T00:00:00",
+      "song_ids": [
+        67,
+        68,
+        69
+      ],
+      "title": "Midnight Serenade"
+    },
+    {
+      "album_id": 15,
+      "release_date": "2022-02-12T00:00:00",
+      "song_ids": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "title": "Whispers in the Wind"
+    },
+    {
+      "album_id": 16,
+      "release_date": "2022-10-14T00:00:00",
+      "song_ids": [
+        74,
+        75,
+        76
+      ],
+      "title": "Electric Dreamscape"
+    },
+    {
+      "album_id": 17,
+      "release_date": "2023-07-18T00:00:00",
+      "song_ids": [
+        77,
+        78,
+        79
+      ],
+      "title": "Enchanted Melodies"
+    },
+    {
+      "album_id": 18,
+      "release_date": "2022-05-03T00:00:00",
+      "song_ids": [
+        80,
+        81,
+        82
+      ],
+      "title": "Echoes of Eternity"
+    }
+  ],
+  "direct_song_library": [
+    {
+      "release_date": "2023-10-06T00:00:00",
+      "song_id": 16,
+      "title": "Yearning for a Glimpse of Heaven"
+    },
+    {
+      "release_date": "2023-10-06T00:00:00",
+      "song_id": 20,
+      "title": "Between the Depths and Heights"
+    },
+    {
+      "release_date": "2021-09-13T00:00:00",
+      "song_id": 26,
+      "title": "In the Light of Dying Stars"
+    },
+    {
+      "release_date": "2021-08-13T00:00:00",
+      "song_id": 51,
+      "title": "The Silence Between Us"
+    },
+    {
+      "release_date": "2023-07-11T00:00:00",
+      "song_id": 56,
+      "title": "Distant Love"
+    },
+    {
+      "release_date": "2023-05-04T00:00:00",
+      "song_id": 58,
+      "title": "Cursed Love"
+    },
+    {
+      "release_date": "2023-03-14T00:00:00",
+      "song_id": 68,
+      "title": "Lost in the Wilderness of Love"
+    },
+    {
+      "release_date": "2022-05-03T00:00:00",
+      "song_id": 81,
+      "title": "Echoes of the Whispering Wind"
+    },
+    {
+      "release_date": "2023-01-16T22:55:35",
+      "song_id": 83,
+      "title": "Where Shadows Come to Life"
+    },
+    {
+      "release_date": "2023-05-13T03:18:48",
+      "song_id": 90,
+      "title": "Whispers of Tomorrow"
+    },
+    {
+      "release_date": "2021-08-24T17:46:53",
+      "song_id": 109,
+      "title": "The Weight of a Thousand Stars"
+    },
+    {
+      "release_date": "2022-02-05T22:24:50",
+      "song_id": 140,
+      "title": "Twisted Paths"
+    },
+    {
+      "release_date": "2021-02-18T03:38:46",
+      "song_id": 145,
+      "title": "Melodies from a Distant Past"
+    },
+    {
+      "release_date": "2023-02-26T14:59:23",
+      "song_id": 174,
+      "title": "The Fading Light of Memory"
+    },
+    {
+      "release_date": "2021-12-15T18:27:57",
+      "song_id": 179,
+      "title": "Reckless Love"
+    },
+    {
+      "release_date": "2021-08-03T07:15:22",
+      "song_id": 250,
+      "title": "Invisible Chains"
+    },
+    {
+      "release_date": "2019-07-31T14:00:27",
+      "song_id": 261,
+      "title": "The Shadows That Haunt Us"
+    },
+    {
+      "release_date": "2020-12-12T05:37:59",
+      "song_id": 295,
+      "title": "City of Fallen Angels"
+    },
+    {
+      "release_date": "2019-07-15T06:54:38",
+      "song_id": 296,
+      "title": "Forgotten Desires"
+    },
+    {
+      "release_date": "2021-04-27T06:17:23",
+      "song_id": 317,
+      "title": "Trapped in a Daydream"
+    }
+  ],
+  "source_interfaces": [
+    "spotify.show_song_library+show_song",
+    "spotify.show_album_library"
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "ch.brow@gmail.com"
+  }
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

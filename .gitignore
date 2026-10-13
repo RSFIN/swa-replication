@@ -1,0 +1,25 @@
+# Local environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Credentials / local overrides
+.env
+*.key
+*.pem
+
+# Reproduced outputs (generated locally)
+reproduced/*
+!reproduced/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+
+# Local backup artifacts
+*_backup.pdf
+*_backup.svg
+*_orig_backup.pdf
+*_orig_backup.svg

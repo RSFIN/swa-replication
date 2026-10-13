@@ -1,0 +1,87 @@
+TASK_ID: 4ec8de5_3
+SCB_CONDITION: B2
+
+TASK INSTRUCTION:
+How many songs from across my spotify song and album libraries were released before this year?
+
+FROZEN CONTEXT:
+{
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "ch.brow@gmail.com"
+  },
+  "unique_qualifying_song_evidence_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    63,
+    64,
+    65,
+    66,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    80,
+    81,
+    82,
+    109,
+    140,
+    145,
+    179,
+    250,
+    261,
+    295,
+    296,
+    317
+  ]
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

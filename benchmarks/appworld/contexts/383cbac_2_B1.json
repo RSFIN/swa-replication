@@ -1,0 +1,228 @@
+{
+  "resolved_coworkers": [
+    {
+      "contact_id": 724,
+      "email": "stmcco@gmail.com",
+      "first_name": "Stephen",
+      "last_name": "Mccoy"
+    },
+    {
+      "contact_id": 726,
+      "email": "kri-powe@gmail.com",
+      "first_name": "Kristin",
+      "last_name": "White"
+    },
+    {
+      "contact_id": 727,
+      "email": "allison-calhoun@gmail.com",
+      "first_name": "Allison",
+      "last_name": "Calhoun"
+    },
+    {
+      "contact_id": 728,
+      "email": "cod.smith@gmail.com",
+      "first_name": "Cody",
+      "last_name": "Smith"
+    },
+    {
+      "contact_id": 729,
+      "email": "tra_wils@gmail.com",
+      "first_name": "Travis",
+      "last_name": "Wilson"
+    },
+    {
+      "contact_id": 730,
+      "email": "gra-martinez@gmail.com",
+      "first_name": "Grant",
+      "last_name": "Martinez"
+    },
+    {
+      "contact_id": 731,
+      "email": "st-maldonado@gmail.com",
+      "first_name": "Stacy",
+      "last_name": "Maldonado"
+    },
+    {
+      "contact_id": 732,
+      "email": "sab-brown@gmail.com",
+      "first_name": "Sabrina",
+      "last_name": "Brown"
+    },
+    {
+      "contact_id": 733,
+      "email": "saritt@gmail.com",
+      "first_name": "Sandra",
+      "last_name": "Martinez"
+    },
+    {
+      "contact_id": 734,
+      "email": "ka_burt@gmail.com",
+      "first_name": "Kayla",
+      "last_name": "Burton"
+    }
+  ],
+  "resolved_manager": {
+    "contact_id": 725,
+    "email": "jamie-solomon@gmail.com",
+    "first_name": "Jamie",
+    "last_name": "Solomon"
+  },
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "anita.burch@gmail.com"
+  },
+  "task_relevant_primitive_feed_records": [
+    {
+      "amount": 25.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Food at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "stmcco@gmail.com",
+        "name": "Stephen Mccoy"
+      },
+      "transaction_id": 8216
+    },
+    {
+      "amount": 40.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Lunch at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "kri-powe@gmail.com",
+        "name": "Kristin White"
+      },
+      "transaction_id": 8217
+    },
+    {
+      "amount": 47.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Food at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "allison-calhoun@gmail.com",
+        "name": "Allison Calhoun"
+      },
+      "transaction_id": 8218
+    },
+    {
+      "amount": 42.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Lunch at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "cod.smith@gmail.com",
+        "name": "Cody Smith"
+      },
+      "transaction_id": 8219
+    },
+    {
+      "amount": 30.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Lunch at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "tra_wils@gmail.com",
+        "name": "Travis Wilson"
+      },
+      "transaction_id": 8220
+    },
+    {
+      "amount": 49.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Food at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "gra-martinez@gmail.com",
+        "name": "Grant Martinez"
+      },
+      "transaction_id": 8221
+    },
+    {
+      "amount": 43.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Lunch at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "st-maldonado@gmail.com",
+        "name": "Stacy Maldonado"
+      },
+      "transaction_id": 8222
+    },
+    {
+      "amount": 38.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "sab-brown@gmail.com",
+        "name": "Sabrina Brown"
+      },
+      "transaction_id": 8223
+    },
+    {
+      "amount": 31.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Lunch at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "saritt@gmail.com",
+        "name": "Sandra Martinez"
+      },
+      "transaction_id": 8224
+    },
+    {
+      "amount": 31.0,
+      "created_at": "2023-05-17T17:53:07",
+      "description": "Food at Enchanted Eats",
+      "like_count": 0,
+      "receiver": {
+        "email": "jamie-solomon@gmail.com",
+        "name": "Jamie Solomon"
+      },
+      "sender": {
+        "email": "ka_burt@gmail.com",
+        "name": "Kayla Burton"
+      },
+      "transaction_id": 8225
+    }
+  ],
+  "task_restaurant": "Enchanted Eats",
+  "task_user_share": 20.0
+}

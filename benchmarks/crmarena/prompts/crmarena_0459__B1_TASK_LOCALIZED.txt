@@ -1,0 +1,234 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Frustration Over Shipping Delay
+- Case Description: I ordered the Swim Training Fins expecting them to arrive within 3-5 days as stated during the purchase. However, it has now been two weeks, and I still haven't received my order. I'm extremely frustrated with this delay and need assistance on this matter immediately.
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Shipping Delay
+TARGET_PRODUCT=Swim Training Fins
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007qcDIIAY|005Ws000001xaRuIAI|Shipping Delay|Urban Lifestyle Sneakers|Closed
+500Ws000007qcgPIAQ|005Ws000001xZu1IAE|Shipping Delay|Seamless Yoga Leggings|Closed
+500Ws000007qcgQIAQ|005Ws000001xXIkIAM|Shipping Delay|Elite Basketball Shorts|Closed
+500Ws000007qcgRIAQ|005Ws000001xYt7IAE|Shipping Delay|Versatile Fitness Mat|Closed
+500Ws000007qe2DIAQ|005Ws000001xarhIAA|Shipping Delay|Cyclone Bike Jersey|Closed
+500Ws000007qe3oIAA|005Ws000001xZ7dIAE|Shipping Delay|Flex Yoga Mat|Closed
+500Ws000007qifLIAQ|005Ws000001xZIvIAM|Shipping Delay|Tempo Running Watch|Closed
+500Ws000007ql6yIAA|005Ws000001xaoTIAQ|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007ql8YIAQ|005Ws000001xaoTIAQ|Shipping Delay|High-Performance Speed Rope|Closed
+500Ws000007qlOkIAI|005Ws000001xZkLIAU|Shipping Delay|Endurance Road Runner|Closed
+500Ws000007qlbZIAQ|005Ws000001xamrIAA|Shipping Delay|Pro Swim Goggles|Closed
+500Ws000007qmEEIAY|005Ws000001xarhIAA|Shipping Delay|Elemental Soccer Shin Guards|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qnFDIAY|005Ws000001xYptIAE|Shipping Delay|Women's Performance Hoodie|Closed
+500Ws000007qnLfIAI|005Ws000001xYmfIAE|Shipping Delay|Women's Yoga Shorts|Closed
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qncWIAQ|005Ws000001xaQIIAY|Shipping Delay|Tracker Smartwatch|Closed
+500Ws000007qoPuIAI|005Ws000001xW8AIAU|Shipping Delay|Women's Flex Running Tights|Closed
+500Ws000007qoPwIAI|005Ws000001xa6vIAA|Shipping Delay|Precision Basketball Jersey|Closed
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qq3QIAQ|005Ws000001xYgDIAU|Shipping Delay|Fusion Yoga Leggings|Closed
+500Ws000007qqKnIAI|005Ws000001xW8AIAU|Shipping Delay|Mercurial Superfly|Closed
+500Ws000007qqKsIAI|005Ws000001xYhpIAE|Shipping Delay|Cycling Bib Shorts|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qqnRIAQ|005Ws000001xYmfIAE|Shipping Delay|Smart Fitness Watch|Closed
+500Ws000007qr2hIAA|005Ws000001xZ2oIAE|Shipping Delay|Mercurial Superfly|Closed
+500Ws000007qr2iIAA|005Ws000001xZlxIAE|Shipping Delay|Elite Basketball Shorts|Closed
+500Ws000007qsTRIAY|005Ws000001xZfVIAU|Shipping Delay|Eco Trail Hiking Pants|Closed
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qt5PIAQ|005Ws000001xZ2oIAE|Order Cancellation|Swim Training Fins|Closed
+500Ws000007qtCXIAY|005Ws000001xTbjIAE|Shipping Delay|Elite Basketball Shorts|Closed
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007qtm4IAA|005Ws000001xZM9IAM|Shipping Delay|Women's Flex Running Tights|Closed
+500Ws000007qturIAA|005Ws000001xYptIAE|Shipping Delay|Women's Fitness Leggings|Closed
+500Ws000007qtuvIAA|005Ws000001xUwrIAE|Shipping Delay|Cyclone Bike Jersey|Closed
+500Ws000007qtxHIAQ|005Ws000001xZ61IAE|Shipping Delay|Smart Soccer Watch|Closed
+500Ws000007qu5NIAQ|005Ws000001xZUDIA2|Shipping Delay|Versatile Fitness Mat|Closed
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quIIIAY|005Ws000001xaYLIAY|Shipping Delay|Endurance Road Runner|Closed
+500Ws000007quJsIAI|005Ws000001xTrqIAE|Shipping Delay|Swimmer's Elite Cap|Closed
+500Ws000007quLUIAY|005Ws000001xaJpIAI|Shipping Delay|Endurance Road Runner|Closed
+500Ws000007quOjIAI|005Ws000001xSR9IAM|Order Cancellation|Swim Training Fins|Closed
+500Ws000007qv4eIAA|005Ws000001xZVpIAM|Shipping Delay|Eco Trail Hiking Pants|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007qxplIAA|005Ws000001xaOfIAI|Shipping Delay|Aero Zip Cycling Vest|Closed
+500Ws000007r0KUIAY|005Ws000001xYt8IAE|Shipping Delay|Hiking Waterproof Boots|Closed
+500Ws000007r6t3IAA|005Ws000001xYhpIAE|Shipping Delay|Pro Swim Goggles|Closed
+500Ws000007r8BYIAY|005Ws000001xYujIAE|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007r8Q4IAI|005Ws000001xZlxIAE|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r9M7IAI|005Ws000001xZQzIAM|Warranty Issue|Swim Training Fins|Closed
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007r9dxIAA|005Ws000001xYgDIAU|Shipping Delay|Women's Performance Hoodie|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rA9EIAU|005Ws000001xatJIAQ|Shipping Delay|Pinnacle Golf Wedges|Closed
+500Ws000007rAA8IAM|005Ws000001xZyrIAE|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rABjIAM|005Ws000001xaoTIAQ|Warranty Issue|Swim Training Fins|Closed
+500Ws000007rABlIAM|005Ws000001xYt7IAE|Shipping Delay|Cyclone Bike Jersey|Closed
+500Ws000007rAIBIA2|005Ws000001xTbjIAE|Shipping Delay|Urban Lifestyle Sneakers|Closed
+500Ws000007rBpOIAU|005Ws000001xZ7dIAE|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rBpQIAU|005Ws000001xaQIIAY|Shipping Delay|Revolution Fitness Tracker|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rCHSIA2|005Ws000001xZM9IAM|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rCHTIA2|005Ws000001xaA9IAI|Shipping Delay|Elite Basketball Shorts|Closed
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCS4IAM|005Ws000001xabZIAQ|Shipping Delay|High-Performance Speed Rope|Closed
+500Ws000007rCVJIA2|005Ws000001xYmfIAE|Shipping Delay|Flex Basketball Arm Sleeves|Closed
+500Ws000007rCdKIAU|005Ws000001xadBIAQ|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rCyJIAU|005Ws000001xZSbIAM|Shipping Delay|Precision Golf Putter|Closed
+500Ws000007rCyMIAU|005Ws000001xYrVIAU|Shipping Delay|Tracker Smartwatch|Closed
+500Ws000007rD5eIAE|005Ws000001xYt7IAE|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rDBEIA2|005Ws000001xZijIAE|Product Defect|Swim Training Fins|Closed
+500Ws000007rDBFIA2|005Ws000001xaJpIAI|Shipping Delay|Pro Swim Briefs|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rEAUIA2|005Ws000001xadBIAQ|Shipping Delay|Solstice Trail Shoes|Closed
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rELoIAM|005Ws000001xZSbIAM|Shipping Delay|Cross Training Jump Rope|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rENSIA2|005Ws000001xaOfIAI|Shipping Delay|Premium Golf Cart Bag|Closed
+500Ws000007rETwIAM|005Ws000001xa25IAA|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEfAIAU|005Ws000001xa6vIAA|Shipping Delay|Elite Basketball Shorts|Closed
+500Ws000007rEliIAE|005Ws000001xYptIAE|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007rEtkIAE|005Ws000001xZQzIAM|Shipping Delay|Women's Fitness Leggings|Closed
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rF6ZIAU|005Ws000001xZVpIAM|Shipping Delay|Women's Performance Hoodie|Closed
+500Ws000007rFBOIA2|005Ws000001xZnaIAE|Order Cancellation|Swim Training Fins|Closed
+500Ws000007rFEdIAM|005Ws000001xZxFIAU|Incorrect Item Received|Swim Training Fins|Closed
+500Ws000007rFGLIA2|005Ws000001xWT8IAM|Shipping Delay|Titanium Road Helmet|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFMlIAM|005Ws000001xamrIAA|Shipping Delay|All-Weather Golf Gloves|Closed
+500Ws000007rFOLIA2|005Ws000001xaRtIAI|Shipping Delay|Vaporfly Elite|Closed
+500Ws000007rFPxIAM|005Ws000001xYmfIAE|Shipping Delay|Aero Golf Driver|Closed
+500Ws000007rFPzIAM|005Ws000001xaLRIAY|Shipping Delay|Cyclone Bike Jersey|Closed
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFUoIAM|005Ws000001xYt8IAE|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007rFWUIA2|005Ws000001xTrqIAE|Shipping Delay|Women's Flex Running Tights|Closed
+500Ws000007rFXzIAM|005Ws000001xTrqIAE|Shipping Delay|Endurance Road Runner|Closed
+500Ws000007rFcsIAE|005Ws000001xaZxIAI|Shipping Delay|Hiking Waterproof Boots|Closed
+500Ws000007rFcuIAE|005Ws000001xadBIAQ|Shipping Delay|High-Performance Speed Rope|Closed
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFeRIAU|005Ws000001xaq5IAA|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rFoEIAU|005Ws000001xatJIAQ|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007rFrNIAU|005Ws000001xaenIAA|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rG13IAE|005Ws000001xZPNIA2|Shipping Delay|Pro Training Jump Rope|Closed
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rGFZIA2|005Ws000001xabZIAQ|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rGKVIA2|005Ws000001xaJpIAI|Shipping Delay|HydroFlow Swim Shorts|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGQrIAM|005Ws000001xZSbIAM|Shipping Delay|Pro Swim Briefs|Closed
+500Ws000007rGU5IAM|005Ws000001xaQIIAY|Shipping Delay|Eco Trail Hiking Pants|Closed
+500Ws000007rGU6IAM|005Ws000001xZvdIAE|Shipping Delay|Precision Basketball Hoop|Closed
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGYuIAM|005Ws000001xalFIAQ|Shipping Delay|Glide Surf Swim Shorts|Closed
+500Ws000007rGgxIAE|005Ws000001xaOfIAI|Shipping Delay|Tracker Smartwatch|Closed
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGx5IAE|005Ws000001xaq5IAA|Warranty Issue|Swim Training Fins|Closed
+500Ws000007rH6lIAE|005Ws000001xZyrIAE|Shipping Delay|Pro Running Cap|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHJgIAM|005Ws000001xaenIAA|Shipping Delay|Fusion Yoga Leggings|Closed
+500Ws000007rHOaIAM|005Ws000001xZkLIAU|Shipping Delay|Vaporfly Elite|Closed
+500Ws000007rHjSIAU|005Ws000001xaQHIAY|Shipping Delay|Flex Fit Yoga Capris|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHmkIAE|005Ws000001xZSbIAM|Shipping Delay|Seamless Yoga Leggings|Closed
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHoPIAU|005Ws000001xVNQIA2|Shipping Delay|All-Weather Golf Gloves|Closed
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rHrbIAE|005Ws000001xaoTIAQ|Shipping Delay|Tracker Smartwatch|Closed
+500Ws000007rI4VIAU|005Ws000001xZCTIA2|Shipping Delay|Urban Lifestyle Sneakers|Closed
+500Ws000007rI66IAE|005Ws000001xYhpIAE|Shipping Delay|Elite Basketball Socks|Closed
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rIE8IAM|005Ws000001xaTVIAY|Shipping Delay|Sport Luxe Sneakers|Closed
+500Ws000007rIKbIAM|005Ws000001xZZ3IAM|Shipping Delay|Sport Luxe Sneakers|Closed
+500Ws000007rIKcIAM|005Ws000001xZXRIA2|Shipping Delay|Urban Flux Sneakers|Closed
+500Ws000007rIR1IAM|005Ws000001xZdtIAE|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXVIA2|005Ws000001xZFhIAM|Shipping Delay|Endurance Road Runner|Closed
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIcJIAU|005Ws000001xagPIAQ|Shipping Delay|Revolution Fitness Tracker|Closed
+500Ws000007rIcKIAU|005Ws000001xaIDIAY|Shipping Delay|Premium Golf Cart Bag|Closed
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIpDIAU|005Ws000001xW8AIAU|Shipping Delay|Mercurial Superfly|Closed
+500Ws000007rIpEIAU|005Ws000001xaEzIAI|Shipping Delay|Women's Quick-Dry Sports Top|Closed
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rJ70IAE|005Ws000001xarhIAA|Shipping Delay|Home Gym Dumbbell Set|Closed
+500Ws000007rJDPIA2|005Ws000001xZ2oIAE|Shipping Delay|Elite Basketball Shorts|Closed
+500Ws000007rJDSIA2|005Ws000001xagPIAQ|Shipping Delay|Women's Performance Hoodie|Closed
+500Ws000007rJYNIA2|005Ws000001xaWjIAI|Shipping Delay|Ultimate Basketball Tank|Closed
+500Ws000007rJeoIAE|005Ws000001xZVpIAM|Shipping Delay|Endurance Road Runner|Closed
+500Ws000007rJgWIAU|005Ws000001xZkLIAU|Shipping Delay|FitPulse Fitness Tracker|Closed
+500Ws000007rJgXIAU|005Ws000001xYujIAE|Shipping Delay|Women's Yoga Shorts|Closed
+500Ws000007rJroIAE|005Ws000001xa0TIAQ|Shipping Delay|Women's Quick-Dry Sports Top|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rK1PIAU|005Ws000001xaWjIAI|Shipping Delay|Women's Flex Running Tights|Closed
+500Ws000007rK1RIAU|005Ws000001xaIDIAY|Shipping Delay|Cycling Thermal Jacket|Closed
+500Ws000007rKEIIA2|005Ws000001xZnaIAE|Shipping Delay|Women's Yoga Shorts|Closed
+500Ws000007rKJWIA2|005Ws000001xZ1BIAU|Shipping Delay|Marathon Elite Running Shoes|Closed
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rKZGIA2|005Ws000001xaA9IAI|Shipping Delay|Eco Trail Hiking Pants|Closed
+500Ws000007rKfiIAE|005Ws000001xZPNIA2|Shipping Delay|Women's Performance Hoodie|Closed
+500Ws000007rKfjIAE|005Ws000001xaQHIAY|Shipping Delay|Cyclone Bike Jersey|Closed
+500Ws000007rKvrIAE|005Ws000001xZnaIAE|Shipping Delay|Comfort Yoga Hoodie|Closed
+500Ws000007rL78IAE|005Ws000001xZPNIA2|Shipping Delay|Revolution Fitness Tracker|Closed
+500Ws000007rLjqIAE|005Ws000001xZpBIAU|Shipping Delay|Cycling Bib Shorts|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQ5CIAU|005Ws000001xamrIAA|Shipping Delay|Cycling Bib Shorts|Closed
+500Ws000007rQ5EIAU|005Ws000001xZafIAE|Shipping Delay|Renegade Fitness Tracker|Closed
+500Ws000007rQAwIAM|005Ws000001xZXRIA2|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rQd9IAE|005Ws000001xZKXIA2|Shipping Delay|Revolution Fitness Tracker|Closed
+500Ws000007rQpxIAE|005Ws000001xZpBIAU|Shipping Delay|HydroFlow Swim Shorts|Closed
+500Ws000007rQpzIAE|005Ws000001xaEzIAI|Warranty Issue|Swim Training Fins|Closed
+500Ws000007rQtBIAU|005Ws000001xaRuIAI|Shipping Delay|Explorer Outdoor Jacket|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rRCYIA2|005Ws000001xZFhIAM|Shipping Delay|Eco Trail Hiking Pants|Closed
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRKbIAM|005Ws000001xaTVIAY|Shipping Delay|Ultimate Basketball Tank|Closed
+500Ws000007rRMDIA2|005Ws000001xYwLIAU|Shipping Delay|Smart Fitness Watch|Closed
+500Ws000007rRNpIAM|005Ws000001xaEzIAI|Shipping Delay|Air Zoom Pegasus|Closed
+500Ws000007rRSfIAM|005Ws000001xaRuIAI|Order Cancellation|Swim Training Fins|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRVtIAM|005Ws000001xaoTIAQ|Shipping Delay|Peak Performance Hoodie|Closed
+500Ws000007rRZCIA2|005Ws000001xYujIAE|Shipping Delay|Elemental Soccer Shin Guards|Closed
+500Ws000007rRakIAE|005Ws000001xYt8IAE|Shipping Delay|Eco Yoga Pants|Closed
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRfaIAE|005Ws000001xaRtIAI|Shipping Delay|Solstice Trail Shoes|Closed
+500Ws000007rRm4IAE|005Ws000001xZafIAE|Shipping Delay|Hiking Waterproof Boots|Closed
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rS29IAE|005Ws000001xaBlIAI|Shipping Delay|Aero Golf Driver|Closed
+500Ws000007rS5NIAU|005Ws000001xZ9FIAU|Shipping Delay|Versatile Fitness Mat|Closed
+500Ws000007rS8bIAE|005Ws000001xTrqIAE|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rSADIA2|005Ws000001xZsPIAU|Shipping Delay|Pro Swim Goggles|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+500Ws000007rSIKIA2|005Ws000001xa6vIAA|Shipping Delay|Tempo Running Watch|Closed
+500Ws000007rSN7IAM|005Ws000001xZ7dIAE|Shipping Delay|Pro Mountain Biking Gloves|Closed
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

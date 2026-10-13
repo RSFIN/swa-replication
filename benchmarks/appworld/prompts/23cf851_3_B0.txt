@@ -1,0 +1,2677 @@
+TASK_ID: 23cf851_3
+SCB_CONDITION: B0
+
+TASK INSTRUCTION:
+How many likes did all Venmo transactions, I sent or received this month, have in total?
+
+FROZEN CONTEXT:
+{
+  "primitive_transactions": [
+    {
+      "amount": 30.0,
+      "created_at": "2023-04-07T06:25:05",
+      "description": "Pasta Night 🍝",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 824
+    },
+    {
+      "amount": 116.0,
+      "created_at": "2023-02-19T06:23:43",
+      "description": "🚀 To the Moon! Crypto Buy-In",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 825
+    },
+    {
+      "amount": 37.0,
+      "created_at": "2023-02-28T09:40:14",
+      "description": "Flower Delivery",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 826
+    },
+    {
+      "amount": 24.0,
+      "created_at": "2023-05-04T08:06:30",
+      "description": "🛵 Food Delivery for Lazy Day 🍕",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 827
+    },
+    {
+      "amount": 66.0,
+      "created_at": "2022-12-04T21:28:02",
+      "description": "Antique Shopping",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 828
+    },
+    {
+      "amount": 23.0,
+      "created_at": "2022-12-07T12:47:20",
+      "description": "🍔 Gourmet Burger and Fries 🍟",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 829
+    },
+    {
+      "amount": 24.0,
+      "created_at": "2023-01-04T04:31:37",
+      "description": "🍺 Craft Beers 🍻👌",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 830
+    },
+    {
+      "amount": 29.0,
+      "created_at": "2023-04-20T23:39:21",
+      "description": "🚕Lyft Home",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "tr_solo@gmail.com",
+        "name": "Troy Solomon"
+      },
+      "transaction_id": 831
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-05-08T19:29:59",
+      "description": "⛽ Gas Money",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 1147
+    },
+    {
+      "amount": 12.0,
+      "created_at": "2023-01-12T05:04:19",
+      "description": "🍵 Tea Tasting Experience",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 1148
+    },
+    {
+      "amount": 73.0,
+      "created_at": "2023-01-04T20:09:20",
+      "description": "Electronics",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 1149
+    },
+    {
+      "amount": 40.0,
+      "created_at": "2023-05-13T11:09:23",
+      "description": "Tutoring",
+      "like_count": 5,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 1150
+    },
+    {
+      "amount": 127.0,
+      "created_at": "2023-02-17T16:38:10",
+      "description": "🚀 To the Moon! Crypto Buy-In",
+      "like_count": 5,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 1151
+    },
+    {
+      "amount": 131.0,
+      "created_at": "2023-04-20T14:55:03",
+      "description": "Gym Membership",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 1152
+    },
+    {
+      "amount": 34.0,
+      "created_at": "2023-02-20T10:55:50",
+      "description": "Crafting supplies",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1219
+    },
+    {
+      "amount": 48.0,
+      "created_at": "2023-02-02T19:53:27",
+      "description": "🎼Vinyl Records",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1220
+    },
+    {
+      "amount": 53.0,
+      "created_at": "2023-03-16T13:58:52",
+      "description": "🎓 Graduation Gift 🎉🎁",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1221
+    },
+    {
+      "amount": 469.0,
+      "created_at": "2023-04-13T01:26:04",
+      "description": "Charity Donation",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1222
+    },
+    {
+      "amount": 60.0,
+      "created_at": "2023-05-16T08:41:08",
+      "description": "Online courses",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1223
+    },
+    {
+      "amount": 107.0,
+      "created_at": "2023-03-02T11:12:43",
+      "description": "Gym Membership",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1224
+    },
+    {
+      "amount": 59.0,
+      "created_at": "2023-04-22T20:07:51",
+      "description": "🎉Bday Bash!",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1225
+    },
+    {
+      "amount": 107.0,
+      "created_at": "2023-04-26T09:41:58",
+      "description": "Watch",
+      "like_count": 4,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 1226
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-03-31T19:22:21",
+      "description": "🚀 Rocket League Tourney 💥🎮",
+      "like_count": 0,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 1570
+    },
+    {
+      "amount": 14.0,
+      "created_at": "2023-01-06T08:40:09",
+      "description": "🚗 Weekend Road Trip Snacks 🍫",
+      "like_count": 0,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 1571
+    },
+    {
+      "amount": 24.0,
+      "created_at": "2023-01-29T16:24:56",
+      "description": "Late-night pizza run",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1786
+    },
+    {
+      "amount": 12.0,
+      "created_at": "2023-01-10T03:02:42",
+      "description": "🍹Happy Hour Vibes",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1787
+    },
+    {
+      "amount": 71.0,
+      "created_at": "2023-03-12T12:56:08",
+      "description": "Date Night 🍷",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1788
+    },
+    {
+      "amount": 28.0,
+      "created_at": "2023-01-16T11:56:54",
+      "description": "🏠 Housewarming Party Gifts 🎁",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1789
+    },
+    {
+      "amount": 94.0,
+      "created_at": "2023-03-23T10:50:33",
+      "description": "🚀Crypto Buy",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1790
+    },
+    {
+      "amount": 85.0,
+      "created_at": "2022-12-19T09:53:55",
+      "description": "Puppy 🐶 Training Classes",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1791
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2022-12-18T21:52:14",
+      "description": "Tacos 🌮 Tuesday",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1792
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2022-12-27T14:52:37",
+      "description": "🍵 Tea Tasting Experience",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 1793
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-04-14T00:01:41",
+      "description": "🚕 Uber Ride 🚗📍",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 1825
+    },
+    {
+      "amount": 17.0,
+      "created_at": "2023-04-17T06:09:36",
+      "description": "🍹 More Thirsty Thursdays 🍸🍹",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 1826
+    },
+    {
+      "amount": 61.0,
+      "created_at": "2022-12-17T01:04:51",
+      "description": "👓 New Glasses 🤓👀",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 1827
+    },
+    {
+      "amount": 32.0,
+      "created_at": "2023-01-31T01:23:52",
+      "description": "Sunday brunch vibes",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 2705
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-05-02T23:35:30",
+      "description": "💈 Haircut 💇💇",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 2706
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-02-10T12:49:28",
+      "description": "Dog Park 🐶 Outing",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 2707
+    },
+    {
+      "amount": 23.0,
+      "created_at": "2022-12-03T14:45:48",
+      "description": "🏀 Basketball Game Tix 🎟️🏀",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "transaction_id": 3235
+    },
+    {
+      "amount": 65.0,
+      "created_at": "2023-02-21T03:57:03",
+      "description": "🍷 Winery Day Trip 🍇",
+      "like_count": 4,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "transaction_id": 3236
+    },
+    {
+      "amount": 315.0,
+      "created_at": "2023-01-06T01:06:16",
+      "description": "Wedding Gift",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "transaction_id": 3237
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-04-15T09:52:20",
+      "description": "🍻Beers & Cheers",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "transaction_id": 3238
+    },
+    {
+      "amount": 98.0,
+      "created_at": "2023-02-10T18:59:50",
+      "description": "Video Games",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "transaction_id": 3239
+    },
+    {
+      "amount": 25.0,
+      "created_at": "2023-01-16T04:57:11",
+      "description": "Makeup 💄",
+      "like_count": 0,
+      "receiver": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 3286
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-05-10T11:01:51",
+      "description": "🌳 National Park Entry 🌲🏞️",
+      "like_count": 0,
+      "receiver": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 3287
+    },
+    {
+      "amount": 67.0,
+      "created_at": "2023-04-09T15:47:25",
+      "description": "Language Classes",
+      "like_count": 0,
+      "receiver": {
+        "email": "mar_blac@gmail.com",
+        "name": "Martin Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 3288
+    },
+    {
+      "amount": 176.0,
+      "created_at": "2022-11-21T18:22:54",
+      "description": "👓New Specs",
+      "like_count": 0,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 3836
+    },
+    {
+      "amount": 26.0,
+      "created_at": "2022-11-24T09:45:09",
+      "description": "🍔 Weekend BBQ Supplies",
+      "like_count": 0,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 3837
+    },
+    {
+      "amount": 7.0,
+      "created_at": "2023-04-21T22:00:06",
+      "description": "Dog Park 🐶 Outing",
+      "like_count": 0,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 3838
+    },
+    {
+      "amount": 171.0,
+      "created_at": "2023-05-13T11:19:09",
+      "description": "🎵Festival Tix",
+      "like_count": 0,
+      "receiver": {
+        "email": "ma_smith@gmail.com",
+        "name": "Marcus Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 5126
+    },
+    {
+      "amount": 42.0,
+      "created_at": "2023-01-27T23:31:46",
+      "description": "💅Glow-up Essentials",
+      "like_count": 0,
+      "receiver": {
+        "email": "ma_smith@gmail.com",
+        "name": "Marcus Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 5127
+    },
+    {
+      "amount": 13.0,
+      "created_at": "2022-11-19T01:14:50",
+      "description": "🌳 Park Picnic Snacks",
+      "like_count": 0,
+      "receiver": {
+        "email": "ma_smith@gmail.com",
+        "name": "Marcus Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 5128
+    },
+    {
+      "amount": 32.0,
+      "created_at": "2023-04-08T02:00:11",
+      "description": "Cosplay 🦸 Gear",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 5176
+    },
+    {
+      "amount": 60.0,
+      "created_at": "2022-12-15T12:20:57",
+      "description": "New kicks 🔥",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 5177
+    },
+    {
+      "amount": 8.0,
+      "created_at": "2023-02-08T21:44:16",
+      "description": "🏝️ Tropical Smoothie Craze 🍍",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 5178
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2022-12-25T04:01:30",
+      "description": "📖 Bookstore Haul 📚❤️",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5284
+    },
+    {
+      "amount": 24.0,
+      "created_at": "2023-01-29T06:26:35",
+      "description": "Vegan Dinner 🌱💚",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5285
+    },
+    {
+      "amount": 40.0,
+      "created_at": "2022-12-27T10:26:38",
+      "description": "💈 Haircut 💇💇",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5286
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2022-12-23T15:01:40",
+      "description": "🎤 Karaoke Night Entry Fees 🎶",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5287
+    },
+    {
+      "amount": 12.0,
+      "created_at": "2022-12-03T05:49:51",
+      "description": "🍔Burger Goals",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5288
+    },
+    {
+      "amount": 9.0,
+      "created_at": "2023-05-15T10:51:25",
+      "description": "Study 📚 Snacks",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5289
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-03-14T00:36:48",
+      "description": "🍪 Bake Sale Goodies",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5290
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-01-26T16:21:33",
+      "description": "Netflix binge weekend",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5291
+    },
+    {
+      "amount": 34.0,
+      "created_at": "2023-05-14T08:49:21",
+      "description": "Garden 🌱 Stuff",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 5292
+    },
+    {
+      "amount": 113.0,
+      "created_at": "2023-05-14T11:05:50",
+      "description": "🧳 Travel Fund 🌍✈️",
+      "like_count": 1,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "transaction_id": 5961
+    },
+    {
+      "amount": 96.0,
+      "created_at": "2023-04-11T17:52:47",
+      "description": "Workshop Fees",
+      "like_count": 2,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "transaction_id": 5962
+    },
+    {
+      "amount": 76.0,
+      "created_at": "2023-03-20T22:58:57",
+      "description": "🏋️ New Gym Gear Shopping 🤸",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "transaction_id": 5963
+    },
+    {
+      "amount": 11.0,
+      "created_at": "2023-04-29T13:24:40",
+      "description": "🍩 Donuts for the Team Meeting 📈",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "transaction_id": 5964
+    },
+    {
+      "amount": 57.0,
+      "created_at": "2023-01-12T03:39:41",
+      "description": "💪 Gym Dues",
+      "like_count": 3,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "transaction_id": 5965
+    },
+    {
+      "amount": 6.0,
+      "created_at": "2023-01-24T22:36:00",
+      "description": "🍬 Candy Run 🍭🍫",
+      "like_count": 0,
+      "receiver": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6017
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-03-22T02:59:27",
+      "description": "🌳 Park Picnic Snacks",
+      "like_count": 0,
+      "receiver": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6018
+    },
+    {
+      "amount": 101.0,
+      "created_at": "2023-02-06T12:16:58",
+      "description": "Photography",
+      "like_count": 0,
+      "receiver": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6019
+    },
+    {
+      "amount": 62.0,
+      "created_at": "2023-01-30T18:59:15",
+      "description": "Hiking Gear 🥾🌲",
+      "like_count": 0,
+      "receiver": {
+        "email": "william_mart@gmail.com",
+        "name": "William Martinez"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6020
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2023-03-17T13:01:55",
+      "description": "📚 Study Group Snack Fund 📖",
+      "like_count": 0,
+      "receiver": {
+        "email": "erikabail@gmail.com",
+        "name": "Erika Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6328
+    },
+    {
+      "amount": 29.0,
+      "created_at": "2023-05-07T22:15:35",
+      "description": "💊 Pharmacy Stuff 🌡️💊",
+      "like_count": 0,
+      "receiver": {
+        "email": "erikabail@gmail.com",
+        "name": "Erika Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6329
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-04-20T23:44:47",
+      "description": "🎥Stream Sesh",
+      "like_count": 0,
+      "receiver": {
+        "email": "erikabail@gmail.com",
+        "name": "Erika Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6330
+    },
+    {
+      "amount": 26.0,
+      "created_at": "2023-01-06T00:03:57",
+      "description": "Yoga class zen",
+      "like_count": 0,
+      "receiver": {
+        "email": "erikabail@gmail.com",
+        "name": "Erika Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6331
+    },
+    {
+      "amount": 154.0,
+      "created_at": "2023-03-13T18:51:32",
+      "description": "Photography",
+      "like_count": 0,
+      "receiver": {
+        "email": "erikabail@gmail.com",
+        "name": "Erika Blackburn"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6332
+    },
+    {
+      "amount": 190.0,
+      "created_at": "2023-02-23T13:48:37",
+      "description": "🎟️ Concert Tickets",
+      "like_count": 0,
+      "receiver": {
+        "email": "carbrown@gmail.com",
+        "name": "Carl Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6937
+    },
+    {
+      "amount": 16.0,
+      "created_at": "2023-05-03T04:58:00",
+      "description": "🌱 Vegan Cooking Ingredients 🍅",
+      "like_count": 0,
+      "receiver": {
+        "email": "carbrown@gmail.com",
+        "name": "Carl Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6938
+    },
+    {
+      "amount": 25.0,
+      "created_at": "2023-03-19T12:52:35",
+      "description": "🚗 Weekend Road Trip Snacks 🍫",
+      "like_count": 0,
+      "receiver": {
+        "email": "carbrown@gmail.com",
+        "name": "Carl Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6939
+    },
+    {
+      "amount": 67.0,
+      "created_at": "2023-01-27T16:12:58",
+      "description": "Fishing Gear",
+      "like_count": 0,
+      "receiver": {
+        "email": "carbrown@gmail.com",
+        "name": "Carl Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6940
+    },
+    {
+      "amount": 30.0,
+      "created_at": "2023-01-16T18:53:32",
+      "description": "Birthday 🎂🎉 Celebration",
+      "like_count": 0,
+      "receiver": {
+        "email": "carbrown@gmail.com",
+        "name": "Carl Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 6941
+    },
+    {
+      "amount": 14.0,
+      "created_at": "2023-02-04T13:49:55",
+      "description": "👾Arcade Night",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7109
+    },
+    {
+      "amount": 33.0,
+      "created_at": "2023-03-08T12:58:02",
+      "description": "🐾Pet Stuff",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7110
+    },
+    {
+      "amount": 12.0,
+      "created_at": "2023-01-24T08:42:55",
+      "description": "Late-night pizza run",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7111
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-02-22T12:58:17",
+      "description": "Pizza Night 🍕",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7112
+    },
+    {
+      "amount": 25.0,
+      "created_at": "2023-04-12T00:32:30",
+      "description": "Skincare 💆🌿",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7113
+    },
+    {
+      "amount": 39.0,
+      "created_at": "2023-01-06T21:47:14",
+      "description": "Escape Room",
+      "like_count": 2,
+      "receiver": {
+        "email": "bradley_ball@gmail.com",
+        "name": "Bradley Ball"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7247
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2022-12-08T16:20:20",
+      "description": "🍕 Extra Cheese 🧀🍕",
+      "like_count": 0,
+      "receiver": {
+        "email": "bradley_ball@gmail.com",
+        "name": "Bradley Ball"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7248
+    },
+    {
+      "amount": 56.0,
+      "created_at": "2023-05-01T06:25:39",
+      "description": "Dog Grooming",
+      "like_count": 0,
+      "receiver": {
+        "email": "bradley_ball@gmail.com",
+        "name": "Bradley Ball"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7249
+    },
+    {
+      "amount": 39.0,
+      "created_at": "2023-02-22T21:41:45",
+      "description": "Grocery haul",
+      "like_count": 0,
+      "receiver": {
+        "email": "bradley_ball@gmail.com",
+        "name": "Bradley Ball"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7250
+    },
+    {
+      "amount": 66.0,
+      "created_at": "2023-01-21T13:07:43",
+      "description": "Wine",
+      "like_count": 6,
+      "receiver": {
+        "email": "bradley_ball@gmail.com",
+        "name": "Bradley Ball"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7251
+    },
+    {
+      "amount": 80.0,
+      "created_at": "2023-04-25T23:59:39",
+      "description": "🎸 Music Lessons for the Month 🎵",
+      "like_count": 0,
+      "receiver": {
+        "email": "bradley_ball@gmail.com",
+        "name": "Bradley Ball"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7252
+    },
+    {
+      "amount": 35.0,
+      "created_at": "2023-01-17T08:54:52",
+      "description": "Coffee for the Team ☕",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7253
+    },
+    {
+      "amount": 34.0,
+      "created_at": "2022-12-09T15:00:32",
+      "description": "📚Book Club Fund",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7254
+    },
+    {
+      "amount": 90.0,
+      "created_at": "2023-02-15T06:24:12",
+      "description": "🏋️Gym Gear",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7255
+    },
+    {
+      "amount": 44.0,
+      "created_at": "2022-12-16T01:41:12",
+      "description": "Thrift shop finds",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7256
+    },
+    {
+      "amount": 22.0,
+      "created_at": "2023-02-12T07:49:15",
+      "description": "🥑 Avocado Toast Brunch 🍞🍳",
+      "like_count": 5,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7257
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-04-01T19:33:34",
+      "description": "🌮Taco Vibes",
+      "like_count": 0,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7258
+    },
+    {
+      "amount": 34.0,
+      "created_at": "2023-04-29T01:47:44",
+      "description": "Fishing License",
+      "like_count": 4,
+      "receiver": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7259
+    },
+    {
+      "amount": 60.0,
+      "created_at": "2023-04-12T21:02:32",
+      "description": "🏕 Camping Trip Food and Gear 🎒",
+      "like_count": 1,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7260
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-03-25T10:56:48",
+      "description": "🧘 Yoga Class 🧘🌿",
+      "like_count": 2,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7261
+    },
+    {
+      "amount": 46.0,
+      "created_at": "2023-02-06T03:20:19",
+      "description": "Camping Fees",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7262
+    },
+    {
+      "amount": 42.0,
+      "created_at": "2023-05-02T22:44:56",
+      "description": "Escape Room",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7263
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-04-11T10:14:34",
+      "description": "Tacos 🌮 Tuesday",
+      "like_count": 2,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7264
+    },
+    {
+      "amount": 163.0,
+      "created_at": "2023-01-29T14:21:00",
+      "description": "Massage",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7265
+    },
+    {
+      "amount": 218.0,
+      "created_at": "2023-02-24T02:16:33",
+      "description": "Language Classes",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7266
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-04-24T12:33:45",
+      "description": "Zoo Tickets",
+      "like_count": 0,
+      "receiver": {
+        "email": "chelsea-burch@gmail.com",
+        "name": "Chelsea Burch"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7267
+    },
+    {
+      "amount": 97.0,
+      "created_at": "2023-04-25T04:03:44",
+      "description": "Tech Gadgets",
+      "like_count": 1,
+      "receiver": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7268
+    },
+    {
+      "amount": 347.0,
+      "created_at": "2023-05-10T15:02:38",
+      "description": "Hotel Stay",
+      "like_count": 5,
+      "receiver": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7269
+    },
+    {
+      "amount": 8.0,
+      "created_at": "2023-03-10T22:51:11",
+      "description": "🍬 Candy Run 🍭🍫",
+      "like_count": 1,
+      "receiver": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7270
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-04-12T18:43:05",
+      "description": "Study 📚 Snacks",
+      "like_count": 5,
+      "receiver": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7271
+    },
+    {
+      "amount": 38.0,
+      "created_at": "2023-05-13T09:36:05",
+      "description": "🎫 Theater Tickets",
+      "like_count": 4,
+      "receiver": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7272
+    },
+    {
+      "amount": 47.0,
+      "created_at": "2023-04-09T21:07:39",
+      "description": "Wine Tasting",
+      "like_count": 0,
+      "receiver": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7273
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-02-28T11:04:01",
+      "description": "🍵 Tea Tasting Experience",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7274
+    },
+    {
+      "amount": 100.0,
+      "created_at": "2023-01-17T11:28:04",
+      "description": "Gardening Supplies",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7275
+    },
+    {
+      "amount": 17.0,
+      "created_at": "2023-04-16T02:53:08",
+      "description": "🎥 Movie Marathon Night 🍿",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7276
+    },
+    {
+      "amount": 12.0,
+      "created_at": "2023-01-15T04:55:28",
+      "description": "Pasta Night 🍝",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7277
+    },
+    {
+      "amount": 8.0,
+      "created_at": "2022-11-27T00:20:21",
+      "description": "🎀 Gift Wrapping 🎁🎀",
+      "like_count": 1,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7278
+    },
+    {
+      "amount": 7.0,
+      "created_at": "2023-02-13T09:04:30",
+      "description": "🎤 Open Mic Night",
+      "like_count": 4,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7279
+    },
+    {
+      "amount": 11.0,
+      "created_at": "2022-11-17T22:37:46",
+      "description": "Skate park fees",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7280
+    },
+    {
+      "amount": 14.0,
+      "created_at": "2023-04-01T00:16:24",
+      "description": "💊 Pharmacy Stuff 🌡️💊",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7281
+    },
+    {
+      "amount": 40.0,
+      "created_at": "2023-03-19T07:14:44",
+      "description": "🔭 Stargazing Trip Essentials 🌌",
+      "like_count": 0,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7282
+    },
+    {
+      "amount": 39.0,
+      "created_at": "2023-05-14T23:36:52",
+      "description": "🌸 Springtime Flower Garden Project 🌷",
+      "like_count": 2,
+      "receiver": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7283
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-03-05T07:26:06",
+      "description": "Lunch",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7284
+    },
+    {
+      "amount": 55.0,
+      "created_at": "2023-02-17T20:51:22",
+      "description": "Craft Supplies",
+      "like_count": 4,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7285
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-04-11T14:00:23",
+      "description": "📚 Study Group Snack Fund 📖",
+      "like_count": 3,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7286
+    },
+    {
+      "amount": 24.0,
+      "created_at": "2023-04-05T02:14:54",
+      "description": "🍹 Happy Hour Fund",
+      "like_count": 2,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7287
+    },
+    {
+      "amount": 27.0,
+      "created_at": "2023-05-12T10:15:16",
+      "description": "🍕Pizza & Chill",
+      "like_count": 1,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7288
+    },
+    {
+      "amount": 55.0,
+      "created_at": "2023-05-16T07:31:27",
+      "description": "Hiking essentials",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7289
+    },
+    {
+      "amount": 19.0,
+      "created_at": "2023-04-17T11:54:27",
+      "description": "Board Games 🎲",
+      "like_count": 0,
+      "receiver": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7290
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-05-17T02:18:42",
+      "description": "🍩 Donuts for the Team Meeting 📈",
+      "like_count": 2,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7291
+    },
+    {
+      "amount": 31.0,
+      "created_at": "2022-11-18T03:47:05",
+      "description": "🍤 Seafood Dinner",
+      "like_count": 0,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7292
+    },
+    {
+      "amount": 38.0,
+      "created_at": "2023-01-13T19:41:59",
+      "description": "💃 Salsa Dancing Lessons 🕺",
+      "like_count": 1,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7293
+    },
+    {
+      "amount": 160.0,
+      "created_at": "2023-05-18T01:54:35",
+      "description": "Weekend getaway",
+      "like_count": 0,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7294
+    },
+    {
+      "amount": 54.0,
+      "created_at": "2022-12-11T20:29:09",
+      "description": "Photography 📸 Workshop",
+      "like_count": 0,
+      "receiver": {
+        "email": "nicholas.weber@gmail.com",
+        "name": "Nicholas Weber"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7295
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-05-01T18:27:33",
+      "description": "🥳 Party Decorations 🎉🎈",
+      "like_count": 5,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7296
+    },
+    {
+      "amount": 15.0,
+      "created_at": "2023-01-16T05:51:42",
+      "description": "🍜 Ramen Night 🍜🥢",
+      "like_count": 1,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7297
+    },
+    {
+      "amount": 29.0,
+      "created_at": "2023-02-04T10:04:45",
+      "description": "👚Thrifting",
+      "like_count": 0,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7298
+    },
+    {
+      "amount": 32.0,
+      "created_at": "2023-02-11T23:36:00",
+      "description": "⛽ Gas Money",
+      "like_count": 6,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7299
+    },
+    {
+      "amount": 43.0,
+      "created_at": "2023-04-29T06:13:45",
+      "description": "🎓 Graduation Gift 🎉🎁",
+      "like_count": 0,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7300
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-02-13T20:23:16",
+      "description": "Farmers 🌽 Market",
+      "like_count": 0,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7301
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2023-04-11T07:28:57",
+      "description": "Skincare 💆🌿",
+      "like_count": 1,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7302
+    },
+    {
+      "amount": 30.0,
+      "created_at": "2023-01-31T02:02:07",
+      "description": "Aesthetic room decor",
+      "like_count": 2,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7303
+    },
+    {
+      "amount": 116.0,
+      "created_at": "2023-05-04T17:17:52",
+      "description": "Musical Instruments",
+      "like_count": 0,
+      "receiver": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7304
+    },
+    {
+      "amount": 14.0,
+      "created_at": "2022-12-22T10:26:39",
+      "description": "Doggo's new toy",
+      "like_count": 4,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7305
+    },
+    {
+      "amount": 33.0,
+      "created_at": "2023-02-07T12:27:44",
+      "description": "🛒 Grocery Run for Potluck Dinner 🍲",
+      "like_count": 4,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7306
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2023-03-10T20:03:18",
+      "description": "Pet Food",
+      "like_count": 4,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7307
+    },
+    {
+      "amount": 50.0,
+      "created_at": "2023-05-08T16:46:52",
+      "description": "Yoga Class",
+      "like_count": 1,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7308
+    },
+    {
+      "amount": 65.0,
+      "created_at": "2023-01-27T14:50:35",
+      "description": "Photography 📸 Workshop",
+      "like_count": 0,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7309
+    },
+    {
+      "amount": 214.0,
+      "created_at": "2022-12-09T02:37:29",
+      "description": "Language Classes",
+      "like_count": 0,
+      "receiver": {
+        "email": "alexander-ridd@gmail.com",
+        "name": "Alexander Riddle"
+      },
+      "sender": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "transaction_id": 7310
+    },
+    {
+      "amount": 33.0,
+      "created_at": "2023-03-19T09:28:34",
+      "description": "🎬 Outdoor Movie Night Setup 📽️",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "joseph.webe@gmail.com",
+        "name": "Joseph Weber"
+      },
+      "transaction_id": 7311
+    },
+    {
+      "amount": 76.0,
+      "created_at": "2023-01-28T10:00:25",
+      "description": "🎧 New Headphones 🎵🤘",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "transaction_id": 7312
+    },
+    {
+      "amount": 18.0,
+      "created_at": "2023-05-13T17:59:09",
+      "description": "Baking 🧁 Supplies",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "hun.weaver@gmail.com",
+        "name": "Hunter Weaver"
+      },
+      "transaction_id": 7313
+    },
+    {
+      "amount": 27.0,
+      "created_at": "2023-03-25T08:47:05",
+      "description": "Game night",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "andrew_brow@gmail.com",
+        "name": "Andrew Brown"
+      },
+      "transaction_id": 7314
+    },
+    {
+      "amount": 10.0,
+      "created_at": "2023-04-27T13:17:55",
+      "description": "📸 Group Photo Printing 🖼️",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 7315
+    },
+    {
+      "amount": 16.0,
+      "created_at": "2022-12-27T18:50:17",
+      "description": "🍔 Gourmet Burger and Fries 🍟",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 7316
+    },
+    {
+      "amount": 16.0,
+      "created_at": "2023-03-23T17:02:49",
+      "description": "Food delivery 🍕",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 7317
+    },
+    {
+      "amount": 62.0,
+      "created_at": "2023-03-10T04:38:21",
+      "description": "🎟️ Concert Tickets",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 7318
+    },
+    {
+      "amount": 94.0,
+      "created_at": "2022-12-16T08:10:03",
+      "description": "👓 New Glasses 🤓👀",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "diwils@gmail.com",
+        "name": "Dillon Wilson"
+      },
+      "transaction_id": 7319
+    },
+    {
+      "amount": 38.0,
+      "created_at": "2023-03-05T20:26:50",
+      "description": "Hiking essentials",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 7320
+    },
+    {
+      "amount": 51.0,
+      "created_at": "2023-05-03T10:49:00",
+      "description": "Hiking Gear 🥾🌲",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 7321
+    },
+    {
+      "amount": 37.0,
+      "created_at": "2023-02-01T18:15:38",
+      "description": "🎨 Art Supplies for Creative Weekend 🖌️",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 7322
+    },
+    {
+      "amount": 46.0,
+      "created_at": "2023-02-15T23:17:15",
+      "description": "Sushi night 🍣",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 7323
+    },
+    {
+      "amount": 32.0,
+      "created_at": "2023-01-05T12:38:15",
+      "description": "Subscription",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 7324
+    },
+    {
+      "amount": 5.0,
+      "created_at": "2023-03-17T18:30:11",
+      "description": "🧼 Laundry Day 🧺💦",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "an-harrison@gmail.com",
+        "name": "Anthony Harrison"
+      },
+      "transaction_id": 7325
+    },
+    {
+      "amount": 104.0,
+      "created_at": "2022-11-26T16:55:27",
+      "description": "Massage",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 7326
+    },
+    {
+      "amount": 55.0,
+      "created_at": "2023-05-13T20:34:37",
+      "description": "🍷 Winery Day Trip 🍇",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 7327
+    },
+    {
+      "amount": 100.0,
+      "created_at": "2023-01-08T16:56:40",
+      "description": "Couples Massage 💆💆",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 7328
+    },
+    {
+      "amount": 20.0,
+      "created_at": "2023-01-18T18:00:26",
+      "description": "Monthly comics 🦸",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "jo-harr@gmail.com",
+        "name": "Jordan Harrison"
+      },
+      "transaction_id": 7329
+    },
+    {
+      "amount": 25.0,
+      "created_at": "2023-02-24T23:59:46",
+      "description": "🍔Burger Goals",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "corwils@gmail.com",
+        "name": "Cory Wilson"
+      },
+      "transaction_id": 7330
+    },
+    {
+      "amount": 54.0,
+      "created_at": "2022-12-22T13:08:27",
+      "description": "Dance Class",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "corwils@gmail.com",
+        "name": "Cory Wilson"
+      },
+      "transaction_id": 7331
+    },
+    {
+      "amount": 6.0,
+      "created_at": "2023-01-29T11:46:15",
+      "description": "Dog Park 🐶 Outing",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "corwils@gmail.com",
+        "name": "Cory Wilson"
+      },
+      "transaction_id": 7332
+    },
+    {
+      "amount": 87.0,
+      "created_at": "2023-05-05T20:46:15",
+      "description": "Health Supplements",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 7333
+    },
+    {
+      "amount": 42.0,
+      "created_at": "2023-05-18T10:49:39",
+      "description": "Gym 💪🏼 Supplements",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 7334
+    },
+    {
+      "amount": 89.0,
+      "created_at": "2023-04-14T18:01:00",
+      "description": "Golf Fees",
+      "like_count": 0,
+      "receiver": {
+        "email": "nan_ritt@gmail.com",
+        "name": "Nancy Ritter"
+      },
+      "sender": {
+        "email": "clmiller@gmail.com",
+        "name": "Claudia Miller"
+      },
+      "transaction_id": 7335
+    }
+  ],
+  "source_interface": "venmo.show_transactions",
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "nan_ritt@gmail.com"
+  }
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

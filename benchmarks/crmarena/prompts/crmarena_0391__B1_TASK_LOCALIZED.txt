@@ -1,0 +1,332 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Incorrect Item Received
+- Case Description: I recently ordered a Reflective Running Vest, but I received a completely different item in my package. I need this item exchanged as soon as possible to get the correct Reflective Running Vest I originally ordered.
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Incorrect Item Received
+TARGET_PRODUCT=Reflective Running Vest
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007q7dmIAA|005Ws000001xaOfIAI|Incorrect Item Received|Ultimate Basketball Tank|Closed
+500Ws000007qSm2IAE|005Ws000001xZ4PIAU|Incorrect Item Received|Endurance Road Runner|Closed
+500Ws000007qVnuIAE|005Ws000001xZVpIAM|Incorrect Item Received|Functional Training Kettlebell|Closed
+500Ws000007qVnvIAE|005Ws000001xTbjIAE|Incorrect Item Received|Aero Zip Cycling Vest|Closed
+500Ws000007qbltIAA|005Ws000001xYl4IAE|Incorrect Item Received|Women's Quick-Dry Sports Top|Closed
+500Ws000007qbluIAA|005Ws000001xZCTIA2|Incorrect Item Received|Women's Quick-Dry Sports Top|Closed
+500Ws000007qcgMIAQ|005Ws000001xZafIAE|Incorrect Item Received|Women's Yoga Shorts|Closed
+500Ws000007qe2AIAQ|005Ws000001xYhpIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007qe2CIAQ|005Ws000001xZ2nIAE|Incorrect Item Received|Pro Swim Goggles|Closed
+500Ws000007qiFUIAY|005Ws000001xYmfIAE|Incorrect Item Received|Versatile Fitness Mat|Closed
+500Ws000007qifIIAQ|005Ws000001xUwrIAE|Incorrect Item Received|Elemental Soccer Shin Guards|Closed
+500Ws000007qifMIAQ|005Ws000001xarhIAA|Incorrect Item Received|Peak Performance Hoodie|Closed
+500Ws000007qk1DIAQ|005Ws000001xabZIAQ|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007qkfVIAQ|005Ws000001xZnaIAE|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007qkfWIAQ|005Ws000001xa25IAA|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007ql8aIAA|005Ws000001xZh7IAE|Incorrect Item Received|Speed Pro Soccer Cleats|Closed
+500Ws000007qlBkIAI|005Ws000001xZQzIAM|Incorrect Item Received|Cycling Bib Shorts|Closed
+500Ws000007qlIQIAY|005Ws000001xaJpIAI|Incorrect Item Received|Flex Yoga Mat|Closed
+500Ws000007qlQFIAY|005Ws000001xaTVIAY|Incorrect Item Received|Pro Swim Cap|Closed
+500Ws000007qlQGIAY|005Ws000001xaV7IAI|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007qlrhIAA|005Ws000001xaYLIAY|Incorrect Item Received|Marathon Elite Running Shoes|Closed
+500Ws000007qlriIAA|005Ws000001xTbjIAE|Incorrect Item Received|Ultra Light Swim Cap|Closed
+500Ws000007qlrkIAA|005Ws000001xaoTIAQ|Incorrect Item Received|Women's Flex Running Tights|Closed
+500Ws000007qlrnIAA|005Ws000001xaYLIAY|Incorrect Item Received|Women's Quick-Dry Sports Top|Closed
+500Ws000007qmEFIAY|005Ws000001xYoHIAU|Incorrect Item Received|Precision Kick Soccer Ball|Closed
+500Ws000007qmEGIAY|005Ws000001xabZIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007qmEHIAY|005Ws000001xZpBIAU|Incorrect Item Received|Home Gym Dumbbell Set|Closed
+500Ws000007qmEIIAY|005Ws000001xYt7IAE|Incorrect Item Received|Air Zoom Pegasus|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qmMNIAY|005Ws000001xaV7IAI|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007qnLeIAI|005Ws000001xVNQIA2|Incorrect Item Received|All-Weather Golf Gloves|Closed
+500Ws000007qnNIIAY|005Ws000001xaBlIAI|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qnWtIAI|005Ws000001xZ61IAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qncUIAQ|005Ws000001xZlxIAE|Incorrect Item Received|Retro Style Sneakers|Closed
+500Ws000007qncXIAQ|005Ws000001xZvdIAE|Incorrect Item Received|Women's Quick-Dry Sports Top|Closed
+500Ws000007qoPsIAI|005Ws000001xZlxIAE|Incorrect Item Received|Velocity Basketball Shoes|Closed
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qocfIAA|005Ws000001xagPIAQ|Incorrect Item Received|Smart Fitness Watch|Closed
+500Ws000007qqKmIAI|005Ws000001xa0TIAQ|Incorrect Item Received|Peak Performance Hoodie|Closed
+500Ws000007qqKoIAI|005Ws000001xZ2oIAE|Incorrect Item Received|Retro Style Sneakers|Closed
+500Ws000007qqKqIAI|005Ws000001xSR9IAM|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007qqKrIAI|005Ws000001xabZIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qsEqIAI|005Ws000001xaRuIAI|Incorrect Item Received|Cycling Thermal Jacket|Closed
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qszeIAA|005Ws000001xa0TIAQ|Incorrect Item Received|Cycling Bib Shorts|Closed
+500Ws000007qtCYIAY|005Ws000001xTrqIAE|Incorrect Item Received|Elite Basketball Socks|Closed
+500Ws000007qtCcIAI|005Ws000001xa8XIAQ|Incorrect Item Received|Urban Lifestyle Sneakers|Closed
+500Ws000007qtHRIAY|005Ws000001xZ4PIAU|Incorrect Item Received|Pro Swim Goggles|Closed
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007qtVqIAI|005Ws000001xatJIAQ|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007qtakIAA|005Ws000001xamrIAA|Incorrect Item Received|Eco Friendly Yoga Bag|Closed
+500Ws000007qthAIAQ|005Ws000001xaRtIAI|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007qtm5IAA|005Ws000001xa8XIAQ|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007qtusIAA|005Ws000001xa6vIAA|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007qtutIAA|005Ws000001xYgDIAU|Incorrect Item Received|Cycling Bib Shorts|Closed
+500Ws000007qtuuIAA|005Ws000001xZ7dIAE|Incorrect Item Received|Smart Fitness Watch|Closed
+500Ws000007qu5OIAQ|005Ws000001xYptIAE|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quDRIAY|005Ws000001xaQIIAY|Incorrect Item Received|Mercurial Superfly|Closed
+500Ws000007quIFIAY|005Ws000001xVFKIA2|Incorrect Item Received|Elite Training Dumbbells|Closed
+500Ws000007quJtIAI|005Ws000001xYgDIAU|Incorrect Item Received|High-Performance Speed Rope|Closed
+500Ws000007quLSIAY|005Ws000001xZnZIAU|Incorrect Item Received|Women's Performance Hoodie|Closed
+500Ws000007quLVIAY|005Ws000001xa25IAA|Incorrect Item Received|Women's Performance Hoodie|Closed
+500Ws000007quN8IAI|005Ws000001xZQzIAM|Incorrect Item Received|Precision Basketball Jersey|Closed
+500Ws000007quOiIAI|005Ws000001xaQHIAY|Incorrect Item Received|Intensity Basketball Tank|Closed
+500Ws000007qv4dIAA|005Ws000001xYujIAE|Incorrect Item Received|Cycling Bib Shorts|Closed
+500Ws000007qvKmIAI|005Ws000001xY6lIAE|Incorrect Item Received|Cycling Bib Shorts|Closed
+500Ws000007qxo3IAA|005Ws000001xatJIAQ|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007r0KTIAY|005Ws000001xZxFIAU|Incorrect Item Received|Pro Athlete Compression Tights|Closed
+500Ws000007r3NBIAY|005Ws000001xaRuIAI|Incorrect Item Received|Versatile Fitness Mat|Closed
+500Ws000007r6ksIAA|005Ws000001xZafIAE|Incorrect Item Received|Women's Flex Running Tights|Closed
+500Ws000007r8DCIAY|005Ws000001xaq5IAA|Incorrect Item Received|Revolution Fitness Tracker|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r8RiIAI|005Ws000001xZSbIAM|Incorrect Item Received|Revolution Fitness Tracker|Closed
+500Ws000007r9M6IAI|005Ws000001xZpBIAU|Incorrect Item Received|Pro Swim Goggles|Closed
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007r9dzIAA|005Ws000001xYwLIAU|Incorrect Item Received|Smart Sports Bra|Closed
+500Ws000007rA23IAE|005Ws000001xa6vIAA|Incorrect Item Received|Cycling Thermal Jacket|Closed
+500Ws000007rA24IAE|005Ws000001xXQpIAM|Incorrect Item Received|Women's Flex Running Tights|Closed
+500Ws000007rA3gIAE|005Ws000001xYptIAE|Incorrect Item Received|Performance Basketball Hoodie|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rA9FIAU|005Ws000001xYzZIAU|Incorrect Item Received|Retro Style Sneakers|Closed
+500Ws000007rA9HIAU|005Ws000001xaOfIAI|Incorrect Item Received|Glide Surf Swim Shorts|Closed
+500Ws000007rABkIAM|005Ws000001xZArIAM|Incorrect Item Received|Cyclone Bike Jersey|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rBxWIAU|005Ws000001xZvdIAE|Incorrect Item Received|Cycling Performance Gloves|Closed
+500Ws000007rCHUIA2|005Ws000001xaLRIAY|Incorrect Item Received|Ultimate Basketball Tank|Closed
+500Ws000007rCHVIA2|005Ws000001xY6lIAE|Incorrect Item Received|Women's Flex Running Tights|Closed
+500Ws000007rCNDIA2|005Ws000001xZ9FIAU|Incorrect Item Received|Pro Swim Goggles|Closed
+500Ws000007rCOvIAM|005Ws000001xZSbIAM|Incorrect Item Received|Pro Slam Dunk Shorts|Closed
+500Ws000007rCOwIAM|005Ws000001xYptIAE|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCVKIA2|005Ws000001xaOfIAI|Incorrect Item Received|Pro Running Cap|Closed
+500Ws000007rCgaIAE|005Ws000001xYzZIAU|Incorrect Item Received|High-Performance Speed Rope|Closed
+500Ws000007rCiDIAU|005Ws000001xZyrIAE|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rCjqIAE|005Ws000001xZvdIAE|Incorrect Item Received|Urban Lifestyle Sneakers|Closed
+500Ws000007rCjrIAE|005Ws000001xYujIAE|Incorrect Item Received|Hydro Racer Swim Fins|Closed
+500Ws000007rCyKIAU|005Ws000001xZvdIAE|Incorrect Item Received|Precision Golf Putter|Closed
+500Ws000007rD9bIAE|005Ws000001xaGbIAI|Incorrect Item Received|Revolution Fitness Tracker|Closed
+500Ws000007rDCqIAM|005Ws000001xaA9IAI|Incorrect Item Received|Functional Training Kettlebell|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDkmIAE|005Ws000001xZVpIAM|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rDnuIAE|005Ws000001xZIvIAM|Incorrect Item Received|Striker Soccer Jersey|Closed
+500Ws000007rDrBIAU|005Ws000001xaRtIAI|Incorrect Item Received|Vaporfly Elite|Closed
+500Ws000007rDuOIAU|005Ws000001xaZxIAI|Incorrect Item Received|All-Weather Golf Gloves|Closed
+500Ws000007rDxbIAE|005Ws000001xYwLIAU|Incorrect Item Received|Titanium Road Helmet|Closed
+500Ws000007rDzGIAU|005Ws000001xYjRIAU|Incorrect Item Received|Durable Training Gloves|Closed
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rDzJIAU|005Ws000001xaBlIAI|Incorrect Item Received|Pro Athlete Compression Tights|Closed
+500Ws000007rE4xIAE|005Ws000001xai1IAA|Incorrect Item Received|Striker Soccer Jersey|Closed
+500Ws000007rE7KIAU|005Ws000001xZArIAM|Incorrect Item Received|Retro Style Sneakers|Closed
+500Ws000007rE8tIAE|005Ws000001xalFIAQ|Incorrect Item Received|Home Gym Dumbbell Set|Closed
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rEC9IAM|005Ws000001xZCTIA2|Incorrect Item Received|Dynamic Run Shorts|Closed
+500Ws000007rEGpIAM|005Ws000001xaTVIAY|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEiNIAU|005Ws000001xamrIAA|Incorrect Item Received|Pro Running Cap|Closed
+500Ws000007rEljIAE|005Ws000001xXQpIAM|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rEnEIAU|005Ws000001xamrIAA|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rEqTIAU|005Ws000001xaYLIAY|Incorrect Item Received|Zen Yoga Mat Carry Strap|Closed
+500Ws000007rEs2IAE|005Ws000001xamrIAA|Incorrect Item Received|Speed Pro Soccer Cleats|Closed
+500Ws000007rEybIAE|005Ws000001xZnaIAE|Incorrect Item Received|Glide Surf Swim Shorts|Closed
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rF6YIAU|005Ws000001xZafIAE|Incorrect Item Received|Elemental Soccer Shin Guards|Closed
+500Ws000007rF9pIAE|005Ws000001xTrqIAE|Incorrect Item Received|Precision Kick Soccer Ball|Closed
+500Ws000007rFBPIA2|005Ws000001xZvdIAE|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rFD0IAM|005Ws000001xXIkIAM|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rFEdIAM|005Ws000001xZxFIAU|Incorrect Item Received|Swim Training Fins|Closed
+500Ws000007rFEgIAM|005Ws000001xaN3IAI|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFMkIAM|005Ws000001xabZIAQ|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rFPyIAM|005Ws000001xZXRIA2|Incorrect Item Received|Vaporfly Elite|Closed
+500Ws000007rFQ0IAM|005Ws000001xYgDIAU|Incorrect Item Received|RapidGo Running Shoes|Closed
+500Ws000007rFRaIAM|005Ws000001xZh7IAE|Incorrect Item Received|Pro Swim Goggles|Closed
+500Ws000007rFRdIAM|005Ws000001xZvdIAE|Incorrect Item Received|Pro Swim Goggles|Closed
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFTAIA2|005Ws000001xaBlIAI|Incorrect Item Received|Trailblazer Jacket|Closed
+500Ws000007rFUpIAM|005Ws000001xTrqIAE|Incorrect Item Received|Air Zoom Pegasus|Closed
+500Ws000007rFUrIAM|005Ws000001xYl3IAE|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007rFUsIAM|005Ws000001xaA9IAI|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rFY1IAM|005Ws000001xYptIAE|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rFcvIAE|005Ws000001xaEzIAI|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFg5IAE|005Ws000001xZZ3IAM|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007rFg6IAE|005Ws000001xZ2oIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rFg7IAE|005Ws000001xZZ3IAM|Incorrect Item Received|Women's Performance Hoodie|Closed
+500Ws000007rFhiIAE|005Ws000001xZ1BIAU|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rFudIAE|005Ws000001xZNlIAM|Incorrect Item Received|Pro Slam Dunk Shorts|Closed
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rG2iIAE|005Ws000001xZ7dIAE|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rG98IAE|005Ws000001xZdtIAE|Incorrect Item Received|Flex Basketball Arm Sleeves|Closed
+500Ws000007rGDvIAM|005Ws000001xYrVIAU|Incorrect Item Received|PowerBrush Football Gloves|Closed
+500Ws000007rGKTIA2|005Ws000001xZlxIAE|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007rGKWIA2|005Ws000001xYgDIAU|Incorrect Item Received|Precision Golf Putter|Closed
+500Ws000007rGNhIAM|005Ws000001xZijIAE|Incorrect Item Received|Explorer Outdoor Jacket|Closed
+500Ws000007rGQpIAM|005Ws000001xai1IAA|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGU7IAM|005Ws000001xYl4IAE|Incorrect Item Received|Performance Soccer Socks|Closed
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGYxIAM|005Ws000001xagPIAQ|Incorrect Item Received|Pro Slam Dunk Shorts|Closed
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGylIAE|005Ws000001xZdtIAE|Incorrect Item Received|Cycling Thermal Jacket|Closed
+500Ws000007rH1zIAE|005Ws000001xarhIAA|Incorrect Item Received|Women's Quick-Dry Sports Top|Closed
+500Ws000007rH20IAE|005Ws000001xSR9IAM|Incorrect Item Received|Performance Soccer Socks|Closed
+500Ws000007rH8PIAU|005Ws000001xZZ3IAM|Incorrect Item Received|Seamless Yoga Comfort Bra|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHA3IAM|005Ws000001xaTVIAY|Incorrect Item Received|Smart Fitness Watch|Closed
+500Ws000007rHA4IAM|005Ws000001xZCTIA2|Incorrect Item Received|Women's Performance Hoodie|Closed
+500Ws000007rHA7IAM|005Ws000001xYmfIAE|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rHBeIAM|005Ws000001xaZxIAI|Incorrect Item Received|All-Weather Golf Gloves|Closed
+500Ws000007rHBgIAM|005Ws000001xaIDIAY|Incorrect Item Received|Women's Quick-Dry Sports Top|Closed
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHMvIAM|005Ws000001xZ2oIAE|Incorrect Item Received|Endurance Road Runner|Closed
+500Ws000007rHMwIAM|005Ws000001xYt8IAE|Incorrect Item Received|Endurance Road Runner|Closed
+500Ws000007rHOVIA2|005Ws000001xZSbIAM|Incorrect Item Received|Women's Flex Running Tights|Closed
+500Ws000007rHOXIA2|005Ws000001xZXRIA2|Incorrect Item Received|Pro Slam Dunk Shorts|Closed
+500Ws000007rHOYIA2|005Ws000001xZfVIAU|Incorrect Item Received|Sport Luxe Sneakers|Closed
+500Ws000007rHOZIA2|005Ws000001xZZ3IAM|Incorrect Item Received|Vaporfly Elite|Closed
+500Ws000007rHWdIAM|005Ws000001xZpBIAU|Incorrect Item Received|Urban Lifestyle Sneakers|Closed
+500Ws000007rHWeIAM|005Ws000001xZ2nIAE|Incorrect Item Received|Vaporfly Elite|Closed
+500Ws000007rHYBIA2|005Ws000001xaZxIAI|Incorrect Item Received|Pro Athlete Compression Tights|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHoKIAU|005Ws000001xZPNIA2|Incorrect Item Received|Mercurial Superfly|Closed
+500Ws000007rHoLIAU|005Ws000001xa6vIAA|Incorrect Item Received|Women's Performance Hoodie|Closed
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rHrZIAU|005Ws000001xaQIIAY|Incorrect Item Received|Air Zoom Pegasus|Closed
+500Ws000007rI4RIAU|005Ws000001xaBlIAI|Incorrect Item Received|Eco Trail Hiking Pants|Closed
+500Ws000007rI4UIAU|005Ws000001xY6lIAE|Incorrect Item Received|Cycling Thermal Jacket|Closed
+500Ws000007rI4WIAU|005Ws000001xYujIAE|Incorrect Item Received|Women's Fitness Leggings|Closed
+500Ws000007rI67IAE|005Ws000001xaoTIAQ|Incorrect Item Received|High-Speed Swim Goggles|Closed
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rI69IAE|005Ws000001xatJIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rIIwIAM|005Ws000001xZNlIAM|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rIKaIAM|005Ws000001xZ4PIAU|Incorrect Item Received|Glide Surf Swim Shorts|Closed
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIahIAE|005Ws000001xZPNIA2|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rIajIAE|005Ws000001xTbjIAE|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rIkQIAU|005Ws000001xZpBIAU|Incorrect Item Received|Women's Trail Running Shorts|Closed
+500Ws000007rIkRIAU|005Ws000001xZ7dIAE|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu3IAE|005Ws000001xZu1IAE|Incorrect Item Received|Trailblazer Jacket|Closed
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rIvkIAE|005Ws000001xaJpIAI|Incorrect Item Received|Seamless Yoga Leggings|Closed
+500Ws000007rIvlIAE|005Ws000001xZcHIAU|Incorrect Item Received|Elite Basketball Shorts|Closed
+500Ws000007rJAAIA2|005Ws000001xZ61IAE|Incorrect Item Received|Women's Flex Running Tights|Closed
+500Ws000007rJACIA2|005Ws000001xa8XIAQ|Incorrect Item Received|Hiking Waterproof Boots|Closed
+500Ws000007rJDQIA2|005Ws000001xZ1BIAU|Incorrect Item Received|Cyclone Bike Jersey|Closed
+500Ws000007rJgTIAU|005Ws000001xZ2oIAE|Incorrect Item Received|Air Zoom Pegasus|Closed
+500Ws000007rJgVIAU|005Ws000001xaLRIAY|Incorrect Item Received|Velocity Basketball Shoes|Closed
+500Ws000007rJqAIAU|005Ws000001xZh7IAE|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rJtMIAU|005Ws000001xagPIAQ|Incorrect Item Received|Striker Soccer Jersey|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rK1TIAU|005Ws000001xaEzIAI|Incorrect Item Received|Velocity Basketball Shoes|Closed
+500Ws000007rK6FIAU|005Ws000001xZ2oIAE|Incorrect Item Received|Flex Basketball Arm Sleeves|Closed
+500Ws000007rK7qIAE|005Ws000001xZM9IAM|Incorrect Item Received|Aquatic Training Shorts|Closed
+500Ws000007rK7rIAE|005Ws000001xadBIAQ|Incorrect Item Received|Urban Lifestyle Sneakers|Closed
+500Ws000007rK7sIAE|005Ws000001xZdtIAE|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rKW7IAM|005Ws000001xaQHIAY|Incorrect Item Received|Cycling Performance Gloves|Closed
+500Ws000007rKXfIAM|005Ws000001xZM9IAM|Incorrect Item Received|Elemental Soccer Shin Guards|Closed
+500Ws000007rKezIAE|005Ws000001xa6vIAA|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rKuEIAU|005Ws000001xYwLIAU|Incorrect Item Received|Trail Running Shoes|Closed
+500Ws000007rL2MIAU|005Ws000001xZnaIAE|Incorrect Item Received|Air Zoom Pegasus|Closed
+500Ws000007rLjrIAE|005Ws000001xYt7IAE|Incorrect Item Received|Women's Yoga Shorts|Closed
+500Ws000007rLruIAE|005Ws000001xa0TIAQ|Incorrect Item Received|Retro Style Sneakers|Closed
+500Ws000007rLrwIAE|005Ws000001xZnZIAU|Incorrect Item Received|HydroFlow Swim Shorts|Closed
+500Ws000007rLrxIAE|005Ws000001xYwLIAU|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rLrzIAE|005Ws000001xaenIAA|Incorrect Item Received|Fusion Yoga Leggings|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQ3bIAE|005Ws000001xYl3IAE|Incorrect Item Received|All-Weather Golf Gloves|Closed
+500Ws000007rQ5FIAU|005Ws000001xabZIAQ|Incorrect Item Received|Eco Trail Hiking Pants|Closed
+500Ws000007rQAxIAM|005Ws000001xaIDIAY|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rQAyIAM|005Ws000001xa8XIAQ|Incorrect Item Received|Classic Court Sneakers|Closed
+500Ws000007rQWcIAM|005Ws000001xaIDIAY|Incorrect Item Received|Eco Yoga Pants|Closed
+500Ws000007rQd6IAE|005Ws000001xZIvIAM|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rQl8IAE|005Ws000001xYujIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rQoMIAU|005Ws000001xZ2oIAE|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rQoOIAU|005Ws000001xYptIAE|Incorrect Item Received|Glide Surf Swim Shorts|Closed
+500Ws000007rQq0IAE|005Ws000001xZqnIAE|Incorrect Item Received|Flex Yoga Mat|Closed
+500Ws000007rQrbIAE|005Ws000001xZh7IAE|Incorrect Item Received|Aquatic Training Shorts|Closed
+500Ws000007rQrcIAE|005Ws000001xatJIAQ|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rQtCIAU|005Ws000001xZkLIAU|Incorrect Item Received|Air Zoom Pegasus|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQwRIAU|005Ws000001xaYLIAY|Incorrect Item Received|Smart Soccer Ball|Closed
+500Ws000007rQzeIAE|005Ws000001xZqnIAE|Incorrect Item Received|Vaporfly Elite|Closed
+500Ws000007rR1GIAU|005Ws000001xZM9IAM|Incorrect Item Received|Urban Lifestyle Sneakers|Closed
+500Ws000007rR2rIAE|005Ws000001xZ4PIAU|Incorrect Item Received|RapidGo Running Shoes|Closed
+500Ws000007rR4TIAU|005Ws000001xSR9IAM|Incorrect Item Received|Tempo Running Watch|Closed
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rR66IAE|005Ws000001xaBlIAI|Incorrect Item Received|Cyclone Bike Jersey|Closed
+500Ws000007rRCXIA2|005Ws000001xZkLIAU|Incorrect Item Received|Urban Flux Sneakers|Closed
+500Ws000007rRE9IAM|005Ws000001xa6vIAA|Incorrect Item Received|Urban Flux Sneakers|Closed
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRHOIA2|005Ws000001xVNQIA2|Incorrect Item Received|Hydrate Fitness Watch|Closed
+500Ws000007rRJ2IAM|005Ws000001xarhIAA|Incorrect Item Received|Trail Running Shoes|Closed
+500Ws000007rRKdIAM|005Ws000001xZpBIAU|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rRKiIAM|005Ws000001xZ4PIAU|Incorrect Item Received|Revolution Fitness Tracker|Closed
+500Ws000007rRNqIAM|005Ws000001xamrIAA|Incorrect Item Received|Aero Zip Cycling Vest|Closed
+500Ws000007rRNsIAM|005Ws000001xaLRIAY|Incorrect Item Received|Active Fitness Tracker|Closed
+500Ws000007rRPRIA2|005Ws000001xaWjIAI|Incorrect Item Received|Elemental Soccer Shin Guards|Closed
+500Ws000007rRR5IAM|005Ws000001xaq5IAA|Incorrect Item Received|Revolution Fitness Tracker|Closed
+500Ws000007rRR6IAM|005Ws000001xZijIAE|Incorrect Item Received|Trail Running Shoes|Closed
+500Ws000007rRR7IAM|005Ws000001xZvdIAE|Incorrect Item Received|Trailblazer Jacket|Closed
+500Ws000007rRR8IAM|005Ws000001xajdIAA|Incorrect Item Received|Eco Trail Hiking Pants|Closed
+500Ws000007rRSgIAM|005Ws000001xarhIAA|Incorrect Item Received|Avalanche Trail Boots|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRXWIA2|005Ws000001xZnaIAE|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rRZ8IAM|005Ws000001xZZ3IAM|Incorrect Item Received|Hiking Waterproof Boots|Closed
+500Ws000007rRZ9IAM|005Ws000001xaIDIAY|Incorrect Item Received|Elemental Soccer Shin Guards|Closed
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdyIAE|005Ws000001xZafIAE|Incorrect Item Received|Women's Trail Running Shorts|Closed
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRfbIAE|005Ws000001xTrqIAE|Incorrect Item Received|All-Around Yoga Tank|Closed
+500Ws000007rRhBIAU|005Ws000001xZ61IAE|Incorrect Item Received|Adventure Parka|Closed
+500Ws000007rRinIAE|005Ws000001xZh7IAE|Incorrect Item Received|Urban Lifestyle Sneakers|Closed
+500Ws000007rRm2IAE|005Ws000001xZVpIAM|Incorrect Item Received|Fusion Yoga Leggings|Closed
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRu5IAE|005Ws000001xZ2nIAE|Incorrect Item Received|Precision Golf Putter|Closed
+500Ws000007rRu6IAE|005Ws000001xZvdIAE|Incorrect Item Received|High-Tech Golf Simulator|Closed
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rS3mIAE|005Ws000001xaLRIAY|Incorrect Item Received|Cycling Thermal Jacket|Closed
+500Ws000007rS5OIAU|005Ws000001xZ1BIAU|Incorrect Item Received|Pro Speed Rope|Closed
+500Ws000007rSAFIA2|005Ws000001xZCTIA2|Incorrect Item Received|Women's High-Impact Sports Bra|Closed
+500Ws000007rSBpIAM|005Ws000001xaDNIAY|Incorrect Item Received|Smart Fitness Watch|Closed
+500Ws000007rSF3IAM|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+500Ws000007rSJuIAM|005Ws000001xaBlIAI|Incorrect Item Received|Seamless Yoga Leggings|Closed
+500Ws000007rSLWIA2|005Ws000001xSR9IAM|Incorrect Item Received|Pro Running Cap|Closed
+500Ws000007rSQLIA2|005Ws000001xaRuIAI|Incorrect Item Received|Altitude Hiking Pants|Closed
+500Ws000007rSRyIAM|005Ws000001xadBIAQ|Incorrect Item Received|Cycling Bib Shorts|Closed
+500Ws000007rSbdIAE|005Ws000001xZ4PIAU|Incorrect Item Received|Aero Golf Driver|Closed
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

@@ -1,0 +1,11 @@
+task_id,scenario_id,provenance_pass,sufficiency_b0_pass,sufficiency_b1_pass,sufficiency_b2_pass,native_evaluator_b0_pass,native_evaluator_b1_pass,native_evaluator_b2_pass,treatment_boundary_pass,no_hidden_solution_pass,determinism_pass,b0_bounded_pass,b0_lossless_pass,rendered_prompt_roundtrip_pass,artifact_hashes_pass,latency_measurement_pass,b0_rendered_prompt_chars,b0_chars,sufficiency_pass
+23cf851_2,23cf851,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,46780,46141,True
+23cf851_3,23cf851,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,66603,65955,True
+383cbac_2,383cbac,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,217323,216497,True
+383cbac_3,383cbac,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,180263,179435,True
+4ec8de5_2,4ec8de5,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,6508,5858,True
+4ec8de5_3,4ec8de5,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,6876,6222,True
+50e1ac9_2,50e1ac9,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,18634,17948,True
+50e1ac9_3,50e1ac9,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,19855,19167,True
+fac291d_2,fac291d,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,3515,2858,True
+fac291d_3,fac291d,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,3822,3165,True

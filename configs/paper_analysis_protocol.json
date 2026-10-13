@@ -1,0 +1,20 @@
+{
+  "paper_analysis_version": "anonymous-artifact-v1",
+  "planned_runs": 900,
+  "design": {
+    "benchmarks": ["CRMArena", "AppWorld"],
+    "models": ["DeepSeek V4 Pro", "Doubao Seed 2.1 Lite", "Qwen3.8-Max", "GPT-5.6 Sol", "Claude Opus 5.5"],
+    "tasks_per_benchmark": 10,
+    "conditions": ["B0", "B1", "B2"],
+    "repetitions": 3
+  },
+  "runtime_budget_seconds": 300,
+  "metrics": {
+    "accuracy": "correct completed runs / completed runs",
+    "reliability": "runs completed within 300 s / planned runs",
+    "operational_success": "correct runs completed within 300 s / planned runs",
+    "token_usage": "mean input and output tokens among completed-within-budget requests",
+    "request_latency": "median end-to-end request latency among completed-within-budget requests"
+  },
+  "important_note": "Historical provider harnesses were heterogeneous. The paper analysis applies the common 300-s budget to recorded traces and excludes post-budget recoveries from bounded-runtime metrics. Historical execution configuration is preserved separately and must not be confused with the paper-analysis protocol."
+}

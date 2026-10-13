@@ -1,0 +1,305 @@
+{
+  "album_library": [
+    {
+      "album_id": 1,
+      "release_date": "2021-05-12T00:00:00",
+      "song_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "title": "Echo Chamber Chronicles"
+    },
+    {
+      "album_id": 2,
+      "release_date": "2021-07-24T00:00:00",
+      "song_ids": [
+        8,
+        9,
+        10
+      ],
+      "title": "Celestial Harmonies"
+    },
+    {
+      "album_id": 3,
+      "release_date": "2023-01-23T00:00:00",
+      "song_ids": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "title": "Nocturnal Melodies"
+    },
+    {
+      "album_id": 4,
+      "release_date": "2021-02-15T00:00:00",
+      "song_ids": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "title": "Neon Echoes"
+    },
+    {
+      "album_id": 5,
+      "release_date": "2023-09-09T00:00:00",
+      "song_ids": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "title": "Velvet Shadows"
+    },
+    {
+      "album_id": 6,
+      "release_date": "2023-07-12T00:00:00",
+      "song_ids": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "title": "Ethereal Rhapsody"
+    },
+    {
+      "album_id": 7,
+      "release_date": "2022-07-07T00:00:00",
+      "song_ids": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "title": "Vibrant Visions"
+    },
+    {
+      "album_id": 8,
+      "release_date": "2022-04-28T00:00:00",
+      "song_ids": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "title": "Velvet Underground"
+    },
+    {
+      "album_id": 9,
+      "release_date": "2023-05-04T00:00:00",
+      "song_ids": [
+        44,
+        45,
+        46
+      ],
+      "title": "Mystical Crescendo"
+    },
+    {
+      "album_id": 10,
+      "release_date": "2021-11-16T00:00:00",
+      "song_ids": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "title": "Dreamscape Delights"
+    },
+    {
+      "album_id": 11,
+      "release_date": "2022-11-02T00:00:00",
+      "song_ids": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "title": "Synaptic Serenity"
+    },
+    {
+      "album_id": 13,
+      "release_date": "2023-03-10T00:00:00",
+      "song_ids": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "title": "Starlight Serenades"
+    },
+    {
+      "album_id": 14,
+      "release_date": "2021-08-10T00:00:00",
+      "song_ids": [
+        67,
+        68,
+        69
+      ],
+      "title": "Midnight Serenade"
+    },
+    {
+      "album_id": 15,
+      "release_date": "2022-02-19T00:00:00",
+      "song_ids": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "title": "Whispers in the Wind"
+    },
+    {
+      "album_id": 16,
+      "release_date": "2021-03-26T00:00:00",
+      "song_ids": [
+        74,
+        75,
+        76
+      ],
+      "title": "Electric Dreamscape"
+    },
+    {
+      "album_id": 17,
+      "release_date": "2023-01-05T00:00:00",
+      "song_ids": [
+        77,
+        78,
+        79
+      ],
+      "title": "Enchanted Melodies"
+    },
+    {
+      "album_id": 18,
+      "release_date": "2022-04-13T00:00:00",
+      "song_ids": [
+        80,
+        81,
+        82
+      ],
+      "title": "Echoes of Eternity"
+    }
+  ],
+  "direct_song_library": [
+    {
+      "release_date": "2023-01-23T00:00:00",
+      "song_id": 12,
+      "title": "Haunted Memories"
+    },
+    {
+      "release_date": "2023-09-09T00:00:00",
+      "song_id": 25,
+      "title": "A Symphony of Broken Hearts"
+    },
+    {
+      "release_date": "2023-09-09T00:00:00",
+      "song_id": 27,
+      "title": "When Angels Weep for Us"
+    },
+    {
+      "release_date": "2022-01-16T00:00:00",
+      "song_id": 59,
+      "title": "Love's Decline"
+    },
+    {
+      "release_date": "2023-03-10T00:00:00",
+      "song_id": 66,
+      "title": "Phantom Pain"
+    },
+    {
+      "release_date": "2023-01-05T00:00:00",
+      "song_id": 78,
+      "title": "A Love That Never Was"
+    },
+    {
+      "release_date": "2020-05-25T20:23:42",
+      "song_id": 105,
+      "title": "Beyond the Horizon's Reach"
+    },
+    {
+      "release_date": "2023-01-12T06:12:23",
+      "song_id": 125,
+      "title": "Heart's Abyss"
+    },
+    {
+      "release_date": "2021-05-28T14:23:11",
+      "song_id": 134,
+      "title": "Lost in a Sea of Echoes"
+    },
+    {
+      "release_date": "2023-04-04T14:07:29",
+      "song_id": 184,
+      "title": "Enchanted Reverie"
+    },
+    {
+      "release_date": "2020-07-21T09:45:39",
+      "song_id": 185,
+      "title": "Mysteries of the Silent Sea"
+    },
+    {
+      "release_date": "2022-10-14T23:42:59",
+      "song_id": 189,
+      "title": "Sinking Ship"
+    },
+    {
+      "release_date": "2020-08-27T12:07:30",
+      "song_id": 204,
+      "title": "Love's Lure"
+    },
+    {
+      "release_date": "2020-07-31T14:41:55",
+      "song_id": 214,
+      "title": "The Sweet Pain of Reminiscence"
+    },
+    {
+      "release_date": "2022-08-20T08:17:08",
+      "song_id": 236,
+      "title": "A Portrait of Love Unrequited"
+    },
+    {
+      "release_date": "2023-01-13T15:40:51",
+      "song_id": 273,
+      "title": "Endless Drift"
+    },
+    {
+      "release_date": "2020-06-27T18:28:48",
+      "song_id": 278,
+      "title": "A Broken Heart's Lament"
+    },
+    {
+      "release_date": "2023-01-01T22:40:16",
+      "song_id": 297,
+      "title": "Vivid Scars"
+    },
+    {
+      "release_date": "2023-01-16T15:16:03",
+      "song_id": 302,
+      "title": "An Ode to Forgotten Dreams"
+    }
+  ],
+  "source_interfaces": [
+    "spotify.show_song_library+show_song",
+    "spotify.show_album_library"
+  ],
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "bradley_ball@gmail.com"
+  }
+}

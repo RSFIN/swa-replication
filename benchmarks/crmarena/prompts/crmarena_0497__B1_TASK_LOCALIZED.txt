@@ -1,0 +1,171 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Defective Pro Running Cap Received
+- Case Description: I recently bought a Pro Running Cap, and I'm very disappointed. After just a week of use, the sole of my running shoes started to come apart. This product defect has made my runs quite uncomfortable. I rely on quality gear, and this issue with the Pro Running Cap is unacceptable.
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Product Defect
+TARGET_PRODUCT=Pro Running Cap
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007qUcOIAU|005Ws000001xaWjIAI|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007qblsIAA|005Ws000001xZijIAE|Product Defect|Adventure Parka|Closed
+500Ws000007qblvIAA|005Ws000001xZ4PIAU|Product Defect|Cross Training Jump Rope|Closed
+500Ws000007qe2BIAQ|005Ws000001xZ7dIAE|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007qifJIAQ|005Ws000001xZVpIAM|Product Defect|Trailblazer Jacket|Closed
+500Ws000007ql5KIAQ|005Ws000001xatJIAQ|Product Defect|Classic Court Sneakers|Closed
+500Ws000007ql8ZIAQ|005Ws000001xZXRIA2|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007qlBjIAI|005Ws000001xaGbIAI|Product Defect|Titanium Road Helmet|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qnQRIAY|005Ws000001xZh7IAE|Product Defect|Long-Distance Running Shoes|Closed
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qprCIAQ|005Ws000001xaRuIAI|Product Defect|RapidGo Running Shoes|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qszdIAA|005Ws000001xYxxIAE|Product Defect|Trail Running Shoes|Closed
+500Ws000007qtCaIAI|005Ws000001xajdIAA|Product Defect|Classic Court Sneakers|Closed
+500Ws000007qtCbIAI|005Ws000001xZXRIA2|Product Defect|Velocity Soccer Cleats|Closed
+500Ws000007qtCdIAI|005Ws000001xZh7IAE|Product Defect|Trailblazer Jacket|Closed
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007qtamIAA|005Ws000001xaZxIAI|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quIGIAY|005Ws000001xVFKIA2|Product Defect|Air Zoom Pegasus|Closed
+500Ws000007quNAIAY|005Ws000001xZVpIAM|Product Defect|Titanium Road Helmet|Closed
+500Ws000007qv4cIAA|005Ws000001xZxFIAU|Product Defect|Pro Running Cap|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007r3NAIAY|005Ws000001xYgDIAU|Product Defect|HydroFlow Swim Shorts|Closed
+500Ws000007r8RfIAI|005Ws000001xZArIAM|Product Defect|Vaporfly Elite|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007rA22IAE|005Ws000001xYzZIAU|Product Defect|Impact Basketball Shoes|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rAICIA2|005Ws000001xTbkIAE|Product Defect|Endurance Road Runner|Closed
+500Ws000007rAJpIAM|005Ws000001xajdIAA|Product Defect|Sport Luxe Sneakers|Closed
+500Ws000007rBpLIAU|005Ws000001xZArIAM|Product Defect|Classic Court Sneakers|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rCHWIA2|005Ws000001xZkLIAU|Product Defect|Titanium Road Helmet|Closed
+500Ws000007rCNEIA2|005Ws000001xYwLIAU|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007rCOxIAM|005Ws000001xaGbIAI|Product Defect|Cycling Performance Gloves|Closed
+500Ws000007rCOzIAM|005Ws000001xZsPIAU|Product Defect|Air Zoom Pegasus|Closed
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCVKIA2|005Ws000001xaOfIAI|Incorrect Item Received|Pro Running Cap|Closed
+500Ws000007rD6PIAU|005Ws000001xZafIAE|Product Defect|Vaporfly Elite|Closed
+500Ws000007rDBEIA2|005Ws000001xZijIAE|Product Defect|Swim Training Fins|Closed
+500Ws000007rDCrIAM|005Ws000001xa25IAA|Product Defect|Mercurial Superfly|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDCtIAM|005Ws000001xZqnIAE|Product Defect|Durable Training Gloves|Closed
+500Ws000007rDJGIA2|005Ws000001xaV7IAI|Product Defect|All-Weather Golf Gloves|Closed
+500Ws000007rDzHIAU|005Ws000001xZpBIAU|Product Defect|Retro Style Sneakers|Closed
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rE51IAE|005Ws000001xZdtIAE|Product Defect|Classic Court Sneakers|Closed
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rEGnIAM|005Ws000001xXQpIAM|Product Defect|Vaporfly Elite|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEaKIAU|005Ws000001xZQzIAM|Product Defect|RapidGo Running Shoes|Closed
+500Ws000007rEiNIAU|005Ws000001xamrIAA|Incorrect Item Received|Pro Running Cap|Closed
+500Ws000007rEs3IAE|005Ws000001xTrqIAE|Product Defect|Precision Golf Putter|Closed
+500Ws000007rEthIAE|005Ws000001xZArIAM|Product Defect|Mercurial Superfly|Closed
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rF4xIAE|005Ws000001xZ1BIAU|Product Defect|Pro Swim Briefs|Closed
+500Ws000007rFGJIA2|005Ws000001xYjRIAU|Product Defect|Cycling Bib Shorts|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFOMIA2|005Ws000001xabZIAQ|Product Defect|Marathon Elite Running Shoes|Closed
+500Ws000007rFRbIAM|005Ws000001xZArIAM|Product Defect|Durable Training Gloves|Closed
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rG5sIAE|005Ws000001xZQzIAM|Product Defect|Speed Pro Soccer Cleats|Closed
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rG99IAE|005Ws000001xZ2nIAE|Product Defect|Pro Basketball Arm Guards|Closed
+500Ws000007rG9AIAU|005Ws000001xTbjIAE|Product Defect|SpeedPro Sprint Shoes|Closed
+500Ws000007rGCQIA2|005Ws000001xYoHIAU|Product Defect|Impact Basketball Shoes|Closed
+500Ws000007rGHDIA2|005Ws000001xZ2oIAE|Product Defect|Classic Court Sneakers|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGyjIAE|005Ws000001xZ4PIAU|Product Defect|Cycling Bib Shorts|Closed
+500Ws000007rH3WIAU|005Ws000001xaA9IAI|Product Defect|Mercurial Superfly|Closed
+500Ws000007rH6lIAE|005Ws000001xZyrIAE|Shipping Delay|Pro Running Cap|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rH9zIAE|005Ws000001xYptIAE|Product Defect|Classic Court Sneakers|Closed
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHA5IAM|005Ws000001xZCTIA2|Product Defect|Sport Luxe Sneakers|Closed
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHJfIAM|005Ws000001xalFIAQ|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007rHTLIA2|005Ws000001xZCTIA2|Product Defect|Marathon Elite Running Shoes|Closed
+500Ws000007rHTMIA2|005Ws000001xai1IAA|Product Defect|Pro Swim Goggles|Closed
+500Ws000007rHTNIA2|005Ws000001xZkLIAU|Product Defect|Elemental Soccer Shin Guards|Closed
+500Ws000007rHmiIAE|005Ws000001xatJIAQ|Product Defect|Velocity Basketball Shoes|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXUIA2|005Ws000001xZijIAE|Product Defect|Elemental Soccer Shin Guards|Closed
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIfWIAU|005Ws000001xZh7IAE|Product Defect|Air Zoom Pegasus|Closed
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rJ5NIAU|005Ws000001xZXRIA2|Product Defect|Pro Running Cap|Closed
+500Ws000007rJQJIA2|005Ws000001xYhpIAE|Product Defect|Velocity Basketball Shoes|Closed
+500Ws000007rJgQIAU|005Ws000001xaLRIAY|Product Defect|Mercurial Superfly|Closed
+500Ws000007rJoYIAU|005Ws000001xaRuIAI|Product Defect|Titanium Road Helmet|Closed
+500Ws000007rJrnIAE|005Ws000001xaN3IAI|Product Defect|HydroFlow Swim Shorts|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rJtQIAU|005Ws000001xaZxIAI|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007rJtRIAU|005Ws000001xZNlIAM|Product Defect|Urban Flux Sneakers|Closed
+500Ws000007rK1OIAU|005Ws000001xYl3IAE|Product Defect|RapidGo Running Shoes|Closed
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rLDeIAM|005Ws000001xZkLIAU|Product Defect|All-Weather Golf Gloves|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQAuIAM|005Ws000001xa25IAA|Product Defect|Performance Basketball Hoodie|Closed
+500Ws000007rQl7IAE|005Ws000001xZdtIAE|Product Defect|Urban Flux Sneakers|Closed
+500Ws000007rQraIAE|005Ws000001xYt8IAE|Product Defect|All-Terrain Running Shoes|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQwQIAU|005Ws000001xZNlIAM|Product Defect|Swift Soccer Boots|Closed
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rRAvIAM|005Ws000001xZ2nIAE|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRIzIAM|005Ws000001xaYLIAY|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007rRJ0IAM|005Ws000001xUwrIAE|Warranty Issue|Pro Running Cap|Closed
+500Ws000007rRPTIA2|005Ws000001xaOfIAI|Product Defect|High-Performance Speed Rope|Closed
+500Ws000007rRPUIA2|005Ws000001xYjRIAU|Product Defect|Trail Running Shoes|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRVuIAM|005Ws000001xZZ3IAM|Product Defect|Trail Running Shoes|Closed
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rRxJIAU|005Ws000001xZXRIA2|Product Defect|Hiking Waterproof Boots|Closed
+500Ws000007rS8cIAE|005Ws000001xZ4PIAU|Product Defect|Cycling Bib Shorts|Closed
+500Ws000007rSAEIA2|005Ws000001xTbjIAE|Product Defect|Pro Swim Briefs|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+500Ws000007rSLVIA2|005Ws000001xaEzIAI|Product Defect|Precision Basketball Arm Sleeve|Closed
+500Ws000007rSLWIA2|005Ws000001xSR9IAM|Incorrect Item Received|Pro Running Cap|Closed
+500Ws000007rSOjIAM|005Ws000001xZ2oIAE|Product Defect|Solstice Trail Shoes|Closed
+500Ws000007rSOkIAM|005Ws000001xTbkIAE|Product Defect|Retro Style Sneakers|Closed
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

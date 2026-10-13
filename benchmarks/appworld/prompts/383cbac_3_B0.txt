@@ -1,0 +1,1487 @@
+TASK_ID: 383cbac_3
+SCB_CONDITION: B0
+
+TASK INSTRUCTION:
+I went on dinner with my coworkers yesterday at Whimsical Bites. My manager paid for food and everyone venmoed them. Everyones' transactions except mine should be on my social feed. My share was $34. How much did my manager pay for the others, including me, yesterday?
+
+FROZEN CONTEXT:
+{"primitive_contacts":[{"contact_id":262,"email":"angriddle@gmail.com","first_name":"Angela","last_name":"Riddle","relationships":["coworker"]},{"contact_id":263,"email":"spencer.powell@gmail.com","first_name":"Spencer","last_name":"Powell","relationships":["manager","coworker"]},{"contact_id":264,"email":"ad.blackburn@gmail.com","first_name":"Adam","last_name":"Blackburn","relationships":["coworker"]},{"contact_id":265,"email":"jefsmith@gmail.com","first_name":"Jeffrey","last_name":"Smith","relationships":["coworker"]},{"contact_id":266,"email":"ashlee_martinez@gmail.com","first_name":"Ashlee","last_name":"Martinez","relationships":["coworker"]},{"contact_id":267,"email":"connorbrow@gmail.com","first_name":"Connor","last_name":"Brown","relationships":["coworker"]},{"contact_id":268,"email":"glenn.burton@gmail.com","first_name":"Glenn","last_name":"Burton","relationships":["coworker"]},{"contact_id":269,"email":"ron.harrison@gmail.com","first_name":"Ronald","last_name":"Harrison","relationships":["parent","father"]},{"contact_id":270,"email":"chrharrison@gmail.com","first_name":"Christina","last_name":"Harrison","relationships":["parent","mother"]},{"contact_id":271,"email":"joseharr@gmail.com","first_name":"Jose","last_name":"Harrison","relationships":["sibling","brother"]},{"contact_id":272,"email":"an-harrison@gmail.com","first_name":"Anthony","last_name":"Harrison","relationships":["sibling","brother"]},{"contact_id":273,"email":"morgan-harrison@gmail.com","first_name":"Morgan","last_name":"Burton","relationships":["sibling","sister"]},{"contact_id":274,"email":"mir-powe@gmail.com","first_name":"Miranda","last_name":"Weber","relationships":["friend"]},{"contact_id":275,"email":"anita.burch@gmail.com","first_name":"Anita","last_name":"Burch","relationships":["friend"]},{"contact_id":276,"email":"kevin.blac@gmail.com","first_name":"Kevin","last_name":"Blackburn","relationships":["friend"]},{"contact_id":277,"email":"jer.calhoun@gmail.com","first_name":"Jeremy","last_name":"Calhoun","relationships":["friend"]},{"contact_id":278,"email":"joseph.webe@gmail.com","first_name":"Joseph","last_name":"Weber","relationships":["friend"]},{"contact_id":279,"email":"ta.weav@gmail.com","first_name":"Tammy","last_name":"Weaver","relationships":["friend"]},{"contact_id":280,"email":"jasonsimp@gmail.com","first_name":"Jason","last_name":"Simpson","relationships":["friend"]},{"contact_id":281,"email":"ma_smith@gmail.com","first_name":"Marcus","last_name":"Smith","relationships":["friend"]},{"contact_id":282,"email":"saritt@gmail.com","first_name":"Sandra","last_name":"Martinez","relationships":["friend"]},{"contact_id":283,"email":"kathrynmaldonado@gmail.com","first_name":"Kathryn","last_name":"Maldonado","relationships":["roommate"]},{"contact_id":284,"email":"tr_solo@gmail.com","first_name":"Troy","last_name":"Solomon","relationships":["roommate"]},{"contact_id":285,"email":"nan_ritt@gmail.com","first_name":"Nancy","last_name":"Ritter","relationships":["roommate"]}],"source_interfaces":["phone.search_contacts","venmo.show_social_feed"],"task_metadata":{"current_datetime":"2023-05-18T12:00:00","user_email":"jo-harr@gmail.com"}}
+SOCIAL_FEED_TABLE_SCHEMA:
+{"column_types": ["int", "float", "str", "str", "int", "str", "str", "str", "str"], "columns": ["transaction_id", "amount", "description", "created_at", "like_count", "sender.email", "sender.name", "receiver.email", "receiver.name"], "decoding": "Plain TSV rows preserve every source record in transaction-ID order, including duplicates. Standard CSV double-quote escaping is used with TAB separators. Each row is read directly using the declared columns and types. There is no custom decompression, participant dictionary, entity interning, deduplication, canonicalization, or target-dependent filtering.", "encoding": "tsv-plain-v1", "tsv_chars": 175564}
+SOCIAL_FEED_TSV:
+9	74.0	Tattoo	2023-02-21T16:57:46	0	stmcco@gmail.com	Stephen Mccoy	saritt@gmail.com	Sandra Martinez
+10	12.0	Movie Ticket	2023-03-25T11:20:37	6	stmcco@gmail.com	Stephen Mccoy	saritt@gmail.com	Sandra Martinez
+11	30.0	Pizza 🍕 Night	2023-03-10T11:24:29	0	stmcco@gmail.com	Stephen Mccoy	saritt@gmail.com	Sandra Martinez
+13	228.0	Weekend getaway	2023-04-04T19:20:57	3	stmcco@gmail.com	Stephen Mccoy	saritt@gmail.com	Sandra Martinez
+35	21.0	Uber last night	2023-02-20T14:44:45	4	stmcco@gmail.com	Stephen Mccoy	anita.burch@gmail.com	Anita Burch
+37	11.0	🦄 Unicorn Merch 🌈🦄	2023-01-26T10:37:44	0	stmcco@gmail.com	Stephen Mccoy	anita.burch@gmail.com	Anita Burch
+38	29.0	Cosmetics	2023-03-17T05:33:54	0	stmcco@gmail.com	Stephen Mccoy	anita.burch@gmail.com	Anita Burch
+39	17.0	Guitar Strings	2023-02-17T06:41:17	0	stmcco@gmail.com	Stephen Mccoy	anita.burch@gmail.com	Anita Burch
+40	332.0	Vacation	2023-04-16T06:15:57	0	stmcco@gmail.com	Stephen Mccoy	anita.burch@gmail.com	Anita Burch
+46	79.0	Theater Tickets	2023-02-04T00:56:53	0	anita.burch@gmail.com	Anita Burch	stmcco@gmail.com	Stephen Mccoy
+216	64.0	🛍️Retail Therapy	2023-03-10T12:47:14	0	jo.ball@gmail.com	Jonathan Ball	ta.weav@gmail.com	Tammy Weaver
+217	17.0	🍳 Breakfast Club	2023-05-10T23:37:55	2	jo.ball@gmail.com	Jonathan Ball	ta.weav@gmail.com	Tammy Weaver
+218	19.0	🌮 Taco Tuesday Office Lunch 🍹	2023-01-27T04:51:29	0	jo.ball@gmail.com	Jonathan Ball	ta.weav@gmail.com	Tammy Weaver
+219	197.0	Pet Care	2023-01-26T11:49:26	4	jo.ball@gmail.com	Jonathan Ball	ta.weav@gmail.com	Tammy Weaver
+220	23.0	Grocery 🛒 Haul	2023-02-02T11:09:12	2	jo.ball@gmail.com	Jonathan Ball	ta.weav@gmail.com	Tammy Weaver
+404	41.0	🏄 Weekend Beach Surfing Adventure 🌊	2023-03-31T00:56:33	3	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+405	13.0	👾 Arcade Night 🕹️💫	2023-03-18T15:36:02	2	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+406	13.0	🎥Stream Sesh	2023-04-12T07:43:13	6	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+407	38.0	Video Games	2023-04-07T19:24:23	1	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+408	24.0	💐 Flower Shop 🌹🌷	2023-05-08T14:52:41	0	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+409	20.0	🎨Art Supplies	2023-05-06T17:51:07	6	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+410	73.0	🎧Podcast Mic 🎤	2023-03-13T11:48:55	0	bradley_ball@gmail.com	Bradley Ball	connorbrow@gmail.com	Connor Brown
+463	41.0	Fishing Gear	2023-04-02T04:27:13	0	connorbrow@gmail.com	Connor Brown	bradley_ball@gmail.com	Bradley Ball
+465	39.0	Food delivery 🍕	2023-02-17T14:43:55	0	connorbrow@gmail.com	Connor Brown	bradley_ball@gmail.com	Bradley Ball
+505	11.0	📚Book Club Fund	2023-03-19T13:08:03	4	ka_ball@gmail.com	Katherine Smith	jasonsimp@gmail.com	Jason Simpson
+506	43.0	🎨Art Supplies	2023-05-04T12:11:52	1	ka_ball@gmail.com	Katherine Smith	jasonsimp@gmail.com	Jason Simpson
+507	33.0	House Party 🎉🏠	2023-02-21T01:26:44	0	ka_ball@gmail.com	Katherine Smith	jasonsimp@gmail.com	Jason Simpson
+508	21.0	🏋️Gym Gear	2022-07-10T15:30:59	2	ka_ball@gmail.com	Katherine Smith	jasonsimp@gmail.com	Jason Simpson
+518	322.0	Tech upgrade	2022-11-03T05:17:20	0	jasonsimp@gmail.com	Jason Simpson	ka_ball@gmail.com	Katherine Smith
+519	108.0	👟Fresh Kicks	2022-08-31T19:14:29	0	jasonsimp@gmail.com	Jason Simpson	ka_ball@gmail.com	Katherine Smith
+521	26.0	Charity Run 🏃💖	2023-04-10T22:14:36	0	jasonsimp@gmail.com	Jason Simpson	ka_ball@gmail.com	Katherine Smith
+527	23.0	Street food fest	2023-04-25T23:42:07	0	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+528	20.0	Taco Tuesday!	2022-11-30T13:52:30	0	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+593	7.0	Dog Park 🐶 Outing	2023-04-11T13:26:07	0	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+595	33.0	🎸 Music Lessons	2022-06-20T08:33:46	0	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+596	58.0	Board Games	2022-08-29T01:49:59	4	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+597	54.0	Farmers Market	2022-12-15T21:37:09	1	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+609	21.0	Energy drink stash	2022-10-09T23:05:34	0	jasonsimp@gmail.com	Jason Simpson	thomas.solomon@gmail.com	Thomas Solomon
+610	101.0	Car Maintenance	2023-04-09T17:02:53	0	jasonsimp@gmail.com	Jason Simpson	thomas.solomon@gmail.com	Thomas Solomon
+611	77.0	Workshop Fees	2022-07-19T17:29:48	0	jasonsimp@gmail.com	Jason Simpson	thomas.solomon@gmail.com	Thomas Solomon
+648	30.0	Guitar Strings	2023-05-04T14:11:47	4	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+649	11.0	🎬 Film Night In	2023-04-12T19:18:29	0	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+650	87.0	🎟️ Concert Tickets	2023-03-29T01:37:23	1	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+651	50.0	Skincare 💦 Essentials	2023-03-20T13:32:34	1	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+652	65.0	🏋️ New Gym Gear Shopping 🤸	2023-02-02T23:56:06	0	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+654	88.0	Groceries	2023-03-29T08:56:37	0	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+655	13.0	🍩 Donuts for the Team Meeting 📈	2023-02-22T04:02:58	5	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+704	77.0	📸Camera Gear	2023-03-05T23:16:40	0	ashlee_martinez@gmail.com	Ashlee Martinez	jamie-solomon@gmail.com	Jamie Solomon
+705	36.0	Makeup 💄	2022-12-30T22:02:28	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+706	19.0	Monthly 📚 Book Club	2023-05-12T19:37:32	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+709	54.0	Skincare glow-up	2022-11-21T01:25:32	2	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+710	23.0	🍺 Craft Beers 🍻👌	2022-12-22T17:10:29	1	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+711	53.0	🎒 New Backpack 📚✨	2023-05-07T10:12:47	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+712	16.0	🚗 Weekend Road Trip Snacks 🍫	2023-03-26T22:42:45	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+713	26.0	Record Store 🎶 Finds	2022-12-27T13:15:42	5	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+714	35.0	🌸 Springtime Flower Garden Project 🌷	2023-05-04T20:39:09	5	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+715	19.0	Dim Sum 🥟 Brunch	2023-01-23T05:30:14	5	ja-solomon@gmail.com	James Solomon	kevin.blac@gmail.com	Kevin Blackburn
+716	81.0	🎸 Music Lessons for the Month 🎵	2022-12-24T04:38:03	0	ja-solomon@gmail.com	James Solomon	kevin.blac@gmail.com	Kevin Blackburn
+717	52.0	New 🎮 Game Purchase	2022-11-16T01:49:01	0	ja-solomon@gmail.com	James Solomon	kevin.blac@gmail.com	Kevin Blackburn
+718	73.0	👟 New Sneakers 👟🔥	2022-12-14T18:54:37	4	ja-solomon@gmail.com	James Solomon	kevin.blac@gmail.com	Kevin Blackburn
+719	60.0	Yoga mat splurge	2023-01-12T07:44:03	3	ja-solomon@gmail.com	James Solomon	kevin.blac@gmail.com	Kevin Blackburn
+720	79.0	Bungee Jumping	2022-12-19T23:58:53	3	ja-solomon@gmail.com	James Solomon	kevin.blac@gmail.com	Kevin Blackburn
+764	68.0	🧳 Travel Fund 🌍✈️	2023-05-18T06:54:49	0	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+825	116.0	🚀 To the Moon! Crypto Buy-In	2023-02-19T06:23:43	2	tr_solo@gmail.com	Troy Solomon	nan_ritt@gmail.com	Nancy Ritter
+826	37.0	Flower Delivery	2023-02-28T09:40:14	0	tr_solo@gmail.com	Troy Solomon	nan_ritt@gmail.com	Nancy Ritter
+828	66.0	Antique Shopping	2022-12-04T21:28:02	0	tr_solo@gmail.com	Troy Solomon	nan_ritt@gmail.com	Nancy Ritter
+829	23.0	🍔 Gourmet Burger and Fries 🍟	2022-12-07T12:47:20	1	tr_solo@gmail.com	Troy Solomon	nan_ritt@gmail.com	Nancy Ritter
+857	14.0	🎤 Karaoke Night 🎶💃	2023-04-07T03:34:54	0	mir-powe@gmail.com	Miranda Weber	tr_solo@gmail.com	Troy Solomon
+859	13.0	🍺 Craft Beers 🍻👌	2022-09-02T08:03:28	0	mir-powe@gmail.com	Miranda Weber	tr_solo@gmail.com	Troy Solomon
+912	45.0	Brunchin' 🥂	2023-03-03T15:19:37	0	jer.calhoun@gmail.com	Jeremy Calhoun	ron.harrison@gmail.com	Ronald Harrison
+913	39.0	🍹 Cocktail Mixing Class 🍸	2023-01-28T19:34:12	0	jer.calhoun@gmail.com	Jeremy Calhoun	ron.harrison@gmail.com	Ronald Harrison
+1083	12.0	🍪Cookie Dough	2023-02-02T10:05:14	0	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+1084	20.0	📚 Study Group Snack Fund 📖	2023-03-19T15:46:37	2	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+1086	39.0	🌺 Farmers Market Haul	2023-05-01T20:41:55	0	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+1088	19.0	🍳 Breakfast Club 🥞🍳	2023-03-09T20:12:53	0	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+1089	7.0	Parking Fees 🅿️	2023-03-17T00:31:27	2	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+1106	12.0	Pasta Night 🍝	2023-04-28T08:34:37	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+1107	42.0	Camping 🏕 Essentials	2023-05-17T17:52:45	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+1109	26.0	🍔 Weekend BBQ Supplies	2022-12-24T09:06:38	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+1110	5.0	🚀 Rocket League Tourney 💥🎮	2022-12-24T00:34:59	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+1111	15.0	🍻Beers & Cheers	2023-02-03T00:08:30	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+1119	14.0	👾 Arcade Night 🕹️💫	2023-02-06T04:21:55	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+1120	64.0	Manicure/Pedicure	2023-05-11T04:38:30	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+1202	48.0	🎒 New Backpack 📚✨	2023-03-09T06:30:46	0	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1203	43.0	🌱Plant Babies	2023-04-03T00:00:51	0	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1204	27.0	🌭 BBQ Supplies 🍔🔥	2023-02-22T23:13:07	6	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1205	17.0	🍪Cookie Dough	2023-03-12T00:24:44	0	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1209	23.0	🍹 More Thirsty Thursdays 🍸🍹	2023-03-14T07:41:12	0	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1210	176.0	Boat Rental	2023-05-08T14:55:55	0	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1211	44.0	Aquarium Tickets	2023-02-19T06:31:13	0	an-harrison@gmail.com	Anthony Harrison	joseph.webe@gmail.com	Joseph Weber
+1219	34.0	Crafting supplies	2023-02-20T10:55:50	0	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+1220	48.0	🎼Vinyl Records	2023-02-02T19:53:27	1	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+1221	53.0	🎓 Graduation Gift 🎉🎁	2023-03-16T13:58:52	0	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+1223	60.0	Online courses	2023-05-16T08:41:08	0	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+1226	107.0	Watch	2023-04-26T09:41:58	4	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+1233	73.0	💄Makeup Haul	2023-04-04T21:40:58	0	an-harrison@gmail.com	Anthony Harrison	jefsmith@gmail.com	Jeffrey Smith
+1234	34.0	🍳 Sunday Brunch with Friends 🥂	2023-01-12T17:50:36	0	an-harrison@gmail.com	Anthony Harrison	jefsmith@gmail.com	Jeffrey Smith
+1235	19.0	🍵Tea Time	2023-03-28T15:41:30	0	an-harrison@gmail.com	Anthony Harrison	jefsmith@gmail.com	Jeffrey Smith
+1237	28.0	Brunchin' 🥂	2023-02-13T11:09:49	0	an-harrison@gmail.com	Anthony Harrison	jefsmith@gmail.com	Jeffrey Smith
+1238	150.0	Cooking Ingredients	2023-01-26T12:24:35	0	an-harrison@gmail.com	Anthony Harrison	jefsmith@gmail.com	Jeffrey Smith
+1239	43.0	Zoo Tickets	2023-02-20T22:37:35	3	an-harrison@gmail.com	Anthony Harrison	jefsmith@gmail.com	Jeffrey Smith
+1245	72.0	🛍 Outlet Shopping	2023-05-18T06:12:19	0	anita.burch@gmail.com	Anita Burch	an-harrison@gmail.com	Anthony Harrison
+1254	41.0	Pet Vaccination	2023-01-19T17:18:39	0	jefsmith@gmail.com	Jeffrey Smith	an-harrison@gmail.com	Anthony Harrison
+1255	20.0	🚴 Biking Trail Snack Fund 🌳	2023-04-14T22:46:40	0	jefsmith@gmail.com	Jeffrey Smith	an-harrison@gmail.com	Anthony Harrison
+1297	91.0	🛹Skate Gear	2023-03-24T18:00:59	0	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+1302	33.0	Spooky 👻 Halloween Costumes	2023-04-20T00:45:10	0	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+1303	119.0	🚀 To the Moon! Crypto Buy-In	2023-04-24T14:23:30	1	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+1304	87.0	🛍 Outlet Shopping	2023-03-12T17:54:30	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+1305	9.0	🥐 Coffee and Croissant ☕🥐	2023-04-16T18:40:40	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+1306	68.0	Cleaning Services	2023-03-21T02:23:18	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+1308	187.0	Spa Day	2023-04-29T05:03:04	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+1309	23.0	🍜Ramen Night	2023-04-26T19:40:09	6	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+1312	24.0	🎤 Karaoke Night Entry Fees 🎶	2023-03-04T23:31:29	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+1324	79.0	Children's Toys	2023-04-08T00:47:26	1	morgan-harrison@gmail.com	Morgan Burton	ta.weav@gmail.com	Tammy Weaver
+1326	188.0	Boat Rental	2023-03-03T19:51:32	0	morgan-harrison@gmail.com	Morgan Burton	ta.weav@gmail.com	Tammy Weaver
+1354	63.0	💄Makeup Haul	2023-05-13T09:33:48	0	joseph.webe@gmail.com	Joseph Weber	morgan-harrison@gmail.com	Morgan Burton
+1355	14.0	🍩 Morning Donut Run 🌞	2023-03-20T05:44:10	0	joseph.webe@gmail.com	Joseph Weber	morgan-harrison@gmail.com	Morgan Burton
+1356	83.0	New kicks 🔥	2023-03-11T08:01:51	0	joseph.webe@gmail.com	Joseph Weber	morgan-harrison@gmail.com	Morgan Burton
+1361	29.0	🍔 Weekend BBQ Supplies	2023-04-29T14:35:34	0	connorbrow@gmail.com	Connor Brown	morgan-harrison@gmail.com	Morgan Burton
+1362	26.0	💊 Pharmacy Stuff 🌡️💊	2023-05-03T11:39:28	0	connorbrow@gmail.com	Connor Brown	morgan-harrison@gmail.com	Morgan Burton
+1363	13.0	Farmers 🌽 Market	2023-04-13T11:27:46	0	connorbrow@gmail.com	Connor Brown	morgan-harrison@gmail.com	Morgan Burton
+1364	14.0	👾 Arcade Night 🕹️💫	2023-02-23T14:10:09	0	connorbrow@gmail.com	Connor Brown	morgan-harrison@gmail.com	Morgan Burton
+1377	9.0	🥐 Coffee and Croissant ☕🥐	2022-06-01T23:31:03	1	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1378	133.0	Skydiving	2023-01-22T19:38:55	0	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1379	20.0	🚲 Bike Repair 🛠️🚲	2023-04-24T15:28:50	2	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1380	20.0	Gaming 🎮 Sesh	2023-04-03T00:02:53	0	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1381	11.0	🎳 Bowling Night 🎳🍻	2023-03-17T03:50:31	0	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1382	12.0	Crafternoon 🧶	2022-10-19T11:02:37	5	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1384	42.0	Podcast Subscription	2022-12-21T17:27:21	2	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1386	10.0	Dog Park 🐶 Outing	2023-02-16T13:35:09	6	ric.riddle@gmail.com	Richard Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+1420	24.0	Cooking Ingredients	2023-03-09T14:13:18	0	ta.weav@gmail.com	Tammy Weaver	ric.riddle@gmail.com	Richard Riddle
+1421	33.0	🏕Camping Trip	2023-03-09T12:05:39	0	ta.weav@gmail.com	Tammy Weaver	ric.riddle@gmail.com	Richard Riddle
+1422	119.0	🧳 Travel Fund 🌍✈️	2023-03-10T23:50:23	0	ta.weav@gmail.com	Tammy Weaver	ric.riddle@gmail.com	Richard Riddle
+1440	36.0	Haircut	2022-09-16T18:08:03	3	angriddle@gmail.com	Angela Riddle	kia_bailey@gmail.com	Kiara Bailey
+1445	91.0	Cosplay 🦸 Gear	2023-03-25T12:53:00	0	angriddle@gmail.com	Angela Riddle	kia_bailey@gmail.com	Kiara Bailey
+1446	69.0	🎮New Game Drop	2022-11-10T10:00:11	2	angriddle@gmail.com	Angela Riddle	kia_bailey@gmail.com	Kiara Bailey
+1448	78.0	💄Makeup Haul	2023-04-15T16:09:38	0	angriddle@gmail.com	Angela Riddle	jefsmith@gmail.com	Jeffrey Smith
+1449	30.0	Dinner 🍴 Date Night	2023-04-18T05:00:42	0	angriddle@gmail.com	Angela Riddle	jefsmith@gmail.com	Jeffrey Smith
+1450	66.0	Gym Membership	2022-07-28T04:01:31	0	angriddle@gmail.com	Angela Riddle	jefsmith@gmail.com	Jeffrey Smith
+1451	28.0	Street food fest	2023-03-29T16:16:33	2	angriddle@gmail.com	Angela Riddle	jefsmith@gmail.com	Jeffrey Smith
+1452	30.0	Movie date 🎬	2023-04-06T01:56:49	6	angriddle@gmail.com	Angela Riddle	jefsmith@gmail.com	Jeffrey Smith
+1453	20.0	Charity Run 🏃💖	2023-03-28T01:46:45	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1454	26.0	🤓Comic Books	2023-03-16T19:07:46	4	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1455	100.0	🛍️Retail Therapy	2023-02-13T23:59:17	6	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1456	59.0	Camping 🏕 Essentials	2023-04-22T01:02:04	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1457	21.0	Protein shake stack	2023-03-02T13:25:08	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1460	33.0	Movie date 🎬	2023-04-29T03:24:41	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1461	10.0	Monthly comics 🦸	2023-03-15T11:50:02	3	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+1462	7.0	Coffee	2023-05-03T09:26:01	0	angriddle@gmail.com	Angela Riddle	angelica.wils@gmail.com	Angelica Wilson
+1463	33.0	Treat Yo' Self 💆	2023-01-22T01:56:43	1	angriddle@gmail.com	Angela Riddle	angelica.wils@gmail.com	Angelica Wilson
+1465	53.0	Festival 🎶 Tickets & Snacks	2022-09-25T10:36:15	0	angriddle@gmail.com	Angela Riddle	angelica.wils@gmail.com	Angelica Wilson
+1467	55.0	👟 New Sneakers 👟🔥	2022-11-01T17:13:47	6	angriddle@gmail.com	Angela Riddle	angelica.wils@gmail.com	Angelica Wilson
+1468	133.0	Podcast gear	2023-04-10T21:47:38	0	angriddle@gmail.com	Angela Riddle	angelica.wils@gmail.com	Angelica Wilson
+1469	32.0	Yoga mat splurge	2022-10-14T21:26:57	4	angriddle@gmail.com	Angela Riddle	angelica.wils@gmail.com	Angelica Wilson
+1470	22.0	🎨 Art Supplies for Creative Weekend 🖌️	2023-01-28T16:11:48	0	angriddle@gmail.com	Angela Riddle	glenn.burton@gmail.com	Glenn Burton
+1473	100.0	Tutoring	2022-11-08T04:55:50	0	angriddle@gmail.com	Angela Riddle	glenn.burton@gmail.com	Glenn Burton
+1474	54.0	Yoga mat splurge	2023-04-21T06:00:02	3	angriddle@gmail.com	Angela Riddle	glenn.burton@gmail.com	Glenn Burton
+1476	108.0	Weekend getaway	2023-03-11T07:35:08	6	angriddle@gmail.com	Angela Riddle	jac-blackburn@gmail.com	Jacob Blackburn
+1477	170.0	📸 New Camera Lens	2022-12-16T05:42:32	1	angriddle@gmail.com	Angela Riddle	jac-blackburn@gmail.com	Jacob Blackburn
+1479	74.0	🏋️ New Gym Gear Shopping 🤸	2023-04-29T08:07:46	0	angriddle@gmail.com	Angela Riddle	jac-blackburn@gmail.com	Jacob Blackburn
+1480	32.0	Yoga mat splurge	2023-04-25T19:11:39	5	angriddle@gmail.com	Angela Riddle	jac-blackburn@gmail.com	Jacob Blackburn
+1481	19.0	Monthly comics 🦸	2023-01-15T13:20:29	0	angriddle@gmail.com	Angela Riddle	jac-blackburn@gmail.com	Jacob Blackburn
+1482	112.0	Room Service	2023-04-20T04:19:18	5	angriddle@gmail.com	Angela Riddle	jac-blackburn@gmail.com	Jacob Blackburn
+1483	36.0	Thrift shop finds	2023-05-18T05:47:53	0	pa_ritter@gmail.com	Patricia Ritter	angriddle@gmail.com	Angela Riddle
+1484	193.0	Opera Tickets	2023-03-03T15:44:53	0	pa_ritter@gmail.com	Patricia Ritter	angriddle@gmail.com	Angela Riddle
+1485	49.0	🏖 Beach Trip	2022-09-19T14:55:23	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+1486	26.0	Mani-pedi day 💅	2022-12-01T07:13:49	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+1487	25.0	🎮 Gaming Marathon Snacks 🎲	2022-09-01T18:46:29	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+1488	18.0	🎤 Open Mic Night	2023-01-08T22:36:01	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+1490	26.0	Karaoke night 🎤	2023-04-20T03:10:26	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+1491	354.0	Vacation	2023-05-08T14:30:22	0	glenn.burton@gmail.com	Glenn Burton	angriddle@gmail.com	Angela Riddle
+1497	15.0	⛽ Gas Money	2023-01-26T12:14:41	0	kia_bailey@gmail.com	Kiara Bailey	angriddle@gmail.com	Angela Riddle
+1498	19.0	🛵 Food Delivery for Lazy Day 🍕	2022-10-15T20:56:30	0	kia_bailey@gmail.com	Kiara Bailey	angriddle@gmail.com	Angela Riddle
+1499	70.0	Spa Day	2022-08-03T13:24:42	0	kia_bailey@gmail.com	Kiara Bailey	angriddle@gmail.com	Angela Riddle
+1500	93.0	🎧Podcast Mic 🎤	2022-11-08T00:51:36	0	kia_bailey@gmail.com	Kiara Bailey	angriddle@gmail.com	Angela Riddle
+1501	108.0	Mixology Class	2022-11-04T15:55:01	0	ashlee_martinez@gmail.com	Ashlee Martinez	angriddle@gmail.com	Angela Riddle
+1502	7.0	Ice Cream 🍦	2023-01-03T10:46:00	0	ashlee_martinez@gmail.com	Ashlee Martinez	angriddle@gmail.com	Angela Riddle
+1503	41.0	Golf 🏌️ Day	2022-10-04T21:22:57	0	ashlee_martinez@gmail.com	Ashlee Martinez	angriddle@gmail.com	Angela Riddle
+1505	4.0	Caffeine Fix ☕	2022-12-13T06:43:17	0	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+1506	16.0	🌮 Taco Tuesday Office Lunch 🍹	2022-11-08T14:38:36	0	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+1507	32.0	🔭 Stargazing Trip Essentials 🌌	2023-05-07T00:44:48	0	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+1508	28.0	Dance Class	2023-02-13T20:48:04	0	sab-brown@gmail.com	Sabrina Brown	angriddle@gmail.com	Angela Riddle
+1509	50.0	New 🎮 Game Purchase	2023-02-06T01:25:15	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+1567	96.0	Wine Tasting	2023-04-25T03:33:11	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexander-ridd@gmail.com	Alexander Riddle
+1569	27.0	Video Games	2023-03-28T19:48:04	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexander-ridd@gmail.com	Alexander Riddle
+1570	10.0	🚀 Rocket League Tourney 💥🎮	2023-03-31T19:22:21	0	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+1571	14.0	🚗 Weekend Road Trip Snacks 🍫	2023-01-06T08:40:09	0	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+1587	250.0	Utilities	2022-12-09T06:31:09	2	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1588	20.0	🍔 Gourmet Burger and Fries 🍟	2022-12-15T04:58:44	3	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1589	62.0	Concert tix 🎶	2022-12-17T10:38:10	6	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1590	14.0	Bike ride fuel	2023-04-18T08:28:13	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1591	35.0	Skincare 💆🌿	2022-11-09T11:50:30	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1593	46.0	🏋️ New Gym Gear Shopping 🤸	2022-12-30T12:47:29	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1594	14.0	🍵Tea Time	2023-03-19T07:13:06	2	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1595	11.0	Parking Fees 🅿️	2023-02-22T03:52:07	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+1628	13.0	Podcast Subscription	2023-02-05T13:20:33	0	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1630	32.0	Airport 🚖 Cab Fare	2023-03-07T21:28:47	0	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1631	76.0	📸Camera Gear	2023-05-02T16:45:57	2	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1632	12.0	🥑Avocado Toast	2022-12-18T03:29:15	0	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1633	28.0	Craft Supplies	2022-12-29T15:37:07	5	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1634	31.0	Gym membership	2022-12-20T12:44:26	5	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1635	10.0	Cooking Ingredients	2023-01-07T13:21:08	4	ismill@gmail.com	Isaac Miller	spencer.powell@gmail.com	Spencer Powell
+1646	23.0	Zoo Tickets	2023-02-07T21:32:29	4	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+1648	83.0	🎸 Music Lessons for the Month 🎵	2023-01-09T05:13:04	6	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+1649	21.0	🍕 Friday Night Pizza Party 🎉	2023-02-08T23:59:44	0	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+1653	231.0	Language Classes	2023-02-12T02:51:40	0	spencer.powell@gmail.com	Spencer Powell	ismill@gmail.com	Isaac Miller
+1658	40.0	🏖 Beach Trip	2023-03-07T03:34:36	0	jer.calhoun@gmail.com	Jeremy Calhoun	ismill@gmail.com	Isaac Miller
+1745	20.0	🍵Tea Time	2023-02-02T12:18:30	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+1746	140.0	Cooking Ingredients	2022-12-16T23:54:21	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+1747	54.0	Aesthetic room decor	2023-01-02T01:20:45	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+1748	184.0	Motorcycle Gear	2023-03-07T08:32:15	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+1755	15.0	Museum Tickets	2023-02-14T20:02:09	4	clmiller@gmail.com	Claudia Miller	kevin.blac@gmail.com	Kevin Blackburn
+1756	19.0	🐟 Fish Tank Supplies 🐠💦	2023-04-22T10:40:59	0	clmiller@gmail.com	Claudia Miller	kevin.blac@gmail.com	Kevin Blackburn
+1758	276.0	Language Classes	2023-03-15T10:43:37	0	clmiller@gmail.com	Claudia Miller	kevin.blac@gmail.com	Kevin Blackburn
+1759	11.0	🚕Lyft Home	2022-12-04T14:03:22	6	clmiller@gmail.com	Claudia Miller	kevin.blac@gmail.com	Kevin Blackburn
+1761	37.0	Treat Yo' Self 💆	2023-01-11T21:02:21	0	clmiller@gmail.com	Claudia Miller	kevin.blac@gmail.com	Kevin Blackburn
+1763	35.0	Crafternoon 🧶	2023-02-11T13:16:49	1	clmiller@gmail.com	Claudia Miller	kevin.blac@gmail.com	Kevin Blackburn
+1786	24.0	Late-night pizza run	2023-01-29T16:24:56	0	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+1787	12.0	🍹Happy Hour Vibes	2023-01-10T03:02:42	0	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+1788	71.0	Date Night 🍷	2023-03-12T12:56:08	1	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+1790	94.0	🚀Crypto Buy	2023-03-23T10:50:33	0	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+1792	20.0	Tacos 🌮 Tuesday	2022-12-18T21:52:14	2	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+1800	29.0	Taco Tuesday!	2023-04-14T17:39:25	2	clmiller@gmail.com	Claudia Miller	connorbrow@gmail.com	Connor Brown
+1803	54.0	🐾 Doggy Daycare for the Week 🐶	2023-05-05T17:11:52	0	clmiller@gmail.com	Claudia Miller	connorbrow@gmail.com	Connor Brown
+1804	30.0	👾Arcade Night	2023-03-01T13:54:19	4	clmiller@gmail.com	Claudia Miller	connorbrow@gmail.com	Connor Brown
+1825	10.0	🚕 Uber Ride 🚗📍	2023-04-14T00:01:41	0	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+1827	61.0	👓 New Glasses 🤓👀	2022-12-17T01:04:51	0	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+1843	50.0	New kicks 🔥	2023-01-12T14:21:44	3	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+1844	43.0	Food Festival	2023-01-02T19:04:21	4	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+1845	8.0	Bubble Tea 🧋 Run	2022-12-23T16:24:16	0	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+1846	42.0	Books	2023-02-01T17:29:14	0	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+1847	90.0	Board Games	2023-04-22T14:10:41	6	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+1849	24.0	🌮 Taco Tuesday Office Lunch 🍹	2023-03-20T15:14:15	0	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+1932	10.0	Streaming sub share	2023-01-14T21:26:53	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+1933	24.0	🍹Happy Hour Vibes	2023-01-30T08:29:10	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+1934	56.0	Craft Supplies	2023-01-25T00:03:46	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+1935	92.0	Haircut	2023-03-26T05:59:57	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+1936	74.0	💄 Girls' Makeup Shopping Spree 💅	2022-12-23T05:40:51	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+1967	11.0	🍇Smoothie Time	2022-12-27T03:33:26	4	paul_mill@gmail.com	Paul Miller	glenn.burton@gmail.com	Glenn Burton
+1968	41.0	Sushi night 🍣	2023-05-02T11:24:37	0	paul_mill@gmail.com	Paul Miller	glenn.burton@gmail.com	Glenn Burton
+1969	34.0	Spooky 👻 Halloween Costumes	2022-12-03T10:48:44	0	paul_mill@gmail.com	Paul Miller	glenn.burton@gmail.com	Glenn Burton
+1970	13.0	🎳Bowling Squad	2023-03-12T09:08:29	3	paul_mill@gmail.com	Paul Miller	glenn.burton@gmail.com	Glenn Burton
+1971	10.0	Monthly 📚 Book Club	2022-12-09T16:02:33	3	paul_mill@gmail.com	Paul Miller	glenn.burton@gmail.com	Glenn Burton
+1983	70.0	Snowboarding Gear	2022-11-27T16:03:09	0	jefsmith@gmail.com	Jeffrey Smith	paul_mill@gmail.com	Paul Miller
+1984	73.0	Wine Tasting	2022-10-31T12:04:44	0	jefsmith@gmail.com	Jeffrey Smith	paul_mill@gmail.com	Paul Miller
+1996	337.0	Wedding Gift	2023-02-19T06:21:31	1	spencer.powell@gmail.com	Spencer Powell	st-maldonado@gmail.com	Stacy Maldonado
+1998	46.0	🏖 Beach Trip	2023-02-24T08:23:57	6	spencer.powell@gmail.com	Spencer Powell	st-maldonado@gmail.com	Stacy Maldonado
+2000	189.0	Photography Gear	2023-03-13T09:23:04	2	spencer.powell@gmail.com	Spencer Powell	st-maldonado@gmail.com	Stacy Maldonado
+2001	77.0	🎟️ Concert Tickets	2023-03-02T20:57:55	0	spencer.powell@gmail.com	Spencer Powell	st-maldonado@gmail.com	Stacy Maldonado
+2002	41.0	Treat Yo' Self 💆	2023-03-14T04:20:43	0	spencer.powell@gmail.com	Spencer Powell	ismill@gmail.com	Isaac Miller
+2003	36.0	Bakery	2023-05-04T21:30:44	0	spencer.powell@gmail.com	Spencer Powell	ismill@gmail.com	Isaac Miller
+2004	18.0	🍩Donut Run	2023-03-07T11:28:59	6	spencer.powell@gmail.com	Spencer Powell	ismill@gmail.com	Isaac Miller
+2005	27.0	🎬 Movie Marathon Night 🍿	2023-02-21T12:44:54	2	spencer.powell@gmail.com	Spencer Powell	ismill@gmail.com	Isaac Miller
+2006	34.0	Airport 🚖 Cab Fare	2022-12-26T15:05:48	0	spencer.powell@gmail.com	Spencer Powell	ismill@gmail.com	Isaac Miller
+2007	24.0	🍜 Ramen Night in Downtown 🌃	2023-03-31T21:25:17	0	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+2008	20.0	🥑Avocado Toast	2023-02-24T04:39:14	0	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+2010	8.0	🎥Stream Sesh	2023-01-13T16:03:05	6	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+2011	24.0	🍹 Cocktail Mixing Class 🍸	2023-05-02T11:13:25	3	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+2013	5.0	Dog Park 🐶 Outing	2023-01-29T15:13:19	0	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+2015	30.0	💃 Salsa Dancing Lessons 🕺	2023-01-28T23:07:56	0	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+2018	48.0	Protein shake stack	2023-02-21T07:56:33	0	spencer.powell@gmail.com	Spencer Powell	caiburc@gmail.com	Caitlin Burch
+2019	27.0	Board Games 🎲	2023-03-20T19:08:11	2	spencer.powell@gmail.com	Spencer Powell	caiburc@gmail.com	Caitlin Burch
+2020	149.0	Massage	2023-04-25T18:32:36	4	spencer.powell@gmail.com	Spencer Powell	caiburc@gmail.com	Caitlin Burch
+2021	16.0	🧘 Yoga Class 🧘🌿	2023-04-07T10:00:09	0	spencer.powell@gmail.com	Spencer Powell	caiburc@gmail.com	Caitlin Burch
+2024	26.0	👾Arcade Night	2023-02-13T13:44:29	2	spencer.powell@gmail.com	Spencer Powell	caiburc@gmail.com	Caitlin Burch
+2025	15.0	💡Smart Bulbs	2023-02-22T23:35:34	6	spencer.powell@gmail.com	Spencer Powell	caiburc@gmail.com	Caitlin Burch
+2037	6.0	🍩 Donut Delight 🍩💕	2023-04-17T11:25:33	4	spencer.powell@gmail.com	Spencer Powell	ashlee_martinez@gmail.com	Ashlee Martinez
+2038	31.0	Gaming 🎮 Sesh	2023-01-24T10:37:44	5	spencer.powell@gmail.com	Spencer Powell	ashlee_martinez@gmail.com	Ashlee Martinez
+2039	39.0	🌌Stargazing Trip	2023-02-21T11:50:42	0	spencer.powell@gmail.com	Spencer Powell	ashlee_martinez@gmail.com	Ashlee Martinez
+2040	72.0	Night Out 🍸	2023-02-10T02:51:15	3	spencer.powell@gmail.com	Spencer Powell	ashlee_martinez@gmail.com	Ashlee Martinez
+2041	32.0	Aesthetic room decor	2023-02-08T12:04:39	2	spencer.powell@gmail.com	Spencer Powell	ashlee_martinez@gmail.com	Ashlee Martinez
+2042	6.0	🎈 Birthday Balloons 🎈🎉	2023-03-29T04:06:41	1	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2043	16.0	Custom phone case	2023-04-23T13:51:54	0	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2044	20.0	🏋️Gym Gear	2023-04-12T17:42:15	1	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2045	20.0	💍 Small Gift 💍💖	2023-04-12T05:06:38	4	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2046	19.0	Farmers 🌽 Market	2023-03-05T21:14:21	0	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2047	25.0	🏖Beach Day	2023-05-08T02:42:39	0	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2048	68.0	Grocery 🛒 Haul	2023-02-09T15:19:45	4	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2049	27.0	🌸 Springtime Flower Garden Project 🌷	2023-04-05T06:32:36	6	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2050	15.0	Tacos 🌮 Tuesday	2023-02-20T11:46:03	5	spencer.powell@gmail.com	Spencer Powell	connorbrow@gmail.com	Connor Brown
+2051	40.0	Beach day fund	2023-02-21T19:33:46	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+2053	216.0	Car Maintenance	2023-02-16T06:13:30	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+2054	25.0	👻 Haunted House Adventure 🎃	2022-12-27T06:41:20	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+2055	917.0	Bicycle	2023-03-27T10:29:31	6	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+2058	65.0	Couples Massage 💆💆	2023-03-19T19:39:35	3	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+2059	54.0	Theater Tickets	2023-04-25T01:14:53	0	spencer.powell@gmail.com	Spencer Powell	angriddle@gmail.com	Angela Riddle
+2062	111.0	Skydiving	2023-03-16T20:45:48	6	spencer.powell@gmail.com	Spencer Powell	angriddle@gmail.com	Angela Riddle
+2063	21.0	🌌Stargazing Trip	2023-04-28T16:17:08	0	spencer.powell@gmail.com	Spencer Powell	angriddle@gmail.com	Angela Riddle
+2065	35.0	🛒 Grocery Run for Potluck Dinner 🍲	2023-04-21T09:54:21	3	spencer.powell@gmail.com	Spencer Powell	angriddle@gmail.com	Angela Riddle
+2067	15.0	🌱Plant Babies	2023-04-27T07:11:50	0	spencer.powell@gmail.com	Spencer Powell	angriddle@gmail.com	Angela Riddle
+2070	90.0	Tattoo	2023-04-03T07:36:25	0	joyce-weav@gmail.com	Joyce Weaver	spencer.powell@gmail.com	Spencer Powell
+2072	13.0	🥳 Party Decorations 🎉🎈	2023-04-10T14:06:34	0	ad.blackburn@gmail.com	Adam Blackburn	spencer.powell@gmail.com	Spencer Powell
+2075	9.0	Quick coffee fix ☕	2023-02-09T23:55:37	0	ad.blackburn@gmail.com	Adam Blackburn	spencer.powell@gmail.com	Spencer Powell
+2076	44.0	Podcast Subscription	2023-05-18T05:27:29	0	ad.blackburn@gmail.com	Adam Blackburn	spencer.powell@gmail.com	Spencer Powell
+2077	21.0	🧗 Rock Climbing	2023-03-11T01:54:36	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+2078	11.0	Gaming 🎮 Sesh	2023-05-11T01:39:41	0	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2079	50.0	💪 Gym Dues	2023-03-23T22:51:28	0	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2080	86.0	Workshop Fees	2023-05-10T05:24:09	0	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2081	58.0	Health Supplements	2023-01-11T04:11:09	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+2082	26.0	🍔 Weekend BBQ Supplies	2023-04-26T11:00:22	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+2223	37.0	Escape Room	2023-01-15T16:21:42	0	anita.burch@gmail.com	Anita Burch	kri-powe@gmail.com	Kristin White
+2251	43.0	🎮 New Video Game Pre-Order 🕹️	2023-01-29T17:25:34	3	jepowell@gmail.com	Jennifer Powell	anita.burch@gmail.com	Anita Burch
+2253	30.0	Gas Money	2023-03-16T05:07:35	4	jepowell@gmail.com	Jennifer Powell	anita.burch@gmail.com	Anita Burch
+2254	15.0	Pasta Night 🍝	2023-04-26T18:55:54	0	jepowell@gmail.com	Jennifer Powell	anita.burch@gmail.com	Anita Burch
+2255	11.0	🍱Bento Box Fix	2023-02-05T23:35:27	0	jepowell@gmail.com	Jennifer Powell	anita.burch@gmail.com	Anita Burch
+2257	192.0	Photography Gear	2023-01-20T17:03:04	0	jepowell@gmail.com	Jennifer Powell	anita.burch@gmail.com	Anita Burch
+2274	18.0	Movie 🎟️ Night	2023-01-20T13:16:56	0	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2277	16.0	🍺 Craft Beers 🍻👌	2023-03-17T01:03:38	0	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2308	143.0	Mixology Class	2023-04-06T00:29:43	2	eri_powe@gmail.com	Erica Wilson	jasonsimp@gmail.com	Jason Simpson
+2309	5.0	Dog Park 🐶 Outing	2022-11-12T10:45:22	0	eri_powe@gmail.com	Erica Wilson	jasonsimp@gmail.com	Jason Simpson
+2311	78.0	Cosplay 🦸 Gear	2023-02-06T03:48:30	0	eri_powe@gmail.com	Erica Wilson	jasonsimp@gmail.com	Jason Simpson
+2313	35.0	🏖 Beach Trip	2022-06-21T14:31:54	5	eri_powe@gmail.com	Erica Wilson	jasonsimp@gmail.com	Jason Simpson
+2370	33.0	🐟 Fish Tank Supplies 🐠💦	2022-06-02T14:29:56	0	jasonsimp@gmail.com	Jason Simpson	eri_powe@gmail.com	Erica Wilson
+2371	41.0	Makeup Class	2023-03-23T08:12:37	5	mir-powe@gmail.com	Miranda Weber	bradley_ball@gmail.com	Bradley Ball
+2372	34.0	🎨 Art Supplies for Creative Weekend 🖌️	2022-11-08T02:46:38	2	mir-powe@gmail.com	Miranda Weber	bradley_ball@gmail.com	Bradley Ball
+2373	127.0	Opera Tickets	2022-09-22T11:39:32	0	mir-powe@gmail.com	Miranda Weber	bradley_ball@gmail.com	Bradley Ball
+2376	16.0	Epic fail fines	2023-04-09T15:45:40	0	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+2377	48.0	Escape Room	2023-04-29T00:18:22	6	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+2379	27.0	Children's Toys	2023-04-23T18:25:09	0	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+2381	11.0	Uber last night	2022-11-14T23:58:35	3	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+2382	36.0	Food delivery 🍕	2022-12-22T00:03:10	6	mir-powe@gmail.com	Miranda Weber	ka_ball@gmail.com	Katherine Smith
+2383	28.0	📖 Bookstore Haul 📚❤️	2023-04-26T11:51:21	6	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+2384	36.0	Board Games	2023-05-15T02:53:56	2	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+2385	43.0	🏋️Gym Gear	2023-02-05T22:15:47	0	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+2386	38.0	Fishing Gear	2023-02-12T13:17:21	4	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+2387	25.0	🏊 Pool Party Supplies	2022-12-11T22:43:54	4	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+2388	20.0	🌱 Vegan Cooking Ingredients 🍅	2023-01-11T07:10:55	3	mir-powe@gmail.com	Miranda Weber	ja-solomon@gmail.com	James Solomon
+2389	26.0	🎳 Bowling Alley Fun Night 🤗	2023-01-09T16:04:38	0	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2390	25.0	🚀Crypto Buy	2023-01-11T00:00:19	0	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2391	46.0	Movie date 🎬	2022-12-28T05:34:05	6	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2392	65.0	Birthday Gift	2022-08-23T09:00:27	0	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2395	73.0	🏕Camping Trip	2023-05-17T09:16:09	0	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2396	34.0	💈 Haircut 💇💇	2023-05-07T14:46:47	0	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2398	22.0	🌈 Pride Parade Outfits 🏳️🌈	2022-08-25T13:53:26	2	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+2399	20.0	Skincare glow-up	2022-12-21T16:13:35	3	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2400	31.0	Art 🎨 Supplies	2023-03-18T09:40:32	0	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2401	27.0	Sushi night 🍣	2022-11-05T13:56:35	0	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2402	81.0	Online Course	2023-04-20T04:30:42	0	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2403	45.0	Theme Park	2023-03-04T10:18:25	0	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2404	310.0	Charity Donation	2022-11-06T18:47:13	5	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2405	126.0	Theater Tickets	2022-11-01T20:52:20	3	mir-powe@gmail.com	Miranda Weber	ron.harrison@gmail.com	Ronald Harrison
+2409	31.0	🔭 Stargazing Trip Essentials 🌌	2023-03-15T03:25:00	0	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+2410	52.0	Flower Delivery	2022-12-28T07:53:37	0	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+2411	79.0	Concert Tickets	2023-01-11T07:00:49	6	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+2413	150.0	📸Camera Gear	2023-01-10T23:28:33	3	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+2414	83.0	🎸 Music Lessons for the Month 🎵	2022-11-26T13:38:03	0	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+2415	262.0	Clothing	2022-11-13T02:46:04	0	mir-powe@gmail.com	Miranda Weber	kat_simp@gmail.com	Katie Simpson
+2416	16.0	🥑Avocado Toast	2022-11-29T13:43:14	0	mir-powe@gmail.com	Miranda Weber	kat_simp@gmail.com	Katie Simpson
+2417	19.0	🎤 Karaoke Night 🎶💃	2023-05-16T17:03:02	2	mir-powe@gmail.com	Miranda Weber	kat_simp@gmail.com	Katie Simpson
+2418	6.0	Ice Cream 🍦	2023-05-10T14:48:15	0	mir-powe@gmail.com	Miranda Weber	kat_simp@gmail.com	Katie Simpson
+2421	15.0	🚕Lyft Home	2023-02-03T20:43:21	3	mir-powe@gmail.com	Miranda Weber	kat_simp@gmail.com	Katie Simpson
+2422	12.0	Study 📚 Snacks	2023-04-09T17:04:53	3	mir-powe@gmail.com	Miranda Weber	kat_simp@gmail.com	Katie Simpson
+2424	29.0	Resume Writing	2023-02-06T11:12:25	0	matthew.blac@gmail.com	Matthew Blackburn	mir-powe@gmail.com	Miranda Weber
+2425	20.0	🍿 Cinema Snacks 🍫	2023-02-16T07:23:49	0	matthew.blac@gmail.com	Matthew Blackburn	mir-powe@gmail.com	Miranda Weber
+2428	11.0	🍹 Happy Hour Fund	2022-09-12T18:15:09	0	jer.calhoun@gmail.com	Jeremy Calhoun	mir-powe@gmail.com	Miranda Weber
+2429	10.0	Pasta Night 🍝	2023-04-26T01:46:28	0	bradley_ball@gmail.com	Bradley Ball	mir-powe@gmail.com	Miranda Weber
+2431	16.0	🌱 Vegan Cooking Ingredients 🍅	2023-01-21T19:35:47	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+2432	17.0	🥑Avocado Toast	2023-01-01T01:06:16	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+2433	19.0	🍵Tea Time	2023-02-12T12:54:01	0	ismill@gmail.com	Isaac Miller	mir-powe@gmail.com	Miranda Weber
+2434	116.0	Boat Rental	2022-11-01T13:58:05	0	tra_wils@gmail.com	Travis Wilson	mir-powe@gmail.com	Miranda Weber
+2435	11.0	🎤 Karaoke Night Entry Fees 🎶	2023-04-01T21:20:45	0	tra_wils@gmail.com	Travis Wilson	mir-powe@gmail.com	Miranda Weber
+2436	15.0	🛵Scooter Ride	2022-09-03T10:50:29	0	tra_wils@gmail.com	Travis Wilson	mir-powe@gmail.com	Miranda Weber
+2437	13.0	Energy drink stash	2022-12-13T19:55:49	0	carbrown@gmail.com	Carl Brown	mir-powe@gmail.com	Miranda Weber
+2438	91.0	Apartment cleaning	2022-12-23T09:39:25	0	carbrown@gmail.com	Carl Brown	mir-powe@gmail.com	Miranda Weber
+2439	127.0	📸Camera Gear	2023-03-07T06:22:35	0	ka_ball@gmail.com	Katherine Smith	mir-powe@gmail.com	Miranda Weber
+2440	81.0	Flower Delivery	2022-09-15T14:58:27	0	ka_ball@gmail.com	Katherine Smith	mir-powe@gmail.com	Miranda Weber
+2441	23.0	🤓Comic Books	2023-02-07T22:40:38	0	ka_ball@gmail.com	Katherine Smith	mir-powe@gmail.com	Miranda Weber
+2485	34.0	Books	2023-01-30T13:16:08	0	jasonsimp@gmail.com	Jason Simpson	ch-burch@gmail.com	Christopher Burch
+2486	43.0	Plant mom life	2022-12-06T14:06:50	0	jasonsimp@gmail.com	Jason Simpson	ch-burch@gmail.com	Christopher Burch
+2532	101.0	Pet Care	2023-04-11T08:59:20	1	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2533	12.0	Study 📚 Snacks	2023-04-30T09:53:04	2	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2534	23.0	🍔Burger Goals	2023-03-21T12:26:59	0	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2537	28.0	🎬Movie Snacks	2023-03-16T17:03:49	0	caiburc@gmail.com	Caitlin Burch	spencer.powell@gmail.com	Spencer Powell
+2609	163.0	Car Maintenance	2022-06-25T10:18:25	6	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2610	13.0	🎼Vinyl Records	2023-04-06T23:33:37	0	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2611	17.0	Roller Skating Night 🛼	2022-05-24T18:06:05	2	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2612	96.0	Theater Tickets	2023-05-01T14:00:01	3	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2614	18.0	Baking 🧁 Supplies	2023-02-26T22:55:16	0	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2616	83.0	Ski 🎿 Trip Expenses	2023-01-17T01:19:16	0	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2617	33.0	Online courses	2022-12-09T03:25:38	6	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2618	96.0	Gardening Supplies	2022-11-08T21:13:44	1	mi.burch@gmail.com	Michael Burch	kevin.blac@gmail.com	Kevin Blackburn
+2629	10.0	🎥Stream Sesh	2023-03-12T17:24:31	0	connorbrow@gmail.com	Connor Brown	mi.burch@gmail.com	Michael Burch
+2630	46.0	Dry Cleaning	2023-04-25T08:10:59	0	connorbrow@gmail.com	Connor Brown	mi.burch@gmail.com	Michael Burch
+2706	15.0	💈 Haircut 💇💇	2023-05-02T23:35:30	0	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+2707	10.0	Dog Park 🐶 Outing	2023-02-10T12:49:28	0	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+2770	19.0	Netflix binge weekend	2023-03-16T00:36:44	5	deniseburch@gmail.com	Denise Maldonado	kevin.blac@gmail.com	Kevin Blackburn
+2771	22.0	Football Game 🏈 Tickets	2023-04-04T15:48:03	0	deniseburch@gmail.com	Denise Maldonado	kevin.blac@gmail.com	Kevin Blackburn
+2775	187.0	Home Repair	2023-04-21T17:18:25	6	deniseburch@gmail.com	Denise Maldonado	kevin.blac@gmail.com	Kevin Blackburn
+2793	220.0	Hiking Gear	2023-04-12T17:00:43	0	anita.burch@gmail.com	Anita Burch	saritt@gmail.com	Sandra Martinez
+2794	21.0	🌮 Spicy Mexican Food Night 🌶️	2023-04-12T14:01:54	3	anita.burch@gmail.com	Anita Burch	saritt@gmail.com	Sandra Martinez
+2795	75.0	Pet Food	2023-01-12T22:16:55	2	anita.burch@gmail.com	Anita Burch	saritt@gmail.com	Sandra Martinez
+2796	19.0	🎳Bowling Squad	2023-05-13T02:50:01	0	anita.burch@gmail.com	Anita Burch	saritt@gmail.com	Sandra Martinez
+2797	39.0	🌌Stargazing Trip	2023-02-21T09:24:06	3	anita.burch@gmail.com	Anita Burch	saritt@gmail.com	Sandra Martinez
+2799	85.0	Mixology Class	2022-12-27T05:41:23	5	anita.burch@gmail.com	Anita Burch	saritt@gmail.com	Sandra Martinez
+2802	30.0	🏖Beach Day	2022-06-14T13:29:50	1	anita.burch@gmail.com	Anita Burch	tra_wils@gmail.com	Travis Wilson
+2803	20.0	Dance Class	2022-12-22T04:42:22	1	anita.burch@gmail.com	Anita Burch	tra_wils@gmail.com	Travis Wilson
+2804	14.0	🌳 Park Picnic Snacks	2022-08-31T06:18:30	0	anita.burch@gmail.com	Anita Burch	tra_wils@gmail.com	Travis Wilson
+2805	11.0	Movie 🎟️ Night	2022-09-04T11:46:44	5	anita.burch@gmail.com	Anita Burch	tra_wils@gmail.com	Travis Wilson
+2806	26.0	👻 Haunted House Adventure 🎃	2023-05-15T12:43:17	0	anita.burch@gmail.com	Anita Burch	corwils@gmail.com	Cory Wilson
+2808	6.0	🎥Stream Sesh	2022-12-25T07:22:10	0	anita.burch@gmail.com	Anita Burch	corwils@gmail.com	Cory Wilson
+2810	38.0	Gym membership	2022-09-05T07:33:31	0	anita.burch@gmail.com	Anita Burch	corwils@gmail.com	Cory Wilson
+2811	1695.0	Bicycle	2023-01-12T11:04:08	0	anita.burch@gmail.com	Anita Burch	corwils@gmail.com	Cory Wilson
+2814	106.0	Bungee Jumping	2023-01-12T19:01:55	0	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2815	15.0	🍜 Ramen Night 🍜🥢	2023-01-20T09:22:25	0	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2817	63.0	👟 New Sneakers 👟🔥	2023-03-29T20:06:56	0	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2818	15.0	🍳 Breakfast Club 🥞🍳	2023-04-21T07:37:11	1	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2819	19.0	🦄 Unicorn Merch 🌈🦄	2023-03-30T21:09:47	6	anita.burch@gmail.com	Anita Burch	jepowell@gmail.com	Jennifer Powell
+2820	70.0	Tutoring	2022-07-20T08:29:16	1	anita.burch@gmail.com	Anita Burch	ka_burt@gmail.com	Kayla Burton
+2823	80.0	🎧Podcast Mic 🎤	2023-03-26T02:09:31	2	anita.burch@gmail.com	Anita Burch	ka_burt@gmail.com	Kayla Burton
+2826	22.0	Roller Skating Night 🛼	2022-10-01T22:35:03	0	anita.burch@gmail.com	Anita Burch	ka_burt@gmail.com	Kayla Burton
+2827	11.0	Baking 🧁 Supplies	2022-08-28T22:52:12	1	anita.burch@gmail.com	Anita Burch	ka_burt@gmail.com	Kayla Burton
+2828	8.0	🌮 More Tacos! 🌮🌶️	2023-04-30T23:14:33	0	anita.burch@gmail.com	Anita Burch	ka_burt@gmail.com	Kayla Burton
+2829	13.0	🎬 Film Night In	2022-12-23T10:03:47	3	anita.burch@gmail.com	Anita Burch	ka_burt@gmail.com	Kayla Burton
+2830	56.0	Puppy 🐶 Training Classes	2023-03-29T19:16:36	3	anita.burch@gmail.com	Anita Burch	stmcco@gmail.com	Stephen Mccoy
+2833	23.0	Fishing Gear	2023-02-24T15:21:30	0	anita.burch@gmail.com	Anita Burch	stmcco@gmail.com	Stephen Mccoy
+2834	67.0	Ski 🎿 Trip Expenses	2023-04-20T16:52:02	5	anita.burch@gmail.com	Anita Burch	stmcco@gmail.com	Stephen Mccoy
+2835	17.0	🎥 Movie Marathon Night 🍿	2022-11-24T04:38:40	5	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2836	52.0	Grocery haul	2022-10-06T00:18:57	3	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2837	45.0	Board Games	2023-02-17T21:17:05	0	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2838	39.0	Art 🎨 Supplies	2023-04-20T10:18:08	6	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2839	43.0	Aquarium Tickets	2023-02-27T20:35:57	3	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2840	21.0	Yoga class zen	2022-12-18T01:14:44	5	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2841	20.0	🌱Plant Babies	2023-03-03T16:15:45	4	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2842	23.0	🎤 Karaoke Night 🎶💃	2022-10-26T03:45:37	0	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2844	59.0	🎟️ Amusement Park Day Pass 🎢	2022-11-25T09:07:57	0	anita.burch@gmail.com	Anita Burch	kat_simp@gmail.com	Katie Simpson
+2846	130.0	Musical Instruments	2023-05-04T07:14:57	0	ta.weav@gmail.com	Tammy Weaver	anita.burch@gmail.com	Anita Burch
+2847	288.0	Ski Pass	2023-02-15T04:56:14	0	corwils@gmail.com	Cory Wilson	anita.burch@gmail.com	Anita Burch
+2848	23.0	Sushi night 🍣	2023-02-09T09:21:38	0	corwils@gmail.com	Cory Wilson	anita.burch@gmail.com	Anita Burch
+2849	27.0	Road trip snacks	2022-09-15T03:12:46	0	corwils@gmail.com	Cory Wilson	anita.burch@gmail.com	Anita Burch
+2852	50.0	🍣Sushi Vibes	2022-08-30T14:31:57	0	kevin.blac@gmail.com	Kevin Blackburn	anita.burch@gmail.com	Anita Burch
+2853	78.0	Home Appliances	2023-01-08T02:38:32	0	kevin.blac@gmail.com	Kevin Blackburn	anita.burch@gmail.com	Anita Burch
+2854	32.0	Gym Membership	2023-02-02T21:22:03	0	kevin.blac@gmail.com	Kevin Blackburn	anita.burch@gmail.com	Anita Burch
+2864	145.0	Ski Pass	2023-02-09T02:08:26	0	jac-blackburn@gmail.com	Jacob Blackburn	angriddle@gmail.com	Angela Riddle
+2865	81.0	Snowboarding Gear	2022-12-14T19:13:34	0	jac-blackburn@gmail.com	Jacob Blackburn	angriddle@gmail.com	Angela Riddle
+2867	88.0	📸Camera Gear	2023-02-24T18:45:05	0	jac-blackburn@gmail.com	Jacob Blackburn	angriddle@gmail.com	Angela Riddle
+2868	32.0	Camping 🏕 Essentials	2023-04-20T23:00:22	0	jac-blackburn@gmail.com	Jacob Blackburn	angriddle@gmail.com	Angela Riddle
+2870	17.0	Museum Tickets	2023-01-04T01:52:28	0	jac-blackburn@gmail.com	Jacob Blackburn	angriddle@gmail.com	Angela Riddle
+2872	27.0	Roller Skating Night 🛼	2023-02-07T23:46:09	0	jac-blackburn@gmail.com	Jacob Blackburn	angriddle@gmail.com	Angela Riddle
+2979	82.0	Gardening Supplies	2022-12-21T05:37:59	0	va-blac@gmail.com	Valerie Blackburn	spencer.powell@gmail.com	Spencer Powell
+2982	62.0	🎮New Game Drop	2023-02-25T04:03:30	4	va-blac@gmail.com	Valerie Blackburn	spencer.powell@gmail.com	Spencer Powell
+2983	26.0	🌱 Vegan Cooking Ingredients 🍅	2023-05-15T03:39:13	6	va-blac@gmail.com	Valerie Blackburn	spencer.powell@gmail.com	Spencer Powell
+2984	45.0	Computer Software	2023-01-19T12:22:38	0	va-blac@gmail.com	Valerie Blackburn	spencer.powell@gmail.com	Spencer Powell
+2985	87.0	Makeup Class	2023-01-18T18:01:05	0	va-blac@gmail.com	Valerie Blackburn	spencer.powell@gmail.com	Spencer Powell
+3026	88.0	Aesthetic room decor	2023-01-18T09:13:02	0	spencer.powell@gmail.com	Spencer Powell	va-blac@gmail.com	Valerie Blackburn
+3028	19.0	Gaming 🎮 Sesh	2023-03-04T16:03:10	0	spencer.powell@gmail.com	Spencer Powell	va-blac@gmail.com	Valerie Blackburn
+3029	16.0	🚕Lyft Home	2023-04-17T23:49:46	0	spencer.powell@gmail.com	Spencer Powell	va-blac@gmail.com	Valerie Blackburn
+3030	12.0	🏝️ Tropical Smoothie Craze 🍍	2023-02-25T10:54:20	0	spencer.powell@gmail.com	Spencer Powell	va-blac@gmail.com	Valerie Blackburn
+3031	87.0	Concert tix 🎶	2023-05-06T00:24:12	0	ad.blackburn@gmail.com	Adam Blackburn	carbrown@gmail.com	Carl Brown
+3032	48.0	Pet Food	2023-01-08T11:20:55	1	ad.blackburn@gmail.com	Adam Blackburn	carbrown@gmail.com	Carl Brown
+3033	21.0	Crafternoon 🧶	2022-11-29T15:16:37	2	ad.blackburn@gmail.com	Adam Blackburn	carbrown@gmail.com	Carl Brown
+3035	20.0	Plants	2023-02-27T12:57:07	6	ad.blackburn@gmail.com	Adam Blackburn	carbrown@gmail.com	Carl Brown
+3036	23.0	💈 Haircut 💇💇	2023-04-01T20:37:52	0	ad.blackburn@gmail.com	Adam Blackburn	carbrown@gmail.com	Carl Brown
+3043	44.0	Sunday brunch vibes	2022-12-22T12:47:49	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3044	26.0	🛒 Grocery Run for Potluck Dinner 🍲	2022-12-18T17:15:21	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3045	30.0	🏀 Basketball Game Tix 🎟️🏀	2023-02-22T23:30:37	4	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3046	46.0	Train Tickets	2023-04-08T07:45:38	2	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3047	69.0	🎉Bday Bash!	2023-05-02T04:05:27	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3048	51.0	Camping Fees	2023-01-05T23:14:20	1	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3049	8.0	Tacos 🌮 Tuesday	2022-12-19T02:20:43	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+3051	56.0	🏋️ New Gym Gear Shopping 🤸	2023-01-16T12:26:37	4	ad.blackburn@gmail.com	Adam Blackburn	mel.bailey@gmail.com	Melissa Bailey
+3052	28.0	Airport 🚖 Cab Fare	2023-01-29T11:44:18	0	ad.blackburn@gmail.com	Adam Blackburn	mel.bailey@gmail.com	Melissa Bailey
+3053	23.0	Podcast Subscription	2022-10-07T14:40:18	1	ad.blackburn@gmail.com	Adam Blackburn	mel.bailey@gmail.com	Melissa Bailey
+3054	5.0	📝 Study Supplies 🖊️📓	2022-09-22T20:46:51	4	ad.blackburn@gmail.com	Adam Blackburn	mel.bailey@gmail.com	Melissa Bailey
+3056	10.0	🎈 Birthday Balloons 🎈🎉	2023-02-09T08:53:17	0	ad.blackburn@gmail.com	Adam Blackburn	connorbrow@gmail.com	Connor Brown
+3058	16.0	Monthly 📚 Book Club	2023-03-04T15:11:44	5	ad.blackburn@gmail.com	Adam Blackburn	connorbrow@gmail.com	Connor Brown
+3059	75.0	Home Appliances	2023-02-25T04:38:56	5	ad.blackburn@gmail.com	Adam Blackburn	connorbrow@gmail.com	Connor Brown
+3060	8.0	Monthly 🎶 Music Subscription	2023-03-24T02:41:45	0	ad.blackburn@gmail.com	Adam Blackburn	connorbrow@gmail.com	Connor Brown
+3061	45.0	Antique Shopping	2023-05-12T20:33:32	4	ad.blackburn@gmail.com	Adam Blackburn	connorbrow@gmail.com	Connor Brown
+3062	66.0	🚀Crypto Buy	2023-02-14T06:28:44	3	ad.blackburn@gmail.com	Adam Blackburn	connorbrow@gmail.com	Connor Brown
+3063	33.0	Lunch	2023-04-07T23:12:39	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3064	76.0	Food Festival	2022-11-24T20:47:12	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3065	8.0	🥐 Coffee and Croissant ☕🥐	2023-03-20T22:09:49	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3066	12.0	Bike ride fuel	2023-02-25T07:43:26	3	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3067	88.0	Pet Sitting	2023-03-29T21:11:56	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3068	43.0	🏄 Weekend Beach Surfing Adventure 🌊	2023-01-20T15:30:53	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3070	32.0	Yoga Class	2022-11-28T10:27:11	0	ad.blackburn@gmail.com	Adam Blackburn	angriddle@gmail.com	Angela Riddle
+3071	22.0	Spooky 👻 Halloween Costumes	2022-10-05T13:41:00	2	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+3073	26.0	Movie date 🎬	2022-10-09T04:28:03	1	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+3074	9.0	Books	2023-03-08T10:21:15	0	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+3076	34.0	Vegan Dinner 🌱💚	2022-10-05T13:37:22	0	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+3080	48.0	Record Store 🎶 Finds	2022-11-01T07:50:20	2	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+3081	40.0	🏠 Housewarming Party Gifts 🎁	2023-02-16T16:14:29	0	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3082	10.0	🍜 Ramen Night 🍜🥢	2023-02-16T07:00:21	0	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3083	68.0	🏋️ New Gym Gear Shopping 🤸	2022-09-20T22:42:25	6	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3085	38.0	🐾 Doggy Daycare for the Week 🐶	2023-03-09T04:14:40	0	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3086	183.0	Photography Gear	2023-04-03T17:01:42	1	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3087	140.0	Online Course	2022-10-09T10:55:28	2	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3088	23.0	📖 Bookstore Haul 📚❤️	2023-01-29T09:29:39	5	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3089	10.0	Summer 🍦 Ice Cream Run	2023-01-16T19:33:42	2	ad.blackburn@gmail.com	Adam Blackburn	robertmartinez@gmail.com	Robert Martinez
+3090	34.0	Bike 🚴 Repairs	2023-03-12T21:55:06	0	carbrown@gmail.com	Carl Brown	ad.blackburn@gmail.com	Adam Blackburn
+3091	10.0	🚀 Rocket League Tourney 💥🎮	2023-01-08T01:48:16	0	carbrown@gmail.com	Carl Brown	ad.blackburn@gmail.com	Adam Blackburn
+3093	105.0	Home Repair	2023-03-10T16:10:14	0	glenn.burton@gmail.com	Glenn Burton	ad.blackburn@gmail.com	Adam Blackburn
+3096	9.0	Dog Park 🐶 Outing	2022-09-13T13:59:32	0	jefsmith@gmail.com	Jeffrey Smith	ad.blackburn@gmail.com	Adam Blackburn
+3100	34.0	Board Games	2023-05-17T08:27:17	0	spencer.powell@gmail.com	Spencer Powell	ad.blackburn@gmail.com	Adam Blackburn
+3115	36.0	Dinner 🍴 Date Night	2023-04-13T20:34:02	0	matthew.blac@gmail.com	Matthew Blackburn	connorbrow@gmail.com	Connor Brown
+3117	192.0	Mixology Class	2023-03-12T10:05:02	0	matthew.blac@gmail.com	Matthew Blackburn	connorbrow@gmail.com	Connor Brown
+3119	62.0	Food Festival	2023-04-30T22:24:50	1	matthew.blac@gmail.com	Matthew Blackburn	connorbrow@gmail.com	Connor Brown
+3140	31.0	🍻 Craft Beer Tasting Extravaganza 🍺	2023-02-27T19:58:36	3	matthew.blac@gmail.com	Matthew Blackburn	saritt@gmail.com	Sandra Martinez
+3141	7.0	Summer 🍦 Ice Cream Run	2023-03-01T15:16:10	0	matthew.blac@gmail.com	Matthew Blackburn	saritt@gmail.com	Sandra Martinez
+3142	17.0	Car Wash	2023-02-05T02:38:40	6	matthew.blac@gmail.com	Matthew Blackburn	saritt@gmail.com	Sandra Martinez
+3143	78.0	Bike 🚴 Repairs	2023-01-30T12:39:02	2	matthew.blac@gmail.com	Matthew Blackburn	saritt@gmail.com	Sandra Martinez
+3146	75.0	Apartment cleaning	2023-03-25T03:37:14	1	matthew.blac@gmail.com	Matthew Blackburn	saritt@gmail.com	Sandra Martinez
+3183	20.0	📖Zine Fund	2023-02-28T20:43:51	0	joseph.webe@gmail.com	Joseph Weber	matthew.blac@gmail.com	Matthew Blackburn
+3195	94.0	Train Tickets	2023-04-09T04:24:07	0	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+3198	6.0	🍰 Dessert Run 🍨🍰	2023-02-09T12:24:06	0	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+3227	100.0	Photography	2022-11-11T00:33:13	1	mar_blac@gmail.com	Martin Blackburn	ma_smith@gmail.com	Marcus Smith
+3228	31.0	🏀 Basketball Game Tix 🎟️🏀	2022-07-09T05:43:26	0	mar_blac@gmail.com	Martin Blackburn	ma_smith@gmail.com	Marcus Smith
+3229	25.0	🎨 DIY Craft Supplies	2022-12-03T23:14:38	6	mar_blac@gmail.com	Martin Blackburn	ma_smith@gmail.com	Marcus Smith
+3230	39.0	💈Fresh Cut	2022-08-13T13:40:17	0	mar_blac@gmail.com	Martin Blackburn	ma_smith@gmail.com	Marcus Smith
+3233	34.0	Camping Fees	2023-02-10T16:55:47	0	mar_blac@gmail.com	Martin Blackburn	ma_smith@gmail.com	Marcus Smith
+3234	28.0	Vet Visit 🐕	2022-10-07T05:15:21	1	mar_blac@gmail.com	Martin Blackburn	ma_smith@gmail.com	Marcus Smith
+3235	23.0	🏀 Basketball Game Tix 🎟️🏀	2022-12-03T14:45:48	0	mar_blac@gmail.com	Martin Blackburn	nan_ritt@gmail.com	Nancy Ritter
+3236	65.0	🍷 Winery Day Trip 🍇	2023-02-21T03:57:03	4	mar_blac@gmail.com	Martin Blackburn	nan_ritt@gmail.com	Nancy Ritter
+3237	315.0	Wedding Gift	2023-01-06T01:06:16	0	mar_blac@gmail.com	Martin Blackburn	nan_ritt@gmail.com	Nancy Ritter
+3266	315.0	Wedding Gift	2023-03-15T17:32:11	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+3267	83.0	Room Service	2022-10-14T05:39:42	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+3268	15.0	Food delivery 🍕	2022-10-19T20:52:48	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+3269	46.0	Plants	2023-04-27T07:18:10	0	joseph.webe@gmail.com	Joseph Weber	mar_blac@gmail.com	Martin Blackburn
+3270	124.0	Theme Park	2023-03-25T08:48:46	0	joseph.webe@gmail.com	Joseph Weber	mar_blac@gmail.com	Martin Blackburn
+3271	29.0	💻Online Game Pass	2023-03-20T14:53:00	0	joseph.webe@gmail.com	Joseph Weber	mar_blac@gmail.com	Martin Blackburn
+3273	11.0	Monthly comics 🦸	2023-04-24T11:15:29	0	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+3274	36.0	🏋️Gym Gear	2023-05-16T15:44:53	0	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+3276	26.0	Fishing Gear	2023-02-07T04:27:52	0	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+3286	25.0	Makeup 💄	2023-01-16T04:57:11	0	nan_ritt@gmail.com	Nancy Ritter	mar_blac@gmail.com	Martin Blackburn
+3287	19.0	🌳 National Park Entry 🌲🏞️	2023-05-10T11:01:51	0	nan_ritt@gmail.com	Nancy Ritter	mar_blac@gmail.com	Martin Blackburn
+3288	67.0	Language Classes	2023-04-09T15:47:25	0	nan_ritt@gmail.com	Nancy Ritter	mar_blac@gmail.com	Martin Blackburn
+3290	50.0	Makeup 💄	2022-11-05T12:45:33	0	jefsmith@gmail.com	Jeffrey Smith	mar_blac@gmail.com	Martin Blackburn
+3291	21.0	Monthly comics 🦸	2023-04-30T10:03:14	0	jefsmith@gmail.com	Jeffrey Smith	mar_blac@gmail.com	Martin Blackburn
+3297	89.0	🎸 Music Lessons for the Month 🎵	2023-03-13T10:44:12	0	kevin.blac@gmail.com	Kevin Blackburn	cod.smith@gmail.com	Cody Smith
+3298	71.0	Board Games	2023-01-23T14:28:27	0	kevin.blac@gmail.com	Kevin Blackburn	cod.smith@gmail.com	Cody Smith
+3299	78.0	Health Supplements	2023-05-17T08:15:56	6	kevin.blac@gmail.com	Kevin Blackburn	cod.smith@gmail.com	Cody Smith
+3300	29.0	New 🎮 Game Purchase	2023-05-11T11:46:27	0	kevin.blac@gmail.com	Kevin Blackburn	cod.smith@gmail.com	Cody Smith
+3302	169.0	Weekend getaway	2023-02-04T16:23:57	0	kevin.blac@gmail.com	Kevin Blackburn	cod.smith@gmail.com	Cody Smith
+3303	305.0	Wedding Gift	2023-04-25T14:34:40	1	kevin.blac@gmail.com	Kevin Blackburn	gra-martinez@gmail.com	Grant Martinez
+3304	84.0	Night Out 🍸	2023-03-20T16:14:33	0	kevin.blac@gmail.com	Kevin Blackburn	gra-martinez@gmail.com	Grant Martinez
+3306	123.0	Musical Instruments	2023-04-02T16:57:30	0	kevin.blac@gmail.com	Kevin Blackburn	gra-martinez@gmail.com	Grant Martinez
+3307	135.0	Home Appliances	2022-12-15T07:24:28	6	kevin.blac@gmail.com	Kevin Blackburn	gra-martinez@gmail.com	Grant Martinez
+3308	493.0	Vacation	2023-01-02T04:54:00	2	kevin.blac@gmail.com	Kevin Blackburn	gra-martinez@gmail.com	Grant Martinez
+3309	44.0	🚲 Bike Repair 🛠️🚲	2023-01-27T07:02:54	0	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3310	8.0	🍕 Extra Cheese 🧀🍕	2023-04-10T19:35:55	0	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3311	96.0	Snowboarding Gear	2023-03-01T13:28:44	0	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3312	12.0	Movie Ticket	2023-03-06T14:59:08	0	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3313	174.0	Hiking Gear	2023-04-11T11:09:34	0	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3315	59.0	🎉 New Year's Eve Party Supplies 🍾	2023-05-11T02:17:31	3	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3316	27.0	Uber last night	2023-03-04T03:41:24	1	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3317	17.0	🐾Pet Stuff	2023-03-02T11:40:19	5	kevin.blac@gmail.com	Kevin Blackburn	deniseburch@gmail.com	Denise Maldonado
+3318	85.0	Makeup Class	2022-07-02T16:46:24	1	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+3319	7.0	🥐 Coffee and Croissant ☕🥐	2022-06-07T20:31:56	0	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+3320	15.0	🍹 More Thirsty Thursdays 🍸🍹	2022-07-19T07:27:00	4	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+3321	30.0	Treat Yo' Self 💆	2022-08-24T23:26:05	0	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+3332	31.0	Birthday Gift	2023-03-27T19:58:06	0	kevin.blac@gmail.com	Kevin Blackburn	brandon-webe@gmail.com	Brandon Weber
+3334	29.0	💈Fresh Cut	2023-05-04T07:16:47	1	kevin.blac@gmail.com	Kevin Blackburn	brandon-webe@gmail.com	Brandon Weber
+3335	26.0	Custom phone case	2023-02-08T22:03:57	3	kevin.blac@gmail.com	Kevin Blackburn	brandon-webe@gmail.com	Brandon Weber
+3338	25.0	Escape Room	2023-04-01T20:40:34	5	kevin.blac@gmail.com	Kevin Blackburn	brandon-webe@gmail.com	Brandon Weber
+3340	19.0	Gas Money	2023-03-12T11:26:27	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3342	15.0	🌮 Spicy Mexican Food Night 🌶️	2023-02-22T09:24:59	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3343	435.0	Vacation	2023-05-09T04:57:55	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3344	90.0	Puppy 🐶 Training Classes	2022-11-13T14:39:44	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3345	128.0	Financial Consulting	2023-03-11T19:46:55	2	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3346	20.0	🍹 Happy Hour Fund	2023-01-24T23:39:31	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3347	23.0	🥑 Avocado Toast Brunch 🍞🍳	2023-05-02T05:51:25	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3348	12.0	🍺 Craft Beers 🍻👌	2023-02-08T11:15:20	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+3350	6.0	Tacos 🌮 Tuesday	2022-12-25T05:09:08	1	kevin.blac@gmail.com	Kevin Blackburn	gl.moore@gmail.com	Glen Moore
+3351	56.0	Opera Tickets	2023-02-04T10:18:18	0	kevin.blac@gmail.com	Kevin Blackburn	gl.moore@gmail.com	Glen Moore
+3352	26.0	Gas Money	2023-04-30T00:54:03	0	kevin.blac@gmail.com	Kevin Blackburn	gl.moore@gmail.com	Glen Moore
+3353	56.0	🏋️ New Gym Gear Shopping 🤸	2023-04-27T18:32:05	0	kevin.blac@gmail.com	Kevin Blackburn	gl.moore@gmail.com	Glen Moore
+3354	57.0	👟 New Sneakers 👟🔥	2023-03-22T21:31:26	0	kevin.blac@gmail.com	Kevin Blackburn	gl.moore@gmail.com	Glen Moore
+3355	11.0	🎬 Movie Marathon Night 🍿	2022-12-08T07:27:19	3	kevin.blac@gmail.com	Kevin Blackburn	gl.moore@gmail.com	Glen Moore
+3357	27.0	Charity Run 🏃💖	2022-12-27T11:42:26	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3358	41.0	Movie date 🎬	2022-05-23T23:06:50	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3359	24.0	Golf 🏌️ Day	2023-03-01T03:06:53	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3360	40.0	Grocery 🛒 Haul	2022-07-31T16:49:52	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3361	30.0	Game night	2022-12-15T11:34:02	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3362	46.0	🍣 Sushi and Sake Night Out 🍶	2022-10-18T12:15:58	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3363	51.0	🎧 New Headphones 🎵🤘	2022-08-22T10:33:58	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+3364	15.0	Roller Skating Night 🛼	2023-03-07T16:44:22	0	gra-martinez@gmail.com	Grant Martinez	kevin.blac@gmail.com	Kevin Blackburn
+3365	26.0	🍣Sushi Vibes	2023-01-17T07:16:44	0	gra-martinez@gmail.com	Grant Martinez	kevin.blac@gmail.com	Kevin Blackburn
+3367	189.0	Boat Rental	2023-01-23T12:13:46	0	gra-martinez@gmail.com	Grant Martinez	kevin.blac@gmail.com	Kevin Blackburn
+3369	26.0	Charity Run 🏃💖	2022-05-19T13:12:07	0	anita.burch@gmail.com	Anita Burch	kevin.blac@gmail.com	Kevin Blackburn
+3371	39.0	Art Supplies	2023-04-22T06:53:26	0	roburton@gmail.com	Robin Burton	kevin.blac@gmail.com	Kevin Blackburn
+3373	20.0	Energy drink stash	2023-03-08T19:35:37	0	roburton@gmail.com	Robin Burton	kevin.blac@gmail.com	Kevin Blackburn
+3374	29.0	🍹Margs Night	2023-03-17T14:58:04	0	carbrown@gmail.com	Carl Brown	kevin.blac@gmail.com	Kevin Blackburn
+3375	44.0	🏀 Basketball Game Tickets and Snacks 🌭	2023-03-22T20:41:00	0	carbrown@gmail.com	Carl Brown	kevin.blac@gmail.com	Kevin Blackburn
+3377	85.0	Dinner	2022-12-09T04:07:01	0	gl.moore@gmail.com	Glen Moore	kevin.blac@gmail.com	Kevin Blackburn
+3378	27.0	Theater Tickets	2023-03-25T10:36:14	0	tra_wils@gmail.com	Travis Wilson	kevin.blac@gmail.com	Kevin Blackburn
+3380	67.0	Cosplay 🦸 Gear	2022-08-06T22:01:04	0	tra_wils@gmail.com	Travis Wilson	kevin.blac@gmail.com	Kevin Blackburn
+3381	8.0	🎥Stream Sesh	2022-10-30T01:00:03	0	tra_wils@gmail.com	Travis Wilson	kevin.blac@gmail.com	Kevin Blackburn
+3386	51.0	Gas Money	2022-10-27T13:37:53	0	normansmit@gmail.com	Norman Smith	kevin.blac@gmail.com	Kevin Blackburn
+3388	18.0	🍪Cookie Dough	2023-03-08T01:59:24	0	normansmit@gmail.com	Norman Smith	kevin.blac@gmail.com	Kevin Blackburn
+3467	19.0	Board Games 🎲	2023-02-24T14:58:37	0	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3468	23.0	🍹Margs Night	2023-04-21T02:42:59	4	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3469	14.0	Monthly 📚 Book Club	2023-04-13T01:03:21	0	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3470	29.0	Art 🎨 Supplies	2023-02-16T13:28:35	0	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3471	43.0	Video Games	2023-04-06T06:45:06	0	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3472	68.0	🛹Skate Gear	2023-02-13T06:35:08	4	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3473	36.0	Garden 🌱 Stuff	2023-03-25T07:14:18	0	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3474	73.0	Podcast gear	2023-02-28T05:15:29	3	allison-calhoun@gmail.com	Allison Calhoun	saritt@gmail.com	Sandra Martinez
+3482	34.0	🛒 Grocery Run for Potluck Dinner 🍲	2023-04-29T01:40:01	0	allison-calhoun@gmail.com	Allison Calhoun	anita.burch@gmail.com	Anita Burch
+3484	13.0	Record Store 🎶 Finds	2023-04-09T16:47:23	4	allison-calhoun@gmail.com	Allison Calhoun	anita.burch@gmail.com	Anita Burch
+3485	28.0	Hiking essentials	2023-03-04T04:30:13	4	allison-calhoun@gmail.com	Allison Calhoun	anita.burch@gmail.com	Anita Burch
+3486	17.0	💐 Flower Shop 🌹🌷	2023-04-05T09:57:15	0	allison-calhoun@gmail.com	Allison Calhoun	anita.burch@gmail.com	Anita Burch
+3487	24.0	💪 Gym Dues	2023-02-17T13:26:06	6	allison-calhoun@gmail.com	Allison Calhoun	anita.burch@gmail.com	Anita Burch
+3488	44.0	Flower Delivery	2023-02-20T23:13:15	1	allison-calhoun@gmail.com	Allison Calhoun	anita.burch@gmail.com	Anita Burch
+3531	27.0	Energy drink stash	2023-04-25T06:56:26	0	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+3532	22.0	Road trip snacks	2023-05-15T14:09:16	0	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+3533	50.0	Cookware	2023-04-17T11:19:36	0	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+3554	25.0	Roller Skating Night 🛼	2023-02-06T16:36:28	1	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+3556	21.0	Skincare 💆🌿	2023-02-09T01:54:15	1	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+3557	25.0	Board Games 🎲	2023-03-19T10:18:07	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+3558	23.0	🎨 Art Supplies 🖌️🎨	2023-03-01T12:43:50	2	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+3559	11.0	🌱 Plant Baby 🌿💚	2023-05-08T23:25:00	4	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+3560	21.0	🌳 National Park Entry 🌲🏞️	2022-06-18T19:35:37	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3561	44.0	Vet Visit 🐕	2022-06-09T11:57:26	1	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3562	16.0	Street food fest	2022-05-19T10:41:34	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3563	46.0	Record Store 🎶 Finds	2022-10-27T08:39:59	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3564	40.0	💍 Small Gift 💍💖	2022-08-19T15:12:47	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3565	59.0	👟 New Running Shoes Fund 🏃	2023-01-12T02:22:08	3	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3566	59.0	Home Appliances	2023-03-03T05:29:54	3	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3568	82.0	Festival 🎶 Tickets & Snacks	2022-09-09T04:13:26	2	jer.calhoun@gmail.com	Jeremy Calhoun	ce-maldonado@gmail.com	Cesar Maldonado
+3569	52.0	Vet Visit 🐕	2022-06-11T14:16:25	5	jer.calhoun@gmail.com	Jeremy Calhoun	ce-maldonado@gmail.com	Cesar Maldonado
+3571	72.0	🏋️Gym Gear	2022-10-27T18:14:57	6	jer.calhoun@gmail.com	Jeremy Calhoun	ce-maldonado@gmail.com	Cesar Maldonado
+3572	30.0	💇Salon Day	2022-07-20T13:38:53	5	jer.calhoun@gmail.com	Jeremy Calhoun	ce-maldonado@gmail.com	Cesar Maldonado
+3573	41.0	Dry Cleaning	2022-08-05T06:10:56	3	jer.calhoun@gmail.com	Jeremy Calhoun	ce-maldonado@gmail.com	Cesar Maldonado
+3574	39.0	Brunchin' 🥂	2023-05-14T07:52:02	0	jer.calhoun@gmail.com	Jeremy Calhoun	masmith@gmail.com	Mason Smith
+3575	5.0	🍩 Donut Delight 🍩💕	2023-03-22T20:40:21	0	jer.calhoun@gmail.com	Jeremy Calhoun	masmith@gmail.com	Mason Smith
+3576	37.0	Birthday 🎂🎉 Celebration	2023-02-25T10:14:50	0	jer.calhoun@gmail.com	Jeremy Calhoun	masmith@gmail.com	Mason Smith
+3577	33.0	Movie date 🎬	2023-03-07T20:04:31	2	jer.calhoun@gmail.com	Jeremy Calhoun	masmith@gmail.com	Mason Smith
+3580	11.0	Plant mom life	2023-03-18T18:31:33	0	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+3582	30.0	House Party 🎉🏠	2023-03-11T08:54:09	0	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+3583	15.0	🎬 Movie Marathon Night 🍿	2023-03-27T15:15:10	6	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+3585	57.0	Grocery 🛒 Haul	2023-05-03T13:11:39	0	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+3586	45.0	🍤 Seafood Dinner	2022-10-14T08:55:15	0	ron.harrison@gmail.com	Ronald Harrison	jer.calhoun@gmail.com	Jeremy Calhoun
+3589	93.0	🎓 Graduation Gift 🎉🎁	2023-03-02T13:43:27	0	chelsea-burch@gmail.com	Chelsea Burch	jer.calhoun@gmail.com	Jeremy Calhoun
+3590	25.0	🍱Bento Box Fix	2023-01-16T06:14:58	0	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+3594	167.0	Home Repair	2023-04-16T20:37:11	0	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+3596	78.0	🏋️Gym Gear	2023-01-14T11:23:05	0	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+3597	21.0	🌮 Taco Tuesday Office Lunch 🍹	2023-02-22T14:42:57	0	ismill@gmail.com	Isaac Miller	jer.calhoun@gmail.com	Jeremy Calhoun
+3599	39.0	🍻 Craft Beer Tasting Extravaganza 🍺	2023-02-20T10:24:02	0	roburton@gmail.com	Robin Burton	jer.calhoun@gmail.com	Jeremy Calhoun
+3600	17.0	🐟 Fish Tank Supplies 🐠💦	2023-04-30T18:16:29	0	roburton@gmail.com	Robin Burton	jer.calhoun@gmail.com	Jeremy Calhoun
+3601	15.0	🌳 Park Picnic Snacks	2022-12-08T01:22:29	0	roburton@gmail.com	Robin Burton	jer.calhoun@gmail.com	Jeremy Calhoun
+3602	52.0	Concert tix 🎶	2023-03-27T17:38:36	0	roburton@gmail.com	Robin Burton	jer.calhoun@gmail.com	Jeremy Calhoun
+3604	60.0	New kicks 🔥	2023-04-08T11:43:08	0	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3605	38.0	Custom phone case	2022-07-26T06:05:51	0	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3606	34.0	Football Game 🏈 Tickets	2022-08-25T15:29:23	0	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3607	15.0	🏝️ Tropical Smoothie Craze 🍍	2022-10-01T09:24:32	0	ad.blackburn@gmail.com	Adam Blackburn	jer.calhoun@gmail.com	Jeremy Calhoun
+3609	16.0	Game night	2023-01-18T05:53:43	0	ad.blackburn@gmail.com	Adam Blackburn	jer.calhoun@gmail.com	Jeremy Calhoun
+3610	38.0	Sunday brunch vibes	2023-02-24T20:51:05	0	ad.blackburn@gmail.com	Adam Blackburn	jer.calhoun@gmail.com	Jeremy Calhoun
+3666	12.0	Game Night 🎲	2023-03-20T07:43:16	0	tra_weber@gmail.com	Tracy Weber	jasonsimp@gmail.com	Jason Simpson
+3667	16.0	🎤 Karaoke Night 🎶💃	2023-02-20T02:25:57	0	tra_weber@gmail.com	Tracy Weber	jasonsimp@gmail.com	Jason Simpson
+3671	61.0	Resume Writing	2023-03-08T02:36:45	0	tra_weber@gmail.com	Tracy Weber	jasonsimp@gmail.com	Jason Simpson
+3746	33.0	👻 Haunted House Adventure 🎃	2023-04-22T17:29:48	0	jasonsimp@gmail.com	Jason Simpson	tra_weber@gmail.com	Tracy Weber
+3747	60.0	🛍️Retail Therapy	2023-05-18T00:16:12	0	jasonsimp@gmail.com	Jason Simpson	tra_weber@gmail.com	Tracy Weber
+3748	33.0	📚Book Club Fund	2023-01-27T13:51:15	0	jasonsimp@gmail.com	Jason Simpson	tra_weber@gmail.com	Tracy Weber
+3809	39.0	👻 Haunted House Adventure 🎃	2023-02-21T04:24:23	0	nicholas.weber@gmail.com	Nicholas Weber	anita.burch@gmail.com	Anita Burch
+3810	60.0	Taxi Fare	2022-09-17T23:45:42	0	nicholas.weber@gmail.com	Nicholas Weber	anita.burch@gmail.com	Anita Burch
+3811	10.0	🌮Taco Vibes	2022-09-11T23:16:08	4	nicholas.weber@gmail.com	Nicholas Weber	anita.burch@gmail.com	Anita Burch
+3813	86.0	Night Out 🍸	2023-04-13T04:32:12	6	nicholas.weber@gmail.com	Nicholas Weber	anita.burch@gmail.com	Anita Burch
+3814	22.0	🌈 Pride Parade Outfits 🏳️🌈	2022-08-22T23:41:04	1	nicholas.weber@gmail.com	Nicholas Weber	anita.burch@gmail.com	Anita Burch
+3823	88.0	🛹Skate Gear	2022-10-21T07:58:03	0	mir-powe@gmail.com	Miranda Weber	nicholas.weber@gmail.com	Nicholas Weber
+3824	22.0	🥳 Party Decorations 🎉🎈	2022-08-23T11:21:08	0	mir-powe@gmail.com	Miranda Weber	nicholas.weber@gmail.com	Nicholas Weber
+3825	60.0	Health Supplements	2022-12-11T22:25:27	0	mir-powe@gmail.com	Miranda Weber	nicholas.weber@gmail.com	Nicholas Weber
+3827	82.0	Cooking Class	2022-12-10T21:39:06	0	mir-powe@gmail.com	Miranda Weber	nicholas.weber@gmail.com	Nicholas Weber
+3836	176.0	👓New Specs	2022-11-21T18:22:54	0	nan_ritt@gmail.com	Nancy Ritter	nicholas.weber@gmail.com	Nicholas Weber
+3838	7.0	Dog Park 🐶 Outing	2023-04-21T22:00:06	0	nan_ritt@gmail.com	Nancy Ritter	nicholas.weber@gmail.com	Nicholas Weber
+3875	11.0	📚 Study Group Snack Fund 📖	2022-09-18T02:13:55	3	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3876	96.0	Room Service	2022-06-28T07:30:59	4	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3877	10.0	📖Zine Fund	2022-05-27T21:07:31	0	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3878	36.0	🏊 Pool Day Vibes	2022-11-05T06:42:35	0	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3879	10.0	Coffee	2022-08-08T20:33:07	6	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3880	16.0	🎤 Karaoke Night 🎶💃	2023-05-06T20:44:59	0	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3881	13.0	🍺 Craft Beers 🍻👌	2023-01-22T20:29:27	1	brenda.webe@gmail.com	Brenda Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+3923	21.0	Hiking Gear	2023-01-17T20:58:53	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3924	22.0	Museum Tickets	2022-12-29T12:28:43	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3925	11.0	🎬 Movie Marathon Night 🍿	2022-10-15T06:41:22	0	jer.calhoun@gmail.com	Jeremy Calhoun	brenda.webe@gmail.com	Brenda Smith
+3989	97.0	Skincare Products	2023-04-10T02:40:04	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+3990	39.0	🎫 Theater Tickets	2023-02-19T01:04:37	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+3991	24.0	🏊 Pool Day Vibes	2023-04-17T19:37:33	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+3994	15.0	Baking 🧁 Supplies	2023-03-18T15:21:27	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+3995	244.0	📸 New Camera Lens	2023-05-18T10:46:03	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+3997	124.0	Photography	2023-05-04T07:23:45	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+3998	31.0	Craft beers 🍺	2023-02-20T23:34:26	4	joseph.webe@gmail.com	Joseph Weber	paul_mill@gmail.com	Paul Miller
+3999	19.0	Pizza & 🎥 Netflix	2023-03-06T01:29:06	5	joseph.webe@gmail.com	Joseph Weber	paul_mill@gmail.com	Paul Miller
+4001	79.0	Apartment cleaning	2023-02-23T09:23:45	0	joseph.webe@gmail.com	Joseph Weber	paul_mill@gmail.com	Paul Miller
+4002	33.0	Golf 🏌️ Day	2023-03-19T10:46:38	0	joseph.webe@gmail.com	Joseph Weber	paul_mill@gmail.com	Paul Miller
+4003	34.0	🍷 Wine Tasting Event	2023-04-23T11:39:18	0	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4005	10.0	🍪 Cookie Baking Night 🥛	2023-02-22T12:20:07	0	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4006	77.0	Cooking Class	2023-05-09T14:19:52	0	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4007	40.0	Dance Class	2023-04-15T19:19:42	5	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4008	82.0	Theme Park	2023-04-03T08:33:20	0	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4009	35.0	Craft beers 🍺	2023-04-02T17:01:52	6	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4010	13.0	🛵Scooter Ride	2023-03-16T18:54:09	0	joseph.webe@gmail.com	Joseph Weber	ma_smith@gmail.com	Marcus Smith
+4011	20.0	📖Zine Fund	2023-03-22T14:45:54	4	joseph.webe@gmail.com	Joseph Weber	william_mart@gmail.com	William Martinez
+4012	13.0	📚 Study Group Snack Fund 📖	2023-04-14T18:16:14	0	joseph.webe@gmail.com	Joseph Weber	william_mart@gmail.com	William Martinez
+4014	128.0	Boat Rental	2023-04-19T10:06:49	0	joseph.webe@gmail.com	Joseph Weber	william_mart@gmail.com	William Martinez
+4016	78.0	🏋️ New Gym Gear Shopping 🤸	2023-03-04T17:30:29	4	joseph.webe@gmail.com	Joseph Weber	william_mart@gmail.com	William Martinez
+4017	27.0	🌈 Pride Parade Outfits 🏳️🌈	2023-04-26T16:50:47	2	joseph.webe@gmail.com	Joseph Weber	diwils@gmail.com	Dillon Wilson
+4018	49.0	🍣Sushi Vibes	2023-03-16T08:10:36	0	joseph.webe@gmail.com	Joseph Weber	diwils@gmail.com	Dillon Wilson
+4020	32.0	🎉Bday Bash!	2023-03-12T18:05:27	3	joseph.webe@gmail.com	Joseph Weber	diwils@gmail.com	Dillon Wilson
+4021	77.0	Vet Visit 🐕	2023-03-01T11:38:07	6	joseph.webe@gmail.com	Joseph Weber	diwils@gmail.com	Dillon Wilson
+4022	40.0	Photography 📸 Workshop	2023-03-12T04:32:52	5	joseph.webe@gmail.com	Joseph Weber	diwils@gmail.com	Dillon Wilson
+4024	28.0	🌱Plant Babies	2023-03-19T17:28:17	0	cod.smith@gmail.com	Cody Smith	joseph.webe@gmail.com	Joseph Weber
+4025	7.0	🚀 Rocket League Tourney 💥🎮	2023-05-08T08:55:09	0	cod.smith@gmail.com	Cody Smith	joseph.webe@gmail.com	Joseph Weber
+4026	49.0	Virtual Reality Games	2023-03-18T21:10:55	0	cod.smith@gmail.com	Cody Smith	joseph.webe@gmail.com	Joseph Weber
+4027	37.0	Movie date 🎬	2023-04-17T05:37:43	0	adrian_burt@gmail.com	Adrian Burton	joseph.webe@gmail.com	Joseph Weber
+4028	41.0	👗 Vintage Shop 👚👗	2023-02-18T14:55:41	0	adrian_burt@gmail.com	Adrian Burton	joseph.webe@gmail.com	Joseph Weber
+4029	24.0	Sushi night 🍣	2023-02-25T06:27:01	0	adrian_burt@gmail.com	Adrian Burton	joseph.webe@gmail.com	Joseph Weber
+4030	58.0	🍣 Sushi and Sake Night Out 🍶	2023-03-17T20:48:45	0	carbrown@gmail.com	Carl Brown	joseph.webe@gmail.com	Joseph Weber
+4032	17.0	🍜 Ramen Night in Downtown 🌃	2023-04-20T02:42:36	0	carbrown@gmail.com	Carl Brown	joseph.webe@gmail.com	Joseph Weber
+4037	8.0	🎀 Gift Wrapping 🎁🎀	2023-05-02T04:40:18	0	william_mart@gmail.com	William Martinez	joseph.webe@gmail.com	Joseph Weber
+4038	38.0	Skincare 💦 Essentials	2023-02-27T01:08:55	0	william_mart@gmail.com	William Martinez	joseph.webe@gmail.com	Joseph Weber
+4040	8.0	🥤 Smoothie Time 🍓🍌	2023-03-01T16:36:24	0	mar_blac@gmail.com	Martin Blackburn	joseph.webe@gmail.com	Joseph Weber
+4041	112.0	Watch	2023-05-01T00:10:14	0	mar_blac@gmail.com	Martin Blackburn	joseph.webe@gmail.com	Joseph Weber
+4239	17.0	Bike ride fuel	2023-03-20T08:19:32	0	hun.weaver@gmail.com	Hunter Weaver	ma_smith@gmail.com	Marcus Smith
+4241	33.0	🍹Happy Hour Vibes	2023-05-09T12:42:13	6	hun.weaver@gmail.com	Hunter Weaver	ma_smith@gmail.com	Marcus Smith
+4243	14.0	🛵Scooter Ride	2023-05-17T02:55:50	0	hun.weaver@gmail.com	Hunter Weaver	ma_smith@gmail.com	Marcus Smith
+4267	10.0	🥳 Party Decorations 🎉🎈	2023-04-29T15:23:44	0	hun.weaver@gmail.com	Hunter Weaver	joseph.webe@gmail.com	Joseph Weber
+4269	24.0	🌱 Plant Baby 🌿💚	2023-03-09T12:56:43	0	hun.weaver@gmail.com	Hunter Weaver	joseph.webe@gmail.com	Joseph Weber
+4303	75.0	Skincare Products	2023-01-10T17:42:14	0	ma_smith@gmail.com	Marcus Smith	hun.weaver@gmail.com	Hunter Weaver
+4407	44.0	Fishing Gear	2022-12-21T00:39:47	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+4408	33.0	🎨 Art Supplies for Creative Weekend 🖌️	2023-02-14T04:20:13	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+4409	142.0	👓 New Glasses 🤓👀	2023-01-27T06:03:25	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+4410	63.0	Clothing	2023-02-05T19:14:02	0	spencer.powell@gmail.com	Spencer Powell	joyce-weav@gmail.com	Joyce Weaver
+4414	65.0	Dance Class	2023-02-01T20:22:10	0	ta.weav@gmail.com	Tammy Weaver	ja-solomon@gmail.com	James Solomon
+4415	67.0	💪 Gym Dues	2023-04-18T13:51:35	1	ta.weav@gmail.com	Tammy Weaver	ja-solomon@gmail.com	James Solomon
+4417	17.0	🍿 Cinema Snacks 🍫	2023-03-20T06:09:46	1	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4418	21.0	🍳 Breakfast Club	2023-04-11T03:27:01	5	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4419	5.0	🍬 Candy Run 🍭🍫	2023-03-26T06:47:46	5	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4420	39.0	Skincare glow-up	2023-04-18T08:38:07	3	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4421	53.0	💪 Gym Dues	2023-03-23T00:32:16	2	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4422	128.0	🎟️ Concert Tickets	2023-04-18T08:58:42	0	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4423	20.0	🍩 Donuts for the Team Meeting 📈	2023-04-03T07:32:35	1	ta.weav@gmail.com	Tammy Weaver	joseph.webe@gmail.com	Joseph Weber
+4424	30.0	💍 Small Gift 💍💖	2023-02-01T15:19:22	6	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4425	40.0	Beach day fund	2023-01-29T10:14:26	0	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4427	34.0	Bakery	2023-03-03T17:58:20	1	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4429	15.0	Monthly 📚 Book Club	2023-02-04T04:55:24	0	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4432	28.0	Aesthetic room decor	2023-02-26T17:42:05	6	ta.weav@gmail.com	Tammy Weaver	anita.burch@gmail.com	Anita Burch
+4433	16.0	Energy drink stash	2023-02-19T14:56:09	0	ta.weav@gmail.com	Tammy Weaver	anita.burch@gmail.com	Anita Burch
+4434	10.0	🍵Tea Time	2023-03-11T19:54:55	6	ta.weav@gmail.com	Tammy Weaver	anita.burch@gmail.com	Anita Burch
+4435	75.0	🏋️ New Gym Gear Shopping 🤸	2023-04-06T21:13:18	0	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4436	39.0	🛒 Grocery Run for Potluck Dinner 🍲	2023-05-10T11:43:46	0	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4437	19.0	📖 Bookstore Haul 📚❤️	2023-05-03T06:19:18	5	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4438	26.0	Cosplay 🦸 Gear	2023-04-25T01:08:21	4	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4439	25.0	Custom phone case	2023-02-20T21:46:54	1	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4440	22.0	🍪 Bake Sale Goodies	2023-03-20T00:08:10	0	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4441	37.0	BBQ party 🍗	2023-02-15T11:39:17	0	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4442	30.0	🍷 Wine Tasting Event	2023-05-09T17:56:01	5	ta.weav@gmail.com	Tammy Weaver	robertmartinez@gmail.com	Robert Martinez
+4443	29.0	Board Games 🎲	2023-04-17T13:41:04	2	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4445	8.0	Subscription	2023-04-09T12:02:50	1	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4446	71.0	📸Camera Gear	2023-04-03T18:31:04	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4447	51.0	🍷 Winery Day Trip 🍇	2023-04-04T00:51:15	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4448	12.0	🌮Taco Vibes	2023-03-12T20:38:39	1	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4449	35.0	Escape room fun	2023-03-24T01:58:06	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4450	41.0	🏕 Camping Trip Food and Gear 🎒	2023-05-04T13:27:13	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4451	19.0	Taco Tuesday!	2023-04-17T00:52:06	0	ta.weav@gmail.com	Tammy Weaver	joseharr@gmail.com	Jose Harrison
+4454	11.0	Movie Ticket	2023-02-10T20:08:44	2	ta.weav@gmail.com	Tammy Weaver	as_moore@gmail.com	Ashley Moore
+4455	36.0	🎬 Outdoor Movie Night Setup 📽️	2023-03-19T06:43:42	0	ta.weav@gmail.com	Tammy Weaver	as_moore@gmail.com	Ashley Moore
+4457	8.0	🎀 Gift Wrapping 🎁🎀	2023-05-04T12:27:20	0	ta.weav@gmail.com	Tammy Weaver	as_moore@gmail.com	Ashley Moore
+4459	4.0	🎀 Gift Wrapping 🎁🎀	2023-03-26T12:57:42	3	ta.weav@gmail.com	Tammy Weaver	mi.burch@gmail.com	Michael Burch
+4460	55.0	Groceries	2023-03-11T09:51:28	4	ta.weav@gmail.com	Tammy Weaver	mi.burch@gmail.com	Michael Burch
+4465	34.0	Skincare 💆🌿	2023-04-20T07:34:55	3	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4466	70.0	Festival 🎶 Tickets & Snacks	2023-03-10T12:46:55	2	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4467	51.0	💄 Girls' Makeup Shopping Spree 💅	2023-04-07T02:05:59	1	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4468	109.0	Golf Fees	2023-03-20T21:23:36	0	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4469	37.0	Hiking Gear	2023-02-02T06:47:21	6	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4472	17.0	Podcast Subscription	2023-02-14T08:08:10	2	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4473	10.0	📸 Group Photo Printing 🖼️	2023-02-10T04:38:47	0	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+4488	26.0	Dry Cleaning	2023-04-18T13:07:28	0	jasonsimp@gmail.com	Jason Simpson	ta.weav@gmail.com	Tammy Weaver
+4489	19.0	🥳 Party Decorations 🎉🎈	2023-02-05T02:09:29	0	jasonsimp@gmail.com	Jason Simpson	ta.weav@gmail.com	Tammy Weaver
+4491	93.0	Children's Toys	2023-04-28T15:12:50	0	alexwhite@gmail.com	Alex White	ta.weav@gmail.com	Tammy Weaver
+4492	13.0	🍺 Craft Beers 🍻👌	2023-05-18T04:33:46	0	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+4493	35.0	Plant mom life	2023-03-05T02:17:04	0	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+4494	36.0	🍹Happy Hour Vibes	2023-03-17T16:37:49	0	joseharr@gmail.com	Jose Harrison	ta.weav@gmail.com	Tammy Weaver
+4497	21.0	🏠 Housewarming Party Gifts 🎁	2023-02-06T20:13:58	0	kathrynmaldonado@gmail.com	Kathryn Maldonado	ta.weav@gmail.com	Tammy Weaver
+4498	56.0	🎉 New Year's Eve Party Supplies 🍾	2023-01-30T19:23:10	0	kathrynmaldonado@gmail.com	Kathryn Maldonado	ta.weav@gmail.com	Tammy Weaver
+4499	19.0	🍔 Gourmet Burger and Fries 🍟	2023-05-17T13:15:56	0	kathrynmaldonado@gmail.com	Kathryn Maldonado	ta.weav@gmail.com	Tammy Weaver
+4501	61.0	📸Camera Gear	2023-04-01T03:58:33	0	robertmartinez@gmail.com	Robert Martinez	ta.weav@gmail.com	Tammy Weaver
+4503	77.0	🚀 To the Moon! Crypto Buy-In	2023-05-07T17:41:17	0	robertmartinez@gmail.com	Robert Martinez	ta.weav@gmail.com	Tammy Weaver
+4504	14.0	🍪 Bake Sale Goodies	2023-04-25T08:59:32	0	robertmartinez@gmail.com	Robert Martinez	ta.weav@gmail.com	Tammy Weaver
+4505	16.0	Crafting supplies	2023-03-20T13:32:03	0	robertmartinez@gmail.com	Robert Martinez	ta.weav@gmail.com	Tammy Weaver
+4506	46.0	Camping Fees	2023-04-06T13:05:45	0	jo.ball@gmail.com	Jonathan Ball	ta.weav@gmail.com	Tammy Weaver
+4580	5.0	Subscription	2023-02-13T06:20:06	6	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4581	65.0	🎓 Graduation Gift 🎉🎁	2022-12-21T16:53:40	0	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4582	169.0	Boat Rental	2023-05-15T22:31:49	4	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4584	75.0	Hiking Gear 🥾🌲	2022-12-16T03:41:29	0	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4585	86.0	Board Games	2023-03-10T10:51:04	4	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4588	12.0	🦄 Unicorn Merch 🌈🦄	2023-03-28T08:37:32	0	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4589	49.0	💇Salon Day	2023-04-06T20:15:08	0	kat_simp@gmail.com	Katie Simpson	mir-powe@gmail.com	Miranda Weber
+4609	60.0	Electronics	2023-02-13T13:38:53	0	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4610	25.0	Custom phone case	2022-11-10T02:59:43	2	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4611	37.0	🏀 Basketball Game Tickets and Snacks 🌭	2023-02-22T06:21:15	0	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4613	18.0	Netflix binge weekend	2022-11-29T02:09:18	3	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4615	22.0	🍔Burger Goals	2022-12-31T19:38:58	0	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4616	17.0	🍜 Ramen Night 🍜🥢	2023-03-22T01:45:48	1	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4618	1967.0	Bicycle	2023-04-03T20:20:03	5	kat_simp@gmail.com	Katie Simpson	jer.calhoun@gmail.com	Jeremy Calhoun
+4632	204.0	📸 New Camera Lens	2022-12-08T06:43:05	0	kevin.blac@gmail.com	Kevin Blackburn	kat_simp@gmail.com	Katie Simpson
+4634	43.0	🏋️ New Gym Gear Shopping 🤸	2022-11-27T09:04:01	0	kevin.blac@gmail.com	Kevin Blackburn	kat_simp@gmail.com	Katie Simpson
+4636	15.0	🎳 Bowling Alley Fun Night 🤗	2023-04-06T04:23:39	0	kevin.blac@gmail.com	Kevin Blackburn	kat_simp@gmail.com	Katie Simpson
+4646	113.0	Utilities	2023-05-05T22:20:47	0	glenn.burton@gmail.com	Glenn Burton	kat_simp@gmail.com	Katie Simpson
+4647	46.0	Vegan 🌱 Cooking Class	2022-12-03T15:45:20	0	glenn.burton@gmail.com	Glenn Burton	kat_simp@gmail.com	Katie Simpson
+4648	35.0	Yoga class zen	2022-12-18T03:37:50	0	glenn.burton@gmail.com	Glenn Burton	kat_simp@gmail.com	Katie Simpson
+4650	24.0	🍹Happy Hour Vibes	2023-03-31T08:18:47	0	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+4651	456.0	Hotel Stay	2022-12-07T11:11:31	0	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+4652	4.0	Caffeine Fix ☕	2022-11-29T23:09:20	0	jer.calhoun@gmail.com	Jeremy Calhoun	kat_simp@gmail.com	Katie Simpson
+4661	119.0	Auto Insurance	2022-12-13T00:32:46	0	jasonsimp@gmail.com	Jason Simpson	ch-burch@gmail.com	Christopher Burch
+4662	31.0	🚕Lyft Home	2022-11-17T12:20:49	0	jasonsimp@gmail.com	Jason Simpson	ch-burch@gmail.com	Christopher Burch
+4663	22.0	🍔 Gourmet Burger and Fries 🍟	2023-03-27T00:03:33	0	jasonsimp@gmail.com	Jason Simpson	ch-burch@gmail.com	Christopher Burch
+4666	50.0	Football Game 🏈 Tickets	2022-10-28T07:23:36	0	jasonsimp@gmail.com	Jason Simpson	ch-burch@gmail.com	Christopher Burch
+4667	27.0	🎬 Movie Marathon Night 🍿	2022-12-22T08:07:24	0	jasonsimp@gmail.com	Jason Simpson	eri_powe@gmail.com	Erica Wilson
+4668	76.0	Groceries	2022-10-17T18:55:48	5	jasonsimp@gmail.com	Jason Simpson	eri_powe@gmail.com	Erica Wilson
+4669	49.0	Online courses	2022-08-15T03:06:17	3	jasonsimp@gmail.com	Jason Simpson	eri_powe@gmail.com	Erica Wilson
+4671	40.0	Hiking essentials	2022-12-23T05:57:51	5	jasonsimp@gmail.com	Jason Simpson	eri_powe@gmail.com	Erica Wilson
+4672	28.0	🌱 Plant Baby 🌿💚	2023-02-24T19:34:41	0	jasonsimp@gmail.com	Jason Simpson	eri_powe@gmail.com	Erica Wilson
+4674	13.0	🥑Avocado Toast	2022-09-24T20:57:16	0	jasonsimp@gmail.com	Jason Simpson	ca-smit@gmail.com	Catherine Smith
+4675	76.0	Concert Tickets	2023-05-02T14:44:07	0	jasonsimp@gmail.com	Jason Simpson	ca-smit@gmail.com	Catherine Smith
+4676	73.0	Hiking Gear 🥾🌲	2023-01-19T19:05:43	3	jasonsimp@gmail.com	Jason Simpson	ca-smit@gmail.com	Catherine Smith
+4677	26.0	🍔 Weekend BBQ Supplies	2022-07-03T22:57:55	0	jasonsimp@gmail.com	Jason Simpson	ca-smit@gmail.com	Catherine Smith
+4679	22.0	Subscription	2023-03-30T11:43:54	0	jasonsimp@gmail.com	Jason Simpson	ca-smit@gmail.com	Catherine Smith
+4680	47.0	Astrology Reading	2023-04-11T00:11:18	6	jasonsimp@gmail.com	Jason Simpson	ca-smit@gmail.com	Catherine Smith
+4682	121.0	Massage	2023-02-10T18:37:44	2	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+4683	23.0	🎨 DIY Craft Supplies	2023-01-19T21:09:59	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+4684	32.0	Cheat day eats	2023-01-29T17:43:35	0	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+4686	11.0	🌮 Taco Tuesday Office Lunch 🍹	2023-04-02T18:31:16	1	jasonsimp@gmail.com	Jason Simpson	joseharr@gmail.com	Jose Harrison
+4687	61.0	💇Salon Day	2022-11-18T17:08:12	5	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4688	89.0	🚀Crypto Buy	2023-04-07T04:50:34	5	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4689	10.0	Parking Fees 🅿️	2023-04-15T16:20:21	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4690	15.0	Bakery	2023-01-02T17:19:06	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4691	95.0	Cooking Class	2022-11-18T15:42:09	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4693	242.0	Flight Ticket	2022-10-10T15:43:33	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4694	26.0	🏊 Pool Day Vibes	2022-11-09T10:01:09	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4695	22.0	🍹Margs Night	2022-11-16T13:34:41	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4696	78.0	Skincare Products	2022-11-26T21:52:10	0	jasonsimp@gmail.com	Jason Simpson	kathrynmaldonado@gmail.com	Kathryn Maldonado
+4697	80.0	BBQ party 🍗	2022-09-13T14:14:06	0	jasonsimp@gmail.com	Jason Simpson	ka_ball@gmail.com	Katherine Smith
+4698	28.0	🍱Bento Box Fix	2023-03-23T02:48:32	2	jasonsimp@gmail.com	Jason Simpson	ka_ball@gmail.com	Katherine Smith
+4702	49.0	🍷 Wine Tasting Event	2023-04-29T12:39:23	2	jasonsimp@gmail.com	Jason Simpson	ka_ball@gmail.com	Katherine Smith
+4707	21.0	Spooky 👻 Halloween Costumes	2023-02-27T20:44:54	2	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4708	52.0	💄Makeup Haul	2023-01-16T11:51:37	1	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4709	27.0	👻 Haunted House Adventure 🎃	2023-02-19T11:55:30	1	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4710	7.0	🍩 Donut Delight 🍩💕	2023-01-07T16:46:13	5	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4712	84.0	Dance Class	2023-05-08T13:44:01	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4713	31.0	🔭 Stargazing Trip Essentials 🌌	2023-02-03T07:10:55	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4714	15.0	🌱 Vegan Cooking Ingredients 🍅	2023-03-22T20:48:23	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4715	36.0	Craft Supplies	2023-03-10T07:28:34	0	jasonsimp@gmail.com	Jason Simpson	jes.mill@gmail.com	Jessica Miller
+4716	57.0	Cosplay 🦸 Gear	2022-08-06T18:47:16	2	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+4718	25.0	🔭 Stargazing Trip Essentials 🌌	2022-08-12T10:35:45	5	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+4719	901.0	Bicycle	2022-09-14T13:32:45	4	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+4720	117.0	Skydiving	2022-05-29T10:21:13	0	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+4721	127.0	Room Service	2022-12-24T08:00:38	6	jasonsimp@gmail.com	Jason Simpson	roburton@gmail.com	Robin Burton
+4722	13.0	Children's Toys	2022-11-17T11:57:41	1	jasonsimp@gmail.com	Jason Simpson	roburton@gmail.com	Robin Burton
+4723	40.0	👻 Haunted House Adventure 🎃	2022-12-24T14:19:45	2	jasonsimp@gmail.com	Jason Simpson	roburton@gmail.com	Robin Burton
+4725	32.0	Cooking Class	2023-02-23T08:19:40	0	jasonsimp@gmail.com	Jason Simpson	roburton@gmail.com	Robin Burton
+4726	26.0	🔭 Stargazing Trip Essentials 🌌	2023-03-11T12:04:49	0	jasonsimp@gmail.com	Jason Simpson	ja-solomon@gmail.com	James Solomon
+4727	6.0	🎤 Open Mic Night	2023-02-09T04:35:15	1	jasonsimp@gmail.com	Jason Simpson	ja-solomon@gmail.com	James Solomon
+4728	65.0	Babysitting	2023-05-03T01:37:58	1	jasonsimp@gmail.com	Jason Simpson	ja-solomon@gmail.com	James Solomon
+4729	73.0	Antique Shopping	2022-12-02T06:30:44	0	jasonsimp@gmail.com	Jason Simpson	ja-solomon@gmail.com	James Solomon
+4734	98.0	Cosmetics	2023-03-31T18:36:03	1	jasonsimp@gmail.com	Jason Simpson	ja-solomon@gmail.com	James Solomon
+4736	75.0	Aesthetic room decor	2022-06-01T08:51:33	0	ca-smit@gmail.com	Catherine Smith	jasonsimp@gmail.com	Jason Simpson
+4737	93.0	Charity Donation	2023-04-25T19:37:50	0	ca-smit@gmail.com	Catherine Smith	jasonsimp@gmail.com	Jason Simpson
+4738	297.0	Vacation	2023-04-21T23:15:46	0	ja-solomon@gmail.com	James Solomon	jasonsimp@gmail.com	Jason Simpson
+4740	8.0	🏝️ Tropical Smoothie Craze 🍍	2022-10-17T13:12:32	0	ja-solomon@gmail.com	James Solomon	jasonsimp@gmail.com	Jason Simpson
+4744	104.0	Financial Consulting	2023-01-13T11:04:25	0	tra_weber@gmail.com	Tracy Weber	jasonsimp@gmail.com	Jason Simpson
+4745	5.0	🧼 Laundry Day 🧺💦	2023-04-06T13:36:06	0	tra_weber@gmail.com	Tracy Weber	jasonsimp@gmail.com	Jason Simpson
+4747	59.0	Flower Delivery	2022-10-30T14:38:59	0	ed_wilson@gmail.com	Edwin Wilson	jasonsimp@gmail.com	Jason Simpson
+4748	30.0	Coffee ☕ Workshop	2022-10-18T07:31:21	0	ed_wilson@gmail.com	Edwin Wilson	jasonsimp@gmail.com	Jason Simpson
+4749	10.0	🥑 Avocado Toast Brunch 🍞🍳	2023-05-06T09:17:36	0	ed_wilson@gmail.com	Edwin Wilson	jasonsimp@gmail.com	Jason Simpson
+4750	20.0	Study 📚 Snacks	2022-10-27T11:21:04	0	ed_wilson@gmail.com	Edwin Wilson	jasonsimp@gmail.com	Jason Simpson
+4751	42.0	💪 Gym Dues	2023-05-17T22:25:40	0	roburton@gmail.com	Robin Burton	jasonsimp@gmail.com	Jason Simpson
+4752	121.0	Sporting Event	2022-11-19T11:49:44	0	roburton@gmail.com	Robin Burton	jasonsimp@gmail.com	Jason Simpson
+4753	10.0	🧗 Rock Climbing	2023-01-31T09:59:09	0	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+4754	44.0	🍷 Wine Tasting Event	2022-11-23T07:22:45	0	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+4756	15.0	Bubble Tea 🧋 Run	2022-10-13T04:38:07	0	thomas.solomon@gmail.com	Thomas Solomon	jasonsimp@gmail.com	Jason Simpson
+4758	35.0	Vegan Dinner 🌱💚	2023-03-29T06:24:27	0	glenn.burton@gmail.com	Glenn Burton	jasonsimp@gmail.com	Jason Simpson
+4761	16.0	Baking 🧁 Supplies	2023-03-07T01:44:56	0	joseharr@gmail.com	Jose Harrison	jasonsimp@gmail.com	Jason Simpson
+4763	168.0	Cooking Ingredients	2023-02-19T04:21:07	0	joseharr@gmail.com	Jose Harrison	jasonsimp@gmail.com	Jason Simpson
+4764	78.0	Festival 🎶 Tickets & Snacks	2023-04-18T06:01:15	0	joseharr@gmail.com	Jose Harrison	jasonsimp@gmail.com	Jason Simpson
+4765	27.0	💃 Salsa Dancing Lessons 🕺	2022-09-09T17:19:08	0	ch.brow@gmail.com	Chad Brown	jasonsimp@gmail.com	Jason Simpson
+4766	11.0	Virtual Reality Games	2022-10-21T17:05:18	0	ch.brow@gmail.com	Chad Brown	jasonsimp@gmail.com	Jason Simpson
+4767	15.0	Epic fail fines	2023-01-25T16:42:50	0	ch.brow@gmail.com	Chad Brown	jasonsimp@gmail.com	Jason Simpson
+4853	47.0	Photography 📸 Workshop	2023-02-24T07:04:53	0	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4854	13.0	🥑 Avocado Toast Brunch 🍞🍳	2023-03-06T08:29:09	0	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4855	43.0	Tutoring	2023-02-12T05:34:30	0	ta.weav@gmail.com	Tammy Weaver	lindseysimpson@gmail.com	Lindsey Simpson
+4881	46.0	🎠 Amusement Park 🎢🎡	2023-05-15T01:42:58	0	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4882	42.0	🎧 New Headphones 🎵🤘	2023-04-21T01:34:58	0	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4884	128.0	Theater Tickets	2023-05-12T05:49:05	3	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4886	7.0	Coffee	2023-04-08T09:18:14	0	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4887	21.0	🍺 Craft Beers 🍻👌	2023-02-25T14:01:17	1	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4888	74.0	Manicure/Pedicure	2023-05-03T13:26:50	2	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4889	29.0	Energy drink stash	2023-05-13T13:33:12	0	masmith@gmail.com	Mason Smith	jer.calhoun@gmail.com	Jeremy Calhoun
+4897	14.0	🍜 Ramen Night 🍜🥢	2023-03-30T19:23:07	4	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4898	26.0	Craft beers 🍺	2023-03-03T21:38:03	0	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4900	56.0	Room Service	2023-03-01T03:29:32	0	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4901	33.0	💻Online Game Pass	2023-03-05T04:14:17	5	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4902	11.0	Doggo's new toy	2023-02-23T06:00:21	6	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4903	19.0	🥑Avocado Toast	2023-05-06T04:34:49	0	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4905	25.0	🌱 Vegan Cooking Ingredients 🍅	2023-02-24T10:11:25	2	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+4906	25.0	Fishing License	2023-02-20T08:52:19	0	masmith@gmail.com	Mason Smith	mir-powe@gmail.com	Miranda Weber
+5015	33.0	Aquarium Tickets	2023-05-16T15:37:06	0	normansmit@gmail.com	Norman Smith	kevin.blac@gmail.com	Kevin Blackburn
+5018	20.0	Doggo's new toy	2023-05-05T21:58:56	2	normansmit@gmail.com	Norman Smith	kevin.blac@gmail.com	Kevin Blackburn
+5020	112.0	Podcast gear	2023-05-11T23:47:14	5	normansmit@gmail.com	Norman Smith	kevin.blac@gmail.com	Kevin Blackburn
+5023	24.0	Plants	2022-12-29T09:25:12	0	normansmit@gmail.com	Norman Smith	kevin.blac@gmail.com	Kevin Blackburn
+5043	79.0	Snowboarding Gear	2023-01-01T19:50:14	4	normansmit@gmail.com	Norman Smith	mir-powe@gmail.com	Miranda Weber
+5045	26.0	Vegan Dinner 🌱💚	2022-10-19T09:54:34	5	normansmit@gmail.com	Norman Smith	mir-powe@gmail.com	Miranda Weber
+5047	22.0	Pizza Night 🍕	2022-12-28T04:42:53	0	normansmit@gmail.com	Norman Smith	mir-powe@gmail.com	Miranda Weber
+5049	62.0	🎧 New Headphones 🎵🤘	2022-12-24T10:51:15	2	normansmit@gmail.com	Norman Smith	mir-powe@gmail.com	Miranda Weber
+5072	39.0	🎁 Birthday Surprise Gift Fund 🎈	2023-01-26T00:42:50	0	mir-powe@gmail.com	Miranda Weber	normansmit@gmail.com	Norman Smith
+5073	37.0	Birthday 🎂🎉 Celebration	2023-04-20T02:13:47	0	mir-powe@gmail.com	Miranda Weber	normansmit@gmail.com	Norman Smith
+5074	22.0	🍜Ramen Night	2023-04-05T13:52:27	0	mir-powe@gmail.com	Miranda Weber	normansmit@gmail.com	Norman Smith
+5083	67.0	Dinner	2023-03-31T08:23:37	0	ma_smith@gmail.com	Marcus Smith	joseph.webe@gmail.com	Joseph Weber
+5084	14.0	🛵Scooter Ride	2023-05-08T01:21:10	0	ma_smith@gmail.com	Marcus Smith	joseph.webe@gmail.com	Joseph Weber
+5085	75.0	Train Tickets	2023-05-04T17:27:03	5	ma_smith@gmail.com	Marcus Smith	joseph.webe@gmail.com	Joseph Weber
+5094	18.0	🍵 Tea Tasting Experience	2023-04-18T05:30:19	4	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5095	22.0	Board Games 🎲	2023-01-30T22:44:21	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5096	131.0	Mixology Class	2023-02-27T02:38:54	4	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5097	43.0	New 🎮 Game Purchase	2022-07-16T04:42:12	2	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5099	53.0	Hiking Gear 🥾🌲	2023-03-03T19:30:17	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5100	40.0	🌱Plant Babies	2023-01-23T09:18:45	1	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5101	35.0	Mani-pedi day 💅	2023-01-15T19:40:56	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5102	24.0	🧗 Rock Climbing	2022-11-06T20:09:14	0	ma_smith@gmail.com	Marcus Smith	mar_blac@gmail.com	Martin Blackburn
+5103	35.0	💈 Haircut 💇💇	2023-02-20T22:35:53	0	ma_smith@gmail.com	Marcus Smith	hun.weaver@gmail.com	Hunter Weaver
+5104	12.0	Baking 🧁 Supplies	2023-01-10T11:39:37	5	ma_smith@gmail.com	Marcus Smith	hun.weaver@gmail.com	Hunter Weaver
+5105	17.0	Skincare 💆🌿	2023-03-03T16:58:22	0	ma_smith@gmail.com	Marcus Smith	hun.weaver@gmail.com	Hunter Weaver
+5106	280.0	Financial Consulting	2023-01-12T10:56:25	5	ma_smith@gmail.com	Marcus Smith	hun.weaver@gmail.com	Hunter Weaver
+5107	28.0	🏠 Housewarming Party Gifts 🎁	2023-05-06T06:48:03	0	ma_smith@gmail.com	Marcus Smith	hun.weaver@gmail.com	Hunter Weaver
+5108	21.0	Airport 🚖 Cab Fare	2022-11-20T18:42:55	0	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5109	47.0	Gym Membership	2023-02-06T01:43:55	0	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5113	15.0	🌳 Park Picnic Snacks	2023-01-08T22:24:59	1	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5114	32.0	Yoga class zen	2022-12-16T11:45:45	0	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5115	91.0	Electronics	2023-04-12T01:35:42	4	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5116	30.0	Garden 🌱 Stuff	2022-11-15T21:01:51	0	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5117	39.0	🚀Crypto Buy	2023-04-23T02:24:50	0	ma_smith@gmail.com	Marcus Smith	erikabail@gmail.com	Erika Blackburn
+5118	39.0	Record Store 🎶 Finds	2023-03-18T05:20:50	0	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5119	14.0	🍳 Breakfast Club	2022-12-11T04:19:29	0	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5120	39.0	🍣 Sushi and Sake Night Out 🍶	2023-02-14T17:49:01	0	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5122	31.0	Football Game 🏈 Tickets	2023-05-04T03:41:20	0	alexwhite@gmail.com	Alex White	ma_smith@gmail.com	Marcus Smith
+5126	171.0	🎵Festival Tix	2023-05-13T11:19:09	0	nan_ritt@gmail.com	Nancy Ritter	ma_smith@gmail.com	Marcus Smith
+5127	42.0	💅Glow-up Essentials	2023-01-27T23:31:46	0	nan_ritt@gmail.com	Nancy Ritter	ma_smith@gmail.com	Marcus Smith
+5128	13.0	🌳 Park Picnic Snacks	2022-11-19T01:14:50	0	nan_ritt@gmail.com	Nancy Ritter	ma_smith@gmail.com	Marcus Smith
+5129	491.0	Tech upgrade	2023-02-15T23:34:56	0	andrew_brow@gmail.com	Andrew Brown	ma_smith@gmail.com	Marcus Smith
+5130	20.0	Escape room fun	2023-03-12T12:42:28	0	andrew_brow@gmail.com	Andrew Brown	ma_smith@gmail.com	Marcus Smith
+5134	61.0	Grocery 🛒 Haul	2022-09-25T21:55:35	0	jefsmith@gmail.com	Jeffrey Smith	ashlee_martinez@gmail.com	Ashlee Martinez
+5136	52.0	🚀Crypto Buy	2023-01-05T14:22:36	1	jefsmith@gmail.com	Jeffrey Smith	ashlee_martinez@gmail.com	Ashlee Martinez
+5137	20.0	🍜 Ramen Night in Downtown 🌃	2023-02-10T12:10:21	0	jefsmith@gmail.com	Jeffrey Smith	ashlee_martinez@gmail.com	Ashlee Martinez
+5138	243.0	Motorcycle Gear	2023-04-25T08:09:31	0	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5139	24.0	🚕Lyft Home	2023-04-25T12:02:40	0	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5140	43.0	🎸 Music Lessons	2022-08-13T04:49:50	5	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5141	20.0	House Party 🎉🏠	2022-10-19T08:45:52	0	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5142	417.0	Tech upgrade	2022-09-18T00:30:21	0	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5143	180.0	Sporting Event	2022-11-12T01:02:37	0	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5144	21.0	💻Online Game Pass	2023-01-19T21:59:12	2	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5146	43.0	🛍️Retail Therapy	2023-03-26T11:20:25	1	jefsmith@gmail.com	Jeffrey Smith	angriddle@gmail.com	Angela Riddle
+5147	45.0	🏖 Beach Trip	2023-02-27T09:26:21	6	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5149	210.0	Financial Consulting	2023-03-30T19:38:02	3	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5150	8.0	Doggo's new toy	2023-01-13T11:39:12	4	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5151	30.0	Yoga class zen	2022-12-19T16:02:47	2	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5152	33.0	Escape Room	2023-02-03T12:36:19	3	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5154	7.0	🎀 Gift Wrapping 🎁🎀	2023-03-21T05:29:36	0	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5156	68.0	Babysitting	2023-04-20T23:54:33	0	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5157	23.0	🎬 Outdoor Movie Night Setup 📽️	2022-12-18T06:11:18	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+5158	120.0	Photography	2023-03-13T03:00:08	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+5160	12.0	Taco Tuesday!	2023-05-13T21:18:48	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+5161	19.0	💊 Pharmacy Stuff 🌡️💊	2022-11-30T21:16:56	0	jefsmith@gmail.com	Jeffrey Smith	susanmiller@gmail.com	Susan Burton
+5170	44.0	🏀 Basketball Game Tickets and Snacks 🌭	2023-01-11T10:35:49	0	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+5171	44.0	Gym 💪🏼 Supplements	2023-04-27T05:15:37	0	ad.blackburn@gmail.com	Adam Blackburn	jefsmith@gmail.com	Jeffrey Smith
+5173	28.0	🎳 Bowling Alley Fun Night 🤗	2023-02-25T02:15:05	0	susanmiller@gmail.com	Susan Burton	jefsmith@gmail.com	Jeffrey Smith
+5174	14.0	Monthly 📚 Book Club	2022-12-01T21:34:08	0	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5176	32.0	Cosplay 🦸 Gear	2023-04-08T02:00:11	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+5177	60.0	New kicks 🔥	2022-12-15T12:20:57	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+5179	32.0	Wine	2022-12-31T08:04:24	0	gra-martinez@gmail.com	Grant Martinez	jefsmith@gmail.com	Jeffrey Smith
+5180	27.0	Coffee ☕ Workshop	2022-12-19T04:43:42	0	gra-martinez@gmail.com	Grant Martinez	jefsmith@gmail.com	Jeffrey Smith
+5181	17.0	🍹 More Thirsty Thursdays 🍸🍹	2023-02-25T19:13:46	0	gra-martinez@gmail.com	Grant Martinez	jefsmith@gmail.com	Jeffrey Smith
+5182	37.0	Cosplay 🦸 Gear	2023-02-23T02:11:28	0	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+5183	28.0	🌮 Spicy Mexican Food Night 🌶️	2023-03-28T12:14:38	0	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+5184	60.0	👟Fresh Kicks	2023-04-21T03:59:49	0	spencer.powell@gmail.com	Spencer Powell	jefsmith@gmail.com	Jeffrey Smith
+5185	28.0	Board Games 🎲	2023-04-06T17:01:02	0	spencer.powell@gmail.com	Spencer Powell	jefsmith@gmail.com	Jeffrey Smith
+5188	111.0	Utilities	2023-03-01T09:31:10	0	spencer.powell@gmail.com	Spencer Powell	jefsmith@gmail.com	Jeffrey Smith
+5189	95.0	🧳 Travel Fund 🌍✈️	2023-01-03T07:13:16	0	spencer.powell@gmail.com	Spencer Powell	jefsmith@gmail.com	Jeffrey Smith
+5190	55.0	Sporting Event	2022-10-17T13:10:43	0	paul_mill@gmail.com	Paul Miller	jefsmith@gmail.com	Jeffrey Smith
+5191	37.0	🐟 Fish Tank Supplies 🐠💦	2023-02-25T00:58:23	0	paul_mill@gmail.com	Paul Miller	jefsmith@gmail.com	Jeffrey Smith
+5193	44.0	Gym membership	2023-03-04T20:49:01	0	paul_mill@gmail.com	Paul Miller	jefsmith@gmail.com	Jeffrey Smith
+5275	9.0	Tacos 🌮 Tuesday	2023-02-27T23:49:45	6	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5277	63.0	🎧Podcast Mic 🎤	2023-01-14T02:33:39	4	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5279	8.0	Ice Cream 🍦	2023-04-06T21:12:44	0	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5280	69.0	👟 New Sneakers 👟🔥	2022-11-23T21:56:28	0	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5281	17.0	👗 Thrift Store Fashion Finds 👚	2023-01-19T12:30:01	1	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5282	25.0	🚗 Weekend Road Trip Snacks 🍫	2022-11-07T20:02:18	5	diwils@gmail.com	Dillon Wilson	ma_smith@gmail.com	Marcus Smith
+5284	19.0	📖 Bookstore Haul 📚❤️	2022-12-25T04:01:30	1	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+5285	24.0	Vegan Dinner 🌱💚	2023-01-29T06:26:35	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+5288	12.0	🍔Burger Goals	2022-12-03T05:49:51	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+5289	9.0	Study 📚 Snacks	2023-05-15T10:51:25	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+5291	15.0	Netflix binge weekend	2023-01-26T16:21:33	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+5292	34.0	Garden 🌱 Stuff	2023-05-14T08:49:21	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+5337	20.0	Study snacks	2022-08-04T09:58:25	6	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+5338	99.0	🛹Skate Gear	2023-04-25T12:55:49	3	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+5339	39.0	🏠 Housewarming Party Gifts 🎁	2022-10-27T23:44:00	0	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+5340	44.0	Podcast Subscription	2023-04-08T14:25:20	0	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+5342	53.0	Tutoring	2023-04-28T22:41:16	1	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+5343	95.0	Flower Delivery	2023-01-30T05:02:42	0	angelica.wils@gmail.com	Angelica Wilson	angriddle@gmail.com	Angela Riddle
+5454	39.0	🚲 Bike Repair 🛠️🚲	2022-09-01T21:27:52	0	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+5455	138.0	Opera Tickets	2023-05-02T14:44:30	0	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+5456	17.0	💈Fresh Cut	2023-02-10T20:52:18	0	kevin.blac@gmail.com	Kevin Blackburn	tra_wils@gmail.com	Travis Wilson
+5474	31.0	🎓 Graduation Gift 🎉🎁	2022-07-13T00:15:32	0	jefsmith@gmail.com	Jeffrey Smith	tra_wils@gmail.com	Travis Wilson
+5475	10.0	Monthly 🎶 Music Subscription	2022-07-30T00:46:12	0	jefsmith@gmail.com	Jeffrey Smith	tra_wils@gmail.com	Travis Wilson
+5498	17.0	🚀Crypto Buy	2023-04-15T02:51:15	5	corwils@gmail.com	Cory Wilson	ta.weav@gmail.com	Tammy Weaver
+5499	17.0	🎤 Karaoke Night 🎶💃	2023-02-19T00:57:11	5	corwils@gmail.com	Cory Wilson	ta.weav@gmail.com	Tammy Weaver
+5500	23.0	Late-night pizza run	2023-04-12T11:54:28	3	corwils@gmail.com	Cory Wilson	ta.weav@gmail.com	Tammy Weaver
+5501	5.0	🎀 Gift Wrapping 🎁🎀	2023-03-30T11:38:42	0	corwils@gmail.com	Cory Wilson	ta.weav@gmail.com	Tammy Weaver
+5505	14.0	Street food fest	2023-04-02T17:53:59	0	corwils@gmail.com	Cory Wilson	ta.weav@gmail.com	Tammy Weaver
+5663	28.0	Cosplay 🦸 Gear	2023-02-14T02:15:15	0	connorbrow@gmail.com	Connor Brown	ed_wilson@gmail.com	Edwin Wilson
+5664	31.0	Record Store 🎶 Finds	2023-05-12T20:43:55	0	connorbrow@gmail.com	Connor Brown	ed_wilson@gmail.com	Edwin Wilson
+5722	98.0	Sporting Event	2023-02-19T00:13:58	0	ashlee_martinez@gmail.com	Ashlee Martinez	eric.bailey@gmail.com	Eric Bailey
+5723	33.0	Skincare 💦 Essentials	2022-10-27T17:35:35	0	ashlee_martinez@gmail.com	Ashlee Martinez	eric.bailey@gmail.com	Eric Bailey
+5724	21.0	Car Wash	2022-09-06T10:25:38	0	ashlee_martinez@gmail.com	Ashlee Martinez	eric.bailey@gmail.com	Eric Bailey
+5726	10.0	🎶 Spotify Subscription 🎧🔥	2022-11-08T06:13:56	0	ashlee_martinez@gmail.com	Ashlee Martinez	eric.bailey@gmail.com	Eric Bailey
+5727	19.0	🎳Bowling Squad	2023-03-30T15:56:46	0	ashlee_martinez@gmail.com	Ashlee Martinez	eric.bailey@gmail.com	Eric Bailey
+5730	52.0	🏋️Gym Gear	2022-08-28T03:15:34	0	ashlee_martinez@gmail.com	Ashlee Martinez	ric.riddle@gmail.com	Richard Riddle
+5731	11.0	Baking 🧁 Supplies	2022-07-24T03:00:38	0	ashlee_martinez@gmail.com	Ashlee Martinez	ric.riddle@gmail.com	Richard Riddle
+5732	30.0	Guitar Strings	2023-03-05T18:07:42	1	ashlee_martinez@gmail.com	Ashlee Martinez	ric.riddle@gmail.com	Richard Riddle
+5733	27.0	💍 Small Gift 💍💖	2023-04-11T08:12:06	5	ashlee_martinez@gmail.com	Ashlee Martinez	ric.riddle@gmail.com	Richard Riddle
+5734	205.0	Business Workshop	2022-08-24T02:46:54	0	ashlee_martinez@gmail.com	Ashlee Martinez	ric.riddle@gmail.com	Richard Riddle
+5735	60.0	Cooking Ingredients	2022-12-26T05:43:45	0	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5736	72.0	Electronics	2023-04-11T04:50:30	3	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5737	27.0	💈 Haircut 💇💇	2022-09-29T15:08:20	4	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5738	34.0	🍹Happy Hour Vibes	2023-04-21T05:53:24	0	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5739	7.0	🎬 Film Night In	2023-03-07T15:34:14	2	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5740	46.0	House Party 🎉🏠	2023-03-24T03:43:42	5	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5741	58.0	Hiking essentials	2023-01-11T23:38:57	0	ashlee_martinez@gmail.com	Ashlee Martinez	jefsmith@gmail.com	Jeffrey Smith
+5743	24.0	Virtual Reality Games	2022-11-20T13:19:08	0	ashlee_martinez@gmail.com	Ashlee Martinez	glenn.burton@gmail.com	Glenn Burton
+5745	43.0	🏊 Pool Party Supplies	2022-11-05T21:43:57	2	ashlee_martinez@gmail.com	Ashlee Martinez	glenn.burton@gmail.com	Glenn Burton
+5746	27.0	Flower Delivery	2023-05-11T17:36:04	0	ashlee_martinez@gmail.com	Ashlee Martinez	glenn.burton@gmail.com	Glenn Burton
+5747	27.0	Car Wash	2023-02-07T14:32:28	3	ashlee_martinez@gmail.com	Ashlee Martinez	glenn.burton@gmail.com	Glenn Burton
+5748	75.0	Clothing	2023-01-16T03:38:38	6	ashlee_martinez@gmail.com	Ashlee Martinez	glenn.burton@gmail.com	Glenn Burton
+5749	112.0	Theater Tickets	2022-09-23T06:34:22	0	ashlee_martinez@gmail.com	Ashlee Martinez	angriddle@gmail.com	Angela Riddle
+5753	13.0	Movie 🎟️ Night	2022-09-30T21:04:43	2	ashlee_martinez@gmail.com	Ashlee Martinez	angriddle@gmail.com	Angela Riddle
+5754	13.0	Movie 🎟️ Night	2022-12-17T04:18:49	5	ashlee_martinez@gmail.com	Ashlee Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5756	39.0	Children's Toys	2022-10-17T04:18:28	0	ashlee_martinez@gmail.com	Ashlee Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5757	133.0	Tech Gadgets	2023-03-21T00:40:30	0	ashlee_martinez@gmail.com	Ashlee Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5759	36.0	Custom phone case	2023-03-28T17:39:47	0	ad.blackburn@gmail.com	Adam Blackburn	ashlee_martinez@gmail.com	Ashlee Martinez
+5760	399.0	Bicycle	2023-03-06T21:36:31	0	jamie-solomon@gmail.com	Jamie Solomon	ashlee_martinez@gmail.com	Ashlee Martinez
+5764	5.0	Bubble Tea 🧋 Run	2023-03-30T02:30:59	0	eric.bailey@gmail.com	Eric Bailey	ashlee_martinez@gmail.com	Ashlee Martinez
+5765	180.0	Boat Rental	2023-03-08T00:28:08	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+5766	17.0	Doggo's new toy	2022-12-07T08:34:23	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+5767	23.0	Skincare 💆🌿	2022-09-02T00:11:41	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+5768	76.0	👓 New Glasses 🤓👀	2023-05-04T23:21:59	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+5770	98.0	Watch	2022-12-02T01:39:28	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+5771	67.0	Hiking Gear 🥾🌲	2023-01-09T12:59:33	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+5772	163.0	Spa Day	2023-04-21T01:54:18	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+5773	49.0	Guitar Strings	2022-12-01T15:13:32	0	angriddle@gmail.com	Angela Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+5774	28.0	🏀 Basketball Game Tickets and Snacks 🌭	2022-10-22T01:25:07	0	angriddle@gmail.com	Angela Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+5775	20.0	Food Festival	2022-07-02T20:13:22	0	angriddle@gmail.com	Angela Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+5777	295.0	Vacation	2022-12-25T13:50:43	0	angriddle@gmail.com	Angela Riddle	ashlee_martinez@gmail.com	Ashlee Martinez
+5804	37.0	Mani-pedi day 💅	2022-12-26T00:32:15	2	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5805	26.0	Escape room fun	2023-04-10T22:06:52	0	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5806	14.0	🧘 Yoga Class 🧘🌿	2023-02-21T07:08:15	6	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5807	84.0	Gardening Supplies	2023-04-24T13:46:02	0	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5808	11.0	Museum Tickets	2022-11-28T19:48:33	5	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5809	73.0	Children's Toys	2022-12-11T22:23:36	4	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5810	22.0	Craft beers 🍺	2023-05-03T09:50:42	3	gra-martinez@gmail.com	Grant Martinez	ma_smith@gmail.com	Marcus Smith
+5811	149.0	Ski 🎿 Trip Expenses	2023-04-04T02:03:49	4	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5813	21.0	👾Arcade Night	2023-03-28T19:59:39	2	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5814	38.0	🎈Party Deco	2023-05-13T17:31:01	3	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5815	23.0	🍳 Sunday Brunch with Friends 🥂	2023-05-03T05:15:10	0	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5816	86.0	Dog Grooming	2023-04-27T03:08:35	3	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5817	94.0	Concert tix 🎶	2023-04-12T04:47:52	0	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5819	30.0	🏖 Beach Trip	2023-05-14T15:25:34	0	gra-martinez@gmail.com	Grant Martinez	joseph.webe@gmail.com	Joseph Weber
+5843	12.0	Crafternoon 🧶	2023-05-05T08:20:13	0	saritt@gmail.com	Sandra Martinez	gra-martinez@gmail.com	Grant Martinez
+5844	50.0	🌺 Farmers Market Haul	2023-01-22T02:37:41	0	saritt@gmail.com	Sandra Martinez	gra-martinez@gmail.com	Grant Martinez
+5845	19.0	🎨 Art Supplies 🖌️🎨	2023-04-16T00:39:14	0	saritt@gmail.com	Sandra Martinez	gra-martinez@gmail.com	Grant Martinez
+5853	61.0	Date Night 🍷	2023-05-17T18:51:09	0	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5854	80.0	Camping Fees	2023-05-06T06:12:39	0	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5855	90.0	Motorcycle Gear	2023-02-13T22:35:48	0	jefsmith@gmail.com	Jeffrey Smith	gra-martinez@gmail.com	Grant Martinez
+5880	176.0	Home Appliances	2022-12-07T23:54:00	0	robertmartinez@gmail.com	Robert Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5881	16.0	🚕Lyft Home	2023-04-20T00:47:10	1	robertmartinez@gmail.com	Robert Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5882	45.0	🐾 Doggy Daycare for the Week 🐶	2022-08-31T01:45:11	5	robertmartinez@gmail.com	Robert Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5884	7.0	🚀 Rocket League Tourney 💥🎮	2022-12-12T04:13:59	4	robertmartinez@gmail.com	Robert Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5885	85.0	Dog Grooming	2023-01-19T04:03:19	0	robertmartinez@gmail.com	Robert Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5886	25.0	🧗 Rock Climbing	2022-10-06T06:02:04	0	robertmartinez@gmail.com	Robert Martinez	ad.blackburn@gmail.com	Adam Blackburn
+5896	39.0	Subscription	2022-12-06T12:24:10	6	robertmartinez@gmail.com	Robert Martinez	jer.calhoun@gmail.com	Jeremy Calhoun
+5961	113.0	🧳 Travel Fund 🌍✈️	2023-05-14T11:05:50	1	william_mart@gmail.com	William Martinez	nan_ritt@gmail.com	Nancy Ritter
+5962	96.0	Workshop Fees	2023-04-11T17:52:47	2	william_mart@gmail.com	William Martinez	nan_ritt@gmail.com	Nancy Ritter
+5963	76.0	🏋️ New Gym Gear Shopping 🤸	2023-03-20T22:58:57	0	william_mart@gmail.com	William Martinez	nan_ritt@gmail.com	Nancy Ritter
+5965	57.0	💪 Gym Dues	2023-01-12T03:39:41	3	william_mart@gmail.com	William Martinez	nan_ritt@gmail.com	Nancy Ritter
+5966	113.0	Musical Instruments	2023-01-25T01:47:56	0	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5967	73.0	Apartment cleaning	2023-01-24T20:22:14	6	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5968	5.0	Ice Cream 🍦	2023-04-24T09:39:28	5	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5969	17.0	🍳 Breakfast Club 🥞🍳	2023-03-29T10:44:52	0	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5971	227.0	📸 New Camera Lens	2023-01-18T12:47:26	1	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5973	14.0	Netflix binge weekend	2023-03-02T22:02:23	0	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5974	40.0	Online courses	2023-01-21T22:46:02	0	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+5976	143.0	Bungee Jumping	2023-04-29T10:38:14	0	william_mart@gmail.com	William Martinez	ma_smith@gmail.com	Marcus Smith
+5977	89.0	Festival 🎶 Tickets & Snacks	2023-04-25T11:55:47	5	william_mart@gmail.com	William Martinez	ma_smith@gmail.com	Marcus Smith
+5979	8.0	🍇Smoothie Time	2023-02-17T04:34:42	3	william_mart@gmail.com	William Martinez	ma_smith@gmail.com	Marcus Smith
+5980	246.0	Auto Insurance	2023-03-11T11:59:42	0	william_mart@gmail.com	William Martinez	ma_smith@gmail.com	Marcus Smith
+5982	90.0	Date Night 🍷	2023-02-18T17:26:47	0	william_mart@gmail.com	William Martinez	ma_smith@gmail.com	Marcus Smith
+6017	6.0	🍬 Candy Run 🍭🍫	2023-01-24T22:36:00	0	nan_ritt@gmail.com	Nancy Ritter	william_mart@gmail.com	William Martinez
+6019	101.0	Photography	2023-02-06T12:16:58	0	nan_ritt@gmail.com	Nancy Ritter	william_mart@gmail.com	William Martinez
+6036	37.0	🎠 Amusement Park 🎢🎡	2023-05-16T02:42:29	0	glenn.burton@gmail.com	Glenn Burton	william_mart@gmail.com	William Martinez
+6037	5.0	🍰 Dessert Run 🍨🍰	2023-03-01T14:09:59	0	glenn.burton@gmail.com	Glenn Burton	william_mart@gmail.com	William Martinez
+6038	10.0	🎼Vinyl Records	2023-02-13T06:55:34	0	glenn.burton@gmail.com	Glenn Burton	william_mart@gmail.com	William Martinez
+6066	154.0	Pet Care	2023-01-31T02:36:01	0	eric.bailey@gmail.com	Eric Bailey	ashlee_martinez@gmail.com	Ashlee Martinez
+6067	86.0	Opera Tickets	2023-05-01T11:43:17	6	eric.bailey@gmail.com	Eric Bailey	ashlee_martinez@gmail.com	Ashlee Martinez
+6069	11.0	Bike ride fuel	2022-10-03T17:00:56	2	eric.bailey@gmail.com	Eric Bailey	ashlee_martinez@gmail.com	Ashlee Martinez
+6070	193.0	Online Course	2022-10-19T15:59:26	0	eric.bailey@gmail.com	Eric Bailey	ashlee_martinez@gmail.com	Ashlee Martinez
+6197	57.0	Apartment cleaning	2023-01-02T21:36:52	0	angriddle@gmail.com	Angela Riddle	kia_bailey@gmail.com	Kiara Bailey
+6198	123.0	Theme Park	2022-10-01T05:39:24	0	angriddle@gmail.com	Angela Riddle	kia_bailey@gmail.com	Kiara Bailey
+6221	17.0	🍇Smoothie Time	2023-04-18T11:06:01	0	mel.bailey@gmail.com	Melissa Bailey	anita.burch@gmail.com	Anita Burch
+6222	15.0	👗 Thrift Store Fashion Finds 👚	2022-09-03T18:22:25	0	mel.bailey@gmail.com	Melissa Bailey	anita.burch@gmail.com	Anita Burch
+6223	37.0	💈Fresh Cut	2022-10-22T13:41:09	4	mel.bailey@gmail.com	Melissa Bailey	anita.burch@gmail.com	Anita Burch
+6224	44.0	🏕Camping Trip	2023-01-18T22:37:10	0	mel.bailey@gmail.com	Melissa Bailey	anita.burch@gmail.com	Anita Burch
+6225	30.0	Manicure/Pedicure	2022-11-22T07:51:36	1	mel.bailey@gmail.com	Melissa Bailey	anita.burch@gmail.com	Anita Burch
+6307	11.0	🍿 Netflix Subscription 🎬🛋️	2023-03-29T15:43:33	6	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6308	40.0	Virtual Reality Games	2023-02-02T04:49:28	0	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6310	8.0	🍩Donut Run	2023-02-03T23:00:48	2	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6311	26.0	Birthday Gift	2023-02-06T04:52:32	5	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6312	245.0	Vacation	2023-04-15T01:33:44	0	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6313	39.0	🍔 Weekend BBQ Supplies	2023-03-14T17:27:24	3	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6314	25.0	🎈Party Deco	2023-03-25T11:57:14	0	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6315	40.0	🏊 Pool Day Vibes	2023-03-28T05:55:30	5	erikabail@gmail.com	Erika Blackburn	ta.weav@gmail.com	Tammy Weaver
+6328	20.0	📚 Study Group Snack Fund 📖	2023-03-17T13:01:55	0	nan_ritt@gmail.com	Nancy Ritter	erikabail@gmail.com	Erika Blackburn
+6329	29.0	💊 Pharmacy Stuff 🌡️💊	2023-05-07T22:15:35	0	nan_ritt@gmail.com	Nancy Ritter	erikabail@gmail.com	Erika Blackburn
+6330	15.0	🎥Stream Sesh	2023-04-20T23:44:47	0	nan_ritt@gmail.com	Nancy Ritter	erikabail@gmail.com	Erika Blackburn
+6332	154.0	Photography	2023-03-13T18:51:32	0	nan_ritt@gmail.com	Nancy Ritter	erikabail@gmail.com	Erika Blackburn
+6440	33.0	🏄 Weekend Beach Surfing Adventure 🌊	2023-03-25T00:54:53	0	ta.weav@gmail.com	Tammy Weaver	she_bailey@gmail.com	Sherry Smith
+6531	25.0	🐾Pet Stuff	2023-02-14T22:54:14	3	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6532	68.0	🏕Camping Trip	2023-02-10T03:52:58	1	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6533	23.0	🎤 Karaoke Night Entry Fees 🎶	2023-03-29T23:08:59	6	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6534	46.0	👟 New Running Shoes Fund 🏃	2023-04-06T19:02:51	1	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6535	53.0	Room Service	2023-01-12T08:23:22	0	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6536	16.0	🍵 Tea Tasting Experience	2023-03-19T17:29:25	0	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6537	564.0	Bicycle	2023-04-09T15:44:52	6	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6539	458.0	Flight Ticket	2022-12-26T10:56:55	1	st-maldonado@gmail.com	Stacy Maldonado	saritt@gmail.com	Sandra Martinez
+6615	43.0	Escape Room	2022-12-02T02:19:34	5	kathrynmaldonado@gmail.com	Kathryn Maldonado	anita.burch@gmail.com	Anita Burch
+6619	73.0	Date Night 🍷	2022-10-13T21:31:32	5	kathrynmaldonado@gmail.com	Kathryn Maldonado	anita.burch@gmail.com	Anita Burch
+6686	108.0	Musical Instruments	2023-04-25T19:42:26	1	ce-maldonado@gmail.com	Cesar Maldonado	mir-powe@gmail.com	Miranda Weber
+6687	28.0	🛒 Grocery Run for Potluck Dinner 🍲	2023-02-03T01:11:04	0	ce-maldonado@gmail.com	Cesar Maldonado	mir-powe@gmail.com	Miranda Weber
+6689	128.0	🧳 Travel Fund 🌍✈️	2023-04-13T13:44:15	0	ce-maldonado@gmail.com	Cesar Maldonado	mir-powe@gmail.com	Miranda Weber
+6691	47.0	🎼Vinyl Records	2022-11-23T07:25:17	2	ce-maldonado@gmail.com	Cesar Maldonado	mir-powe@gmail.com	Miranda Weber
+6693	16.0	💡Smart Bulbs	2023-02-04T22:25:45	4	ce-maldonado@gmail.com	Cesar Maldonado	mir-powe@gmail.com	Miranda Weber
+6694	52.0	🎓 Graduation Gift 🎉🎁	2023-02-09T18:08:02	6	ce-maldonado@gmail.com	Cesar Maldonado	mir-powe@gmail.com	Miranda Weber
+6725	43.0	🎨Art Supplies	2022-11-29T23:48:21	0	mir-powe@gmail.com	Miranda Weber	ce-maldonado@gmail.com	Cesar Maldonado
+6801	16.0	Plants	2023-03-01T11:07:57	2	sab-brown@gmail.com	Sabrina Brown	angriddle@gmail.com	Angela Riddle
+6804	17.0	🍩 Donuts for the Team Meeting 📈	2023-04-30T15:36:31	5	sab-brown@gmail.com	Sabrina Brown	angriddle@gmail.com	Angela Riddle
+6805	15.0	Streaming sub share	2023-04-21T14:17:24	0	sab-brown@gmail.com	Sabrina Brown	angriddle@gmail.com	Angela Riddle
+6806	25.0	Escape Room	2023-04-17T20:54:25	0	sab-brown@gmail.com	Sabrina Brown	angriddle@gmail.com	Angela Riddle
+6807	21.0	🧗 Rock Climbing	2023-02-23T07:14:25	5	sab-brown@gmail.com	Sabrina Brown	angriddle@gmail.com	Angela Riddle
+6834	39.0	Online Course	2023-05-06T01:46:12	0	sab-brown@gmail.com	Sabrina Brown	anita.burch@gmail.com	Anita Burch
+6835	10.0	🎬 Film Night In	2023-05-09T10:13:46	5	sab-brown@gmail.com	Sabrina Brown	anita.burch@gmail.com	Anita Burch
+6836	40.0	🛀 Spa Day Self-Care Kit 🌿	2023-02-22T02:05:09	0	sab-brown@gmail.com	Sabrina Brown	anita.burch@gmail.com	Anita Burch
+6837	16.0	📚 Study Group Snack Fund 📖	2023-02-22T04:50:10	3	sab-brown@gmail.com	Sabrina Brown	anita.burch@gmail.com	Anita Burch
+6838	6.0	🚀 Rocket League Tourney 💥🎮	2023-03-20T00:44:55	4	sab-brown@gmail.com	Sabrina Brown	anita.burch@gmail.com	Anita Burch
+6871	31.0	Podcast Subscription	2023-02-13T16:46:03	0	anita.burch@gmail.com	Anita Burch	sab-brown@gmail.com	Sabrina Brown
+6872	20.0	🚕 Uber Ride 🚗📍	2023-03-29T04:25:11	0	anita.burch@gmail.com	Anita Burch	sab-brown@gmail.com	Sabrina Brown
+6917	73.0	Photography 📸 Workshop	2023-02-07T03:55:55	0	carbrown@gmail.com	Carl Brown	jer.calhoun@gmail.com	Jeremy Calhoun
+6918	11.0	🍺 Craft Beers 🍻👌	2023-03-29T18:52:54	6	carbrown@gmail.com	Carl Brown	jer.calhoun@gmail.com	Jeremy Calhoun
+6919	40.0	Food delivery 🍕	2022-12-25T20:09:30	0	carbrown@gmail.com	Carl Brown	jer.calhoun@gmail.com	Jeremy Calhoun
+6920	38.0	Coffee for the Team ☕	2022-12-28T04:14:23	5	carbrown@gmail.com	Carl Brown	jer.calhoun@gmail.com	Jeremy Calhoun
+6932	60.0	🎸 Music Lessons for the Month 🎵	2023-01-18T17:41:02	0	kevin.blac@gmail.com	Kevin Blackburn	carbrown@gmail.com	Carl Brown
+6937	190.0	🎟️ Concert Tickets	2023-02-23T13:48:37	0	nan_ritt@gmail.com	Nancy Ritter	carbrown@gmail.com	Carl Brown
+6940	67.0	Fishing Gear	2023-01-27T16:12:58	0	nan_ritt@gmail.com	Nancy Ritter	carbrown@gmail.com	Carl Brown
+6943	18.0	Board Games 🎲	2023-02-21T12:44:54	6	connorbrow@gmail.com	Connor Brown	glenn.burton@gmail.com	Glenn Burton
+6944	47.0	Brunchin' 🥂	2023-04-15T15:09:57	0	connorbrow@gmail.com	Connor Brown	glenn.burton@gmail.com	Glenn Burton
+6945	89.0	Pet Vaccination	2023-04-13T23:53:52	0	connorbrow@gmail.com	Connor Brown	glenn.burton@gmail.com	Glenn Burton
+6946	57.0	🍣 Sushi and Sake Night Out 🍶	2023-03-26T15:26:40	1	connorbrow@gmail.com	Connor Brown	glenn.burton@gmail.com	Glenn Burton
+6947	38.0	🍣Sushi Vibes	2023-03-12T06:47:45	5	connorbrow@gmail.com	Connor Brown	glenn.burton@gmail.com	Glenn Burton
+6948	103.0	Online Course	2023-02-11T12:08:27	2	connorbrow@gmail.com	Connor Brown	glenn.burton@gmail.com	Glenn Burton
+6949	11.0	🎥 Movie Marathon Night 🍿	2023-03-04T09:50:30	0	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+6950	22.0	💇Salon Day	2023-02-24T09:16:45	0	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+6951	21.0	🍳 Breakfast Club	2023-02-05T11:17:59	3	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+6952	14.0	🎤 Karaoke Night Entry Fees 🎶	2023-03-01T23:20:17	5	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+6953	28.0	Protein shake stack	2023-02-06T15:14:19	0	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+6956	14.0	🍜 Ramen Night 🍜🥢	2023-02-25T21:13:51	5	connorbrow@gmail.com	Connor Brown	jefsmith@gmail.com	Jeffrey Smith
+6957	50.0	Bakery	2023-04-25T12:05:48	0	connorbrow@gmail.com	Connor Brown	matthew.blac@gmail.com	Matthew Blackburn
+6961	14.0	Craft beers 🍺	2023-04-26T21:55:50	0	connorbrow@gmail.com	Connor Brown	matthew.blac@gmail.com	Matthew Blackburn
+6971	11.0	🍔Burger Goals	2023-04-18T04:46:03	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6973	6.0	🧼 Laundry Day 🧺💦	2023-02-11T13:55:16	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6974	85.0	Birthday Gift	2023-03-17T14:11:04	1	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6975	26.0	Late-night pizza run	2023-04-23T16:11:38	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6976	83.0	🎧Podcast Mic 🎤	2023-03-15T23:38:18	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6977	95.0	Wine Tasting	2023-03-15T22:23:46	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6978	8.0	🍰 Dessert Run 🍨🍰	2023-02-03T01:35:16	6	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6979	6.0	🥐 Coffee and Croissant ☕🥐	2023-04-28T02:18:34	0	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6980	70.0	Yoga mat splurge	2023-04-27T03:13:18	2	connorbrow@gmail.com	Connor Brown	angriddle@gmail.com	Angela Riddle
+6981	108.0	Photography Gear	2023-03-07T05:19:30	0	connorbrow@gmail.com	Connor Brown	ad.blackburn@gmail.com	Adam Blackburn
+6982	31.0	Plant mom life	2023-02-23T08:16:31	0	connorbrow@gmail.com	Connor Brown	ad.blackburn@gmail.com	Adam Blackburn
+6983	19.0	🎳 Bowling Night 🎳🍻	2023-04-26T13:49:27	4	connorbrow@gmail.com	Connor Brown	ad.blackburn@gmail.com	Adam Blackburn
+6984	6.0	🎬 Film Night In	2023-03-05T21:52:01	6	connorbrow@gmail.com	Connor Brown	ad.blackburn@gmail.com	Adam Blackburn
+6985	93.0	Bike 🚴 Repairs	2023-03-04T05:29:08	4	connorbrow@gmail.com	Connor Brown	ad.blackburn@gmail.com	Adam Blackburn
+6987	141.0	Birthday Gift	2023-05-15T08:28:56	0	connorbrow@gmail.com	Connor Brown	ad.blackburn@gmail.com	Adam Blackburn
+6988	19.0	🌮 Spicy Mexican Food Night 🌶️	2023-02-21T10:31:27	0	connorbrow@gmail.com	Connor Brown	clmiller@gmail.com	Claudia Miller
+6989	37.0	Uber last night	2023-04-01T00:52:38	0	connorbrow@gmail.com	Connor Brown	clmiller@gmail.com	Claudia Miller
+6993	17.0	Art Supplies	2023-02-18T03:11:32	0	connorbrow@gmail.com	Connor Brown	clmiller@gmail.com	Claudia Miller
+6994	22.0	Farmers 🌽 Market	2023-05-14T11:48:45	0	connorbrow@gmail.com	Connor Brown	clmiller@gmail.com	Claudia Miller
+6995	28.0	👾Arcade Night	2023-03-30T20:28:19	1	connorbrow@gmail.com	Connor Brown	clmiller@gmail.com	Claudia Miller
+6996	143.0	Resume Writing	2023-04-01T00:21:58	0	deniseburch@gmail.com	Denise Maldonado	connorbrow@gmail.com	Connor Brown
+6997	11.0	🥳 Party Decorations 🎉🎈	2023-05-08T09:32:49	0	deniseburch@gmail.com	Denise Maldonado	connorbrow@gmail.com	Connor Brown
+6999	34.0	🌈 Pride Parade Outfits 🏳️🌈	2023-03-04T23:32:47	0	deniseburch@gmail.com	Denise Maldonado	connorbrow@gmail.com	Connor Brown
+7005	89.0	Flower Delivery	2023-04-25T21:11:58	0	glenn.burton@gmail.com	Glenn Burton	connorbrow@gmail.com	Connor Brown
+7006	47.0	Photography 📸 Workshop	2023-05-16T09:56:00	0	glenn.burton@gmail.com	Glenn Burton	connorbrow@gmail.com	Connor Brown
+7008	42.0	Gas money	2023-05-17T18:05:40	0	gina-ritter@gmail.com	Gina Burch	connorbrow@gmail.com	Connor Brown
+7010	17.0	🍪 Bake Sale Goodies	2023-02-06T05:38:21	0	alexwhite@gmail.com	Alex White	connorbrow@gmail.com	Connor Brown
+7011	7.0	🎶 Spotify Subscription 🎧🔥	2023-03-08T11:30:13	0	alexwhite@gmail.com	Alex White	connorbrow@gmail.com	Connor Brown
+7012	180.0	Online Course	2023-03-23T11:02:22	0	alexwhite@gmail.com	Alex White	connorbrow@gmail.com	Connor Brown
+7013	13.0	📱 App Store Fun	2023-02-13T16:34:03	0	alexwhite@gmail.com	Alex White	connorbrow@gmail.com	Connor Brown
+7015	328.0	Tech upgrade	2023-05-15T21:56:18	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+7016	7.0	🧦 Funky Socks 🌈✨	2023-02-14T15:44:03	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+7017	34.0	Uber last night	2023-04-08T02:24:33	0	morgan-harrison@gmail.com	Morgan Burton	connorbrow@gmail.com	Connor Brown
+7020	10.0	Quick coffee fix ☕	2023-03-04T08:23:39	0	jefsmith@gmail.com	Jeffrey Smith	connorbrow@gmail.com	Connor Brown
+7021	73.0	Online courses	2023-03-02T14:33:05	0	jefsmith@gmail.com	Jeffrey Smith	connorbrow@gmail.com	Connor Brown
+7024	22.0	Farmers 🌽 Market	2023-03-10T19:06:06	0	mar_blac@gmail.com	Martin Blackburn	connorbrow@gmail.com	Connor Brown
+7025	277.0	Clothing	2023-04-17T07:28:56	0	mar_blac@gmail.com	Martin Blackburn	connorbrow@gmail.com	Connor Brown
+7026	72.0	Resume Writing	2023-04-14T09:59:19	0	mar_blac@gmail.com	Martin Blackburn	connorbrow@gmail.com	Connor Brown
+7027	46.0	🎨Art Supplies	2023-02-22T04:17:12	0	mar_blac@gmail.com	Martin Blackburn	connorbrow@gmail.com	Connor Brown
+7051	21.0	🌱 Vegan Cooking Ingredients 🍅	2023-05-15T16:36:32	0	andrew_brow@gmail.com	Andrew Brown	glenn.burton@gmail.com	Glenn Burton
+7056	31.0	Crafternoon 🧶	2023-01-16T10:11:39	2	andrew_brow@gmail.com	Andrew Brown	glenn.burton@gmail.com	Glenn Burton
+7058	24.0	🎼Vinyl Records	2023-04-27T12:06:45	0	andrew_brow@gmail.com	Andrew Brown	glenn.burton@gmail.com	Glenn Burton
+7059	13.0	🧘 Yoga Class 🧘🌿	2023-03-05T13:09:21	0	andrew_brow@gmail.com	Andrew Brown	glenn.burton@gmail.com	Glenn Burton
+7106	26.0	Pizza 🍕 Night	2023-04-28T05:09:15	0	ma_smith@gmail.com	Marcus Smith	andrew_brow@gmail.com	Andrew Brown
+7107	12.0	Monthly 📚 Book Club	2023-03-29T17:26:27	0	ma_smith@gmail.com	Marcus Smith	andrew_brow@gmail.com	Andrew Brown
+7108	50.0	🏖 Beach Trip	2023-04-26T21:32:35	0	ma_smith@gmail.com	Marcus Smith	andrew_brow@gmail.com	Andrew Brown
+7109	14.0	👾Arcade Night	2023-02-04T13:49:55	0	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7110	33.0	🐾Pet Stuff	2023-03-08T12:58:02	0	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7112	18.0	Pizza Night 🍕	2023-02-22T12:58:17	0	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7113	25.0	Skincare 💆🌿	2023-04-12T00:32:30	0	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7121	111.0	📸Camera Gear	2023-04-04T05:54:23	0	glenn.burton@gmail.com	Glenn Burton	andrew_brow@gmail.com	Andrew Brown
+7122	19.0	🦄 Unicorn Merch 🌈🦄	2023-03-13T05:33:46	0	glenn.burton@gmail.com	Glenn Burton	andrew_brow@gmail.com	Andrew Brown
+7130	18.0	Late-night pizza run	2022-11-26T21:25:16	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7131	196.0	📸 New Camera Lens	2022-06-03T21:00:22	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7132	32.0	🎁 Birthday Surprise Gift Fund 🎈	2023-04-30T06:16:17	5	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7133	34.0	🐟 Aquarium Visit 🦑	2022-09-27T05:38:15	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7134	66.0	🏕Camping Trip	2022-05-26T13:44:55	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7135	116.0	Ski Pass	2022-12-22T06:26:57	3	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7136	69.0	Board Games	2023-04-01T03:06:43	0	br_ritt@gmail.com	Brian Ritter	ashlee_martinez@gmail.com	Ashlee Martinez
+7177	16.0	👚Thrifting	2022-10-01T05:16:31	0	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+7179	12.0	🦄 Unicorn Merch 🌈🦄	2022-07-30T11:43:18	0	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+7180	5.0	🍪Cookie Dough	2022-12-11T16:30:19	0	jasonsimp@gmail.com	Jason Simpson	br_ritt@gmail.com	Brian Ritter
+7227	16.0	🐟 Fish Tank Supplies 🐠💦	2022-10-26T01:23:05	0	angriddle@gmail.com	Angela Riddle	pa_ritter@gmail.com	Patricia Ritter
+7228	56.0	🌌Stargazing Trip	2023-01-06T11:48:04	0	angriddle@gmail.com	Angela Riddle	pa_ritter@gmail.com	Patricia Ritter
+7230	54.0	Theater Tickets	2022-10-15T21:58:15	0	angriddle@gmail.com	Angela Riddle	pa_ritter@gmail.com	Patricia Ritter
+7231	33.0	Pet Food	2023-04-26T07:14:11	0	angriddle@gmail.com	Angela Riddle	pa_ritter@gmail.com	Patricia Ritter
+7247	39.0	Escape Room	2023-01-06T21:47:14	2	nan_ritt@gmail.com	Nancy Ritter	bradley_ball@gmail.com	Bradley Ball
+7248	15.0	🍕 Extra Cheese 🧀🍕	2022-12-08T16:20:20	0	nan_ritt@gmail.com	Nancy Ritter	bradley_ball@gmail.com	Bradley Ball
+7250	39.0	Grocery haul	2023-02-22T21:41:45	0	nan_ritt@gmail.com	Nancy Ritter	bradley_ball@gmail.com	Bradley Ball
+7251	66.0	Wine	2023-01-21T13:07:43	6	nan_ritt@gmail.com	Nancy Ritter	bradley_ball@gmail.com	Bradley Ball
+7253	35.0	Coffee for the Team ☕	2023-01-17T08:54:52	0	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+7255	90.0	🏋️Gym Gear	2023-02-15T06:24:12	0	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+7256	44.0	Thrift shop finds	2022-12-16T01:41:12	0	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+7257	22.0	🥑 Avocado Toast Brunch 🍞🍳	2023-02-12T07:49:15	5	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+7258	10.0	🌮Taco Vibes	2023-04-01T19:33:34	0	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+7259	34.0	Fishing License	2023-04-29T01:47:44	4	nan_ritt@gmail.com	Nancy Ritter	clmiller@gmail.com	Claudia Miller
+7260	60.0	🏕 Camping Trip Food and Gear 🎒	2023-04-12T21:02:32	1	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+7261	18.0	🧘 Yoga Class 🧘🌿	2023-03-25T10:56:48	2	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+7262	46.0	Camping Fees	2023-02-06T03:20:19	0	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+7263	42.0	Escape Room	2023-05-02T22:44:56	0	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+7266	218.0	Language Classes	2023-02-24T02:16:33	0	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+7267	15.0	Zoo Tickets	2023-04-24T12:33:45	0	nan_ritt@gmail.com	Nancy Ritter	chelsea-burch@gmail.com	Chelsea Burch
+7269	347.0	Hotel Stay	2023-05-10T15:02:38	5	nan_ritt@gmail.com	Nancy Ritter	joseph.webe@gmail.com	Joseph Weber
+7270	8.0	🍬 Candy Run 🍭🍫	2023-03-10T22:51:11	1	nan_ritt@gmail.com	Nancy Ritter	joseph.webe@gmail.com	Joseph Weber
+7271	19.0	Study 📚 Snacks	2023-04-12T18:43:05	5	nan_ritt@gmail.com	Nancy Ritter	joseph.webe@gmail.com	Joseph Weber
+7272	38.0	🎫 Theater Tickets	2023-05-13T09:36:05	4	nan_ritt@gmail.com	Nancy Ritter	joseph.webe@gmail.com	Joseph Weber
+7274	15.0	🍵 Tea Tasting Experience	2023-02-28T11:04:01	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7275	100.0	Gardening Supplies	2023-01-17T11:28:04	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7276	17.0	🎥 Movie Marathon Night 🍿	2023-04-16T02:53:08	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7277	12.0	Pasta Night 🍝	2023-01-15T04:55:28	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7278	8.0	🎀 Gift Wrapping 🎁🎀	2022-11-27T00:20:21	1	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7279	7.0	🎤 Open Mic Night	2023-02-13T09:04:30	4	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7280	11.0	Skate park fees	2022-11-17T22:37:46	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7281	14.0	💊 Pharmacy Stuff 🌡️💊	2023-04-01T00:16:24	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7282	40.0	🔭 Stargazing Trip Essentials 🌌	2023-03-19T07:14:44	0	nan_ritt@gmail.com	Nancy Ritter	jefsmith@gmail.com	Jeffrey Smith
+7284	18.0	Lunch	2023-03-05T07:26:06	0	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7285	55.0	Craft Supplies	2023-02-17T20:51:22	4	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7286	10.0	📚 Study Group Snack Fund 📖	2023-04-11T14:00:23	3	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7287	24.0	🍹 Happy Hour Fund	2023-04-05T02:14:54	2	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7288	27.0	🍕Pizza & Chill	2023-05-12T10:15:16	1	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7290	19.0	Board Games 🎲	2023-04-17T11:54:27	0	nan_ritt@gmail.com	Nancy Ritter	andrew_brow@gmail.com	Andrew Brown
+7291	15.0	🍩 Donuts for the Team Meeting 📈	2023-05-17T02:18:42	2	nan_ritt@gmail.com	Nancy Ritter	nicholas.weber@gmail.com	Nicholas Weber
+7293	38.0	💃 Salsa Dancing Lessons 🕺	2023-01-13T19:41:59	1	nan_ritt@gmail.com	Nancy Ritter	nicholas.weber@gmail.com	Nicholas Weber
+7294	160.0	Weekend getaway	2023-05-18T01:54:35	0	nan_ritt@gmail.com	Nancy Ritter	nicholas.weber@gmail.com	Nicholas Weber
+7296	18.0	🥳 Party Decorations 🎉🎈	2023-05-01T18:27:33	5	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7298	29.0	👚Thrifting	2023-02-04T10:04:45	0	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7299	32.0	⛽ Gas Money	2023-02-11T23:36:00	6	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7300	43.0	🎓 Graduation Gift 🎉🎁	2023-04-29T06:13:45	0	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7301	10.0	Farmers 🌽 Market	2023-02-13T20:23:16	0	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7302	20.0	Skincare 💆🌿	2023-04-11T07:28:57	1	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7303	30.0	Aesthetic room decor	2023-01-31T02:02:07	2	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7304	116.0	Musical Instruments	2023-05-04T17:17:52	0	nan_ritt@gmail.com	Nancy Ritter	hun.weaver@gmail.com	Hunter Weaver
+7305	14.0	Doggo's new toy	2022-12-22T10:26:39	4	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+7306	33.0	🛒 Grocery Run for Potluck Dinner 🍲	2023-02-07T12:27:44	4	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+7307	20.0	Pet Food	2023-03-10T20:03:18	4	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+7308	50.0	Yoga Class	2023-05-08T16:46:52	1	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+7309	65.0	Photography 📸 Workshop	2023-01-27T14:50:35	0	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+7310	214.0	Language Classes	2022-12-09T02:37:29	0	nan_ritt@gmail.com	Nancy Ritter	alexander-ridd@gmail.com	Alexander Riddle
+7312	76.0	🎧 New Headphones 🎵🤘	2023-01-28T10:00:25	0	hun.weaver@gmail.com	Hunter Weaver	nan_ritt@gmail.com	Nancy Ritter
+7313	18.0	Baking 🧁 Supplies	2023-05-13T17:59:09	0	hun.weaver@gmail.com	Hunter Weaver	nan_ritt@gmail.com	Nancy Ritter
+7314	27.0	Game night	2023-03-25T08:47:05	0	andrew_brow@gmail.com	Andrew Brown	nan_ritt@gmail.com	Nancy Ritter
+7316	16.0	🍔 Gourmet Burger and Fries 🍟	2022-12-27T18:50:17	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+7317	16.0	Food delivery 🍕	2023-03-23T17:02:49	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+7318	62.0	🎟️ Concert Tickets	2023-03-10T04:38:21	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+7319	94.0	👓 New Glasses 🤓👀	2022-12-16T08:10:03	0	diwils@gmail.com	Dillon Wilson	nan_ritt@gmail.com	Nancy Ritter
+7321	51.0	Hiking Gear 🥾🌲	2023-05-03T10:49:00	0	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+7322	37.0	🎨 Art Supplies for Creative Weekend 🖌️	2023-02-01T18:15:38	0	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+7325	5.0	🧼 Laundry Day 🧺💦	2023-03-17T18:30:11	0	an-harrison@gmail.com	Anthony Harrison	nan_ritt@gmail.com	Nancy Ritter
+7332	6.0	Dog Park 🐶 Outing	2023-01-29T11:46:15	0	corwils@gmail.com	Cory Wilson	nan_ritt@gmail.com	Nancy Ritter
+7333	87.0	Health Supplements	2023-05-05T20:46:15	0	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+7334	42.0	Gym 💪🏼 Supplements	2023-05-18T10:49:39	0	clmiller@gmail.com	Claudia Miller	nan_ritt@gmail.com	Nancy Ritter
+7422	73.0	🎧Podcast Mic 🎤	2022-12-22T11:46:55	2	de_ritt@gmail.com	Debra Ritter	glenn.burton@gmail.com	Glenn Burton
+7425	33.0	🛵 Weekend Scooter Rental 🌆	2023-01-18T21:21:34	0	de_ritt@gmail.com	Debra Ritter	glenn.burton@gmail.com	Glenn Burton
+7428	49.0	Makeup 💄	2023-01-17T00:36:15	0	de_ritt@gmail.com	Debra Ritter	glenn.burton@gmail.com	Glenn Burton
+7444	14.0	🍹 Happy Hour Fund	2023-01-27T00:01:36	4	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+7446	20.0	🌱 Plant Baby 🌿💚	2023-02-18T13:02:14	1	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+7447	100.0	Festival 🎶 Tickets & Snacks	2022-11-23T22:01:36	1	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+7448	15.0	🎥 Movie Marathon Night 🍿	2022-11-10T05:52:27	5	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+7450	35.0	Airport 🚖 Cab Fare	2022-11-18T00:38:12	0	de_ritt@gmail.com	Debra Ritter	kevin.blac@gmail.com	Kevin Blackburn
+7512	15.0	Record Store 🎶 Finds	2022-06-19T11:46:12	0	anita.burch@gmail.com	Anita Burch	de_ritt@gmail.com	Debra Ritter
+7513	22.0	Cosplay 🦸 Gear	2023-05-03T09:23:35	0	anita.burch@gmail.com	Anita Burch	de_ritt@gmail.com	Debra Ritter
+7514	27.0	🌱 Vegan Cooking Ingredients 🍅	2022-12-01T10:34:31	0	anita.burch@gmail.com	Anita Burch	de_ritt@gmail.com	Debra Ritter
+7516	35.0	💇Salon Day	2023-01-08T01:26:28	0	anita.burch@gmail.com	Anita Burch	de_ritt@gmail.com	Debra Ritter
+7530	262.0	Car Maintenance	2023-04-23T19:30:50	1	saritt@gmail.com	Sandra Martinez	kri-powe@gmail.com	Kristin White
+7533	189.0	Photography Gear	2023-03-08T03:48:35	0	saritt@gmail.com	Sandra Martinez	kri-powe@gmail.com	Kristin White
+7534	50.0	New 🎮 Game Purchase	2023-01-28T01:25:13	0	saritt@gmail.com	Sandra Martinez	kri-powe@gmail.com	Kristin White
+7535	10.0	Dog Park 🐶 Outing	2023-03-09T15:39:51	0	saritt@gmail.com	Sandra Martinez	kri-powe@gmail.com	Kristin White
+7536	36.0	💄Makeup Haul	2023-03-31T04:14:45	0	saritt@gmail.com	Sandra Martinez	kri-powe@gmail.com	Kristin White
+7539	46.0	Skincare glow-up	2023-03-28T02:25:51	1	saritt@gmail.com	Sandra Martinez	anita.burch@gmail.com	Anita Burch
+7542	25.0	🌳 National Park Entry 🌲🏞️	2023-04-24T14:12:19	0	saritt@gmail.com	Sandra Martinez	anita.burch@gmail.com	Anita Burch
+7543	20.0	Coffee for the Team ☕	2023-01-10T07:10:25	2	saritt@gmail.com	Sandra Martinez	anita.burch@gmail.com	Anita Burch
+7550	172.0	Mixology Class	2023-03-04T13:04:30	0	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+7551	49.0	Sunday brunch vibes	2023-02-02T19:34:15	6	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+7553	28.0	🎨 DIY Craft Supplies	2023-03-09T06:10:45	0	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+7555	15.0	Movie 🎟️ Night	2023-01-30T19:28:26	0	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+7556	168.0	Wedding Gift	2023-02-13T20:45:06	0	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+7557	44.0	Grocery haul	2023-03-27T08:35:49	2	saritt@gmail.com	Sandra Martinez	matthew.blac@gmail.com	Matthew Blackburn
+7562	22.0	Vintage tee score	2023-03-29T22:55:00	0	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+7564	102.0	Gym Membership	2023-05-17T15:13:36	0	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+7565	17.0	Plant mom life	2023-03-28T04:00:41	0	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+7567	45.0	Karaoke night 🎤	2023-05-14T09:46:09	4	saritt@gmail.com	Sandra Martinez	allison-calhoun@gmail.com	Allison Calhoun
+7568	40.0	Concert tix 🎶	2022-12-14T15:03:33	0	saritt@gmail.com	Sandra Martinez	ed_wilson@gmail.com	Edwin Wilson
+7569	27.0	🎫 Theater Tickets	2023-01-11T10:30:30	4	saritt@gmail.com	Sandra Martinez	ed_wilson@gmail.com	Edwin Wilson
+7570	55.0	New kicks 🔥	2023-04-14T03:10:31	0	saritt@gmail.com	Sandra Martinez	ed_wilson@gmail.com	Edwin Wilson
+7571	31.0	⛽ Gas Money	2022-12-20T11:35:31	0	saritt@gmail.com	Sandra Martinez	ed_wilson@gmail.com	Edwin Wilson
+7573	174.0	Tech upgrade	2023-02-21T12:52:04	0	saritt@gmail.com	Sandra Martinez	ed_wilson@gmail.com	Edwin Wilson
+7574	90.0	🛹Skate Gear	2022-12-10T01:50:28	2	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+7575	19.0	Study 📚 Snacks	2023-01-18T17:17:30	0	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+7576	150.0	Opera Tickets	2023-05-04T09:46:06	4	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+7577	58.0	🎸 Music Lessons	2023-02-05T19:46:24	0	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+7579	22.0	🎨 Art Supplies 🖌️🎨	2023-01-13T03:00:16	0	saritt@gmail.com	Sandra Martinez	mar_blac@gmail.com	Martin Blackburn
+7581	252.0	Car Maintenance	2023-05-08T14:18:14	0	saritt@gmail.com	Sandra Martinez	andrew_brow@gmail.com	Andrew Brown
+7583	52.0	Hiking Gear	2023-03-26T09:43:23	5	saritt@gmail.com	Sandra Martinez	andrew_brow@gmail.com	Andrew Brown
+7585	27.0	Guitar Strings	2023-03-05T12:53:51	3	saritt@gmail.com	Sandra Martinez	andrew_brow@gmail.com	Andrew Brown
+7586	31.0	🛒 Grocery Run for Potluck Dinner 🍲	2023-04-15T02:29:41	0	saritt@gmail.com	Sandra Martinez	cod.smith@gmail.com	Cody Smith
+7589	147.0	🚀 To the Moon! Crypto Buy-In	2023-03-31T13:54:40	0	saritt@gmail.com	Sandra Martinez	cod.smith@gmail.com	Cody Smith
+7590	49.0	🏄 Weekend Beach Surfing Adventure 🌊	2023-03-09T00:38:18	0	saritt@gmail.com	Sandra Martinez	cod.smith@gmail.com	Cody Smith
+7591	17.0	Lunch	2023-04-06T02:37:24	0	saritt@gmail.com	Sandra Martinez	cod.smith@gmail.com	Cody Smith
+7595	39.0	🍳 Sunday Brunch with Friends 🥂	2023-02-27T21:16:49	0	saritt@gmail.com	Sandra Martinez	sab-brown@gmail.com	Sabrina Brown
+7596	10.0	Streaming sub share	2023-04-03T14:16:38	0	saritt@gmail.com	Sandra Martinez	sab-brown@gmail.com	Sabrina Brown
+7597	314.0	Tech upgrade	2023-04-29T10:31:28	0	saritt@gmail.com	Sandra Martinez	sab-brown@gmail.com	Sabrina Brown
+7598	33.0	Dry Cleaning	2023-05-04T02:01:02	3	saritt@gmail.com	Sandra Martinez	sab-brown@gmail.com	Sabrina Brown
+7600	22.0	🍳 Breakfast Club	2023-04-17T05:14:45	0	connorbrow@gmail.com	Connor Brown	saritt@gmail.com	Sandra Martinez
+7601	53.0	Festival 🎶 Tickets & Snacks	2023-02-16T19:45:18	0	connorbrow@gmail.com	Connor Brown	saritt@gmail.com	Sandra Martinez
+7602	35.0	🛍️Retail Therapy	2023-05-18T05:52:27	0	connorbrow@gmail.com	Connor Brown	saritt@gmail.com	Sandra Martinez
+7606	65.0	👓New Specs	2023-04-05T17:11:57	0	cod.smith@gmail.com	Cody Smith	saritt@gmail.com	Sandra Martinez
+7607	59.0	🎉Bday Bash!	2023-02-27T15:05:46	0	cod.smith@gmail.com	Cody Smith	saritt@gmail.com	Sandra Martinez
+7608	49.0	Guitar Strings	2023-02-09T16:14:03	0	cod.smith@gmail.com	Cody Smith	saritt@gmail.com	Sandra Martinez
+7609	123.0	🎵Festival Tix	2023-05-11T06:06:25	0	cod.smith@gmail.com	Cody Smith	saritt@gmail.com	Sandra Martinez
+7610	44.0	Skincare 💦 Essentials	2023-05-15T02:46:30	0	cod.smith@gmail.com	Cody Smith	saritt@gmail.com	Sandra Martinez
+7611	34.0	💈 Haircut 💇💇	2023-01-30T18:35:21	0	jamie-solomon@gmail.com	Jamie Solomon	saritt@gmail.com	Sandra Martinez
+7612	220.0	Wedding Gift	2023-03-27T10:05:31	0	jamie-solomon@gmail.com	Jamie Solomon	saritt@gmail.com	Sandra Martinez
+7613	35.0	💈Fresh Cut	2023-03-10T16:38:40	0	jamie-solomon@gmail.com	Jamie Solomon	saritt@gmail.com	Sandra Martinez
+7616	45.0	Cosmetics	2023-05-16T05:13:33	0	kri-powe@gmail.com	Kristin White	saritt@gmail.com	Sandra Martinez
+7617	178.0	Golf Fees	2023-02-01T05:16:30	0	ka_burt@gmail.com	Kayla Burton	saritt@gmail.com	Sandra Martinez
+7619	17.0	Movie 🎟️ Night	2023-03-28T14:48:11	0	ka_burt@gmail.com	Kayla Burton	saritt@gmail.com	Sandra Martinez
+7621	52.0	🎧Podcast Mic 🎤	2023-03-01T19:50:20	0	sab-brown@gmail.com	Sabrina Brown	saritt@gmail.com	Sandra Martinez
+7622	17.0	🚗 Weekend Road Trip Snacks 🍫	2023-03-14T05:00:07	0	sab-brown@gmail.com	Sabrina Brown	saritt@gmail.com	Sandra Martinez
+7623	48.0	🏄 Weekend Beach Surfing Adventure 🌊	2023-02-01T12:18:29	0	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+7624	458.0	Charity Donation	2023-01-30T01:42:54	0	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+7625	36.0	Gym 💪🏼 Supplements	2022-12-28T02:16:08	0	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+7626	31.0	Treat Yo' Self 💆	2023-01-28T17:17:12	0	morgan-harrison@gmail.com	Morgan Burton	saritt@gmail.com	Sandra Martinez
+7628	17.0	Parking Fees 🅿️	2023-01-21T18:33:22	0	mar_blac@gmail.com	Martin Blackburn	saritt@gmail.com	Sandra Martinez
+7629	13.0	Doggo's new toy	2023-03-11T12:54:33	0	mar_blac@gmail.com	Martin Blackburn	saritt@gmail.com	Sandra Martinez
+7781	27.0	Gym 💪🏼 Supplements	2022-12-26T19:58:47	1	ka_burt@gmail.com	Kayla Burton	saritt@gmail.com	Sandra Martinez
+7785	49.0	Plant mom life	2023-01-04T05:47:01	0	ka_burt@gmail.com	Kayla Burton	saritt@gmail.com	Sandra Martinez
+7786	21.0	🎤 Karaoke Night 🎶💃	2023-01-11T18:26:55	0	ka_burt@gmail.com	Kayla Burton	saritt@gmail.com	Sandra Martinez
+7838	24.0	Coffee ☕ Workshop	2022-10-04T14:47:21	0	adrian_burt@gmail.com	Adrian Burton	mir-powe@gmail.com	Miranda Weber
+7839	27.0	Gaming 🎮 Sesh	2023-01-31T20:21:00	1	adrian_burt@gmail.com	Adrian Burton	mir-powe@gmail.com	Miranda Weber
+7841	42.0	BBQ party 🍗	2023-03-25T15:11:38	6	adrian_burt@gmail.com	Adrian Burton	mir-powe@gmail.com	Miranda Weber
+7842	25.0	🎬 Movie Marathon Night 🍿	2022-08-26T12:53:42	0	adrian_burt@gmail.com	Adrian Burton	mir-powe@gmail.com	Miranda Weber
+7844	67.0	Cooking Class	2022-10-06T06:28:45	0	adrian_burt@gmail.com	Adrian Burton	mir-powe@gmail.com	Miranda Weber
+7845	36.0	Craft beers 🍺	2023-04-12T13:21:58	0	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+7846	12.0	🍰 Dessert Run 🍨🍰	2022-10-14T05:00:32	0	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+7847	21.0	🎥 Movie Marathon Night 🍿	2022-10-22T21:51:44	0	mir-powe@gmail.com	Miranda Weber	adrian_burt@gmail.com	Adrian Burton
+7850	25.0	🛹Skate Gear	2023-04-11T11:25:23	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+7852	73.0	Photography 📸 Workshop	2023-04-24T17:45:13	0	joseph.webe@gmail.com	Joseph Weber	adrian_burt@gmail.com	Adrian Burton
+7861	20.0	📖Zine Fund	2022-06-13T17:08:53	0	jer.calhoun@gmail.com	Jeremy Calhoun	adrian_burt@gmail.com	Adrian Burton
+7862	42.0	🎁 Birthday Surprise Gift Fund 🎈	2022-12-13T16:47:18	0	jer.calhoun@gmail.com	Jeremy Calhoun	adrian_burt@gmail.com	Adrian Burton
+7866	12.0	🍺 Craft Beers 🍻👌	2022-12-17T16:02:32	5	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+7867	31.0	Craft Supplies	2023-03-13T04:50:29	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+7868	49.0	🎮New Game Drop	2023-04-15T13:50:13	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+7870	31.0	🎧 New Headphones 🎵🤘	2023-01-19T10:04:46	5	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+7872	16.0	🥑 Avocado Toast Brunch 🍞🍳	2023-01-02T16:43:45	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+7873	80.0	Concert tix 🎶	2023-05-03T07:57:19	0	glenn.burton@gmail.com	Glenn Burton	ashlee_martinez@gmail.com	Ashlee Martinez
+7876	80.0	Workshop Fees	2023-03-13T17:27:01	0	glenn.burton@gmail.com	Glenn Burton	connorbrow@gmail.com	Connor Brown
+7877	119.0	Cookware	2023-02-18T09:54:00	0	glenn.burton@gmail.com	Glenn Burton	connorbrow@gmail.com	Connor Brown
+7878	25.0	🌱 Vegan Cooking Ingredients 🍅	2023-04-02T20:21:34	0	glenn.burton@gmail.com	Glenn Burton	connorbrow@gmail.com	Connor Brown
+7879	30.0	Treat Yo' Self 💆	2022-12-29T00:51:24	6	glenn.burton@gmail.com	Glenn Burton	joseharr@gmail.com	Jose Harrison
+7880	42.0	Protein shake stack	2023-04-25T14:50:59	2	glenn.burton@gmail.com	Glenn Burton	joseharr@gmail.com	Jose Harrison
+7881	22.0	👗 Thrift Store Fashion Finds 👚	2023-02-13T21:54:40	0	glenn.burton@gmail.com	Glenn Burton	joseharr@gmail.com	Jose Harrison
+7882	85.0	Concert Tickets	2022-12-27T21:35:22	0	glenn.burton@gmail.com	Glenn Burton	joseharr@gmail.com	Jose Harrison
+7886	57.0	Wine Tasting	2023-04-18T00:22:23	1	glenn.burton@gmail.com	Glenn Burton	jefsmith@gmail.com	Jeffrey Smith
+7888	88.0	🎸 Music Lessons for the Month 🎵	2023-03-19T08:26:51	3	glenn.burton@gmail.com	Glenn Burton	jefsmith@gmail.com	Jeffrey Smith
+7889	99.0	Hiking Gear 🥾🌲	2023-04-25T19:09:22	0	glenn.burton@gmail.com	Glenn Burton	jefsmith@gmail.com	Jeffrey Smith
+7890	17.0	🎳 Bowling Alley Fun Night 🤗	2022-12-13T06:26:00	0	glenn.burton@gmail.com	Glenn Burton	jefsmith@gmail.com	Jeffrey Smith
+7892	246.0	Utilities	2023-03-18T08:21:30	1	glenn.burton@gmail.com	Glenn Burton	jefsmith@gmail.com	Jeffrey Smith
+7894	23.0	Vintage tee score	2022-12-19T01:56:04	5	glenn.burton@gmail.com	Glenn Burton	ja-solomon@gmail.com	James Solomon
+7895	36.0	💃 Salsa Dancing Lessons 🕺	2022-10-30T16:50:54	1	glenn.burton@gmail.com	Glenn Burton	ja-solomon@gmail.com	James Solomon
+7897	10.0	🥤 Smoothie Time 🍓🍌	2023-01-06T15:48:58	1	glenn.burton@gmail.com	Glenn Burton	ja-solomon@gmail.com	James Solomon
+7898	179.0	Home Appliances	2023-02-24T08:35:15	0	glenn.burton@gmail.com	Glenn Burton	ja-solomon@gmail.com	James Solomon
+7899	38.0	🎧 New Headphones 🎵🤘	2022-11-10T15:12:04	0	glenn.burton@gmail.com	Glenn Burton	ja-solomon@gmail.com	James Solomon
+7901	61.0	Wine	2023-03-11T02:49:57	5	glenn.burton@gmail.com	Glenn Burton	ja-solomon@gmail.com	James Solomon
+7902	52.0	Dinner 🍴 Date Night	2022-11-15T09:51:45	6	glenn.burton@gmail.com	Glenn Burton	de_ritt@gmail.com	Debra Ritter
+7903	31.0	🎟️ Amusement Park Day Pass 🎢	2022-12-01T00:34:01	0	glenn.burton@gmail.com	Glenn Burton	de_ritt@gmail.com	Debra Ritter
+7904	73.0	Financial Consulting	2023-01-07T17:54:06	4	glenn.burton@gmail.com	Glenn Burton	de_ritt@gmail.com	Debra Ritter
+7907	32.0	Yoga class zen	2023-04-09T01:11:29	4	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+7908	11.0	🍩 Donuts for the Team Meeting 📈	2023-03-14T03:45:18	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+7910	16.0	💈 Haircut 💇💇	2023-03-22T08:49:19	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+7912	43.0	Theme Park	2023-02-19T12:56:30	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+7913	100.0	🎟️ Concert Tickets	2022-12-25T01:01:12	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+7916	51.0	Ski 🎿 Trip Expenses	2023-03-05T18:48:28	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+7923	37.0	Fishing License	2023-03-05T10:18:07	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+7924	26.0	🚲 Bike Repair 🛠️🚲	2023-03-21T17:50:06	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+7925	25.0	Crafternoon 🧶	2023-02-18T10:47:22	0	ja-solomon@gmail.com	James Solomon	glenn.burton@gmail.com	Glenn Burton
+7926	6.0	🥤 Smoothie Time 🍓🍌	2023-03-30T22:08:28	0	joseharr@gmail.com	Jose Harrison	glenn.burton@gmail.com	Glenn Burton
+7927	33.0	Dinner 🍴 Date Night	2023-01-12T05:39:40	0	joseharr@gmail.com	Jose Harrison	glenn.burton@gmail.com	Glenn Burton
+7928	15.0	🐾Pet Stuff	2023-04-03T01:42:06	0	joseharr@gmail.com	Jose Harrison	glenn.burton@gmail.com	Glenn Burton
+7934	46.0	👗 Vintage Shop 👚👗	2023-01-13T22:43:47	0	william_mart@gmail.com	William Martinez	glenn.burton@gmail.com	Glenn Burton
+7935	20.0	Movie 🎟️ Night	2023-05-13T06:56:50	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+7936	17.0	🎳 Bowling Alley Fun Night 🤗	2023-04-29T07:05:46	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+7937	5.0	🥤 Smoothie Time 🍓🍌	2023-03-14T21:50:06	0	ad.blackburn@gmail.com	Adam Blackburn	glenn.burton@gmail.com	Glenn Burton
+7993	43.0	🎉Bday Bash!	2022-09-13T18:25:57	0	jasonsimp@gmail.com	Jason Simpson	roburton@gmail.com	Robin Burton
+7994	72.0	Makeup 💄	2022-09-13T07:35:53	0	jasonsimp@gmail.com	Jason Simpson	roburton@gmail.com	Robin Burton
+8009	8.0	🧼 Laundry Day 🧺💦	2022-09-23T00:55:39	0	kevin.blac@gmail.com	Kevin Blackburn	roburton@gmail.com	Robin Burton
+8151	23.0	Camping Fees	2023-02-22T05:06:43	0	alexwhite@gmail.com	Alex White	ta.weav@gmail.com	Tammy Weaver
+8152	60.0	👓 New Glasses 🤓👀	2023-04-16T18:08:17	3	alexwhite@gmail.com	Alex White	ta.weav@gmail.com	Tammy Weaver
+8154	22.0	Pizza 🍕 Night	2023-02-14T08:38:27	3	alexwhite@gmail.com	Alex White	ta.weav@gmail.com	Tammy Weaver
+8155	34.0	🍔 Weekend BBQ Supplies	2023-02-13T14:49:22	3	alexwhite@gmail.com	Alex White	ta.weav@gmail.com	Tammy Weaver
+8156	78.0	💄Makeup Haul	2023-05-12T00:13:23	5	alexwhite@gmail.com	Alex White	ta.weav@gmail.com	Tammy Weaver
+8174	20.0	🚀Crypto Buy	2023-05-09T10:01:46	1	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8175	12.0	🚗 Weekend Road Trip Snacks 🍫	2023-04-07T00:21:15	3	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8176	20.0	🌮 Spicy Mexican Food Night 🌶️	2023-03-05T08:43:35	0	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8177	11.0	📚 Study Group Snack Fund 📖	2023-03-29T16:24:52	3	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8178	125.0	Boat Rental	2023-02-04T10:17:47	0	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8180	193.0	Car Maintenance	2023-02-04T00:48:26	4	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8182	13.0	🚴 Biking Trail Snack Fund 🌳	2023-02-25T19:44:45	0	alexwhite@gmail.com	Alex White	jer.calhoun@gmail.com	Jeremy Calhoun
+8183	16.0	Beach day fund	2023-04-12T17:07:44	0	ma_smith@gmail.com	Marcus Smith	alexwhite@gmail.com	Alex White
+8187	162.0	Spa Day	2023-04-27T23:10:38	0	connorbrow@gmail.com	Connor Brown	alexwhite@gmail.com	Alex White
+8188	42.0	🍻 Craft Beer Tasting Extravaganza 🍺	2023-03-15T11:53:03	0	connorbrow@gmail.com	Connor Brown	alexwhite@gmail.com	Alex White
+8189	49.0	🍣 Sushi and Sake Night Out 🍶	2023-04-15T18:32:19	0	connorbrow@gmail.com	Connor Brown	alexwhite@gmail.com	Alex White
+8197	23.0	Children's Toys	2023-01-24T06:44:23	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+8198	10.0	👾Arcade Night	2023-02-05T09:03:05	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+8199	6.0	📝 Study Supplies 🖊️📓	2023-03-08T16:41:11	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+8201	49.0	Aquarium Tickets	2023-05-15T13:23:42	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+8202	54.0	Treat Yo' Self 💆	2023-03-15T06:21:37	0	jer.calhoun@gmail.com	Jeremy Calhoun	alexwhite@gmail.com	Alex White
+8203	18.0	💻Online Game Pass	2023-02-11T06:46:30	0	ta.weav@gmail.com	Tammy Weaver	alexwhite@gmail.com	Alex White
+8204	24.0	Custom phone case	2023-05-12T22:23:51	0	ta.weav@gmail.com	Tammy Weaver	alexwhite@gmail.com	Alex White
+8216	26.0	Whimsical Bites	2023-05-17T12:00:57	0	angriddle@gmail.com	Angela Riddle	spencer.powell@gmail.com	Spencer Powell
+8217	39.0	Whimsical Bites	2023-05-17T12:00:57	0	ad.blackburn@gmail.com	Adam Blackburn	spencer.powell@gmail.com	Spencer Powell
+8218	47.0	Dinner at Whimsical Bites	2023-05-17T12:00:57	0	jefsmith@gmail.com	Jeffrey Smith	spencer.powell@gmail.com	Spencer Powell
+8219	40.0	Dinner at Whimsical Bites	2023-05-17T12:00:57	0	ashlee_martinez@gmail.com	Ashlee Martinez	spencer.powell@gmail.com	Spencer Powell
+8220	40.0	Food at Whimsical Bites	2023-05-17T12:00:57	0	connorbrow@gmail.com	Connor Brown	spencer.powell@gmail.com	Spencer Powell
+8221	49.0	Whimsical Bites	2023-05-17T12:00:57	0	glenn.burton@gmail.com	Glenn Burton	spencer.powell@gmail.com	Spencer Powell
+8223	24.0	Lunch at Moonlit Munchies	2023-05-17T18:08:32	0	mir-powe@gmail.com	Miranda Weber	jasonsimp@gmail.com	Jason Simpson
+8224	28.0	Lunch at Moonlit Munchies	2023-05-17T18:08:32	0	anita.burch@gmail.com	Anita Burch	jasonsimp@gmail.com	Jason Simpson
+8225	44.0	Food at Moonlit Munchies	2023-05-17T18:08:32	0	ta.weav@gmail.com	Tammy Weaver	jasonsimp@gmail.com	Jason Simpson
+8226	28.0	Lunch at Moonlit Munchies	2023-05-17T18:08:32	0	joseph.webe@gmail.com	Joseph Weber	jasonsimp@gmail.com	Jason Simpson
+
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

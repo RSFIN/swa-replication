@@ -1,0 +1,30 @@
+{
+  "experiment_id": "SWA_RUNTIME_EVAL_V1",
+  "repeats": 2,
+  "run_order_seed": 20261002,
+  "conditions": [
+    "B0_RUNTIME_HEAVY",
+    "B1_TASK_LOCALIZED",
+    "B2_DECISION_SUFFICIENT"
+  ],
+  "system_instruction": "You are participating in a controlled software-engineering benchmark. Use only the supplied task context. Do not use external tools, web search, memory, or unstated facts. Follow the task output contract exactly. The EXPERIMENT_CALL_ID is semantically irrelevant and must be ignored.",
+  "cache_busting": true,
+  "tools": false,
+  "multimodal": false,
+  "stream": false,
+  "timeout_seconds": 1800,
+  "retry": {
+    "max_attempts": 5,
+    "base_delay_seconds": 2,
+    "retry_statuses": [
+      408,
+      409,
+      429,
+      500,
+      502,
+      503,
+      504
+    ]
+  },
+  "formal_requires_all_benchmarks_ready": true
+}

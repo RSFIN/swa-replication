@@ -1,0 +1,92 @@
+{
+  "crmarena_0391": {
+    "benchmark_idx": 391,
+    "gold": "005Ws000001xZvdIAE",
+    "target_issue_id": "a1MWs0000012u7BMAQ",
+    "target_issue_name": "Incorrect Item Received",
+    "target_product_id": "01tWs000002wWw1IAE",
+    "target_product_name": "Reflective Running Vest",
+    "route_depth": 1
+  },
+  "crmarena_0393": {
+    "benchmark_idx": 393,
+    "gold": "005Ws000001xZvdIAE",
+    "target_issue_id": "a1MWs0000012u7BMAQ",
+    "target_issue_name": "Incorrect Item Received",
+    "target_product_id": "01tWs000002wR9zIAE",
+    "target_product_name": "AeroFlex Cycling Jacket",
+    "route_depth": 1
+  },
+  "crmarena_0394": {
+    "benchmark_idx": 394,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012u0jMAA",
+    "target_issue_name": "Size Mismatch",
+    "target_product_id": "01tWs000002wVNFIA2",
+    "target_product_name": "Velocity Soccer Ball",
+    "route_depth": 1
+  },
+  "crmarena_0395": {
+    "benchmark_idx": 395,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012u0jMAA",
+    "target_issue_name": "Size Mismatch",
+    "target_product_id": "01tWs000002wXQfIAM",
+    "target_product_name": "HydroFlex Swim Belt",
+    "route_depth": 1
+  },
+  "crmarena_0399": {
+    "benchmark_idx": 399,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012u0jMAA",
+    "target_issue_name": "Size Mismatch",
+    "target_product_id": "01tWs000002wWPlIAM",
+    "target_product_name": "ProGym Dumbbell Set",
+    "route_depth": 1
+  },
+  "crmarena_0459": {
+    "benchmark_idx": 459,
+    "gold": "005Ws000001xaoTIAQ",
+    "target_issue_id": "a1MWs0000012u2LMAQ",
+    "target_issue_name": "Shipping Delay",
+    "target_product_id": "01tWs000002wRwLIAU",
+    "target_product_name": "Swim Training Fins",
+    "route_depth": 2
+  },
+  "crmarena_0462": {
+    "benchmark_idx": 462,
+    "gold": "005Ws000001xZ2oIAE",
+    "target_issue_id": "a1MWs0000012u3xMAA",
+    "target_issue_name": "Order Cancellation",
+    "target_product_id": "01tWs000002wRTJIA2",
+    "target_product_name": "Active Fitness Tracker",
+    "route_depth": 2
+  },
+  "crmarena_0497": {
+    "benchmark_idx": 497,
+    "gold": "005Ws000001xZXRIA2",
+    "target_issue_id": "a1MWs0000012tz7MAA",
+    "target_issue_name": "Product Defect",
+    "target_product_id": "01tWs000002wRrVIAU",
+    "target_product_name": "Pro Running Cap",
+    "route_depth": 2
+  },
+  "crmarena_0505": {
+    "benchmark_idx": 505,
+    "gold": "005Ws000001xaBlIAI",
+    "target_issue_id": "a1MWs0000012u5ZMAQ",
+    "target_issue_name": "Warranty Issue",
+    "target_product_id": "01tWs000002wQp0IAE",
+    "target_product_name": "Trailblazer Jacket",
+    "route_depth": 2
+  },
+  "crmarena_0509": {
+    "benchmark_idx": 509,
+    "gold": "005Ws000001xYl3IAE",
+    "target_issue_id": "a1MWs0000012txVMAQ",
+    "target_issue_name": "Return Policy Issue",
+    "target_product_id": "01tWs000002wROTIA2",
+    "target_product_name": "Pro Speed Rope",
+    "route_depth": 2
+  }
+}

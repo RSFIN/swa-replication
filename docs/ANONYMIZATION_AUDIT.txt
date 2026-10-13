@@ -1,0 +1,9 @@
+ANONYMIZATION SCAN
+==================
+
+OK: no personal home paths, nonempty credential-like assignments, private keys, or institutional-email strings detected in repository metadata/code/config/results.
+
+Note: benchmark-derived task payloads are excluded because they may contain synthetic benchmark names/emails.
+
+Scan scope: README.md, Makefile, configs/, docs/, scripts/, results/.
+Excluded by design: .venv/ and .idea/ (local environments, see .gitignore), benchmark payloads, binary figures, reproduced/ outputs.

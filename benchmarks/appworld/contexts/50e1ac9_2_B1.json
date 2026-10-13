@@ -1,0 +1,191 @@
+{
+  "candidate_occurrences_with_source_provenance": [
+    {
+      "song_id": 54,
+      "source_id": 11,
+      "source_type": "album"
+    },
+    {
+      "song_id": 55,
+      "source_id": 11,
+      "source_type": "album"
+    },
+    {
+      "song_id": 56,
+      "source_id": 11,
+      "source_type": "album"
+    },
+    {
+      "song_id": 57,
+      "source_id": 11,
+      "source_type": "album"
+    },
+    {
+      "song_id": 57,
+      "source_id": 502,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 107,
+      "source_id": 502,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 100,
+      "source_id": 503,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 112,
+      "source_id": 504,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 293,
+      "source_id": 504,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 96,
+      "source_id": 506,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 100,
+      "source_id": 506,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 116,
+      "source_id": 506,
+      "source_type": "playlist"
+    },
+    {
+      "song_id": 1,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 64,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 111,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 253,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 293,
+      "source_id": "direct",
+      "source_type": "song_library"
+    },
+    {
+      "song_id": 294,
+      "source_id": "direct",
+      "source_type": "song_library"
+    }
+  ],
+  "candidate_song_details": [
+    {
+      "genre": "EDM",
+      "play_count": 638,
+      "song_id": 1,
+      "title": "Painting Shadows on the Wall"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 845,
+      "song_id": 54,
+      "title": "Heartstrings Symphony"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 437,
+      "song_id": 55,
+      "title": "Tangled Lies"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 334,
+      "song_id": 56,
+      "title": "Distant Love"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 421,
+      "song_id": 57,
+      "title": "Silver Lining"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 468,
+      "song_id": 64,
+      "title": "Caught in a Web of Lies"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 382,
+      "song_id": 96,
+      "title": "In the Chambers of My Mind"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 549,
+      "song_id": 100,
+      "title": "Fragile Bonds"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 466,
+      "song_id": 107,
+      "title": "Quiet Despair"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 658,
+      "song_id": 111,
+      "title": "Lonesome Road"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 356,
+      "song_id": 112,
+      "title": "Silent Tears"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 565,
+      "song_id": 116,
+      "title": "Paper Planes"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 548,
+      "song_id": 253,
+      "title": "In the Wake of Unspoken Promises"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 786,
+      "song_id": 293,
+      "title": "Dancing in a Field of Thorns"
+    },
+    {
+      "genre": "EDM",
+      "play_count": 910,
+      "song_id": 294,
+      "title": "Eternal Reverie"
+    }
+  ],
+  "target_genre": "edm",
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "erikabail@gmail.com"
+  }
+}

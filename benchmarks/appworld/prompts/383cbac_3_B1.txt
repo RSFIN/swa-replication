@@ -1,0 +1,157 @@
+TASK_ID: 383cbac_3
+SCB_CONDITION: B1
+
+TASK INSTRUCTION:
+I went on dinner with my coworkers yesterday at Whimsical Bites. My manager paid for food and everyone venmoed them. Everyones' transactions except mine should be on my social feed. My share was $34. How much did my manager pay for the others, including me, yesterday?
+
+FROZEN CONTEXT:
+{
+  "resolved_coworkers": [
+    {
+      "contact_id": 262,
+      "email": "angriddle@gmail.com",
+      "first_name": "Angela",
+      "last_name": "Riddle"
+    },
+    {
+      "contact_id": 264,
+      "email": "ad.blackburn@gmail.com",
+      "first_name": "Adam",
+      "last_name": "Blackburn"
+    },
+    {
+      "contact_id": 265,
+      "email": "jefsmith@gmail.com",
+      "first_name": "Jeffrey",
+      "last_name": "Smith"
+    },
+    {
+      "contact_id": 266,
+      "email": "ashlee_martinez@gmail.com",
+      "first_name": "Ashlee",
+      "last_name": "Martinez"
+    },
+    {
+      "contact_id": 267,
+      "email": "connorbrow@gmail.com",
+      "first_name": "Connor",
+      "last_name": "Brown"
+    },
+    {
+      "contact_id": 268,
+      "email": "glenn.burton@gmail.com",
+      "first_name": "Glenn",
+      "last_name": "Burton"
+    }
+  ],
+  "resolved_manager": {
+    "contact_id": 263,
+    "email": "spencer.powell@gmail.com",
+    "first_name": "Spencer",
+    "last_name": "Powell"
+  },
+  "task_metadata": {
+    "current_datetime": "2023-05-18T12:00:00",
+    "user_email": "jo-harr@gmail.com"
+  },
+  "task_relevant_primitive_feed_records": [
+    {
+      "amount": 26.0,
+      "created_at": "2023-05-17T12:00:57",
+      "description": "Whimsical Bites",
+      "like_count": 0,
+      "receiver": {
+        "email": "spencer.powell@gmail.com",
+        "name": "Spencer Powell"
+      },
+      "sender": {
+        "email": "angriddle@gmail.com",
+        "name": "Angela Riddle"
+      },
+      "transaction_id": 8216
+    },
+    {
+      "amount": 39.0,
+      "created_at": "2023-05-17T12:00:57",
+      "description": "Whimsical Bites",
+      "like_count": 0,
+      "receiver": {
+        "email": "spencer.powell@gmail.com",
+        "name": "Spencer Powell"
+      },
+      "sender": {
+        "email": "ad.blackburn@gmail.com",
+        "name": "Adam Blackburn"
+      },
+      "transaction_id": 8217
+    },
+    {
+      "amount": 47.0,
+      "created_at": "2023-05-17T12:00:57",
+      "description": "Dinner at Whimsical Bites",
+      "like_count": 0,
+      "receiver": {
+        "email": "spencer.powell@gmail.com",
+        "name": "Spencer Powell"
+      },
+      "sender": {
+        "email": "jefsmith@gmail.com",
+        "name": "Jeffrey Smith"
+      },
+      "transaction_id": 8218
+    },
+    {
+      "amount": 40.0,
+      "created_at": "2023-05-17T12:00:57",
+      "description": "Dinner at Whimsical Bites",
+      "like_count": 0,
+      "receiver": {
+        "email": "spencer.powell@gmail.com",
+        "name": "Spencer Powell"
+      },
+      "sender": {
+        "email": "ashlee_martinez@gmail.com",
+        "name": "Ashlee Martinez"
+      },
+      "transaction_id": 8219
+    },
+    {
+      "amount": 40.0,
+      "created_at": "2023-05-17T12:00:57",
+      "description": "Food at Whimsical Bites",
+      "like_count": 0,
+      "receiver": {
+        "email": "spencer.powell@gmail.com",
+        "name": "Spencer Powell"
+      },
+      "sender": {
+        "email": "connorbrow@gmail.com",
+        "name": "Connor Brown"
+      },
+      "transaction_id": 8220
+    },
+    {
+      "amount": 49.0,
+      "created_at": "2023-05-17T12:00:57",
+      "description": "Whimsical Bites",
+      "like_count": 0,
+      "receiver": {
+        "email": "spencer.powell@gmail.com",
+        "name": "Spencer Powell"
+      },
+      "sender": {
+        "email": "glenn.burton@gmail.com",
+        "name": "Glenn Burton"
+      },
+      "transaction_id": 8221
+    }
+  ],
+  "task_restaurant": "Whimsical Bites",
+  "task_user_share": 34.0
+}
+
+OUTPUT CONTRACT:
+Return exactly three lines:
+EVIDENCE_IDS: <JSON array of stable evidence IDs you used>
+COMPUTATION: <brief externally verifiable aggregation/ranking statement>
+FINAL_ANSWER: <native AppWorld answer format>

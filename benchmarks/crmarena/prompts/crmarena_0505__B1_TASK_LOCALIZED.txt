@@ -1,0 +1,168 @@
+Use the case routing policy to determine the most suitable agent for the given case. Follow the output contract at the end exactly.
+## Given Case
+- Case Subject: Difficulty in Filing Warranty for Defective Jacket
+- Case Description: I recently purchased the Trailblazer Jacket and have encountered an issue with its waterproofing functionality. When I tried to file a warranty claim for this defective product, I ran into several problems on your website. The system does not seem to recognize the jacket's serial number, and I am unable to proceed with my claim. I need assistance to resolve this warranty issue for the Trailblazer Jacket.
+
+CASE ROUTING POLICY
+1. Issue Expertise: choose the agent who has closed the most cases associated with the issue most similar to the given case.
+2. Product Expertise: if tied, choose among those tied agents the one who has solved the most cases associated with the product most relevant to the given case.
+3. Workload: if still tied, choose among those tied agents the one with the fewest cases whose Status is not Closed.
+
+TARGET_ISSUE=Warranty Issue
+TARGET_PRODUCT=Trailblazer Jacket
+Task-relevant primitive records after entity/relation resolution and relevance filtering. No evidence groups or counts are precomputed.
+TASK_LOCAL_CASES
+case_id|agent_id|issue|product|status
+500Ws000007qVnwIAE|005Ws000001xZnZIAU|Warranty Issue|Precision Kick Soccer Ball|Closed
+500Ws000007qWseIAE|005Ws000001xaTVIAY|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007qifJIAQ|005Ws000001xZVpIAM|Product Defect|Trailblazer Jacket|Closed
+500Ws000007qifKIAQ|005Ws000001xZ9FIAU|Warranty Issue|Precision Kick Soccer Ball|Closed
+500Ws000007qk1EIAQ|005Ws000001xYzZIAU|Warranty Issue|Studio Yoga Block|Closed
+500Ws000007ql3kIAA|005Ws000001xZnZIAU|Warranty Issue|Resistance Training Bands|Closed
+500Ws000007qlGZIAY|005Ws000001xagPIAQ|Warranty Issue|Flex Yoga Mat|Closed
+500Ws000007qmMMIAY|005Ws000001xYujIAE|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qnQSIAY|005Ws000001xaq5IAA|Shipping Delay|Marathon Elite Running Shoes|Waiting on Customer
+500Ws000007qnYcIAI|005Ws000001xVFKIA2|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007qncRIAQ|005Ws000001xamrIAA|Shipping Delay|Tracker Smartwatch|Waiting on Customer
+500Ws000007qncTIAQ|005Ws000001xaTVIAY|Warranty Issue|Pro Swim Goggles|Closed
+500Ws000007qoPxIAI|005Ws000001xYptIAE|Return Policy Issue|Versatile Fitness Mat|Waiting on Customer
+500Ws000007qoceIAA|005Ws000001xZafIAE|Shipping Delay|Air Zoom Pegasus|Waiting on Customer
+500Ws000007qqD0IAI|005Ws000001xZFhIAM|Warranty Issue|Revolution Fitness Tracker|Closed
+500Ws000007qqKpIAI|005Ws000001xZ61IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007qqKtIAI|005Ws000001xamrIAA|Order Cancellation|Trailblazer Jacket|Closed
+500Ws000007qqjPIAQ|005Ws000001xZlxIAE|Order Cancellation|Women's Flex Running Tights|Waiting on Customer
+500Ws000007qqnQIAQ|005Ws000001xYhpIAE|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007qsd4IAA|005Ws000001xZvdIAE|Shipping Delay|Ultra Light Swim Cap|Waiting on Customer
+500Ws000007qtCZIAY|005Ws000001xalFIAQ|Order Cancellation|Trailblazer Jacket|Closed
+500Ws000007qtCdIAI|005Ws000001xZh7IAE|Product Defect|Trailblazer Jacket|Closed
+500Ws000007qtHTIAY|005Ws000001xaOfIAI|Return Policy Issue|Ultimate Basketball Tank|Waiting on Customer
+500Ws000007quDPIAY|005Ws000001xZ1BIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007quIJIAY|005Ws000001xXIkIAM|Warranty Issue|High-Performance Speed Rope|Closed
+500Ws000007qxpkIAA|005Ws000001xYgDIAU|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007r8JjIAI|005Ws000001xaLRIAY|Warranty Issue|Smart Soccer Watch|Closed
+500Ws000007r8ReIAI|005Ws000001xZkLIAU|Warranty Issue|Revolution Fitness Tracker|Closed
+500Ws000007r8RgIAI|005Ws000001xWT8IAM|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007r9M7IAI|005Ws000001xZQzIAM|Warranty Issue|Swim Training Fins|Closed
+500Ws000007r9XPIAY|005Ws000001xaZxIAI|Size Mismatch|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007r9Z0IAI|005Ws000001xXQpIAM|Size Mismatch|Air Zoom Pegasus|Waiting on Customer
+500Ws000007r9e0IAA|005Ws000001xZVpIAM|Warranty Issue|Tracker Smartwatch|Closed
+500Ws000007r9ysIAA|005Ws000001xaBlIAI|Warranty Issue|Pro Swim Cap|Closed
+500Ws000007rA9DIAU|005Ws000001xY6lIAE|Warranty Issue|Active Fitness Tracker|Waiting on Customer
+500Ws000007rABjIAM|005Ws000001xaoTIAQ|Warranty Issue|Swim Training Fins|Closed
+500Ws000007rBpOIAU|005Ws000001xZ7dIAE|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rBxUIAU|005Ws000001xYwLIAU|Warranty Issue|Precision Golf Putter|Waiting on Customer
+500Ws000007rCHSIA2|005Ws000001xZM9IAM|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rCS3IAM|005Ws000001xTrqIAE|Loyalty Program Inquiry|Women's Running Tank Top|Waiting on Customer
+500Ws000007rCiEIAU|005Ws000001xaBlIAI|Warranty Issue|Versatile Fitness Mat|Closed
+500Ws000007rD7yIAE|005Ws000001xaq5IAA|Warranty Issue|Smart Soccer Ball|Closed
+500Ws000007rDCsIAM|005Ws000001xadBIAQ|Product Availability|Retro Style Sneakers|Waiting on Customer
+500Ws000007rDJHIA2|005Ws000001xaGbIAI|Warranty Issue|Tempo Running Watch|Closed
+500Ws000007rDrCIAU|005Ws000001xZu1IAE|Warranty Issue|Home Gym Dumbbell Set|Closed
+500Ws000007rDzFIAU|005Ws000001xaWjIAI|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rDzIIAU|005Ws000001xaTVIAY|Warranty Issue|All-Weather Golf Gloves|Waiting on Customer
+500Ws000007rEC7IAM|005Ws000001xadBIAQ|Order Cancellation|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rEC8IAM|005Ws000001xW8AIAU|Billing/Payment Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rEH1IAM|005Ws000001xZIvIAM|Warranty Issue|PowerBrush Football Gloves|Closed
+500Ws000007rENRIA2|005Ws000001xabZIAQ|Product Availability|Velocity Basketball Shoes|Waiting on Customer
+500Ws000007rEaIIAU|005Ws000001xYptIAE|Shipping Delay|Hiking Waterproof Boots|Waiting on Customer
+500Ws000007rEdcIAE|005Ws000001xZArIAM|Warranty Issue|Hydrate Fitness Watch|Closed
+500Ws000007rEqSIAU|005Ws000001xaGbIAI|Warranty Issue|High-Tech Golf Simulator|Closed
+500Ws000007rEtiIAE|005Ws000001xZVpIAM|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rEtjIAE|005Ws000001xaA9IAI|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rEyeIAE|005Ws000001xYptIAE|Loyalty Program Inquiry|Active Fitness Tracker|Waiting on Customer
+500Ws000007rFEeIAM|005Ws000001xYoHIAU|Warranty Issue|Enduro Training Ladder|Closed
+500Ws000007rFLBIA2|005Ws000001xYgDIAU|Warranty Issue|Pro Speed Rope|Waiting on Customer
+500Ws000007rFT8IAM|005Ws000001xZsPIAU|Warranty Issue|Aero Golf Driver|Waiting on Customer
+500Ws000007rFTAIA2|005Ws000001xaBlIAI|Incorrect Item Received|Trailblazer Jacket|Closed
+500Ws000007rFUqIAM|005Ws000001xTrqIAE|Warranty Issue|Revolution Fitness Tracker|Closed
+500Ws000007rFctIAE|005Ws000001xaQHIAY|Warranty Issue|High-Performance Speed Rope|Closed
+500Ws000007rFcxIAE|005Ws000001xXQpIAM|Size Mismatch|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rFeRIAU|005Ws000001xaq5IAA|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rFeSIAU|005Ws000001xYzZIAU|Warranty Issue|Trailblazer Jacket|Closed
+500Ws000007rFg4IAE|005Ws000001xZ4PIAU|Warranty Issue|Versatile Fitness Mat|Closed
+500Ws000007rFueIAE|005Ws000001xaRtIAI|Incorrect Item Received|Pro Speed Rope|Waiting on Customer
+500Ws000007rG5uIAE|005Ws000001xa0TIAQ|Product Availability|Pro Mountain Biking Gloves|Waiting on Customer
+500Ws000007rG9BIAU|005Ws000001xUwrIAE|Warranty Issue|Smart Fitness Watch|Closed
+500Ws000007rG9CIAU|005Ws000001xaBlIAI|Warranty Issue|Revolution Fitness Tracker|Closed
+500Ws000007rGHCIA2|005Ws000001xZh7IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rGPEIA2|005Ws000001xYujIAE|Warranty Issue|Flex Yoga Mat|Closed
+500Ws000007rGQqIAM|005Ws000001xZijIAE|Size Mismatch|Retro Style Sneakers|Working
+500Ws000007rGU9IAM|005Ws000001xSR9IAM|Size Mismatch|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rGfKIAU|005Ws000001xYl3IAE|Warranty Issue|Tracker Smartwatch|Closed
+500Ws000007rGgyIAE|005Ws000001xYoHIAU|Incorrect Item Received|Aero Golf Driver|Waiting on Customer
+500Ws000007rGx5IAE|005Ws000001xaq5IAA|Warranty Issue|Swim Training Fins|Closed
+500Ws000007rGyhIAE|005Ws000001xaBlIAI|Order Cancellation|Trailblazer Jacket|Closed
+500Ws000007rGyiIAE|005Ws000001xZcHIAU|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rH3ZIAU|005Ws000001xVNQIA2|Warranty Issue|Smart Fitness Watch|Closed
+500Ws000007rH9yIAE|005Ws000001xZcHIAU|Warranty Issue|Renegade Fitness Tracker|Waiting on Customer
+500Ws000007rHA0IAM|005Ws000001xYl3IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rHA1IAM|005Ws000001xaYLIAY|Warranty Issue|Smart Fitness Watch|Waiting on Customer
+500Ws000007rHA2IAM|005Ws000001xaWjIAI|Warranty Issue|Pro Swim Goggles|Closed
+500Ws000007rHBiIAM|005Ws000001xZkLIAU|Return Policy Issue|Ultimate Yoga Strap|Waiting on Customer
+500Ws000007rHLHIA2|005Ws000001xTbkIAE|Warranty Issue|Functional Training Kettlebell|Closed
+500Ws000007rHWfIAM|005Ws000001xaN3IAI|Warranty Issue|Cycling Performance Gloves|Closed
+500Ws000007rHjTIAU|005Ws000001xa0TIAQ|Warranty Issue|Elite Training Dumbbells|Closed
+500Ws000007rHmjIAE|005Ws000001xZ7dIAE|Warranty Issue|Titanium Road Helmet|Waiting on Customer
+500Ws000007rHoNIAU|005Ws000001xarhIAA|Return Policy Issue|FitPulse Fitness Tracker|Waiting on Customer
+500Ws000007rHrXIAU|005Ws000001xa25IAA|Incorrect Item Received|Striker Soccer Jersey|Waiting on Customer
+500Ws000007rHrYIAU|005Ws000001xaLRIAY|Warranty Issue|Tempo Running Watch|Closed
+500Ws000007rHrcIAE|005Ws000001xZIvIAM|Warranty Issue|Titanium Road Helmet|Closed
+500Ws000007rHxyIAE|005Ws000001xZ1BIAU|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rI68IAE|005Ws000001xZafIAE|Product Defect|Retro Style Sneakers|Waiting on Customer
+500Ws000007rIAtIAM|005Ws000001xZUDIA2|Warranty Issue|All-Weather Golf Gloves|Closed
+500Ws000007rIKZIA2|005Ws000001xZcHIAU|Warranty Issue|Precision Basketball Hoop|Closed
+500Ws000007rIKdIAM|005Ws000001xaQIIAY|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rIR4IAM|005Ws000001xZ2oIAE|Size Mismatch|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rIXWIA2|005Ws000001xZu1IAE|Incorrect Item Received|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rIm0IAE|005Ws000001xa0TIAQ|Incorrect Item Received|Mercurial Superfly|Waiting on Customer
+500Ws000007rIsRIAU|005Ws000001xaTVIAY|Warranty Issue|FitPulse Fitness Tracker|Closed
+500Ws000007rIsSIAU|005Ws000001xZVpIAM|Shipping Delay|Versatile Fitness Mat|Waiting on Customer
+500Ws000007rIu2IAE|005Ws000001xW8AIAU|Return Policy Issue|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rIu3IAE|005Ws000001xZu1IAE|Incorrect Item Received|Trailblazer Jacket|Closed
+500Ws000007rIu6IAE|005Ws000001xZijIAE|Return Policy Issue|Women's Running Tank Top|Waiting on Customer
+500Ws000007rJi3IAE|005Ws000001xYl3IAE|Warranty Issue|Pro Speed Rope|Closed
+500Ws000007rJtLIAU|005Ws000001xZQzIAM|Warranty Issue|Elemental Soccer Shin Guards|Closed
+500Ws000007rJtOIAU|005Ws000001xYl3IAE|Return Policy Issue|Eco Trail Hiking Pants|Waiting on Customer
+500Ws000007rJtPIAU|005Ws000001xYzZIAU|Warranty Issue|Durable Training Gloves|Closed
+500Ws000007rK6GIAU|005Ws000001xa8XIAQ|Warranty Issue|HydroGuard Pro Swim Fins|Closed
+500Ws000007rK7vIAE|005Ws000001xaLRIAY|Warranty Issue|Velocity Basketball Shoes|Closed
+500Ws000007rKMNIA2|005Ws000001xaYLIAY|Shipping Delay|High-Performance Speed Rope|Waiting on Customer
+500Ws000007rKW6IAM|005Ws000001xXIkIAM|Order Cancellation|Revolution Fitness Tracker|Waiting on Customer
+500Ws000007rL2LIAU|005Ws000001xZSbIAM|Warranty Issue|Titanium Road Helmet|Closed
+500Ws000007rQ2tIAE|005Ws000001xZfVIAU|Shipping Delay|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rQmjIAE|005Ws000001xYujIAE|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rQoLIAU|005Ws000001xZkLIAU|Warranty Issue|Smart Soccer Watch|Closed
+500Ws000007rQpzIAE|005Ws000001xaEzIAI|Warranty Issue|Swim Training Fins|Closed
+500Ws000007rQwPIAU|005Ws000001xZFhIAM|Incorrect Item Received|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rR4UIAU|005Ws000001xYwLIAU|Warranty Issue|Cross Training Jump Rope|Waiting on Customer
+500Ws000007rR65IAE|005Ws000001xaZxIAI|Warranty Issue|Pro Swim Cap|Closed
+500Ws000007rR9LIAU|005Ws000001xXIkIAM|Warranty Issue|Trailblazer Jacket|Closed
+500Ws000007rRFmIAM|005Ws000001xZ4PIAU|Order Cancellation|Performance Soccer Socks|Waiting on Customer
+500Ws000007rRJ0IAM|005Ws000001xUwrIAE|Warranty Issue|Pro Running Cap|Closed
+500Ws000007rRJ1IAM|005Ws000001xZCTIA2|Warranty Issue|Trailblazer Jacket|Closed
+500Ws000007rRJ3IAM|005Ws000001xZcHIAU|Warranty Issue|Cross Training Jump Rope|Closed
+500Ws000007rRR7IAM|005Ws000001xZvdIAE|Incorrect Item Received|Trailblazer Jacket|Closed
+500Ws000007rRSiIAM|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Comfort Bra|Waiting on Customer
+500Ws000007rRdxIAE|005Ws000001xZ7dIAE|Product Availability|Endurance Road Runner|Waiting on Customer
+500Ws000007rRdzIAE|005Ws000001xa6vIAA|Product Availability|Urban Lifestyle Sneakers|Waiting on Customer
+500Ws000007rRfZIAU|005Ws000001xatJIAQ|Return Policy Issue|Seamless Yoga Leggings|Waiting on Customer
+500Ws000007rRfcIAE|005Ws000001xabZIAQ|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rRsTIAU|005Ws000001xVFKIA2|Return Policy Issue|Balance Yoga Mat|Waiting on Customer
+500Ws000007rRvhIAE|005Ws000001xaIDIAY|Order Cancellation|Women's Trail Running Shorts|Waiting on Customer
+500Ws000007rRvlIAE|005Ws000001xZKXIA2|Warranty Issue|All-Weather Golf Gloves|Closed
+500Ws000007rS0XIAU|005Ws000001xZIvIAM|Warranty Issue|Revolution Fitness Tracker|Closed
+500Ws000007rS8bIAE|005Ws000001xTrqIAE|Shipping Delay|Trailblazer Jacket|Closed
+500Ws000007rSDRIA2|005Ws000001xZUDIA2|Warranty Issue|Active Fitness Tracker|Closed
+500Ws000007rSIJIA2|005Ws000001xaLRIAY|Size Mismatch|Women's Yoga Shorts|Waiting on Customer
+500Ws000007rSJtIAM|005Ws000001xZfVIAU|Warranty Issue|Tempo Running Watch|Closed
+500Ws000007rSTZIA2|005Ws000001xZdtIAE|Warranty Issue|Pro Swim Goggles|Closed
+500Ws000007rSYPIA2|005Ws000001xZPNIA2|Warranty Issue|Smart Fitness Watch|Closed
+
+OUTPUT CONTRACT
+Return only the following externally auditable fields. Do not provide private chain-of-thought.
+TARGET_ISSUE: <issue name>
+TARGET_PRODUCT: <product name>
+ISSUE_STAGE: {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}
+PRODUCT_STAGE: <NOT_REACHED or {"top_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<case ids>]}}>
+WORKLOAD_STAGE: <NOT_REACHED or {"min_count": <integer>, "finalists": [<agent ids>], "evidence": {<finalist agent id>: [<non-Closed case ids>]}}>
+FINAL_ANSWER: <agent id>

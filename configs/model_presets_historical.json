@@ -1,0 +1,89 @@
+{
+  "deepseek_v4_pro_0813": {
+    "display_name": "DeepSeek-V4-Pro-0813",
+    "adapter": "openai_chat",
+    "base_url": "https://api.deepseek.com",
+    "endpoint": "/chat/completions",
+    "model": "deepseek-v4-pro",
+    "expected_version": "DeepSeek-V4-Pro-0813",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "max_output_tokens": 16384,
+    "request_overrides": {
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "notes": "Official DeepSeek API model id; current model version is V4-Pro-0813. Explicit high matches current default thinking effort."
+  },
+  "doubao_seed_2_1_lite_260915": {
+    "display_name": "Doubao-Seed-2.1-lite-260915",
+    "adapter": "openai_chat",
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+    "endpoint": "/chat/completions",
+    "model": "doubao-seed-2-1-lite-260915",
+    "expected_version": "doubao-seed-2-1-lite-260915",
+    "api_key_env": "ARK_API_KEY",
+    "max_output_tokens": 16384,
+    "max_token_field": "max_completion_tokens",
+    "request_overrides": {
+      "thinking": {
+        "type": "enabled"
+      },
+      "reasoning_effort": "high"
+    },
+    "notes": "User-available fixed snapshot. Runtime preflight must confirm exact availability; no silent fallback is allowed."
+  },
+  "qwen3_8_max_0902": {
+    "display_name": "Qwen3.8-Max-0902",
+    "adapter": "openai_chat",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "endpoint": "/chat/completions",
+    "model": "qwen3.8-max-0902",
+    "expected_version": "qwen3.8-max-0902",
+    "api_key_env": "DASHSCOPE_API_KEY",
+    "max_output_tokens": 16384,
+    "request_overrides": {
+      "enable_thinking": true,
+      "reasoning_effort": "xhigh"
+    },
+    "notes": "Pinned Qwen snapshot. xhigh is the documented default thinking effort for this model."
+  },
+  "gpt_5_6_sol_high": {
+    "display_name": "GPT-5.6 Sol (high)",
+    "adapter": "openai_responses",
+    "base_url": "https://api.openai.com/v1",
+    "endpoint": "/responses",
+    "model": "gpt-5.6-sol",
+    "expected_version": "gpt-5.6-sol",
+    "api_key_env": "OPENAI_API_KEY",
+    "max_output_tokens": 16384,
+    "request_overrides": {
+      "reasoning": {
+        "effort": "high",
+        "mode": "standard"
+      },
+      "store": false
+    },
+    "notes": "Direct OpenAI Responses API; high reasoning, standard mode, no tools."
+  },
+  "claude_opus_5_5_high": {
+    "display_name": "Claude Opus 5.5 (high)",
+    "adapter": "anthropic_messages",
+    "base_url": "https://api.anthropic.com/v1",
+    "endpoint": "/messages",
+    "model": "claude-opus-5-5",
+    "expected_version": "claude-opus-5-5",
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "max_output_tokens": 16384,
+    "request_overrides": {
+      "thinking": {
+        "type": "adaptive"
+      },
+      "output_config": {
+        "effort": "high"
+      }
+    },
+    "notes": "Adaptive thinking is always on for Opus 5.5; high effort is fixed explicitly for this study."
+  }
+}

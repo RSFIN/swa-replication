@@ -1,0 +1,91 @@
+run_id,model_label,benchmark,task_id,scenario_id,condition,finish_reason,latency_ms,input_tokens,output_tokens,reasoning_tokens,prompt_chars,predicted,gold,correct
+deepseek_v4_pro_0813__appworld__50e1ac9_2__B0,deepseek_v4_pro_0813,appworld,50e1ac9_2,50e1ac9,B0,stop,22129,6014,2682,2571,18373,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+deepseek_v4_pro_0813__appworld__4ec8de5_3__B2,deepseek_v4_pro_0813,appworld,4ec8de5_3,4ec8de5,B2,stop,6175,528,873,640,1081,66,66,1
+deepseek_v4_pro_0813__appworld__383cbac_2__B0,deepseek_v4_pro_0813,appworld,383cbac_2,383cbac,B0,stop,25661,88796,2313,2193,217062,396,396.0,1
+deepseek_v4_pro_0813__appworld__383cbac_2__B2,deepseek_v4_pro_0813,appworld,383cbac_2,383cbac,B2,stop,11942,839,1523,1350,2146,$396,396.0,1
+deepseek_v4_pro_0813__appworld__50e1ac9_2__B2,deepseek_v4_pro_0813,appworld,50e1ac9_2,50e1ac9,B2,stop,6838,813,940,855,2056,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+deepseek_v4_pro_0813__appworld__383cbac_3__B1,deepseek_v4_pro_0813,appworld,383cbac_3,383cbac,B1,stop,30865,1411,3753,3649,4087,275.0,275.0,1
+deepseek_v4_pro_0813__appworld__4ec8de5_3__B0,deepseek_v4_pro_0813,appworld,4ec8de5_3,4ec8de5,B0,stop,38196,2348,5252,5164,6615,66,66,1
+deepseek_v4_pro_0813__appworld__383cbac_3__B2,deepseek_v4_pro_0813,appworld,383cbac_3,383cbac,B2,stop,20529,660,2464,2343,1643,275.0,275.0,1
+deepseek_v4_pro_0813__appworld__23cf851_3__B2,deepseek_v4_pro_0813,appworld,23cf851_3,23cf851,B2,stop,11191,926,1558,1380,2411,26,26,1
+deepseek_v4_pro_0813__appworld__383cbac_2__B1,deepseek_v4_pro_0813,appworld,383cbac_2,383cbac,B1,stop,14524,2064,1651,1563,6129,396.0,396.0,1
+deepseek_v4_pro_0813__appworld__fac291d_2__B0,deepseek_v4_pro_0813,appworld,fac291d_2,fac291d,B0,stop,25519,1110,4302,4227,3254,93,93,1
+deepseek_v4_pro_0813__appworld__23cf851_2__B2,deepseek_v4_pro_0813,appworld,23cf851_2,23cf851,B2,stop,19362,1303,2511,2289,3574,79,79,1
+deepseek_v4_pro_0813__appworld__4ec8de5_2__B2,deepseek_v4_pro_0813,appworld,4ec8de5_2,4ec8de5,B2,stop,4081,421,484,355,799,30,30,1
+deepseek_v4_pro_0813__appworld__4ec8de5_2__B1,deepseek_v4_pro_0813,appworld,4ec8de5_2,4ec8de5,B1,stop,43954,1135,5594,5415,2895,30,30,1
+deepseek_v4_pro_0813__appworld__fac291d_2__B1,deepseek_v4_pro_0813,appworld,fac291d_2,fac291d,B1,stop,35912,3476,5835,5777,10415,93,93,1
+deepseek_v4_pro_0813__appworld__50e1ac9_2__B1,deepseek_v4_pro_0813,appworld,50e1ac9_2,50e1ac9,B1,stop,7465,1464,843,760,4087,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+deepseek_v4_pro_0813__appworld__fac291d_3__B0,deepseek_v4_pro_0813,appworld,fac291d_3,fac291d,B0,stop,31921,1218,5431,5336,3561,95,95,1
+deepseek_v4_pro_0813__appworld__23cf851_3__B1,deepseek_v4_pro_0813,appworld,23cf851_3,23cf851,B1,stop,15842,3691,2233,2015,11384,26,26,1
+deepseek_v4_pro_0813__appworld__fac291d_3__B1,deepseek_v4_pro_0813,appworld,fac291d_3,fac291d,B1,stop,46667,3610,7285,7214,10868,95,95,1
+deepseek_v4_pro_0813__appworld__23cf851_2__B1,deepseek_v4_pro_0813,appworld,23cf851_2,23cf851,B1,stop,17680,5731,2632,2392,17981,79,79,1
+deepseek_v4_pro_0813__appworld__383cbac_3__B0,deepseek_v4_pro_0813,appworld,383cbac_3,383cbac,B0,stop,15820,72997,1857,1756,180002,275,275.0,1
+deepseek_v4_pro_0813__appworld__fac291d_2__B2,deepseek_v4_pro_0813,appworld,fac291d_2,fac291d,B2,stop,7138,602,1225,898,1342,93,93,1
+deepseek_v4_pro_0813__appworld__23cf851_3__B0,deepseek_v4_pro_0813,appworld,23cf851_3,23cf851,B0,stop,43006,20770,7450,7288,66342,26,26,1
+deepseek_v4_pro_0813__appworld__50e1ac9_3__B2,deepseek_v4_pro_0813,appworld,50e1ac9_3,50e1ac9,B2,stop,10279,605,1349,1275,1429,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+deepseek_v4_pro_0813__appworld__23cf851_2__B0,deepseek_v4_pro_0813,appworld,23cf851_2,23cf851,B0,stop,52449,14701,8245,8009,46519,79,79,1
+deepseek_v4_pro_0813__appworld__50e1ac9_3__B0,deepseek_v4_pro_0813,appworld,50e1ac9_3,50e1ac9,B0,stop,17791,6382,2227,2133,19594,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+deepseek_v4_pro_0813__appworld__4ec8de5_2__B0,deepseek_v4_pro_0813,appworld,4ec8de5_2,4ec8de5,B0,stop,74556,2238,9529,9259,6247,30,30,1
+deepseek_v4_pro_0813__appworld__fac291d_3__B2,deepseek_v4_pro_0813,appworld,fac291d_3,fac291d,B2,stop,8814,607,1457,1124,1352,95,95,1
+deepseek_v4_pro_0813__appworld__4ec8de5_3__B1,deepseek_v4_pro_0813,appworld,4ec8de5_3,4ec8de5,B1,stop,37320,1614,4999,4759,4418,66,66,1
+deepseek_v4_pro_0813__appworld__50e1ac9_3__B1,deepseek_v4_pro_0813,appworld,50e1ac9_3,50e1ac9,B1,stop,7819,963,950,868,2564,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+doubao_seed_2_1_lite_260915__appworld__50e1ac9_3__B1,doubao_seed_2_1_lite_260915,appworld,50e1ac9_3,50e1ac9,B1,stop,32426,1093,2086,1973,2564,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+doubao_seed_2_1_lite_260915__appworld__23cf851_2__B1,doubao_seed_2_1_lite_260915,appworld,23cf851_2,23cf851,B1,stop,34397,6867,2420,2089,17981,79,79,1
+doubao_seed_2_1_lite_260915__appworld__fac291d_3__B1,doubao_seed_2_1_lite_260915,appworld,fac291d_3,fac291d,B1,stop,102279,4400,7687,7301,10868,95,95,1
+doubao_seed_2_1_lite_260915__appworld__383cbac_3__B1,doubao_seed_2_1_lite_260915,appworld,383cbac_3,383cbac,B1,stop,5995,1593,337,195,4087,$275.00,275.0,1
+doubao_seed_2_1_lite_260915__appworld__23cf851_3__B1,doubao_seed_2_1_lite_260915,appworld,23cf851_3,23cf851,B1,stop,12203,4390,937,694,11384,26,26,1
+doubao_seed_2_1_lite_260915__appworld__50e1ac9_3__B0,doubao_seed_2_1_lite_260915,appworld,50e1ac9_3,50e1ac9,B0,stop,37108,7837,2630,2444,19594,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+doubao_seed_2_1_lite_260915__appworld__50e1ac9_3__B2,doubao_seed_2_1_lite_260915,appworld,50e1ac9_3,50e1ac9,B2,stop,5294,657,297,221,1429,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+doubao_seed_2_1_lite_260915__appworld__fac291d_2__B2,doubao_seed_2_1_lite_260915,appworld,fac291d_2,fac291d,B2,stop,26501,912,2181,1808,1342,93,93,1
+doubao_seed_2_1_lite_260915__appworld__383cbac_3__B2,doubao_seed_2_1_lite_260915,appworld,383cbac_3,383cbac,B2,stop,10103,705,681,530,1643,$275.00,275.0,1
+doubao_seed_2_1_lite_260915__appworld__4ec8de5_3__B2,doubao_seed_2_1_lite_260915,appworld,4ec8de5_3,4ec8de5,B2,stop,14593,701,1070,824,1081,66,66,1
+doubao_seed_2_1_lite_260915__appworld__23cf851_3__B0,doubao_seed_2_1_lite_260915,appworld,23cf851_3,23cf851,B0,stop,50655,25143,4368,4083,66342,26,26,1
+doubao_seed_2_1_lite_260915__appworld__fac291d_2__B0,doubao_seed_2_1_lite_260915,appworld,fac291d_2,fac291d,B0,stop,70961,1548,5714,5583,3254,93,93,1
+doubao_seed_2_1_lite_260915__appworld__fac291d_3__B2,doubao_seed_2_1_lite_260915,appworld,fac291d_3,fac291d,B2,stop,35820,918,2614,2140,1352,95,95,1
+doubao_seed_2_1_lite_260915__appworld__fac291d_2__B1,doubao_seed_2_1_lite_260915,appworld,fac291d_2,fac291d,B1,stop,64075,4240,5109,4962,10415,93,93,1
+doubao_seed_2_1_lite_260915__appworld__4ec8de5_2__B1,doubao_seed_2_1_lite_260915,appworld,4ec8de5_2,4ec8de5,B1,stop,27132,1403,1938,1744,2895,30,30,1
+doubao_seed_2_1_lite_260915__appworld__50e1ac9_2__B1,doubao_seed_2_1_lite_260915,appworld,50e1ac9_2,50e1ac9,B1,stop,11329,1722,745,611,4087,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+doubao_seed_2_1_lite_260915__appworld__4ec8de5_2__B2,doubao_seed_2_1_lite_260915,appworld,4ec8de5_2,4ec8de5,B2,stop,8380,493,676,496,799,30,30,1
+doubao_seed_2_1_lite_260915__appworld__fac291d_3__B0,doubao_seed_2_1_lite_260915,appworld,fac291d_3,fac291d,B0,stop,69426,1676,6004,5504,3561,95,95,1
+doubao_seed_2_1_lite_260915__appworld__383cbac_3__B0,doubao_seed_2_1_lite_260915,appworld,383cbac_3,383cbac,B0,stop,32545,87866,2183,2027,180002,$275.00,275.0,1
+doubao_seed_2_1_lite_260915__appworld__4ec8de5_3__B0,doubao_seed_2_1_lite_260915,appworld,4ec8de5_3,4ec8de5,B0,stop,91868,3084,7037,6801,6615,66,66,1
+doubao_seed_2_1_lite_260915__appworld__23cf851_2__B2,doubao_seed_2_1_lite_260915,appworld,23cf851_2,23cf851,B2,stop,22085,1523,1637,1301,3574,79,79,1
+doubao_seed_2_1_lite_260915__appworld__4ec8de5_3__B1,doubao_seed_2_1_lite_260915,appworld,4ec8de5_3,4ec8de5,B1,stop,25948,2077,1792,1560,4418,66,66,1
+doubao_seed_2_1_lite_260915__appworld__23cf851_2__B0,doubao_seed_2_1_lite_260915,appworld,23cf851_2,23cf851,B0,stop,82403,17758,6412,6039,46519,79,79,1
+doubao_seed_2_1_lite_260915__appworld__383cbac_2__B2,doubao_seed_2_1_lite_260915,appworld,383cbac_2,383cbac,B2,stop,11105,909,791,593,2146,$396.00,396.0,1
+doubao_seed_2_1_lite_260915__appworld__50e1ac9_2__B2,doubao_seed_2_1_lite_260915,appworld,50e1ac9_2,50e1ac9,B2,stop,7738,924,484,388,2056,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+doubao_seed_2_1_lite_260915__appworld__50e1ac9_2__B0,doubao_seed_2_1_lite_260915,appworld,50e1ac9_2,50e1ac9,B0,stop,20868,7389,1513,1334,18373,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+doubao_seed_2_1_lite_260915__appworld__383cbac_2__B0,doubao_seed_2_1_lite_260915,appworld,383cbac_2,383cbac,B0,stop,32726,107050,1951,1796,217062,$396.00,396.0,1
+doubao_seed_2_1_lite_260915__appworld__23cf851_3__B2,doubao_seed_2_1_lite_260915,appworld,23cf851_3,23cf851,B2,stop,13312,1057,1155,890,2411,26,26,1
+doubao_seed_2_1_lite_260915__appworld__4ec8de5_2__B0,doubao_seed_2_1_lite_260915,appworld,4ec8de5_2,4ec8de5,B0,stop,87648,2937,6481,6290,6247,30,30,1
+doubao_seed_2_1_lite_260915__appworld__383cbac_2__B1,doubao_seed_2_1_lite_260915,appworld,383cbac_2,383cbac,B1,stop,6137,2380,489,331,6129,$396.00,396.0,1
+qwen3_8_max_0902__appworld__fac291d_3__B1,qwen3_8_max_0902,appworld,fac291d_3,fac291d,B1,stop,119907,4384,5756,5695,10868,95,95,1
+qwen3_8_max_0902__appworld__50e1ac9_3__B0,qwen3_8_max_0902,appworld,50e1ac9_3,50e1ac9,B0,stop,43625,7784,1697,1528,19594,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+qwen3_8_max_0902__appworld__50e1ac9_2__B0,qwen3_8_max_0902,appworld,50e1ac9_2,50e1ac9,B0,stop,83148,7351,3221,2935,18373,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+qwen3_8_max_0902__appworld__23cf851_2__B0,qwen3_8_max_0902,appworld,23cf851_2,23cf851,B0,stop,126141,17639,6109,5821,46519,79,79,1
+qwen3_8_max_0902__appworld__23cf851_2__B1,qwen3_8_max_0902,appworld,23cf851_2,23cf851,B1,stop,62686,6829,2874,2586,17981,79,79,1
+qwen3_8_max_0902__appworld__fac291d_3__B0,qwen3_8_max_0902,appworld,fac291d_3,fac291d,B0,stop,204305,1669,8948,8879,3561,95,95,1
+qwen3_8_max_0902__appworld__4ec8de5_3__B2,qwen3_8_max_0902,appworld,4ec8de5_3,4ec8de5,B2,stop,26067,703,1283,1044,1081,66,66,1
+qwen3_8_max_0902__appworld__fac291d_3__B2,qwen3_8_max_0902,appworld,fac291d_3,fac291d,B2,stop,49739,917,2482,2106,1352,95,95,1
+qwen3_8_max_0902__appworld__383cbac_2__B2,qwen3_8_max_0902,appworld,383cbac_2,383cbac,B2,stop,25101,911,1088,897,2146,396,396.0,1
+qwen3_8_max_0902__appworld__23cf851_2__B2,qwen3_8_max_0902,appworld,23cf851_2,23cf851,B2,stop,36566,1530,1827,1543,3574,79,79,1
+qwen3_8_max_0902__appworld__4ec8de5_2__B1,qwen3_8_max_0902,appworld,4ec8de5_2,4ec8de5,B1,stop,110044,1397,3932,3830,2895,30,30,1
+qwen3_8_max_0902__appworld__23cf851_3__B0,qwen3_8_max_0902,appworld,23cf851_3,23cf851,B0,stop,216476,25025,10560,10314,66342,26,26,1
+qwen3_8_max_0902__appworld__50e1ac9_3__B2,qwen3_8_max_0902,appworld,50e1ac9_3,50e1ac9,B2,stop,16949,658,607,519,1429,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+qwen3_8_max_0902__appworld__4ec8de5_3__B1,qwen3_8_max_0902,appworld,4ec8de5_3,4ec8de5,B1,stop,72860,2076,3086,2881,4418,66,66,1
+qwen3_8_max_0902__appworld__50e1ac9_2__B2,qwen3_8_max_0902,appworld,50e1ac9_2,50e1ac9,B2,stop,22779,925,967,840,2056,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+qwen3_8_max_0902__appworld__383cbac_3__B1,qwen3_8_max_0902,appworld,383cbac_3,383cbac,B1,stop,77413,1589,2501,2377,4087,275,275.0,1
+qwen3_8_max_0902__appworld__23cf851_3__B1,qwen3_8_max_0902,appworld,23cf851_3,23cf851,B1,stop,38026,4377,1588,1367,11384,26,26,1
+qwen3_8_max_0902__appworld__383cbac_3__B0,qwen3_8_max_0902,appworld,383cbac_3,383cbac,B0,stop,124656,87230,4241,4114,180002,275,275.0,1
+qwen3_8_max_0902__appworld__383cbac_3__B2,qwen3_8_max_0902,appworld,383cbac_3,383cbac,B2,stop,10888,706,440,301,1643,$275,275.0,1
+qwen3_8_max_0902__appworld__383cbac_2__B1,qwen3_8_max_0902,appworld,383cbac_2,383cbac,B1,stop,34384,2354,1339,1183,6129,$396,396.0,1
+qwen3_8_max_0902__appworld__4ec8de5_2__B2,qwen3_8_max_0902,appworld,4ec8de5_2,4ec8de5,B2,stop,14018,494,624,483,799,30,30,1
+qwen3_8_max_0902__appworld__50e1ac9_3__B1,qwen3_8_max_0902,appworld,50e1ac9_3,50e1ac9,B1,stop,39997,1086,1490,1382,2564,"Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven","Lost in the Embrace of Night, Mystic Voyage to Avalon, Yearning for a Glimpse of Heaven",1
+qwen3_8_max_0902__appworld__383cbac_2__B0,qwen3_8_max_0902,appworld,383cbac_2,383cbac,B0,stop,139602,105757,4834,4664,217062,396,396.0,1
+qwen3_8_max_0902__appworld__50e1ac9_2__B1,qwen3_8_max_0902,appworld,50e1ac9_2,50e1ac9,B1,stop,60307,1706,2082,1961,4087,"Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes","Eternal Reverie, Heartstrings Symphony, Dancing in a Field of Thorns, Lonesome Road, Painting Shadows on the Wall, Paper Planes",1
+qwen3_8_max_0902__appworld__fac291d_2__B0,qwen3_8_max_0902,appworld,fac291d_2,fac291d,B0,stop,78573,1538,3915,3838,3254,93,93,1
+qwen3_8_max_0902__appworld__fac291d_2__B2,qwen3_8_max_0902,appworld,fac291d_2,fac291d,B2,stop,35053,914,1850,1386,1342,93,93,1
+qwen3_8_max_0902__appworld__fac291d_2__B1,qwen3_8_max_0902,appworld,fac291d_2,fac291d,B1,stop,83553,4232,3898,3844,10415,93,93,1
+qwen3_8_max_0902__appworld__4ec8de5_2__B0,qwen3_8_max_0902,appworld,4ec8de5_2,4ec8de5,B0,timeout,300000,,,,6247,,30,0
+qwen3_8_max_0902__appworld__23cf851_3__B2,qwen3_8_max_0902,appworld,23cf851_3,23cf851,B2,stop,41524,1062,1684,1448,2411,26,26,1
+qwen3_8_max_0902__appworld__4ec8de5_3__B0,qwen3_8_max_0902,appworld,4ec8de5_3,4ec8de5,B0,stop,147532,3072,5935,5620,6615,66,66,1
