@@ -103,8 +103,6 @@ Everything needed to check the paper's reported Table I and Figure 2 summaries i
 
 Historical model-call scripts are included only for provenance. Re-executing model calls requires provider credentials and may not reproduce historical hosted-model behavior exactly because provider-side models and infrastructure can change.
 
-A clean future rerun should use a hard 300-s wall-clock watchdog, fixed retry semantics, balanced condition order, and pinned model/configuration manifests.
-
 ## Known paper-frozen latency detail
 
 Reliability and token-usage summaries reconstruct directly from the canonical run-level table. A few GPT/Claude request-latency cells differ by small sub-second amounts when recalculated from normalized timestamps versus the paper-production aggregation. For transparency, `reproduce_all.py` writes both the reconstructed values and a comparison against `results/paper_metrics/Figure2_metrics.csv`. The paper-frozen figure values remain the authoritative values used in the submitted manuscript.
